@@ -5,7 +5,7 @@ using std::endl;
 // using std::pow;
 using ll = long long;
 
-ll ISPRIME=13;
+ll ISPRIME=19;
 
 ll fermatTheoremCheck(ll base,ll powNum){
     ll res = 1;
@@ -22,9 +22,9 @@ ll fermatTheoremCheck(ll base,ll powNum){
 int main(int argc, char const *argv[])
 {
     ll answer;
-    for(ll i = 2;i <= ISPRIME*2;i++){
-        cout << i << "^" << (ISPRIME-2) << "MOD " << ISPRIME << " = " \
-         << fermatTheoremCheck(i,ISPRIME-2) << endl;
+    for(ll i = 2;i <= ISPRIME;i++){
+        cout << i << "^" << (ISPRIME-1) << "MOD " << ISPRIME << " = " \
+         << fermatTheoremCheck(i,ISPRIME-1) << endl;
     }    
     return 0;
 }
