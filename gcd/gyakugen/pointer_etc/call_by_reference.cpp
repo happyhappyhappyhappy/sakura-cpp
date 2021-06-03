@@ -30,3 +30,10 @@ int main(int argc, const char** argv) {
     cout << "x=" << x << ":&x=" << &x << endl;
     return 0;
 }
+/** output
+x=721:&x=0x7ffe440a838c
+y=0x7ffe440a8490:&y=0x7ffe440a8390:*y=721
+a=721:&a=0x7ffe440a838c
+a=1442:&a=0x7ffe440a838c
+x=1442:&x=0x7ffe440a838c
+**/
