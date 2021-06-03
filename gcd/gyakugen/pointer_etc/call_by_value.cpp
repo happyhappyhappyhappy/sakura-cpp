@@ -1,6 +1,9 @@
 #include<iostream>
+// 値渡し -> この場合はint型のクラスが作成されてその中に入れている
+// 従って、渡した値の中身が関数内で変わっても(twice)、main関数での変数は変わらない
 using std::cout;
 using std::endl;
+// 引数に何も指定しない
 bool twice(int a){
     bool retcode=true;
     cout << a << endl;
