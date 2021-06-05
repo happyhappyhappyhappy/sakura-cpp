@@ -1,0 +1,19 @@
+Start status: a= 7 b= 5 u= 1 v= 0
+ b= 5is true
+ t= 1
+a=a-t*b ->2
+swap(a,b) ->a = 5b = 2
+u=u-t*v ->1swap(u,v)-> u= 0 v= 1
+ b= 2is true
+ t= 2
+a=a-t*b ->1
+swap(a,b) ->a = 2b = 1
+u=u-t*v ->-2swap(u,v)-> u= 1 v= -2
+ b= 1is true
+ t= 2
+a=a-t*b ->0
+swap(a,b) ->a = 1b = 0
+u=u-t*v ->5swap(u,v)-> u= -2 v= 5
+ b= 0is false.
+End Status a= 1 b= 0 u= 3 v= 5
+7's inv: 3 mod 5
