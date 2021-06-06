@@ -75,4 +75,5 @@ u=u-t*v ->5swap(u,v)-> u= -2 v= 5
  b= 0is false.
 End Status a= 1 b= 0 u= 3 v= 5
 7's inv: 3 mod 5
+手で計算する時はu,vのswapを間違えないように注意する
 */
