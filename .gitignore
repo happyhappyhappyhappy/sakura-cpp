@@ -1,5 +1,6 @@
 a.out
 *.out
+*.o
 out*.txt
 testcase_*.txt
 url.txt
