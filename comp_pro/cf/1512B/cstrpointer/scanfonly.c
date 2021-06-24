@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     余計な出力分は削除
     printf("InputString : ");
 */    
-    scanf("%s\n",a);
+    scanf("%s",a);
     if (a == NULL)
     {
         printf("NULL POINTER!!\n");
