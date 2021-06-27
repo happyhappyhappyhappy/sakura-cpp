@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 #define BUFFER 65536
 
@@ -8,7 +9,7 @@ int main(int argc, char const *argv[])
     char* str;
     int strlength;
     str = malloc(BUFFER);
-    if (fgets(str,BUFFER,stdin) == 1 || str[0] == '\n')
+    if (fgets(str,BUFFER,stdin) == NULL || str[0] == '\n')
     {
         printf("NO INPUT \n");
         return 1;
@@ -20,6 +21,5 @@ int main(int argc, char const *argv[])
         str[strlength] = '\0';
     }
     printf("Answer String : %s\n",str);
-    
-    return 0;
+        return 0;
 }
