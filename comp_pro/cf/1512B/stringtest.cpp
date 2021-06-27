@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
-
+/**
+    Problem: https://codeforces.com/problemset/problem/1512/B
+    Answer : https://codeforces.com/blog/entry/89535
+ **/
 using namespace std;
 
 int main(int argc, char const *argv[])
