@@ -3,7 +3,10 @@
 #include<stdlib.h>
 
 #define BUFFER 65536
-
+/*
+    * fgetsで入力列を実行する→改行を取り除いたはずのプログラム
+    →これでは何故か改行が取り除けない
+*/
 int main(int argc, char const *argv[])
 {
     char* str;
