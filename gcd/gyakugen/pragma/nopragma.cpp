@@ -33,9 +33,10 @@ int main(int argc, char const *argv[])
     ll x;
     ll y;
     ll d;
-    ll invNum=7;
-    ll modNum=5;
-
+    // ll invNum=7;
+    // ll modNum=5;
+    ll invNum=317811; // フィナボッチ28番目
+    ll modNum=832040; // フィナボッチ30番目
     cout << "Main Function :" <<
     " invNum = " << invNum <<
     " modNum = " << modNum << 

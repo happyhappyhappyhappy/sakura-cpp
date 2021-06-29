@@ -1,5 +1,5 @@
 #include<iostream>
-#pragma GCC optimize "O3" // 03 では無い
+#pragma GCC optimize "Ofast" // 03 では無い
 // Pragmaで色々設定した場合
 // (元:GCD 値渡し＋再帰関数利用する場合のデバッグ確認)
 using namespace std;
@@ -10,13 +10,13 @@ ll extGCD(ll a,ll b,ll &x,ll &y){
     cout << "Start extGCD " <<  
     "a = " << a << " b = " << b << 
     " x = " << x << " &x = " << &x << 
-    " y = " << y << " &y = " << &y << endl;
+    " y = " << y << " &y = " << &y << "\n";
     if ( b == 0 ){
         x = 1;
         y = 0;
         cout << "Last extGCD " <<
         "x = " << x << " &x = " << &x << 
-        " y = " << y << " &y = " << &y << endl;
+        " y = " << y << " &y = " << &y << "\n";
         return a;
     }
     ll d;
@@ -25,7 +25,7 @@ ll extGCD(ll a,ll b,ll &x,ll &y){
     cout << "End extGCD " << 
     "d = " << d << " a = " << a << " b = " << b <<
     " x = " << x << " &x = " << &x <<
-    " y = " << y << " &y = " << &y << endl;
+    " y = " << y << " &y = " << &y << "\n";
     return d;
 }
 
@@ -34,22 +34,22 @@ int main(int argc, char const *argv[])
     ll x;
     ll y;
     ll d;
-    ll invNum=7;
-    ll modNum=5;
+    ll invNum=317811; // フィナボッチ28番目
+    ll modNum=832040; // フィナボッチ30番目
 
     cout << "Main Function :" <<
     " invNum = " << invNum <<
     " modNum = " << modNum << 
     " x= " << x << " &x= " << 
     " y= " << y << " &y= " << 
-    " d= " << d << endl;
+    " d= " << d << "\n";
  
     d = extGCD(invNum,modNum,x,y);
     if(x < 0){
         x = x + modNum;
     }
     cout << "Function Result :" << 
-    " x= " << x << " y= " << y << " d= " << d << endl;
+    " x= " << x << " y= " << y << " d= " << d << "\n";
     return 0;
 }
 /*
