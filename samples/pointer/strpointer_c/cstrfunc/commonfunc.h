@@ -7,6 +7,7 @@
 #include<stdbool.h>
 
 #define BUFFER 65536
+#define RC "\r\n"
 
 bool serveStrOK(char* getStr);
 #endif // !YAMANAKA_H
