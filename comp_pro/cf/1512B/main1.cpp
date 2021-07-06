@@ -39,6 +39,15 @@ int main(int argc, char const *argv[])
         point[2].second = (point[0].second + 1) % n;
         point[3].second = (point[1].second + 1) % n;
     }
+    else{
+        if(point[0].first == point[1].first){
+            point[2].first = (point[2].first +1 ) % n;
+            point[3].first = (point[3].first +1) %n;
+        }
+        else{
+            swap(point[2].second , point[3].second);
+        }
+    }
     cout << "↓" << "\n";
     for (int i = 0; i < point.size(); i = i + 1)
     {
@@ -51,6 +60,7 @@ int main(int argc, char const *argv[])
     // 出力
     for (int i = 0; i < n; i++)
     {   
+        cout << line[i] << "\n";
         // line[i]で出力させちゃえ
         // cin << ;
         // for (int j = 0; i < n; j++)
