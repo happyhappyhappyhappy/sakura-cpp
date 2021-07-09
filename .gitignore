@@ -3,5 +3,4 @@ a.out
 *.o
 out*.txt
 testcase_*.txt
-url.txt
 *result*.txt
