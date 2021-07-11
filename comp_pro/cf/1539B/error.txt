@@ -1,0 +1,68 @@
+In file included from /usr/include/c++/9/vector:67,
+                 from /usr/include/c++/9/queue:61,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:86,
+                 from submodule1.cpp:5:
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘struct std::_Vector_base<int, int>’:
+/usr/include/c++/9/bits/stl_vector.h:386:11:   required from ‘class std::vector<int, int>’
+submodule1.cpp:10:45:   required from here
+/usr/include/c++/9/bits/stl_vector.h:84:21: error: ‘int’ is not a class, struct, or union type
+   84 |  rebind<_Tp>::other _Tp_alloc_type;
+      |                     ^~~~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:86:9: error: ‘int’ is not a class, struct, or union type
+   86 |         pointer;
+      |         ^~~~~~~
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘class std::vector<int, int>’:
+submodule1.cpp:10:45:   required from here
+/usr/include/c++/9/bits/stl_vector.h:471:20: error: no members matching ‘std::vector<int, int>::_Base {aka std::_Vector_base<int, int>}::_M_allocate’ in ‘std::vector<int, int>::_Base’ {aka ‘struct std::_Vector_base<int, int>’}
+  471 |       using _Base::_M_allocate;
+      |                    ^~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:472:20: error: no members matching ‘std::vector<int, int>::_Base {aka std::_Vector_base<int, int>}::_M_deallocate’ in ‘std::vector<int, int>::_Base’ {aka ‘struct std::_Vector_base<int, int>’}
+  472 |       using _Base::_M_deallocate;
+      |                    ^~~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:474:20: error: no members matching ‘std::vector<int, int>::_Base {aka std::_Vector_base<int, int>}::_M_get_Tp_allocator’ in ‘std::vector<int, int>::_Base’ {aka ‘struct std::_Vector_base<int, int>’}
+  474 |       using _Base::_M_get_Tp_allocator;
+      |                    ^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = int]’:
+submodule1.cpp:11:47:   required from here
+/usr/include/c++/9/bits/stl_vector.h:677:30: error: ‘struct std::_Vector_base<int, int>::_Vector_impl’ has no member named ‘_M_start’
+  677 |  std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |                ~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:677:54: error: ‘struct std::_Vector_base<int, int>::_Vector_impl’ has no member named ‘_M_finish’
+  677 |  std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |                                        ~~~~~~~~~~~~~~^~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:678:28: error: ‘_M_get_Tp_allocator’ was not declared in this scope; did you mean ‘get_allocator’?
+  678 |         _M_get_Tp_allocator());
+      |         ~~~~~~~~~~~~~~~~~~~^~
+      |         get_allocator
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl(std::_Vector_base<_Tp, _Alloc>::_Vector_impl&&) [with _Tp = int; _Alloc = int]’:
+/usr/include/c++/9/bits/stl_vector.h:305:7:   required from here
+/usr/include/c++/9/bits/stl_vector.h:141:68: error: ‘int’ is not a class, struct, or union type
+  141 |  : _Tp_alloc_type(std::move(__x)), _Vector_impl_data(std::move(__x))
+      |                                                                    ^
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = int; _Alloc = int]’:
+/usr/include/c++/9/bits/stl_vector.h:569:7:   required from here
+/usr/include/c++/9/bits/stl_vector.h:332:24: error: ‘struct std::_Vector_base<int, int>::_Vector_impl’ has no member named ‘_M_start’
+  332 |  _M_deallocate(_M_impl._M_start,
+      |                ~~~~~~~~^~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:333:17: error: ‘struct std::_Vector_base<int, int>::_Vector_impl’ has no member named ‘_M_end_of_storage’
+  333 |         _M_impl._M_end_of_storage - _M_impl._M_start);
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:333:45: error: ‘struct std::_Vector_base<int, int>::_Vector_impl’ has no member named ‘_M_start’
+  333 |         _M_impl._M_end_of_storage - _M_impl._M_start);
+      |                                     ~~~~~~~~^~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::_Vector_base(const allocator_type&) [with _Tp = int; _Alloc = int; std::_Vector_base<_Tp, _Alloc>::allocator_type = int]’:
+/usr/include/c++/9/bits/stl_vector.h:495:18:   required from ‘std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = int; _Alloc = int; std::vector<_Tp, _Alloc>::allocator_type = int]’
+submodule1.cpp:11:47:   required from here
+/usr/include/c++/9/bits/stl_vector.h:291:20: error: no matching function for call to ‘std::_Vector_base<int, int>::_Vector_impl::_Vector_impl(const allocator_type&)’
+  291 |       : _M_impl(__a) { }
+      |                    ^
+/usr/include/c++/9/bits/stl_vector.h:140:2: note: candidate: ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl(std::_Vector_base<_Tp, _Alloc>::_Vector_impl&&) [with _Tp = int; _Alloc = int]’
+  140 |  _Vector_impl(_Vector_impl&& __x) noexcept
+      |  ^~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:140:30: note:   no known conversion for argument 1 from ‘const allocator_type’ {aka ‘const int’} to ‘std::_Vector_base<int, int>::_Vector_impl&&’
+  140 |  _Vector_impl(_Vector_impl&& __x) noexcept
+      |               ~~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/stl_vector.h:128:2: note: candidate: ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl() [with _Tp = int; _Alloc = int]’
+  128 |  _Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+      |  ^~~~~~~~~~~~
+/usr/include/c++/9/bits/stl_vector.h:128:2: note:   candidate expects 0 arguments, 1 provided
