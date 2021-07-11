@@ -4,3 +4,4 @@ a.out
 out*.txt
 testcase_*.txt
 *result*.txt
+*test*.txt
