@@ -7,8 +7,8 @@
 
 using namespace std; 
 
-vector<int,int> checkProcess(string inputStr){
-    vector<int,int> result(int('z')-int('a')+1);
+vector<int> checkProcess(string inputStr){
+    vector<int> result(int('z')-int('a')+1);
     int a_i = int('a');
     int z_i = int('z');
     for (int i = a_i-a_i ; i <= z_i - a_i; i++)
@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 
     string inputStr;
     cin >> inputStr;
-    vector<int,int> resultStr(int('z')-int('a')+1);
+    vector<int> resultStr(int('z')-int('a')+1);
     resultStr = checkProcess(inputStr);
 /**    for (int i = int('a')-int('a'); i <= int('z')-int('a'); i++)
     {
