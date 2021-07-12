@@ -15,15 +15,17 @@ int main(int argc, char const *argv[])
     map<char,int> charMap;
 
     cin >> inputStr;
+    int multi=1;
     for (int i = 0; i < inputStr.size(); i++)
     {
         if(charMap.count(inputStr.at(i))==0){
-            charMap.insert(make_pair(inputStr.at(i),1));
+            charMap.insert(make_pair(inputStr.at(i),multi));
+            multi++;
         }
     }       
-    cout << inputStr <<  "に存在する文字" << "\n";
+    cout << inputStr <<  "に存在する文字と倍数" << "\n";
     for(auto itr = charMap.begin();itr != charMap.end();itr++ ){
-        cout << itr->first << "\n";
+        cout << itr->first << " : " << itr->second << "\n";
     }
     return 0;
 }
