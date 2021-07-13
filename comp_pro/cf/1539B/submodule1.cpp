@@ -37,3 +37,23 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
+/**
+ * テスト結果
+ -----abacabaに含まれる文字とそれに対する倍数-----
+a : 1
+b : 2
+c : 3
+-----abbabaaに含まれる文字とそれに対する倍数-----
+a : 1
+b : 2
+-----sonoshikumiwoに含まれる文字とそれに対する倍数-----
+h : 4
+i : 5
+k : 6
+m : 8
+n : 3
+o : 2
+s : 1
+u : 7
+w : 9
+ **/
