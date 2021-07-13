@@ -7,9 +7,13 @@
                 "Answer": 
                  "https://codeforces.com/blog/entry/91906"
             },
+            "Result":{
     "1st Result":{
         "ResultUrl":"<itoa関数が使えないため見守り2021//07//11>",
         "FinarizeDate":"作成中"
-                    }
+                    }},
+            "Preference":{
+                "C++ 連想配列クラス std::map 入門":"http://vivi.dyndns.org/tech/cpp/map.html"
+            }
     }
 ] 
