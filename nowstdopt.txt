@@ -1,0 +1,51 @@
+  -std=<standard>          Assume that the input sources are for <standard>.
+  -std=f2003                  Conform to the ISO Fortran 2003 standard.
+  -std=f2008                  Conform to the ISO Fortran 2008 standard.
+  -std=f2008ts                Conform to the ISO Fortran 2008 standard including TS 29113.
+  -std=f2018                  Conform to the ISO Fortran 2018 standard.
+  -std=f95                    Conform to the ISO Fortran 95 standard.
+  -std=gnu                    Conform to nothing in particular.
+  -std=legacy                 Accept extensions to support legacy code.
+  -std=c++03                  Conform to the ISO 1998 C++ standard revised by the 2003 technical
+  -std=c++0x                  Deprecated in favor of -std=c++11.  Same as -std=c++11.
+  -std=c++11                  Conform to the ISO 2011 C++ standard.
+  -std=c++14                  Conform to the ISO 2014 C++ standard.
+  -std=c++17                  Conform to the ISO 2017 C++ standard.
+  -std=c++1y                  Deprecated in favor of -std=c++14.  Same as -std=c++14.
+  -std=c++1z                  Deprecated in favor of -std=c++17.  Same as -std=c++17.
+  -std=c++2a                  Conform to the ISO 2020(?) C++ draft standard (experimental and incomplete
+  -std=c++98                  Conform to the ISO 1998 C++ standard revised by the 2003 technical corrigendum.
+  -std=c11                    Conform to the ISO 2011 C standard.
+  -std=c17                    Conform to the ISO 2017 C standard (published in 2018).
+  -std=c18                    Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
+  -std=c1x                    Deprecated in favor of -std=c11.  Same as -std=c11.
+  -std=c2x                    Conform to the ISO 202X C standard draft (experimental and incomplete support).
+  -std=c89                    Conform to the ISO 1990 C standard.  Same as -std=c90.
+  -std=c90                    Conform to the ISO 1990 C standard.
+  -std=c99                    Conform to the ISO 1999 C standard.
+  -std=c9x                    Deprecated in favor of -std=c99.  Same as -std=c99.
+  -std=gnu++03                Conform to the ISO 1998 C++ standard revised by the 2003 technical corrigendum
+  -std=gnu++0x                Deprecated in favor of -std=gnu++11.  Same as -std=gnu++11.
+  -std=gnu++11                Conform to the ISO 2011 C++ standard with GNU extensions.
+  -std=gnu++14                Conform to the ISO 2014 C++ standard with GNU extensions.
+  -std=gnu++17                Conform to the ISO 2017 C++ standard with GNU extensions.
+  -std=gnu++1y                Deprecated in favor of -std=gnu++14.  Same as -std=gnu++14.
+  -std=gnu++1z                Deprecated in favor of -std=gnu++17.  Same as -std=gnu++17.
+  -std=gnu++2a                Conform to the ISO 2020(?) C++ draft standard with GNU extensions
+  -std=gnu++98                Conform to the ISO 1998 C++ standard revised by the 2003 technical corrigendum
+  -std=gnu11                  Conform to the ISO 2011 C standard with GNU extensions.
+  -std=gnu17                  Conform to the ISO 2017 C standard (published in 2018) with GNU extensions.
+  -std=gnu18                  Conform to the ISO 2017 C standard (published in 2018) with GNU extensions. 
+  -std=gnu1x                  Deprecated in favor of -std=gnu11.  Same as -std=gnu11.
+  -std=gnu2x                  Conform to the ISO 202X C standard draft with GNU extensions (experimental and
+  -std=gnu89                  Conform to the ISO 1990 C standard with GNU extensions.  Same as -std=gnu90.
+  -std=gnu90                  Conform to the ISO 1990 C standard with GNU extensions.
+  -std=gnu99                  Conform to the ISO 1999 C standard with GNU extensions.
+  -std=gnu9x                  Deprecated in favor of -std=gnu99.  Same as -std=gnu99.
+  -std=iso9899:1990           Conform to the ISO 1990 C standard.  Same as -std=c90.
+  -std=iso9899:199409         Conform to the ISO 1990 C standard as amended in 1994.
+  -std=iso9899:1999           Conform to the ISO 1999 C standard.  Same as -std=c99.
+  -std=iso9899:199x           Deprecated in favor of -std=iso9899:1999.  Same as -std=c99.
+  -std=iso9899:2011           Conform to the ISO 2011 C standard.  Same as -std=c11.
+  -std=iso9899:2017           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
+  -std=iso9899:2018           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
