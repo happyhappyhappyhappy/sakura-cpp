@@ -1,5 +1,7 @@
 # Shortest Path with Obstacle
+
 # 最も短い障害物ありのパスの長さは？
+
 
 [Problem](https://codeforces.com/problemset/problem/1547/A)
 
