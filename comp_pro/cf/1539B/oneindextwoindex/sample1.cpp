@@ -9,10 +9,27 @@
 
 using namespace std;
 
+bool change_index(int &x,int &y){
+    bool result=true;
+    x = x - 1;
+    y = y - 1;
+    return result;
+}
+
 int main(int argc, char const *argv[])
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    /* code */
+    int counter;
+    cin >> counter;
+    for (int i = 0; i < counter; i=i+1)
+    {
+        int a;
+        int b;
+        cin >> a >> b;
+        if(change_index(a,b)){
+            cout << a << " " << b << " \n";
+        }
+    }
     return 0;
 }
