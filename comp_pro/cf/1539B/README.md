@@ -1,4 +1,4 @@
-# 1539B.LOVE SONG
+# \[1539B\]LOVE SONG
 
 ## [問題のURL](https://codeforces.com/problemset/problem/1539/B)
 ## [解説のURL](https://codeforces.com/blog/entry/91906)←ヒントのみにとどまっている
@@ -9,6 +9,7 @@
 * まずはどのアルファベットが何番目に出たかで分ける
 →終了
 * 問題の出し方を見てこれは1indexなので0-indexにする
+→問題のフォーマットを見る限り行数＋データにする
 * 0-indexを見て正しく文字列を作れるかチェック
 
 -----
