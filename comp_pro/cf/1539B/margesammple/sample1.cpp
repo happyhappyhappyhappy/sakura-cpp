@@ -8,9 +8,9 @@ using namespace std;
 
 bool index_change_one_to_zero(int& x,int& y){
     bool result=false;
-    cout << "x : " << x << "\n";
-    cout << "y : " << y << "\n";
-    if(x < y){
+    // cout << "x : " << x << "\n";
+    // cout << "y : " << y << "\n";
+    if(x <= y){
         result=true;
         y = y - 1;
         x = x - 1;
@@ -27,12 +27,15 @@ int main(int argc, char const *argv[])
     string themeString,ansString;
     cin >> tmp >> problem_line;
     cin >> themeString;
-    cout << themeString;
+    // cout << themeString;
     for (int i = 0; i < problem_line; i++)
     {
         int from_pos,to_pos;
         cin >> from_pos >> to_pos;
-        index_change_one_to_zero(from_pos,to_pos);
+        if(index_change_one_to_zero(from_pos,to_pos)==false){
+            cout << "Check from position and to position.\n";
+            return 2;
+        }
         ansString = themeString.substr(from_pos,to_pos-from_pos+1);
         cout << ansString << "\n";
     }
