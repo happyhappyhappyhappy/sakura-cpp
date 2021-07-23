@@ -15,3 +15,4 @@
 -----
 ### 参考リンク
 * [Mapの使い方](http://vivi.dyndns.org/tech/cpp/map.html)
+* [文字列関数を使いこなす](https://qiita.com/MasahiroBW/items/3f56b22a079cd3272cd3)
