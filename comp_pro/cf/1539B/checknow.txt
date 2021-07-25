@@ -1,0 +1,17 @@
+Problem String: sonoshikumiwo
+Char h	4
+Char i	5
+Char k	6
+Char m	8
+Char n	3
+Char o	2
+Char s	1
+Char u	7
+Char w	9
+9
+38
+5
+55
+18
+8
+28

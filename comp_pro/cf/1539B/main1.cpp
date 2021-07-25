@@ -5,6 +5,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool dictCheck(map<char,int> &dict){
+    for (auto i = dict.begin(); i != dict.end(); i++)
+    {
+        cout << "Char " << i->first 
+        << "\t" << i->second << "\n";
+    }
+    return true;
+    
+}
 bool oneIndextoZero(int &from_pos,int &end_pos){
     from_pos = from_pos - 1;
     end_pos = end_pos - 1;
@@ -33,7 +42,7 @@ int solve(string problem_str,map<char,int> &dict,int from_pos,int to_pos){
     int result=0;
     oneIndextoZero(from_pos,to_pos);
     for(int i=from_pos;i < to_pos+1;i++){
-        result = result + tmp;
+        result = result + dict.at(problem_str.at(i));
     }
 
     return result;
@@ -59,6 +68,7 @@ int main(int argc, char const *argv[])
         cout << "char : " << iter->first << " , multi : " << iter->second << "\n";
     }
     **/
+    dictCheck(dict);    
     for (int i = 0; i < problem_cnt; i++)
     {
         int from_pos,to_pos;
