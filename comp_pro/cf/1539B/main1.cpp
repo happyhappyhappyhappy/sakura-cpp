@@ -5,26 +5,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool oneIndextoZero(int &from_pos,int &end_pos){
+    from_pos = from_pos - 1;
+    end_pos = end_pos - 1;
+    return true;
+}
 bool make_dict(map<char,int> &emp_dict,string problem_str){
     bool can_do=false;
     cout << "Problem String: " << problem_str << "\n";
-    int position = 0;
+    int multi = 1;
     // ここで与えられた文字列から辞書を作成する
     for (int i = 0; i < problem_str.size(); i++)
     {
         if(emp_dict.count(problem_str.at(i))==0){
-
+            emp_dict.insert(make_pair(problem_str.at(i),multi));
+            multi = multi + 1;
+            can_do = true;
         }
-        /* code */
     }
     
     // can_do=true;
     return can_do;
 }
-int solve(map<char,int> &dict,int from_pos,int to_pos){
-    cout << "From : " << from_pos-1 
-    << " -> To : " << to_pos-1 << "\n";
+int solve(string problem_str,map<char,int> &dict,int from_pos,int to_pos){
+    // cout << "From : " << from_pos-1 
+    // << " -> To : " << to_pos-1 << "\n";
     int result=0;
+    oneIndextoZero(from_pos,to_pos);
+    for(int i=from_pos;i < to_pos+1;i++){
+        result = result + tmp;
+    }
+
     return result;
 }
 int main(int argc, char const *argv[])
@@ -42,11 +53,17 @@ int main(int argc, char const *argv[])
         cout << "Error String:" << problem_str << "\n";
         return 2;
     }
+    /**
+      for (auto iter=dict.begin(); iter != dict.end(); iter++)
+    {
+        cout << "char : " << iter->first << " , multi : " << iter->second << "\n";
+    }
+    **/
     for (int i = 0; i < problem_cnt; i++)
     {
         int from_pos,to_pos;
         cin >> from_pos >> to_pos;
-        int answer = solve(dict,from_pos,to_pos);
+        int answer = solve(problem_str,dict,from_pos,to_pos);
         cout << answer << "\n";        
     }
     return 0;
