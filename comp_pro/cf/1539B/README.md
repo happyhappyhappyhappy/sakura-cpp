@@ -14,6 +14,9 @@
   * よく考えると、指定した位置から位置まで逐一調べるだけでも良さそうな気もしてきた
 
 -----
+# 完了したが大きいデータでTLEが起こる
+[結果](https://codeforces.com/problemset/submission/1539/123788108)
+-----
 ### 参考リンク
 * [Mapの使い方](http://vivi.dyndns.org/tech/cpp/map.html)
 * [文字列関数を使いこなす](https://qiita.com/MasahiroBW/items/3f56b22a079cd3272cd3)

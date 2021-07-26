@@ -12,27 +12,23 @@ bool dictCheck(map<char,int> &dict){
         << "\t" << i->second << "\n";
     }
     return true;
-    
 }
 bool oneIndextoZero(int &from_pos,int &end_pos){
     from_pos = from_pos - 1;
     end_pos = end_pos - 1;
     return true;
 }
-bool make_dict(map<char,int> &emp_dict,string problem_str){
+bool make_dict(map<char,int> &emp_dict){
     bool can_do=false;
-    cout << "Problem String: " << problem_str << "\n";
+ //   cout << "Problem String: " << problem_str << "\n";
     int multi = 1;
     // ここで与えられた文字列から辞書を作成する
-    for (int i = 0; i < problem_str.size(); i++)
+    for (int i = int('a'); i <= int('z'); i++)
     {
-        if(emp_dict.count(problem_str.at(i))==0){
-            emp_dict.insert(make_pair(problem_str.at(i),multi));
-            multi = multi + 1;
-            can_do = true;
-        }
+        emp_dict.insert(make_pair(char(i),multi));
+        multi = multi + 1;
+        can_do = true;
     }
-    
     // can_do=true;
     return can_do;
 }
@@ -58,7 +54,7 @@ int main(int argc, char const *argv[])
     // ↑ 問題の文字列が解析できたら都度main関数内で処理するようロジック設定
     cin >> tmp >> problem_cnt;
     cin >> problem_str;
-    if(make_dict(dict,problem_str)==false){
+    if(make_dict(dict)==false){
         cout << "Error String:" << problem_str << "\n";
         return 2;
     }
@@ -68,7 +64,8 @@ int main(int argc, char const *argv[])
         cout << "char : " << iter->first << " , multi : " << iter->second << "\n";
     }
     **/
-    dictCheck(dict);    
+    // dictCheck(dict);    
+
     for (int i = 0; i < problem_cnt; i++)
     {
         int from_pos,to_pos;
