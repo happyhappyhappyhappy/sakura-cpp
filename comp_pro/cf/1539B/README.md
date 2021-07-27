@@ -15,7 +15,12 @@
 
 -----
 # 完了したが大きいデータでTLEが起こる
-[結果](https://codeforces.com/problemset/submission/1539/123788108)
+[結果1](https://codeforces.com/problemset/submission/1539/123788108)
+[結果2](https://codeforces.com/contest/1539/submission/123884877)
+
+* 累積和を使って見ようか
+[他人の解答](https://codeforces.com/contest/1539/status/B)
+\[問題番号\\status\\\問題コード\\]で見に行ける
 -----
 ### 参考リンク
 * [Mapの使い方](http://vivi.dyndns.org/tech/cpp/map.html)
