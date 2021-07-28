@@ -6,3 +6,5 @@ testcase_*.txt
 *result*.txt
 *test*.txt
 *tmp*.*
+*.tar
+*.tgz
