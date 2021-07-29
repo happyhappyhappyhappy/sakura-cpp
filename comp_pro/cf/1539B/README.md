@@ -23,8 +23,12 @@
 
 
 * \[問題番号\\status\\問題コード\\]で見に行ける
+
+* [結果](https://codeforces.com/contest/1539/submission/124075767)
+  * 段違いに実行時間が異なる
 -----
 ### 参考リンク
 * [Mapの使い方](http://vivi.dyndns.org/tech/cpp/map.html)
 * [文字列関数を使いこなす](https://qiita.com/MasahiroBW/items/3f56b22a079cd3272cd3)
 * [make_pair関数](https://cpprefjp.github.io/reference/utility/make_pair.html)
+* [累積和→重要](https://qiita.com/drken/items/56a6b68edef8fc605821)

@@ -5,6 +5,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+long accu_sum(vector<long> &acc,long from_pos,long to_pos){
+    long result;
+    result = acc[to_pos]-acc[from_pos-1];
+    return result;
+}
+
 bool setAccumrate(vector<long> &acc,string problem_str){
     bool result = false;
     int a_code = int('a');
@@ -30,14 +37,12 @@ int main(int argc, char const *argv[])
     cin >> problem_str;
     vector<long> acc(100007);
     setAccumrate(acc,problem_str);
-    for (long i = 0; i < string_size+1; i++)
-    {
-        cout << acc[i] << " ";
-    }
-    cout << "\n";
     for(long i = 0; i < problem_no;i++){
-        // ignore
-        long tmp1;
+        long from_pos,to_pos;
+        cin >> from_pos >> to_pos;
+        long answer;
+        answer = accu_sum(acc,from_pos,to_pos);
+        cout << answer << "\n";
     }
     return 0;
 }
