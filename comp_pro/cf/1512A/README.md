@@ -12,3 +12,4 @@
 -----
 ### 参考
 * [範囲for文](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
+* [配列のコピー](https://en.cppreference.com/w/cpp/algorithm/copy)
