@@ -5,8 +5,9 @@
 ## [この問題の結果](https://codeforces.com/contest/1512/status)
 
 -----
-ヒント
 
+ヒント
+* スパイ以外の数値を見つける一番確実な方法は？
 
 
 -----
@@ -16,3 +17,4 @@
 * [配列のコピー2](https://bit.ly/37do1N0)
 * 配列の再定義[日](https://cpprefjp.github.io/reference/vector/vector/resize.html)[英基本](https://en.cppreference.com/w/cpp/container/vector/resize)
 * ランダム数を作る:やってみたいだけ[英語](https://en.cppreference.com/w/cpp/numeric/random)[日本語](https://cpprefjp.github.io/reference/random.html)
+* Vector関連変数の並び替えSTL[日本語](https://cpprefjp.github.io/reference/algorithm/sort.html)[英語](https://en.cppreference.com/w/cpp/algorithm/sort)
