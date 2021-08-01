@@ -14,3 +14,5 @@
 * [範囲for文](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
 * [配列のコピー](https://en.cppreference.com/w/cpp/algorithm/copy)
 * [配列のコピー2](https://bit.ly/37do1N0)
+* 配列の再定義[日](https://cpprefjp.github.io/reference/vector/vector/resize.html)[英基本](https://en.cppreference.com/w/cpp/container/vector/resize)
+* ランダム数を作る:やってみたいだけ[英語](https://en.cppreference.com/w/cpp/numeric/random)[日本語](https://cpprefjp.github.io/reference/random.html)
