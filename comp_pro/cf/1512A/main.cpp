@@ -5,11 +5,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int check_spy(int memberNo,vector<int> member_call){
-    vector<int> sorted_call(memberNo);
-    for(int j=0;j<memberNo;j=j+1){
-        sorted_call.at[j] = sorted_call.at[j];
+int check_process(vector<int>& org_call,vector<int>& check_call){
+    int result = -1;
+    sort(check_call.begin(),check_call.end(),
+    [](int a,int b)
+    {
+        return a < b;
+    });
+    for(int j=0;j<org_call.size();j=j+1){
+        if(check_call.at(1) != org_call.at(j)){
+            result = j+1;
+        }
     }
+    return result;
+}
+
+int copy_callList(vector<int>& from_data,vector<int>& to_data){
+    int result = -1;
+    copy(from_data.begin(),from_data.end(),back_inserter(to_data));
+    return result;
+}
+
+int check_spy(int memberNo,vector<int>& member_call){
+    int result=-1;
+    vector<int> sorted_call;
+    copy_callList(member_call,sorted_call);
+    result = check_process(member_call,sorted_call);
+    return result;
 }
 
 int main(int argc, char const *argv[])
@@ -23,11 +45,10 @@ int main(int argc, char const *argv[])
         int member;
         cin >> member;
         vector<int> member_call (member);
-        for(int e:member_call){
+        for(int& e:member_call){
             cin >> e;
         }
         cout << check_spy(member,member_call) << "\n";
- 
     }
     
 
