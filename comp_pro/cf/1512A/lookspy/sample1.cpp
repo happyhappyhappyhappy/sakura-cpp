@@ -7,7 +7,23 @@ using namespace std;
 
 int loopup_spy(vector<int>& callNum,vector<int>& copy_callNum){
     int result= -1;
-    
+    sort(copy_callNum.begin(),copy_callNum.end(),[](int a,int b)
+    { return b < a ;}
+    );
+    /**
+    cout << "---- Sorted Vector ----" << "\n";
+    for (auto&e :copy_callNum)
+    {
+        cout << e << " ";
+    }
+    cout << "\n"; **/
+    // int checkNum = copy_callNum.at(1);
+    for(int j=0;j<callNum.size();j=j+1){
+        if(callNum.at(j) != copy_callNum.at(1))
+        {
+            result = j+1;
+        }
+    }
     return result;
 }
 
