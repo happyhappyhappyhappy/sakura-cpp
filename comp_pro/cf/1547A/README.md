@@ -11,4 +11,11 @@
  ---->
 
 -----
+
 ヒント
+
+-----
+
+## 参考にしたサイト
+
+* [絶対値(一般的)](https://cpprefjp.github.io/reference/cmath/fabs.html)
