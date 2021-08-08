@@ -1,13 +1,14 @@
-# Shortest Path with Obstacle
+# \[1547A\]\<Shortest Path with Obstacle\>
 
-# 最も短い障害物ありのパスの長さは？
+## [問題のURL](https://codeforces.com/problemset/problem/1547/A)
 
+## [解説のURL](https://codeforces.com/blog/entry/92715)
 
-[Problem](https://codeforces.com/problemset/problem/1547/A)
+## [この問題の結果](https://codeforces.com/contest/1547/status/A)
 
-## ヒント
+<!---- 「問題の結果の見方」
+ PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
+ ---->
 
-問題にでる3つのポイントA,B,Fについて次の様に分ける
-1. もしA,B,F全部,X軸Y軸異なる座標な場合→単純にA,Bの距離で計算
-1. もしA,B,FがX軸Y軸同じ場合
-    1. AとBの間にFが挟まる場合->2プラスする
+-----
+ヒント
