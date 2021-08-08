@@ -5,6 +5,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool mymin(size_t &base,size_t &check)
+{
+    bool result = false;
+    if(base > check){
+        base = check;
+        return true;
+    }
+    return result;
+}
+
+bool mymax(size_t &base,size_t &check)
+{
+    bool result = false;
+    if(base < check){
+        base = check;
+        return true;
+    }
+    return result;
+}
+
 bool resolve(string &getString){
     bool result = false;
     size_t length = getString.size();
@@ -25,15 +45,15 @@ bool resolve(string &getString){
             return result;
         }
         else{
-           min(L,find_code);
-           max(R,find_code);
+           mymin(L,find_code);
+           mymax(R,find_code);
            cout << "L : " << L << " ; R : " << R << "\n"; 
 
         }
         /* code */
     }
     
-
+    result = true;
     return result;
 }
 

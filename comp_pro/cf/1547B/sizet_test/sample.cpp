@@ -5,6 +5,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool mymin(int &base,int &check)
+{
+    bool result = false;
+    if(base > check){
+        base = check;
+        return true;
+    }
+    return result;
+}
+
+bool mymax(int &base,int &check)
+{
+    bool result = false;
+    if(base < check){
+        base = check;
+        return true;
+    }
+    return result;
+}
+
 int main(int argc, char const *argv[])
 {
     size_t t = sizeof('z');
@@ -18,6 +38,6 @@ int main(int argc, char const *argv[])
         cout << "Not Find!! a\n";
         return 10;
     }
-    cout << "testStr.find() :" << t1 << "\n";
+    // cout << "testStr.find() :" << t1 << "\n";
     return 0;
 }
