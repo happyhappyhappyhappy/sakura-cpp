@@ -6,6 +6,10 @@
 
 ## [この問題の結果](https://codeforces.com/contest/1547/status/B)
 
+## 完了
+
+* [投稿リンク](https://codeforces.com/problemset/submission/1547/125186067)
+
 <!----
 PROBLEMS→問題番号一覧→回答者数→accepted 
 ----->
@@ -15,6 +19,12 @@ PROBLEMS→問題番号一覧→回答者数→accepted
 ## ヒント
 
 * とりあえず'a'を見つけて、後は右と左で探索
+
+## 考えたところ
+
+* 模範解答にはmin,max関数を使っているがここでは自動的に値を切り替える独自の関数を作成
+
+* もしかしたら入力はscanf,出力はputとすればもっと速くなる＋メモリ使わないか
 
 -----
 
