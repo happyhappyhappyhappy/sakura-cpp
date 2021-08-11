@@ -1,4 +1,4 @@
-# \[問題番号\]\<問題名\>
+# \[A\]\<Flog\>
 
 ## [問題のURL](https://atcoder.jp/contests/dp/tasks/dp_a)
 
