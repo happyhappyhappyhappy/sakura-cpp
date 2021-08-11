@@ -13,3 +13,13 @@
 -----
 
 ヒント
+
+-----
+
+## 自分の提出
+
+### [貰う型DP](https://atcoder.jp/contests/dp/submissions/24954182)
+
+### [与える型DP](https://atcoder.jp/contests/dp/submissions/24954182)←まだ更新していない
+
+### [再帰メモ化](https://atcoder.jp/contests/dp/submissions/24954182)←まだ更新していない
