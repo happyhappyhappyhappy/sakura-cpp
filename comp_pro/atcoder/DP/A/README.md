@@ -23,6 +23,6 @@
 
 ### [貰う型DP](https://atcoder.jp/contests/dp/submissions/24954182)
 
-### [与える型DP](https://atcoder.jp/contests/dp/submissions/24969125)←まだ更新していない
+### [与える型DP](https://atcoder.jp/contests/dp/submissions/24969125)
 
 ### [再帰メモ化](https://atcoder.jp/contests/dp/submissions/24954182)←まだ更新していない
