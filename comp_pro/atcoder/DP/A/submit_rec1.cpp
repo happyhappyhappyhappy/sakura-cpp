@@ -20,7 +20,7 @@ template<class XXX> inline bool chmin(XXX &x,XXX y){
 
 ll rec(vector<ll> &dp,vector<ll> &height,ll nowPosition){
     ll result = PLUS_MAX;
-    if(nowPosition = 0){
+    if(nowPosition == 0){
         result = 0;
         return result;
     }
@@ -32,26 +32,21 @@ ll rec(vector<ll> &dp,vector<ll> &height,ll nowPosition){
     +abs(height[nowPosition-2]-height[nowPosition]));
     }
     dp[nowPosition] = result;
-    cout << "dp in " << nowPosition << "\t" << dp[nowPosition] << "\n";
     return result;
 }
 
 ll resolve(void){
-    cout << "resulve()\n" ;
     ll result = PLUS_MAX;
-    vector<ll> dp(BOX_SIZE);
-    vector<ll> height(BOX_SIZE);
+    vector<ll> dp(100010);
+    vector<ll> height(100010);
     ios_base::sync_with_stdio(false);
-    cout << "resolve\n";
     cin.tie(nullptr);
     ll problem_size=0;
     cin >> problem_size;
-    cout << "size\n";
     for (ll i = 0; i < BOX_SIZE; i++)
     {
         height[i] = PLUS_MAX;
     }
-    
     for(ll i = 0;i<problem_size;i++){
         cin >> height[i];
     }
@@ -67,7 +62,6 @@ int main(void)
     int testcase=1;
     for (int i = 0; i < testcase; i++)
     {
-        cout << "return\n" ;
         cout << resolve() << "\n";
     }
     
