@@ -8,6 +8,7 @@ using ll=long long;
 
 ll PLUS_MAX = 1LL<<60;
 ll BOX_SIZE = 100010;
+ll call_rec;
 
 
 template<class XXX> inline bool chmin(XXX &x,XXX y){
@@ -20,21 +21,24 @@ template<class XXX> inline bool chmin(XXX &x,XXX y){
 }
 
 ll rec(vector<ll> &dp,vector<ll> &height,ll nowPosition){
+
     ll result = PLUS_MAX;
-    if(dp.at(nowPosition) != PLUS_MAX){
-        result = dp[nowPosition];
-        return result;
-    }
+    // if(dp.at(nowPosition) != PLUS_MAX){
+    //    result = dp[nowPosition];
+    //    return result;
+    // }
     if(nowPosition == 0){
         result = 0;
         return result;
     }
     chmin(result,rec(dp,height,nowPosition-1)+
     abs(height.at(nowPosition)-height.at(nowPosition-1)));
+    call_rec = call_rec + 2;
     if(1 < nowPosition){
     chmin(result,
     rec(dp,height,nowPosition-2)
     +abs(height[nowPosition-2]-height[nowPosition]));
+    call_rec = call_rec + 2;
     }
     dp[nowPosition] = result;
     return result;
@@ -67,7 +71,9 @@ int main(void)
     int testcase=1;
     for (int i = 0; i < testcase; i++)
     {   
+        call_rec=0;
         cout << resolve() << "\n";
+        cout << "recが呼ばれた回数\t" << call_rec << "\n";
     }
     
     return 0;
