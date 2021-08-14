@@ -13,7 +13,7 @@ ll solve(void){
     ll person;
     ll needpizza;
     cin >> person;
-    if(person & 1){
+    if(person & 1){ // もしかしてこの段階で計算してる？
         needpizza = (person + 1) ;
     }
     {
@@ -39,10 +39,10 @@ int main(void)
 --- in
 6
 12
-15 ← ?
+15 ← ? <- 16だとあってる？
 300
 1
-9999999999999999 <- ?
+9999999999999999 <- 10000000とかはどう？
 3
 --- out
 30
