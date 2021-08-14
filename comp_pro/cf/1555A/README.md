@@ -10,6 +10,8 @@
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
 
+## [自分の提出](https://codeforces.com/contest/1555/submission/125829006)
+
 -----
 ヒント
 

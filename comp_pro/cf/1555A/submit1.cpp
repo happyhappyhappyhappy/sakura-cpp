@@ -13,10 +13,14 @@ ll solve(void){
     ll person;
     ll needpizza;
     cin >> person;
-    if(person & 1){ // もしかしてこの段階で計算してる？
+    if(person < 7){
+        result = 15;
+        return result;
+    }
+    if(person & 1){ // もしかしてこの段階で計算してる？ ← 関係なし
         needpizza = (person + 1) ;
     }
-    {
+    else{// else抜かすとここの計算すべてしてしまう
         needpizza = person ;
     }
     result = ll((needpizza * 5) / 2);
