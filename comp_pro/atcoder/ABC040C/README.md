@@ -12,3 +12,5 @@
 
 -----
 ヒント
+
+* [これ](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#%E9%A1%9E%E9%A1%8C)の類題として紹介。
