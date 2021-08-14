@@ -14,3 +14,7 @@
 ヒント
 
 * [これ](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#%E9%A1%9E%E9%A1%8C)の類題として紹介。
+
+* [テンプレートの書き方](https://rinatz.github.io/cpp-book/ch09-01-function-templates/)
+
+* 最大値を表したいときは`1LL << 60`で表現する。1を60回左へ移動するということを覚えれば良いか。
