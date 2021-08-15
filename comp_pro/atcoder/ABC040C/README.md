@@ -6,6 +6,10 @@
 
 ## [この問題の結果](https://atcoder.jp/contests/abc040/submissions?f.Task=abc040_c&f.LanguageName=&f.Status=AC&f.User=)
 
+## [提出結果](https://atcoder.jp/contests/abc040/submissions/25074824)
+
+* 2021年8月15日段階は配るDPで行っております。
+
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
@@ -18,3 +22,5 @@
 * [テンプレートの書き方](https://rinatz.github.io/cpp-book/ch09-01-function-templates/)
 
 * 最大値を表したいときは`1LL << 60`で表現する。1を60回左へ移動するということを覚えれば良いか。
+
+* 確かに回答に掛かった時間は少ない。
