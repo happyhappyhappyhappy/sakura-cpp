@@ -20,6 +20,8 @@ ll resolve(void){
     ll stair_num;
     ll break_sum;
     cin >> stair_num >> break_sum;
+// TODO: むやみに範囲For文を使うとややこしくなるので一旦消して書き直す
+// 標準入力文のみ。
     for(ll &e:dp){
         e = default_comv;
     }
@@ -35,13 +37,30 @@ ll resolve(void){
         }
         // 壊れている段にtrueのマークを付ける
     }
-
+    // 
+    for(ll &e:stair_broke_point){
+        stair_broken[e] = true;
+    }
     dp[0] = 0;
-    if(!stair_broken[1])dp[1] = 1;
-    if(!stair_broken[2])dp[2] = 2;
+    if(stair_broken[1] == false){ // 一段目壊れてない
+        dp[1] = 1; // 一通り
+    }
+    else{// 一段目壊れた
+        dp[1] = 0; // 無し
+    }
+    dp[2] = dp[1] + 1;
+    if(stair_broken[2] == true){
+        dp[2] = 0;
+    }
+    
+
     for(ll j=3;j<=stair_num;j++){
         dp[j] = dp[j-1] + dp[j-2];
+        if(stair_broken[j] == true){
+        dp[j] = 0;
+        }
     }
+    
     result = dp[stair_num];
     return result;
 }
