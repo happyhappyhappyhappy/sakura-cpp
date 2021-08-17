@@ -31,15 +31,40 @@ ll resolve(void){
     for(ll &e:stair_broke_point){
         e = -1;
     }
-    if(break_sum != 0){
-        for(ll &e:stair_broke_point){
+    // check
+    cout << "Line 35 is OK\n";
+    if(break_sum != 0)
+    {
+        /** 
+        for(ll &e:stair_broke_point)
+        {
             cin >> e;
         }
-        // 壊れている段にtrueのマークを付ける
-    }
-    // 
-    for(ll &e:stair_broke_point){
-        stair_broken[e] = true;
+        **/
+        for(ll j=0;j<break_sum;j++)
+        {
+            ll e;
+            cin >> e;
+            cout << e << "\n";
+            stair_broke_point[j] = e;
+        }
+        cout << "\nThis Line is OK\n";
+        // TODO: ここから火種になっている感じ
+        for(ll j=0;j<break_sum;j++){
+            stair_broken[stair_broke_point] = true;
+        }
+        // TODO:　この4行正しくして確認する
+        // もしかしたら true,falseは出ないかもしれない
+        for(ll j=0;j<=stair_num;j++){
+            
+            cout << stair_broken[j] << "\t";
+        }
+        cout << "\n";
+        /** for(ll &e:stair_broke_point)
+        {
+            stair_broken[e] = true;
+        }
+        **/
     }
     dp[0] = 0;
     if(stair_broken[1] == false){ // 一段目壊れてない
