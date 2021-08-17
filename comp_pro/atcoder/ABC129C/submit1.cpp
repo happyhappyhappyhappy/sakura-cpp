@@ -50,6 +50,7 @@ ll resolve(void){
         }
         cout << "\nThis Line is OK\n";
         // TODO: ここから火種になっている感じ
+        // true,falseのvector型はやめてしまおうか
         for(ll j=0;j<break_sum;j++){
             stair_broken[stair_broke_point] = true;
         }
