@@ -15,32 +15,22 @@ ll resolve(void){
     cin.tie(nullptr);
     ll result=0;
     vector<long long> dp(dpsize);
-    vector<bool> stair_broken(dpsize);
+    vector<int> stair_broken(dpsize);
     vector<ll> stair_broke_point(dpsize);
     ll stair_num;
     ll break_sum;
     cin >> stair_num >> break_sum;
-// TODO: むやみに範囲For文を使うとややこしくなるので一旦消して書き直す
-// 標準入力文のみ。
     for(ll j=0;j<dpsize;j++){
         dp[j] = default_comv;
     }
     for(ll j=0;j<dpsize;j++){
-        stair_broken[j] = false;
+        stair_broken[j] = 0;
     }
     for(ll j=0;j<dpsize;j++){ 
         stair_broke_point[j]=-1;
     }
-    // check
-    cout << "Line 35 is OK\n";
     if(break_sum != 0)
     {
-        /** 
-        for(ll &e:stair_broke_point)
-        {
-            cin >> e;
-        }
-        **/
         for(ll j=0;j<break_sum;j++)
         {
             ll e;
@@ -48,41 +38,26 @@ ll resolve(void){
             cout << e << "\n";
             stair_broke_point[j] = e;
         }
-        cout << "\nThis Line is OK\n";
-        // TODO: ここから火種になっている感じ
-        // true,falseのvector型はやめてしまおうか
         for(ll j=0;j<break_sum;j++){
             stair_broken[stair_broke_point[j]] = 1;
         }
-        // TODO:　この4行正しくして確認する
-        // もしかしたら true,falseは出ないかもしれない
-        for(ll j=0;j<=stair_num;j++){
-            
-            cout << stair_broken[j] << "\t";
-        }
-        cout << "\n";
-        /** for(ll &e:stair_broke_point)
-        {
-            stair_broken[e] = true;
-        }
-        **/
     }
     dp[0] = 0;
-    if(stair_broken[1] == false){ // 一段目壊れてない
+    if(stair_broken[1] == 0){ // 一段目壊れてない
         dp[1] = 1; // 一通り
     }
     else{// 一段目壊れた
         dp[1] = 0; // 無し
     }
     dp[2] = dp[1] + 1;
-    if(stair_broken[2] == true){
+    if(stair_broken[2] == 1){
         dp[2] = 0;
     }
     
 
     for(ll j=3;j<=stair_num;j++){
         dp[j] = dp[j-1] + dp[j-2];
-        if(stair_broken[j] == true){
+        if(stair_broken[j] == 1){
         dp[j] = 0;
         }
     }
