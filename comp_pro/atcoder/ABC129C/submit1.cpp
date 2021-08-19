@@ -22,14 +22,14 @@ ll resolve(void){
     cin >> stair_num >> break_sum;
 // TODO: むやみに範囲For文を使うとややこしくなるので一旦消して書き直す
 // 標準入力文のみ。
-    for(ll &e:dp){
-        e = default_comv;
+    for(ll j=0;j<dpsize;j++){
+        dp[j] = default_comv;
     }
     for(ll j=0;j<dpsize;j++){
         stair_broken[j] = false;
     }
-    for(ll &e:stair_broke_point){
-        e = -1;
+    for(ll j=0;j<dpsize;j++){ 
+        stair_broke_point[j]=-1;
     }
     // check
     cout << "Line 35 is OK\n";
@@ -52,7 +52,7 @@ ll resolve(void){
         // TODO: ここから火種になっている感じ
         // true,falseのvector型はやめてしまおうか
         for(ll j=0;j<break_sum;j++){
-            stair_broken[stair_broke_point] = true;
+            stair_broken[stair_broke_point[j]] = 1;
         }
         // TODO:　この4行正しくして確認する
         // もしかしたら true,falseは出ないかもしれない
