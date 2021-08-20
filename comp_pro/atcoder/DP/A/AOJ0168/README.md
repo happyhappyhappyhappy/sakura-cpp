@@ -15,3 +15,18 @@
 ### ヒント
 
 * 2段が3段になった類題
+
+* `0`を最終行とする点はちょっと回答を参照する。
+
+```c++
+while(true){
+    long long input_data;
+    cin >> input_data;
+    if(input_data == 0)
+        break; // これで処理終了
+    (以下略)
+}
+
+```
+
+という感じだ。
