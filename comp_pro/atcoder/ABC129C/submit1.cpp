@@ -35,7 +35,7 @@ ll resolve(void){
         {
             ll e;
             cin >> e;
-            cout << e << "\n";
+//            cout << e << "\n";
             stair_broke_point[j] = e;
         }
         for(ll j=0;j<break_sum;j++){
@@ -56,7 +56,7 @@ ll resolve(void){
     
 
     for(ll j=3;j<=stair_num;j++){
-        dp[j] = dp[j-1] + dp[j-2];
+        dp[j] = (dp[j-1] + dp[j-2]) % modnum;
         if(stair_broken[j] == 1){
         dp[j] = 0;
         }
