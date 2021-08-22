@@ -8,6 +8,11 @@ using ll=long long;
 static ll dptable=35;
 static ll default_comv=0;
 
+ll solver(vector<ll>& dp,ll position){
+    ll answer = 0;
+    answer = (dp[position]+3650)/3650;
+    return answer;
+}
 bool dp_init(vector<ll>& dp){
     bool result=true;
     for(ll j=0;j<dptable;j++){
@@ -17,11 +22,15 @@ bool dp_init(vector<ll>& dp){
 }
 bool dp_process(vector<ll>& dp){
     bool result=true;
+    dp[0] = 0;
+    dp[1] = dp[0] + 1;
+    dp[2] = dp[1] + 1;
+    dp[3] = dp[2] + dp[1] + 1;
+    for(ll j=4;j<=dptable;j=j+1){
+        dp[j] = dp[j-1] + dp[j-2] + dp[j-3];
+     //   cout << j << "\t" << dp[j] << "\n";
+    }
     return result;
-}
-
-ll solver(vector<ll>& dp,ll input_data){
-    return 0;
 }
 
 int main(void)
@@ -32,10 +41,21 @@ int main(void)
     vector<ll> dp(dptable);
     dp_init(dp);
     dp_process(dp);
+    /**
+    for(ll j=1;j<=10;j++){
+        ll answer ;
+        answer = solver(dp,j);
+        cout << answer << "\n";
+    }**/
     while(true){
+        ll answer=0;
         cin >> input_data;
-
+        if(input_data == 0){
+            // 処理終了
+            break;
+        }
+        answer = solver(dp,input_data);
+        cout << answer << "\n";
     }
-
     return 0;
 }

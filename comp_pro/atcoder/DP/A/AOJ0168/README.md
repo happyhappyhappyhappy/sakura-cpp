@@ -1,6 +1,6 @@
 # \[AOJ0168\]\<観音堂\>
 
-## [問題のURL](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0168)
+## [問題のURL](https://onlinejudge.u-aizu.ac.jp/problems/0168)
 
 ## [この問題の結果](https://judge.u-aizu.ac.jp/onlinejudge/solution.jsp?pid=0168)
 
