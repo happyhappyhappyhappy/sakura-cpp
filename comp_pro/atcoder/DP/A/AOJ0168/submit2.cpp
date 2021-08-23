@@ -1,23 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-const long long dptable = 31;
-const long long default_comv = 0;
+const int dptable = 31;
+const int default_comv = 0;
 
 int main(void){
-    long long dp(dptable);
-    for(long long j=0;j<dptable;j=j+1){
+    vector<int> dp(dptable);
+    for(int j=0;j<dptable;j=j+1){
         dp[j] = default_comv;
     }
     dp[0] = 0;
     dp[1] = 1;
     dp[2] = dp[1] + 1;
     dp[3] = dp[2] + dp[1] + 1;
-    for(long long j=4;j<dptable;j++){
+    for(int j=4;j<dptable;j++){
         dp[j] = dp[j-1] + dp[j-2] + dp[j-3];
     }
     while(true){
-        long long position;
-        long long answer;
+        int position;
+        int answer;
         cin >> position;
         if(position == 0){
             break;

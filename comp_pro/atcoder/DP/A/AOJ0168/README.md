@@ -6,6 +6,8 @@
 
 * 特にC++の拡張に依存している訳でもないので上記リンクは「C++」をセット。
 
+## [完了2021年8月23日](https://onlinejudge.u-aizu.ac.jp/recent_judges/0168/judge/5816269/ymnk_kun/C++)
+
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
