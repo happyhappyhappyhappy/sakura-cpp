@@ -77,17 +77,6 @@ alias ..="cd ../.."
 alias ...="cd ../../.."
 alias ....="cd ../../../.."
 alias .....="cd ../../../../.."
-OR
-alias ..="cd .."
-
-alias ...="cd ../.."
-
-alias ....="cd ../../.."
-
-alias .....="cd ../../../.."
-
-alias ......="cd ../../../../.."
-
 alias .1="cd .."
 
 alias .2="cd ../.."
@@ -130,48 +119,47 @@ alias cd5="cd ../../../../.."
 
 # useful Docker functions
 
-dock-run() { sudo docker run -i -t --privileged $@ ;}
-dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
-dock-log() { sudo docker logs --tail=all -f $@ ;}
-dock-port() { sudo docker port $@ ;}
-dock-vol() { sudo docker inspect --format '{{ .Volumes }}' $@ ;}
-dock-ip() { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
-dock-rmc() { sudo docker rm sudo docker ps -qa --filter 'status=exited' ;}
-dock-rmi() { sudo docker rmi -f sudo docker images | grep '^<none>' | awk '{print $3}' ;}
-dock-stop() { sudo docker stop $(docker ps -a -q); }
-dock-rm() { sudo docker rm $(docker ps -a -q); }
-*dock-do() { if [ "$#" -ne 1 ]; then echo "Usage: $0 start|stop|pause|unpause|" fi
+dock-run() {  docker run -i -t --privileged $@ ;}
+dock-exec() {  docker exec -i -t $@ /bin/bash ;}
+dock-log() {  docker logs --tail=all -f $@ ;}
+dock-port() {  docker port $@ ;}
+dock-vol() {  docker inspect --format '{{ .Volumes }}' $@ ;}
+dock-ip() {  docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
+dock-rmc() {  docker rm  docker ps -qa --filter 'status=exited' ;}
+dock-rmi() {  docker rmi -f  docker images | grep '^<none>' | awk '{print $3}' ;}
+dock-stop() {  docker stop $(docker ps -a -q); }
+dock-rm() {  docker rm $(docker ps -a -q); }
+# *dock-do() { if [ "$#" -ne 1 ]; then echo "Usage: $0 start|stop|pause|unpause|" fi
 
-for c in $(sudo docker ps -a | awk '{print $1}' | sed "1 d") do sudo docker $1 $c done }
+# for c in $( docker ps -a | awk '{print $1}' | sed "1 d") do  docker $1 $c done }
 
 # Kubernetes commands
 
-alias k="kubectl"
-alias ka="kubectl apply -f"
-alias kpa="kubectl patch -f"
-alias ked="kubectl edit"
-alias ksc="kubectl scale"
-alias kex="kubectl exec -i -t"
-alias kg="kubectl get"
-alias kga="kubectl get all"
-alias kgall="kubectl get all --all-namespaces"
-alias kinfo="kubectl cluster-info"
-alias kdesc="kubectl describe"
-alias ktp="kubectl top"
-alias klo="kubectl logs -f"
-alias kn="kubectl get nodes"
-alias kpv="kubectl get pv"
-alias kpvc="kubectl get pvc"
+# alias k="kubectl"
+# alias ka="kubectl apply -f"
+# alias kpa="kubectl patch -f"
+# alias ked="kubectl edit"
+# alias ksc="kubectl scale"
+# alias kex="kubectl exec -i -t"
+# alias kg="kubectl get"
+# alias kga="kubectl get all"
+# alias kgall="kubectl get all --all-namespaces"
+# alias kinfo="kubectl cluster-info"
+# alias kdesc="kubectl describe"
+# alias ktp="kubectl top"
+# alias klo="kubectl logs -f"
+# alias kn="kubectl get nodes"
+# alias kpv="kubectl get pv"
+# alias kpvc="kubectl get pvc"
 # Docker commands
-
-alias dl="sudo docker ps -l -q"
-alias dps="sudo docker ps"
-alias di="sudo docker images"
-alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-alias dkd="sudo docker run -d -P"
-alias dki="sudo docker run -i -t -P"
-alias dex="sudo docker exec -i -t"
-alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
+alias dl=" docker ps -l -q"
+alias dps=" docker ps"
+alias di=" docker images"
+alias dip=" docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias dkd=" docker run -d -P"
+alias dki=" docker run -i -t -P"
+alias dex=" docker exec -i -t"
+alias drmf=' docker stop $( docker ps -a -q) &&  docker rm $( docker ps -a -q)'
 # Estimate file space usage to maximum depth
 
 alias du1="du -d 1"
@@ -241,12 +229,9 @@ alias chgrp='chgrp --preserve-root'
 # Install & Update utilties
 
 alias sai="sudo apt install"
-alias sai="sudo apt-get install"
 alias sau="sudo apt update"
-alias sau="sudo apt-get update"
 alias update="sudo apt update"
-alias update="yum update"
-alias updatey="yum -y update"
+alias upgrade="sudo apt upgrade -y"
 # System state
 
 alias reboot="sudo /sbin/reboot"
@@ -300,27 +285,4 @@ alias most='du -hsx * | sort -rh | head -10'
 # MacOs commands
 
 alias rp='. ~/.bash_profile'
-alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
-About
-A curated list of awesome Bash aliases.
-
-vikaskyadav.github.io/awesome-bash-alias/
-Topics
-bash zsh bashrc zshrc aliases commands-cheat-sheet
-Resources
- Readme
-Releases
-No releases published
-Packages
-No packages published
-Contributors 7
-@vikaskyadav
-@vikasuperman
-@adrianocanofre
-@arandilopez
-@domgoodwin
-@iamhrishikeshpadhye
-@gmhflg
-Environments 1
- github-pages Active
-
+# alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
