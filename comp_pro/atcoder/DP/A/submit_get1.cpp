@@ -32,8 +32,8 @@ int main(){
     /** for(ll j=0;j<point;j++){
         cout << height[j] << "\t";
     }
-    cout << "\n"; **/
-    dp.at(0) = 0;
+    cout << "\n"; **/  
+    dp.at(0) = 0; 
     for(ll j=1;j < point ;j=j+1){
         minchange(dp[j],dp[j-1]+abs(height[j-1]-height[j]));
         if(j > 1){
