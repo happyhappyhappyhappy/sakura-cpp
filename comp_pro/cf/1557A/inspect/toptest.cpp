@@ -10,6 +10,7 @@ void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+    
 #ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
 #else
@@ -17,11 +18,11 @@ void initial(void){
 }
 
 int main(void){
-    const int problem_counts;
-    cin >> problem_counts;
+    cout << fixed << setprecision(10);
+    int problem_counts;
     for (j = 0; j < problem_counts; j++)
     {
-        vector<int> value(5);
+        vector<double> value(5);
         for()
     }
     
