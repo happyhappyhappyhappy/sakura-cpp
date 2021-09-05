@@ -23,7 +23,10 @@ int main(void){
     for (j = 0; j < problem_counts; j++)
     {
         vector<double> value(5);
-        for()
+        for(double& e: value){
+            cin >> e;
+        }
+        cout << "入力結果\n";
     }
     
 }
