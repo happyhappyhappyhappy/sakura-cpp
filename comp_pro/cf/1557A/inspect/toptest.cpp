@@ -3,6 +3,7 @@
 #endif
 #pragma GCC optimize("O3")
 #include<bits/stdc++.h>
+#include<algorithm>
 using namespace std;
 using ll=long long;
 
@@ -27,20 +28,35 @@ int main(void){
         for(double& e: value){
             cin >> e;
         }
-        sort(value.begin,value.end);
+        sort(value.begin(),value.end());
         double top1,top2;
         // 最後の一つだけ以外の平均＋最後の一つ
         double top4ave,top4all;
-        top4ave = 0.0;
-        top4sum = 0.0;
+        double top4sum = 0.0;
         for(int m;m<4;m=m+1){
             top4sum = top4sum+value[m];
         }
+        cout << "top4sum = " << top4sum << "\n";
         top1 = top4sum / 4.0 + value[4];
-        top3ave = 0.0;
-        top3last2 = 0.0;
-        top3sum = 0.0;
-        top3last2sum = 0.0;
+        cout << "top1 = " << top1 << "\n";
+        double top3ave = 0.0;
+        double top3last2 = 0.0;
+        double top3avesum = 0.0;
+        double top3last2sum = 0.0;
+        for(int m=0;m<3;m=m+1){
+            top3avesum = top3avesum + value[m];
+        }
+        for(int m=3;m<value.size();m=m+1){
+            top3last2sum = top3last2sum + value[m];
+        }
+        top2 = (top3avesum / 3.0) + (top3last2sum / 2.0);
+        cout << top2 << " ? " << top1 << "\n";
+        if( top2 < top1){
+            cout << "This case is top1 max\n";
+        }
+        else{
+            cout << "This case is top2 max\n";
+        }
     }
     
 }
