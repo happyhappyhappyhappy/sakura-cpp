@@ -33,12 +33,10 @@ int main(void){
         // 最後の一つだけ以外の平均＋最後の一つ
         double top4ave,top4all;
         double top4sum = 0.0;
-        for(int m;m<4;m=m+1){
+        for(int m=0;m<4;m=m+1){
             top4sum = top4sum+value[m];
         }
-        cout << "top4sum = " << top4sum << "\n";
         top1 = top4sum / 4.0 + value[4];
-        cout << "top1 = " << top1 << "\n";
         double top3ave = 0.0;
         double top3last2 = 0.0;
         double top3avesum = 0.0;

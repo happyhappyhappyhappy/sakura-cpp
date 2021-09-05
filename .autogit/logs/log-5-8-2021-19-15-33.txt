@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Sep 05 2021 19:15:33 GMT+0900 (Japan Standard Time)
+------------------------------------------------------
+
+Modified files:
+* comp_pro/cf/1557A/inspect/toptest.cpp
+
+
+Created files:
+* .autogit/logs/log-5-8-2021-18-45-26.txt
+
+
+Deleted files:
+
+
+Renamed files:
