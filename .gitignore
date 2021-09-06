@@ -2,9 +2,7 @@ a.out
 *.out
 *.o
 out*.txt
-testcase_*.txt
 *result*.txt
-*test*.txt
 *tmp*.*
 *.tar
 *.tgz
