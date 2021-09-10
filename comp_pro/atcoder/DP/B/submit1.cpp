@@ -4,8 +4,6 @@
 #pragma GCC optimize("O3")
 #include<bits/stdc++.h>
 using namespace std;
-using ll=long long;
-const ll INF=1LL << 62;
 
 template<class XXX> inline bool minchange(XXX &a,XXX b){
     if( b < a){
@@ -23,25 +21,31 @@ void initial(void){
 }
 
 int main(void){
+    initial();
     int N,K;
     cin >> N >> K;
-    vector<int> h(N);
-    for(auto &e:h){
-        cin >> e;
+    const int LIMITAREA = 200000;
+    const int LIMITMAX = 1<<15;
+    vector<int> H(LIMITAREA);
+    vector<int> DP(LIMITAREA);
+    for(int j=0;j<LIMITAREA;j=j+1){
+        H[j] = LIMITMAX;
+        DP[j] = LIMITMAX;
+    }
+    for(for j=0;j<N;j=j+1){
+        cin >> h[j];
     }
     // for(auto &e:h){
     //     cout << e << " ";
     // }
     // cout << "\n";
-    vector<ll> dp(N+K+1);
-    for(auto &e:dp){
-        e = INF;
-    }
     dp[0] = 0;
-    for(int j=0;j < N+1;j=j+1){
+    for(int j=0;j < N;j=j+1){
         for(int m=0; m < K ; m = m + 1){
-            int cost=1;
-
+           int frompos,topos;
+           frompos = j;
+           topos = j+m+1;
+           // 2021/09/11 はここの実装から
         }
     }
 }

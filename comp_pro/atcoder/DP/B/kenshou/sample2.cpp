@@ -11,22 +11,21 @@ void initial(void){
 int main(void){
     initial();
     int N,K;
-    char strbuf[1LL<15];
+    char strbuf[1<<15];
 // STR の　文字列は関数に埋め込む
-    const char* STR="DP[%d]=DP[%d]+abs(H[%d]-H[%d])\n";
+// const char* STR="DP[%d]=DP[%d]+abs(H[%d]-H[%d])\n";
     cin >> N >> K;
     cout << N << K << "\n";
     for(int j=0;j<N;j=j+1){
         for(int m=0;m<K;m=m+1){
-            cout << "ROOP\n";
             int return_tmp;
             int from_pos,to_pos;
             from_pos = j;
             to_pos = j + m + 1;
             return_tmp = snprintf(strbuf,sizeof(strbuf),
-            STR,// 必要な文字列に変更　それでもダメなら並べるだけ
+            "DP[%d]=DP[%d]+abs(H[%d]-H[%d])\n",
             to_pos,from_pos,to_pos,from_pos);
-            cout << strbuf <<  " " << return_tmp <<"  OK\n";            
+            cout << strbuf;
         }
     }
 }
