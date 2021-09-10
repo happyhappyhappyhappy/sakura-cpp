@@ -12,6 +12,7 @@ int main(void){
     initial();
     int N,K;
     char strbuf[1LL<15];
+// STR の　文字列は関数に埋め込む
     const char* STR="DP[%d]=DP[%d]+abs(H[%d]-H[%d])\n";
     cin >> N >> K;
     cout << N << K << "\n";
@@ -23,7 +24,7 @@ int main(void){
             from_pos = j;
             to_pos = j + m + 1;
             return_tmp = snprintf(strbuf,sizeof(strbuf),
-            STR,
+            STR,// 必要な文字列に変更　それでもダメなら並べるだけ
             to_pos,from_pos,to_pos,from_pos);
             cout << strbuf <<  " " << return_tmp <<"  OK\n";            
         }
