@@ -32,20 +32,22 @@ int main(void){
         H[j] = LIMITMAX;
         DP[j] = LIMITMAX;
     }
-    for(for j=0;j<N;j=j+1){
-        cin >> h[j];
+    for(int j=0;j<N;j=j+1){
+        cin >> H[j];
     }
     // for(auto &e:h){
     //     cout << e << " ";
     // }
     // cout << "\n";
-    dp[0] = 0;
+    DP[0] = 0;
     for(int j=0;j < N;j=j+1){
-        for(int m=0; m < K ; m = m + 1){
+        for(int m=1; m < K+1 ; m = m + 1){
            int frompos,topos;
            frompos = j;
-           topos = j+m+1;
-           // 2021/09/11 はここの実装から
+           topos = j+m;
+           minchange(DP[topos],DP[frompos]+abs(H[topos]-H[frompos]));
         }
     }
+    cout << DP[N-1] << "\n";
+    return 0;
 }

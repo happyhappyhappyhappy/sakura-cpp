@@ -78,5 +78,8 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "git.postCommitCommand": "push",
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.tree.renderIndentGuides": "always"
 }

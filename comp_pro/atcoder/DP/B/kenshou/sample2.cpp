@@ -17,11 +17,11 @@ int main(void){
     cin >> N >> K;
     cout << N << K << "\n";
     for(int j=0;j<N;j=j+1){
-        for(int m=0;m<K;m=m+1){
+        for(int m=1;m<K+1;m=m+1){
             int return_tmp;
             int from_pos,to_pos;
             from_pos = j;
-            to_pos = j + m + 1;
+            to_pos = j + m;
             return_tmp = snprintf(strbuf,sizeof(strbuf),
             "DP[%d]=DP[%d]+abs(H[%d]-H[%d])\n",
             to_pos,from_pos,to_pos,from_pos);
