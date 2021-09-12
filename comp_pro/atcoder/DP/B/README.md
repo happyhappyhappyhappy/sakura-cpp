@@ -25,6 +25,9 @@
 
 ## 自分の提出
 
-### [与える型DP](https://atcoder.jp/contests/dp/submissions/24969125)
+### [与える型DP→OK](https://atcoder.jp/contests/dp/submissions/25809798)
 
+### [与える型DP→NG](https://atcoder.jp/contests/dp/submissions/25740376)
+
+    * NGの特徴は`LIMITMAX` を`1LL<<15`から`1LL<<61`と値を大幅に増加させたこと。
 -----

@@ -22,19 +22,20 @@ void initial(void){
 
 int main(void){
     initial();
-    int N,K;
+    long long N,K;
     cin >> N >> K;
-    const int LIMITAREA = 200000;
-    const int LIMITMAX = 1<<15;
+    const long long LIMITSTR = 1LL << 31;
+    const long long LIMITAREA = 200000;
+    const long long LIMITMAX = 1LL<<61;
 // limitmax これでは小さいのでは？33000位？
 // 解答例を見て再設定せいぜい31へ、型もlong long にしてみる
-    vector<int> H(LIMITAREA);
-    vector<int> DP(LIMITAREA);
-    for(int j=0;j<LIMITAREA;j=j+1){
+    vector<long long> H(LIMITAREA);
+    vector<long long> DP(LIMITAREA);
+    for(long long j=0;j<LIMITAREA;j=j+1){
         H[j] = LIMITMAX;
         DP[j] = LIMITMAX;
     }
-    for(int j=0;j<N;j=j+1){
+    for(long long j=0;j<N;j=j+1){
         cin >> H[j];
     }
     // for(auto &e:h){
@@ -42,9 +43,9 @@ int main(void){
     // }
     // cout << "\n";
     DP[0] = 0;
-    for(int j=0;j < N;j=j+1){
-        for(int m=1; m < K+1 ; m = m + 1){
-           int frompos,topos;
+    for(long long j=0;j < N;j=j+1){
+        for(long long m=1; m < K+1 ; m = m + 1){
+           long long frompos,topos;
            frompos = j;
            topos = j+m;
            minchange(DP[topos],DP[frompos]+abs(H[topos]-H[frompos]));
