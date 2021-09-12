@@ -26,6 +26,8 @@ int main(void){
     cin >> N >> K;
     const int LIMITAREA = 200000;
     const int LIMITMAX = 1<<15;
+// limitmax これでは小さいのでは？33000位？
+// 解答例を見て再設定せいぜい31へ、型もlong long にしてみる
     vector<int> H(LIMITAREA);
     vector<int> DP(LIMITAREA);
     for(int j=0;j<LIMITAREA;j=j+1){
