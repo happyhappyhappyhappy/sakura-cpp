@@ -4,7 +4,7 @@
 #pragma GCC optimize("O3")
 #include<bits/stdc++.h>
 using namespace std;
-
+using ll=long long;
 template<class XXX> inline bool minchange(XXX &a,XXX b){
     if( b < a){
         a = b;
