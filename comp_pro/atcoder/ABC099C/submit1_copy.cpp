@@ -5,8 +5,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll=long long;
-
-
 template<class XXX> inline bool changemin(XXX& x,XXX y){
     if(x > y){
         x = y;
@@ -17,6 +15,9 @@ template<class XXX> inline bool changemin(XXX& x,XXX y){
     }
 }
 
+// const ll N;
+// const vector<ll> memo(101010);
+
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -24,16 +25,16 @@ void initial(void){
     cout << fixed << setprecision(10);    
 }
 
+ll f(ll totalValue){
+    ll result = 0;
+
+    return result;
+}
+
 int main(void){
     initial();
-    const ll TABLESIZE=100010;
-    const ll LIMITDATA=1LL<<61;
-    ll DP[TABLESIZE];
-    for(ll j=0;j<TABLESIZE;j=j+1){
-        DP[j] = LIMITDATA;
-    }
-    
+    ll giveMoney;
     cin >> giveMoney;
-
+    cout << f(giveMoney) << "\n";
     return 0;
 }
