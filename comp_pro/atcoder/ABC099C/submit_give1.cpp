@@ -8,10 +8,10 @@ using ll=long long;
 
 template<class XXX> inline bool changemin(XXX& x,XXX y){
     if(x > y){
-        ll BUFFERSIZE=1LL<<15;
-        char strfmt[]="DP[%lld]確定中: %lld";
-        char strbuf[BUFFERSIZE];
-        snprintf(strbuf,sizeof(strbuf),); // TODO:次はここから
+        // ll BUFFERSIZE=1LL<<15;
+        // char strfmt[]="DP[%lld]確定中: %lld";
+        // char strbuf[BUFFERSIZE];
+        // snprintf(strbuf,sizeof(strbuf),); 
         x = y;
         return true;
     }
@@ -52,7 +52,7 @@ ll solver(ll x){
         while(true){
             changemin(DP[j+nineYen],DP[j]+1);
             nineYen = nineYen * 9;
-            if(x < nineYen){
+            if(nineYen > x){
                 break;
             }
         }
