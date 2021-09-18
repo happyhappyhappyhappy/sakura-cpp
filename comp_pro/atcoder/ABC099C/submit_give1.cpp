@@ -8,6 +8,10 @@ using ll=long long;
 
 template<class XXX> inline bool changemin(XXX& x,XXX y){
     if(x > y){
+        ll BUFFERSIZE=1LL<<15;
+        char strfmt[]="DP[%lld]確定中: %lld";
+        char strbuf[BUFFERSIZE];
+        snprintf(strbuf,sizeof(strbuf),); // TODO:次はここから
         x = y;
         return true;
     }
@@ -30,10 +34,32 @@ void initial(void){
 }
 ll solver(ll x){
     ll result = x;
-// TODO:ここを埋めよう
+    for(ll j=0;j <= x ; j=j+1)
+    {
+        // * ONE Yen
+        changemin(DP[j+1],DP[j]+1);
+        // * SIX Yen
+        ll sixYen = 6;
+        while(true){
+            changemin(DP[j+sixYen],DP[j]+1);
+            sixYen = sixYen * 6;
+            if(sixYen > x){
+                break;
+            }
+        }
+        // ? NINE Yen
+        ll nineYen = 9; 
+        while(true){
+            changemin(DP[j+nineYen],DP[j]+1);
+            nineYen = nineYen * 9;
+            if(x < nineYen){
+                break;
+            }
+        }
+    }
+    result = DP[x];
     return result;
 }
-
 
 int main(void){
     initial();
