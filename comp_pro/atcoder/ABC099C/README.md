@@ -2,7 +2,9 @@
 
 ## [問題のURL](https://atcoder.jp/contests/abc099/tasks/abc099_c)
 
-## [解説のURL](https://blog.hamayanhamayan.com/entry/2018/06/15/003759)
+## [解説のURL1](https://blog.hamayanhamayan.com/entry/2018/06/15/003759)
+
+* [本体](https://atcoder.jp/contests/abc099/submissions/2667784)
 
 ## [この問題の結果](https://atcoder.jp/contests/abc099/submissions?f.Task=abc099_c&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
 
@@ -25,3 +27,4 @@
     * 箱を100010の所を500000としたところでREは発生しなくなった。
     * しかし解説(再帰化)では100010しか無かったような。
     * 少しいじってみる
+* 解説にあるヘッダーの段階でcinがらみは全部設定している
