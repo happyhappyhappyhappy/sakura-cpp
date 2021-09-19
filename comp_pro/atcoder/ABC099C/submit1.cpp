@@ -26,7 +26,7 @@ void initial(void){
 
 int main(void){
     initial();
-    const ll TABLESIZE=100010;
+    const ll TABLESIZE=200000;
     const ll LIMITDATA=1LL<<61;
     ll DP[TABLESIZE];
     for(ll j=0;j<TABLESIZE;j=j+1){

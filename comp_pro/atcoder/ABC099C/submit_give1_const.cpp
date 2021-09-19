@@ -8,12 +8,11 @@ using ll=long long;
 
 template<class XXX> inline bool changemin(XXX& x,XXX y){
     if(x > y){
-        /**
+        /*
         const ll BUFFERSIZE=1LL<<15;
         char strfmt[]="DP[%lld]確定: %lldへ\n";
         char strbuf[BUFFERSIZE];
-        snprintf(strbuf,sizeof(strbuf),strfmt,x,y);
-        **/ 
+        snprintf(strbuf,sizeof(strbuf),strfmt,x,y);*/ 
         x = y;
         return true;
     }
@@ -66,7 +65,8 @@ ll solver(ll x){
 int main(void){
     initial();
     ll inputdata;
-    cin >> inputdata;
+    // cin >> inputdata;
+    inputdata=100000;
     cout << solver(inputdata) << "\n";
     return 0;
 }

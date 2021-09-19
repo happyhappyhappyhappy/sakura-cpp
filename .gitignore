@@ -6,3 +6,4 @@ out*.txt
 *tmp*.*
 *.tar
 *.tgz
+core
