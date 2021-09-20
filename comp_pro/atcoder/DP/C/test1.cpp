@@ -49,7 +49,7 @@ int main(void)
             cin >> HAPPY[j][k];
         }
     }
-    for(int taro_date=1;taro_date<N;taro_date=taro_date+1){
+    for(int taro_date=0;taro_date<N;taro_date=taro_date+1){
         for (int move1 = 0; move1 < PATTARN; move1=move1+1){ 
             // 何を前日したか
             for(int move2 = 0; move2 < PATTARN;move2=move2+1){
@@ -63,12 +63,7 @@ int main(void)
         }
     }
     int result = 0;
- //   result = max(DP[N][0],max(DP[N][1],DP[N][2]));
-    cout << "-----\n"; 
-    for(int j=0;j < 3;j++){
-        cout << j << " : " << DP[N][j] << "\n";
-        changemax(result,DP[N][j]);
-    }
+    result = max(DP[N][0],max(DP[N][1],DP[N][2]));
     cout << result << "\n";
     return 0;
 }

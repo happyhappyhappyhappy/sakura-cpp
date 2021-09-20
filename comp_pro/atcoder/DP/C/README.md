@@ -20,5 +20,8 @@
 
 ## 自分の提出
 
-### []()
+### [失敗](https://atcoder.jp/contests/dp/submissions/26011346)
 
+    * 理由はデバッグで使った横線を出力させたままだったため
+
+### [成功](https://atcoder.jp/contests/dp/submissions/26011373)
