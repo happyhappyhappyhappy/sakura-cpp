@@ -6,7 +6,7 @@
 using namespace std;
 using ll=long long;
 
-templete<class XXX> inline bool changemax(XXX& x,XXX y){
+template<class XXX> inline bool changemax(XXX& x,XXX y){
     bool result=false;
     if(x < y){
         x = y;
@@ -24,7 +24,7 @@ int DP[MAX_DATE][PATTARN];
 // 本人の幸福度変数
 int HAPPY[MAX_DATE][PATTARN];
 // 本体。_mainは実際の算術関数
-int main(void){
+void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -35,12 +35,11 @@ int main(void){
             HAPPY[j][k] = 0;
         }
     }
-    _main(void);
-    return 0;
 }
 
-void _main(void)
+int main(void)
 {
+    initial();
     int N;
     cin >> N;
     for(int j=0;j<N;j++)
@@ -63,4 +62,13 @@ void _main(void)
             }
         }
     }
+    int result = 0;
+ //   result = max(DP[N][0],max(DP[N][1],DP[N][2]));
+    cout << "-----\n"; 
+    for(int j=0;j < 3;j++){
+        cout << j << " : " << DP[N][j] << "\n";
+        changemax(result,DP[N][j]);
+    }
+    cout << result << "\n";
+    return 0;
 }
