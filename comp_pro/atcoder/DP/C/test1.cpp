@@ -20,32 +20,47 @@ templete<class XXX> inline bool changemax(XXX& x,XXX y){
 const ll MAX_DATE=100010;
 const ll PATTARN = 3;
 // DP絡み変数
-vector<ll> DP[MAX_DATE][PATTARN];
-
+int DP[MAX_DATE][PATTARN];
+// 本人の幸福度変数
+int HAPPY[MAX_DATE][PATTARN];
 // 本体。_mainは実際の算術関数
 int main(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    // DPテーブル初期化
+    // 各テーブル初期化
     for(int j=0;j<MAX_DATE;j++){
-        for(int k=0;k<MAX_DATE;k++){
+        for(int k=0;k<PATTARN;k++){
             DP[j][k] = 0;
+            HAPPY[j][k] = 0;
         }
     }
     _main(void);
     return 0;
 }
 
-void _main(void){
+void _main(void)
+{
     int N;
     cin >> N;
-    for(int j=0;j<N;j++){
-        for(int k=0;k<PATTARN;k++){
-            cin >> DP[j][k];
+    for(int j=0;j<N;j++)
+    {
+        for(int k=0;k<PATTARN;k++)
+        {
+            cin >> HAPPY[j][k];
         }
     }
     for(int taro_date=1;taro_date<N;taro_date=taro_date+1){
-        // TODO: ここからスタート 2021/09/19 19:53
+        for (int move1 = 0; move1 < PATTARN; move1=move1+1){ 
+            // 何を前日したか
+            for(int move2 = 0; move2 < PATTARN;move2=move2+1){
+            // 今日は何をするか
+                if(move1!=move2) {
+                    // 同じ事はしない  
+                    changemax(DP[taro_date+1][move2]
+                    ,DP[taro_date][move1]+HAPPY[taro_date][move2]);  
+                }
+            }
+        }
     }
 }
