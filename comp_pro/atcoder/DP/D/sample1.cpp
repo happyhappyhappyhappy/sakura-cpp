@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 template<class XXX> inline bool chmin(XXX& x,XXX y){
     if(x>y){
