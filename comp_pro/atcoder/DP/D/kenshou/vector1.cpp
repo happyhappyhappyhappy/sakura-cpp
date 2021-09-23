@@ -23,10 +23,7 @@ int main(void){
         sum = sum + b1[j];
     }
     end = system_clock::now();
-    /*
-    TODO: chrono絡みのバグ修正からスタート
-    */
-    elaspd = duration_cast<microseconds>(end-start);
+    elaspd = chrono::duration_cast<microseconds>(end-start).count();
     cout << elaspd << " μs\n";
     return 0;   
 }

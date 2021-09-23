@@ -1,0 +1,28 @@
+
+]2;./array2_ini.o]1;./array2_ini.oarray型を利用するが初期化はしておく
+2725μs
+]2;kaede@cppkaede:~/sakura-cpp/comp_pro/atcoder/DP/D/kenshou]1;../DP/D/kenshou
+[0m[27m[24m[J[kaede@cppkaede kenshou]$ [K[53C[38;5;111m[40m[23/09/21| 3:28PM][71D[?1h=[?2004h../array2.o[1m [0m[0m [?1l>[?2004l
+
+]2;./array2.o]1;./array2.oarray型を利用するが初期化はしておく
+2667μs
+]2;kaede@cppkaede:~/sakura-cpp/comp_pro/atcoder/DP/D/kenshou]1;../DP/D/kenshou
+[0m[27m[24m[J[kaede@cppkaede kenshou]$ [K[53C[38;5;111m[40m[23/09/21| 3:29PM][71D[?1h=[?2004h../hairetu1.out[1m [0m[0m [?1l>[?2004l
+
+]2;./hairetu1.out]1;./hairetu1.out配列:基本型の場合
+2452 μs
+]2;kaede@cppkaede:~/sakura-cpp/comp_pro/atcoder/DP/D/kenshou]1;../DP/D/kenshou
+[0m[27m[24m[J[kaede@cppkaede kenshou]$ [K[53C[38;5;111m[40m[23/09/21| 3:29PM][71D[?1h=[?2004h../vector1.out[1m [0m[0m [?1l>[?2004l
+
+]2;./vector1.out]1;./vector1.outVector:配列と同じ扱い
+1991 μs
+]2;kaede@cppkaede:~/sakura-cpp/comp_pro/atcoder/DP/D/kenshou]1;../DP/D/kenshou
+[0m[27m[24m[J[kaede@cppkaede kenshou]$ [K[53C[38;5;111m[40m[23/09/21| 3:29PM][71D[?1h=[?2004h../vector2.out[1m [0m[0m [?1l>[?2004l
+
+]2;./vector2.out]1;./vector2.outVector:push backの違い
+7848 μs
+]2;kaede@cppkaede:~/sakura-cpp/comp_pro/atcoder/DP/D/kenshou]1;../DP/D/kenshou
+[0m[27m[24m[J[kaede@cppkaede kenshou]$ [K[53C[38;5;111m[40m[23/09/21| 3:29PM][71D[?1h=[?2004heexit[?1l>[?2004l
+
+]2;exit]1;exit
+Script done on 2021-09-23 15:29:44+09:00 [COMMAND_EXIT_CODE="0"]

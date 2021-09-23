@@ -11,18 +11,18 @@ int main(void){
     system_clock::time_point start,end;
     double elaspd;
     const li MAX=100000;
-    vector<li> b2;
-    cout << "Vector:push backの違い\n";
-    start = chrono::system_clock::now();
+    array<li,MAX> c={};
+    cout << "array型を利用するが初期化はしておく\n";
+    start = system_clock::now();
     for(li j=0;j<MAX;j++){
-        b2.push_back(j);
-    } 
-    li sum = 0;
-    for(li j=0;j<MAX;j=j+1){
-        sum = sum + b2[j];
+        c[j] = j;
+    }
+    li sum=0;
+    for(li j=0;j<MAX;j++){
+        sum = sum + c[j];
     }
     end = system_clock::now();
     elaspd = chrono::duration_cast<microseconds>(end-start).count();
-    cout << elaspd << " μs\n";
+    cout << elaspd << "μs\n";
     return 0;
 }
