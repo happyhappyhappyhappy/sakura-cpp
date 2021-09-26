@@ -23,4 +23,4 @@
 
 ## 自分の提出
 
-### [未提出](https://atcoder.jp/)
+### [TLEのつもりで出した全検索での提出](https://atcoder.jp/contests/dp/submissions/26114239)→何故かWAとして反映
