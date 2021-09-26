@@ -6,7 +6,7 @@
 using namespace std;
 using ll=long long;
 
-template<class XXX> inline bool changeMax(&XXX x,XXX y){
+template<class XXX> inline bool changeMax(XXX& x,XXX y){
     if(x < y){
         x = y;
         return true;
