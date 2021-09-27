@@ -37,7 +37,8 @@ int main(void){
     }
     for(ll j=0;j < N; j=j+1){
         for(ll sum_w=0;sum_w <= W; sum_w = sum_w + 1)
-        //                                ~~~~~~~~~~~このインクリメントは有り？
+        // 
+// sum_wの値をループの順に出力してみる。                               ~~~~~~~~~~~このインクリメントは有り？
         {
             if(sum_w - weight[j] >= 0 ){
                 // TODO: 次はここから
