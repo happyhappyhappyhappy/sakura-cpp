@@ -15,7 +15,7 @@ ll W;
 ll weight[110];
 ll value[110];
 
-ll dp[110][100100];
+ll DP[110][100100];
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -28,7 +28,7 @@ int main(void){
     initial();
     for(ll j=0;j < 110;j=j+1){
         for(ll k=0;k < 100100;k=k+1){
-            dp[j][k]=0;
+            DP[j][k]=0;
         }
     }
     cin >> N >> W;
@@ -38,15 +38,15 @@ int main(void){
     for(ll j=0;j < N; j=j+1){
         for(ll sum_w=0;sum_w <= W; sum_w = sum_w + 1)
         // 
-// sum_wの値をループの順に出力してみる。                               ~~~~~~~~~~~このインクリメントは有り？
+        // sum_wの値をループの順に出力してみる。                               ~~~~~~~~~~~このインクリメントは有り？
         {
             if(sum_w - weight[j] >= 0 ){
-                // TODO: 次はここから
-                // https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1
-                // ↑参照 このサンプルのコピー
+                // まだまだ荷物に余裕があった為
+                chmax(DP[j+1][sum_w],DP[j][sum_w-weight[j]]+value[j]);
             }
+            chmax(DP[j+1][sum_w],DP[j][sum_w]);
         }
     }
-
+    cout << DP[N][W] << "\n";
     return 0;
 }
