@@ -7,3 +7,4 @@ out*.txt
 *.tar
 *.tgz
 core
+*X.txt

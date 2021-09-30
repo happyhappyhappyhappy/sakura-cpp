@@ -4,6 +4,7 @@ using ll = long long;
 
 template<class T> inline bool chmax(T& a,T b){
     if(a < b){
+        cout << "Change: a = " << a << " -> b = " << b << "\n"; 
         a=b;
         return true;
     }
@@ -40,6 +41,7 @@ int main(void){
         // 
         // sum_wの値をループの順に出力してみる。                               ~~~~~~~~~~~このインクリメントは有り？
         {
+            cout << "Now SUM_W LOOP : " << sum_w << "\n";
             if(sum_w - weight[j] >= 0 ){
                 // まだまだ荷物に余裕があった為
                 chmax(DP[j+1][sum_w],DP[j][sum_w-weight[j]]+value[j]);
@@ -48,5 +50,12 @@ int main(void){
         }
     }
     cout << DP[N][W] << "\n";
+    // 出力する
+    for(ll j=0 ; j <= N;j++){
+        for(ll k=0; k <= W ; k++){
+            cout << DP[j][k] << " ";
+        }
+        cout << "\n";
+    }
     return 0;
 }
