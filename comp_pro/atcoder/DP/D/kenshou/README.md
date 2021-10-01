@@ -17,3 +17,9 @@
 -----
 
 [参考](https://can.hatenadiary.com/entry/2016/07/08/230801)
+
+-----
+
+## 単純に二次元配列を作って見る
+
+* [これ](https://qiita.com/ysuzuki19/items/df872d91c9c89cc31aee)を参考にして作って見た
