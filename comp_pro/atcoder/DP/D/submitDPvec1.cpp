@@ -18,8 +18,8 @@ ll N;
 ll W;
 
 vector<vector<ll>> dp(100,vector<ll>(100100,0));
-vector<ll> weight[110];
-vector<ll> value[110];
+vector<ll> weight(110);
+vector<ll> value(110);
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -31,10 +31,16 @@ int main(void){
     
     cin >> N >> W;
     for(ll j=0;j<N;j++){
-        cin >> weight[j] >> value<j>;
-        // TODO:次はここからDPの書き込みスタート
-        // for(ll j)
+        cin >> weight[j] >> value[j];
     }
-
+    for(ll j=0;j<N;j++){
+        for(ll sum_weight=0;sum_weight<=W;sum_weight=sum_weight+1){
+            if(W >= sum_weight){
+                changeMax(dp[j+1][sum_weight],dp[j][W-sum_weight]+value[j]);
+            }
+            changeMax(dp[j+1][sum_weight],dp[j][sum_weight]);
+        }
+    }
+    cout << dp[N][W] << "\n";
     return 0;
 }
