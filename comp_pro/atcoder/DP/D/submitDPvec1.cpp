@@ -16,8 +16,8 @@ template<class XXX> inline bool changeMax(XXX& a,XXX b){
 
 ll N;
 ll W;
-
-ll dp[100][100100];
+// TODO:これで再vector化していて→dp[N*2][W*2]
+ll dp[110][100100];
 ll weight[110];
 ll value[110];
 
@@ -25,7 +25,7 @@ void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    for(ll j=0;j<100;j=j+1){
+    for(ll j=0;j<110;j=j+1){
         for(ll k=0;k<100100;k=k+1){
             dp[j][k] = 0;
         }

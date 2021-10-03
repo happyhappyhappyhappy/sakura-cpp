@@ -1,0 +1,68 @@
+1c1,5
+< #include<iostream>
+---
+> #ifdef DEBUG
+> #define _GLIBXX_DEBUG
+> #endif
+> #pragma GCC optimize("O3")
+> #include<bits/stdc++.h>
+3,5c7,9
+< using ll = long long;
+< // cf.https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1
+< template<class T> inline bool chmax(T& a,T b){
+---
+> using ll=long long;
+> 
+> template<class XXX> inline bool changeMax(XXX& a,XXX b){
+7c11
+<         a=b;
+---
+>         a = b;
+14a19,20
+> 
+> ll dp[100][100100];
+18,19d23
+< ll DP[110][100100];
+< 
+23a28,32
+>     for(ll j=0;j<100;j=j+1){
+>         for(ll k=0;k<100100;k=k+1){
+>             dp[j][k] = 0;
+>         }
+>     }
+26d34
+< 
+29,33d36
+<     for(ll j=0;j < 110;j=j+1){
+<         for(ll k=0;k < 100100;k=k+1){
+<             DP[j][k]=0;
+<         }
+<     }
+35c38
+<     for(ll j=0;j < N;j=j+1){
+---
+>     for(ll j=0;j<N;j++){
+38,42c41,44
+<     for(ll j=0;j < N; j=j+1){
+<         for(ll sum_w=0;sum_w <= W; sum_w = sum_w + 1)
+<         {
+<             if(sum_w - weight[j] >= 0 ){
+<                 chmax(DP[j+1][sum_w],DP[j][sum_w-weight[j]]+value[j]);
+---
+>     for(ll j=0;j<N;j++){
+>         for(ll sum_weight=0;sum_weight<=W;sum_weight=sum_weight+1){
+>             if( sum_weight - weight[j] >= 0){
+>                 changeMax(dp[j+1][sum_weight],dp[j][sum_weight-weight[j]]+value[j]);
+44c46
+<             chmax(DP[j+1][sum_w],DP[j][sum_w]);
+---
+>             changeMax(dp[j+1][sum_weight],dp[j][sum_weight]);
+47c49
+<     cout << DP[N][W] << "\n";
+---
+>     cout << dp[N][W] << "\n";
+49c51
+< }
+---
+> }
+\ ファイル末尾に改行がありません
