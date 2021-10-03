@@ -4,7 +4,7 @@
 
 ## [解説のURL](https://atcoder.jp/contests/tdpc/editorial/756)
 
-## [解説中にあったpython版の回答](https://atcoder.jp/contests/tdpc/submissions/20186239)
+## [解説中にあったpython版の回答](https://atcoder.jp/contests/tdpc/submissions/20186239)←分からん
 
 ## [この問題の結果:c++](https://atcoder.jp/contests/tdpc/submissions?f.Task=tdpc_contest&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
 
@@ -14,3 +14,5 @@
 
 -----
 ヒント
+
+* この問題は二次元DPにするのみで大きさの比較は特に要らない、というか0と1の論理和で求めてしまう。
