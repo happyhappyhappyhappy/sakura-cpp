@@ -24,3 +24,11 @@
 ## 自分の提出
 
 ### [TLEのつもりで出した全検索での提出](https://atcoder.jp/contests/dp/submissions/26114239)→何故かWAとして反映
+
+### [解説と同じつもりでVectorにして作成](https://atcoder.jp/contests/dp/submissions/26332019)→ランタイムエラー(RE)
+
+* 恐らくはこの回答だと100の場合にエラーが出てしまう
+
+### [ようやく原因が分かって再構築した物](https://atcoder.jp/contests/dp/submissions/26336621)
+
+* ベクトルの最大数を与えられた型の1.1倍にしてみた
