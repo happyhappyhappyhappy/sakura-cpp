@@ -9,7 +9,9 @@
 ## [この問題の結果:c++](https://atcoder.jp/contests/tdpc/submissions?f.Task=tdpc_contest&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
 
 ## [セレクターのc++解答](https://drken1215.hatenablog.com/entry/2020/12/21/153600)
+
 * 考え方としては、無ければ無視、有ればつぎの変数に引き継ぎと次の問題を加えて引き継ぐ感じかな。
+
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
