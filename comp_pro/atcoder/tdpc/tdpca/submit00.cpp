@@ -5,7 +5,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll=long long;
-
+// todo:誰かの解法参考ならどこから取ったか書きましょう
+// このプログラムは
+// https://drken1215.hatenablog.com/entry/2020/12/21/153600
+// から借りました
 ll ALLN=110;
 ll ALLPT = ALLN*110;
 vector<int> PT(ALLN); 
