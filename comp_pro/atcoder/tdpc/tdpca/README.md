@@ -1,5 +1,7 @@
 # \[TDPC-A\]\<コンテスト\>
 
+* [これの類題](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1)
+
 ## [問題のURL](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)
 
 ## [解説のURL](https://atcoder.jp/contests/tdpc/editorial/756)

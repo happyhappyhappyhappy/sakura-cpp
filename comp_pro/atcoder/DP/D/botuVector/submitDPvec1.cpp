@@ -16,7 +16,6 @@ template<class XXX> inline bool changeMax(XXX& a,XXX b){
 
 ll N;
 ll W;
-// TODO:これで再vector化していて→dp[N*2][W*2]
 ll dp[110][100100];
 ll weight[110];
 ll value[110];
