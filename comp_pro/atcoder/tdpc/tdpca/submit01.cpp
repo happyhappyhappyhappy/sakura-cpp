@@ -5,23 +5,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll=long long;
+// 本番用
+
 
 // グローバル変数
 ll MAXN = 100*2;
 ll MAXCOUNT = MAXN*(100*2);
 vector<ll> point(MAXN);
-vector<vector<bool>> dp(MAXN,vector<bool>(MAXCOUNT));
+vector<vector<bool>> dp(MAXN,vector<bool>(MAXCOUNT,false));
 
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-//    cout << fixed << setprecision(10);
-    for(ll j=0;j<MAXN;j=j+1){
-        for(ll k=0;k<MAXCOUNT;k=k+1){
-            dp[j][k] = false;
-        }
-    }
     dp[0][0]=true;
 }
 
@@ -51,22 +47,4 @@ int main(void){
         }
     }
     cout << answer << "\n";
-    ll topans=0;
-    for(ll j=0;j<N;j++){
-        topans = point[j];
-    }
-    for(ll j=0;j<N+1;j++){
-        for(ll k=0;k <= topans;k++){
-            char output;
-            if(dp[j][k]){
-                output='o';
-            }
-            else{
-                output='x';
-            }
-            cout << output << " ";
-        }
-        cout << "\n";
-    }
-    return 0;
 }
