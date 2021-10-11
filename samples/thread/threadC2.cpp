@@ -4,7 +4,7 @@
 #include<thread>
 
 using namespace std;
-// threadC1.cpp を 銀行に想定してみる
+// TODO: threadC1.cpp を 銀行に想定してみる
 
 mutex mtx_; // 排他制御ミューテックス(mutex)
 uint32_t count_;
