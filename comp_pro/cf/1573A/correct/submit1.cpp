@@ -15,8 +15,14 @@ int main(void){
             if(int(a) > 48 && j!= n){
                 result = result + 1;
             }
-            cout << result << "\n";
+            else{
+                if(j == n){
+                    cout << "j=n:  " << j << "=" << n <<" の為、足していない" << "\n";
+                    }
+            }
+            
         }
+        cout << result << "\n";
     }
 
 
