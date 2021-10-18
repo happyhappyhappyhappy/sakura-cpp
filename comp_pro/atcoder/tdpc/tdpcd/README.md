@@ -1,4 +1,4 @@
-# \[TDPC-D\]\<コンテスト\>
+# \[TDPC-D\]\<サイコロ\>
 
 * [これの類題](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1)
 
@@ -16,5 +16,8 @@
 
 -----
 ヒント
+
+* [map構造体とは？サンプルで説明](https://thispointer.com/stdmap-tutorial-part-1-usage-detail-with-examples/)
+* [mapとは](https://cpprefjp.github.io/reference/map/map.html)
 
 ## [自分の答(未完)](https://atcoder.jp/)
