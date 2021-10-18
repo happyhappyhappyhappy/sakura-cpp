@@ -14,7 +14,7 @@
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
 
-## [自分の提出](https://codeforces.com/contest/1555/submission/125829006)
+## [自分の提出](https://codeforces.com/contest/1573/submission/132317576)
 
 -----
 ヒント
@@ -36,3 +36,6 @@ Pを正であり、最下位桁ではない桁数とします。私たちの答�
 
 * 数字だが文字列にしてしまったほうがいろいろ良さそう
 
+* 問題文に`swap two digits (you can choose which digits to swap, and they don't have to be adjacent).`とある。
+  * すなわち、どこの桁でも交換できるのだ！→これを見落としていた
+  
