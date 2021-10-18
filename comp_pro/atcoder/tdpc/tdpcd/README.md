@@ -1,4 +1,4 @@
-# \[TDPC-A\]\<コンテスト\>
+# \[TDPC-D\]\<コンテスト\>
 
 * [これの類題](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1)
 
