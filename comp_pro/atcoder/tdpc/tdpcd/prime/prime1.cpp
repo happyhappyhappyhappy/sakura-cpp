@@ -14,18 +14,16 @@ void initial(void){
 }
 int N;
 ll D;
-map<ll,ll> prime_factor(ll n){
-    // TODO: これのミスでやらかしたところを再度コンパイルして実行
-    // →ここは関係ないです。下でイテレーター操作していないのが原因の可能性大
+map<ll,ll> prime_factor(ll D){
     map<ll,ll> result;
-    for(ll j=2LL;j*j<=n;j=j+1){
-        while(n%j == 0LL){
-            ++result[j];
-            n /= j;
+    for(ll j=2LL;j*j<=D;j=j+1){
+        while(D%j == 0LL){
+            result[j]=result[j]+1;
+            D = D / j;
         }
     }
-    if( n != 1LL){
-        result[n] = 1LL;
+    if( D != 1LL){
+        result[D] = 1LL;
     }
     return result;
 }
@@ -39,8 +37,7 @@ int main(void){
     it = primeMap.begin();
     while(it != primeMap.end()){
         cout << it->first << " :: " << it->second << "\n";
-        // TODO: ↓これ無いと無限ループにハマるよ
-　　　　　it++;
+        it++;
 }
     return 0;
 }
