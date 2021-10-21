@@ -17,8 +17,6 @@
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
 
-https://qiita.com/suuungwoo/items/e054fdcb5a4805bb226b
-
  ---->
 
 -----
