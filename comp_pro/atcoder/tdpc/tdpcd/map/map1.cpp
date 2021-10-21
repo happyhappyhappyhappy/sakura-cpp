@@ -16,16 +16,16 @@ int main(void){
         cout<< it->first << " :: " << it->second << "\n";
         it++;
     }
-    
+/**    
        if(mapOfWords.insert(make_pair("earth", 1)).second == false){
         cout << "'earth'はすでに存在しています" << "\n";
        }
-/**
-     if(mapOfWords.insert(make_pair("earth",1)).second == false){
+**/
+    if(mapOfWords.insert(make_pair("earth",1)).second == false){
         cout << "'earth'はすでに存在しています\n";
-    }**/
+    }
     if(mapOfWords.find("sun") != mapOfWords.end()){
-        cout << "'sun'はmapOfWordに存在しています\n";
+        cout << "'sun'はmapOfWordに存在していません\n";
     }
     if(mapOfWords.find("mars") == mapOfWords.end()){
         cout << "'mars'は存在していません\n";
