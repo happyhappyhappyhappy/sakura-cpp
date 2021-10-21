@@ -38,6 +38,6 @@ int main(void){
     while(it != primeMap.end()){
         cout << it->first << " :: " << it->second << "\n";
         it++;
-}
+    }
     return 0;
 }
