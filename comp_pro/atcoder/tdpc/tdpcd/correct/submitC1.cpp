@@ -25,7 +25,8 @@ map<ll,ll> primeFact(ll D){
         }
     }
     // キレイに2,3,5の倍数だけで成り立っている物でなければその値を入れる
-    if(D != 1LL){
+    // ミス　単に素数の場合
+if(D != 1LL){
         result[D] = 1LL;
     }
     return result;
@@ -58,5 +59,6 @@ int main(void){
         it++;
     }
     // TODO: もし2,3,5の要素がそもそも無かったらどうなるか調べる
-    return 0;
+    // mapディレクトリでざっくりと検証してからやってみる。
+return 0;
 }
