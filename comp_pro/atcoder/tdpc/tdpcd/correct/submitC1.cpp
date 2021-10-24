@@ -35,15 +35,14 @@ if(D != 1LL){
 int main(void){
     ll N;
     ll D;
+    dd zero=0.0;
     cin >> N >> D;
     map<ll,ll> baseMap=primeFact(D);
-    /**
     map<ll,ll>::iterator it=baseMap.begin();
     while(it!=baseMap.end()){
         cout << it->first << " :: " << it->second << "\n";
         it++;
     }
-    **/
     map<ll,ll> diceChecker = baseMap;
     /**
     map<ll,ll>::iterator it=diceChecker.begin();
@@ -52,13 +51,23 @@ int main(void){
         it++;
     }
     **/
+   /**
     diceChecker.erase(2);
     map<ll,ll>::iterator it=diceChecker.begin();
     while(it!=diceChecker.end()){
         cout << it->first << " :: " << it->second << "\n";
         it++;
     }
-    // TODO: もし2,3,5の要素がそもそも無かったらどうなるか調べる
-    // mapディレクトリでざっくりと検証してからやってみる。
-return 0;
+    **/
+   
+    diceChecker.erase(2);
+    diceChecker.erase(3);
+    diceChecker.erase(5);
+    if(diceChecker.size() > 0){
+        cout << "この数はサイコロでは表現できません\n" ;
+        cout << zero << "\n";
+        return 0;
+    }
+    cout << "素数の数 :: " << baseMap.size() << "\n";
+    return 0;
 }
