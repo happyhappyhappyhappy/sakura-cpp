@@ -20,9 +20,11 @@
  ---->
 
 -----
-ヒント
+ヒントや各種参考となったページ
 
 * [map構造体とは？サンプルで説明](https://thispointer.com/stdmap-tutorial-part-1-usage-detail-with-examples/)
 * [mapとは](https://cpprefjp.github.io/reference/map/map.html)
+* [#defineは使わない方が良い](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
+* [constexprの使い方](https://cpprefjp.github.io/lang/cpp11/constexpr.html)
 
 ## [自分の答(未完)](https://atcoder.jp/)
