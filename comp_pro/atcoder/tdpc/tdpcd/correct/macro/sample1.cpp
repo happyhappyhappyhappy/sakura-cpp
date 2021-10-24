@@ -4,10 +4,14 @@
 #pragma GCC optimize("O3")
 #include<bits/stdc++.h>
 using ll=long long;
-
-// ↓のやり方はNG
+// ★ #define によるマクロは使わなくても上手くいくのか
+// ↓のやり方はやはりNG
+// 使い方についてはここを参照
+// https://cpprefjp.github.io/lang/cpp11/constexpr.html
 // template<typename T>
 // constexpr FOR(T j,T n) {return for(int (j)=0;(j)<(int)(n);(j)++)}
+
+
 
 // やっぱりここであるように#defineが有効な様だ
 #define REP(i,n) for(int (j)=0;(j) < (int)(n);++(j))
