@@ -1,4 +1,4 @@
-# \[TDPC-D\]\<サイコロ\>
+# \[TDPC-D\]\<サイコロ\> → 一旦保留
 
 * [これの類題](https://qiita.com/drken/items/dc53c683d6de8aeacf5a#d-%E5%95%8F%E9%A1%8C---knapsack-1)
 
@@ -33,6 +33,6 @@
 
 ## TODO
 
-* abc
+* `a[x] =+ b[x]/6`は`a[x] = ( a[x] + b[x] ) / 6`か`a[x] = a[x] + (b[x] / 6`か調べてみる。ちなみに`6`はサイコロの目の数
 
-* abc
+* another
