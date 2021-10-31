@@ -6,7 +6,7 @@
 
 ## [この問題の結果](https://codeforces.com/contest/1594/status/A)
 
-    * [tourist氏の解答](https://codeforces.com/contest/1594/submission/131186762)
+* [tourist氏の解答](https://codeforces.com/contest/1594/submission/131186762)
 
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
@@ -16,8 +16,8 @@
 
 ## ヒント
 
-* テストデータの2つ目`2`の解答が`-1 2`になっているのがポイントです
+* テストデータの2つ目にコツがあります
 
 ## 自分の答え
 
-    * [1回目](https://codeforces.com/contest/1594/submission/133715924)
+* [1回目](https://codeforces.com/contest/1594/submission/133715924)
