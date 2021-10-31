@@ -41,14 +41,17 @@ int main(void){
     int N,K;
     cin >> N >> K;
     vector<int> HABA(N);
-    vector<int> HIROSA(N);
+    vector<int> KATI(N);
     for(int j=0;j<N;j=j+1){
         cin >> HABA[j] >> HIROSA[j];
     }
     for(int j=0;j < N;j=j+1){
         for(int aviableK=0;aviableK<=K;aviableK=aviableK+1){
             for(int width=0;width<=W;width=width+1){
-
+                if(width+HABA[j] <= W){
+                    DP[j+1][aviableK+1][width+HABA[j]]=
+                    max(DP[j][aviableK][width]+KATI[j],DP[j][aviableK][width+HABA[j]]);
+                }
             }
         }
     }
