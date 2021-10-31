@@ -48,6 +48,8 @@ int main(void){
     for(int j=0;j < N;j=j+1){
         for(int aviableK=0;aviableK<=K;aviableK=aviableK+1){
             for(int width=0;width<=W;width=width+1){
+                // TODO https://mmxsrup.hatenablog.com/entry/2016/09/18/230648 を見て
+                // これを実装してみる
                 if(width+HABA[j] <= W){
                     DP[j+1][aviableK+1][width+HABA[j]]=
                     max(DP[j][aviableK][width]+KATI[j],DP[j][aviableK][width+HABA[j]]);
