@@ -17,7 +17,7 @@
 ヒント
 
 * [一括で初期化出来るという関数fill](https://cpprefjp.github.io/reference/array/array/fill.html)
-  * vector型でなくてarray型なのね。あと2次元というのもある。
+    * vector型でなくてarray型なのね。あと2次元というのもある。
 
 -----
 
