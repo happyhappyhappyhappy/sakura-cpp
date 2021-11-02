@@ -41,10 +41,16 @@ int main(void){
     }
     // 取り扱っている商品についてのfor文
     for(auto j=0;j<N;j=j+1){
-        // TODO 重さで変わる箇所のfor文 でもforの回し方違わないか？
-        // このままだと0番目 0-weight[k]では0になるような気がするが
+        for(auto k=0;k <= W;k=k+1){
+            // まず今のyの値で重さkで使えるものの場合。
+            if(k-weight[j]>=0){
+                changeMax(DP[j+1][k],DP[j][k-weight[j]]+value[j]);
+            }
+            // そのまま放置した場合の遷移
+            changeMax(DP[j+1][k],DP[j][k]);
+        }
     }
-
-
+    // TODO : DP処理は終わったので最終結果を出すだけ
+    //          1回目同様テストケースはこのフォルダに置こう
     return 0;
 }
