@@ -7,7 +7,7 @@ using namespace std;
 using ll=long long;
 
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<endl
-template<class XXX> inline void changeMax(&x,y){
+template<class XXX> inline bool changeMax(XXX& x,XXX y){
     if(x<y){
         x = y;
         return true;
@@ -37,7 +37,7 @@ int main(void){
     initial();
     cin >> N >> W;
     for(auto x=0;x<N;x=x+1){
-        cin >> weight[x] >> value[y];
+        cin >> weight[x] >> value[x];
     }
     // 取り扱っている商品についてのfor文
     for(auto j=0;j<N;j=j+1){
@@ -50,7 +50,6 @@ int main(void){
             changeMax(DP[j+1][k],DP[j][k]);
         }
     }
-    // TODO : DP処理は終わったので最終結果を出すだけ
-    //          1回目同様テストケースはこのフォルダに置こう
+    cout << DP[N][W] << "\n";
     return 0;
 }
