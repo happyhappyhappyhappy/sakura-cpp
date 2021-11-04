@@ -8,14 +8,14 @@ using ll=long long;
 
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<endl
 
-template<class XXX> bool maxChange(XXX& x,XXX y){
+template<class XXX> inline bool maxChange(XXX& x,XXX y){
     if(x<y){
         x = y;
         return true;
     }
     return false;
 }
-template<class XXX> bool minChange(XXX& x,XXX y){
+template<class XXX> inline bool minChange(XXX& x,XXX y){
     if(x>y){
         x=y;
         return true;
@@ -63,8 +63,8 @@ int main(void){
     // 面倒なのでここで物と重さの配列を作って入れてしまえ
     COUT(N);
     COUT(W);
-    int value[N];
-    int weight[N];
+    ll value[N];
+    ll weight[N];
     for(int j=0;j<N;j=j+1){
         cin >> value[j] >> weight[j];
     }
