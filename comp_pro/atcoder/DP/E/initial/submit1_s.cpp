@@ -9,3 +9,4 @@ template<class T> inline chmax(T& a,T b)
             }
         return false;
     }
+// TODO 写経の際は型に注目しよう
