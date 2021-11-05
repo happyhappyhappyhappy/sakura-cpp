@@ -85,5 +85,12 @@
     "terminal.integrated.scrollback": 20000,
     "editor.tabSize": 4,
     "markdownlint.run": "onSave",
-    "markdownlint.config": {"default": true, "MD007": { "indent": 4 } }
+    "markdownlint.config": {
+        "default": true,
+        "MD007": {
+            "indent": 4
+        }
+    },
+    "editor.fontFamily": "JetBrains Mono,Source Han Code JP",
+    "terminal.integrated.fontFamily": "JetBrains Mono,Source Han Code JP"
 }

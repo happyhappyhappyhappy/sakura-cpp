@@ -103,6 +103,6 @@ int main(void){
     */
     cout << "drken :" << answerA << "\n";
     // cout << "friend:" << answerB << "\n";
-
+    
     return 0;
 }
