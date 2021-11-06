@@ -39,8 +39,8 @@ void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    for(int j=0;j<MAX_N;j=j++){
-        for(int k=0;k<MAX_VALUE;k++){
+    for(int j=0;j<MAX_N;j=j+1){
+        for(int k=0;k<MAX_VALUE;k=k+1){
             DP[j][k] = INF;
 //            COUT(j);
 //            COUT(k);
@@ -51,14 +51,17 @@ void initial(void){
 }
 
 int main(void){
-    // initial();
+    initial();
+    /*
     for(int j=0;j<MAX_N;j=++j)
         {
         for(int k=0;k<MAX_VALUE;++k)
         {
             DP[j][k] = INF;
         }
-        }
+        } */
+    ;
+    COUT(DP[0][0]);
     cin >> N >> W;
     // 面倒なのでここで物と重さの配列を作って入れてしまえ
     COUT(N);
@@ -67,7 +70,7 @@ int main(void){
     ll weight[N];
     // TODO 入力順序逆か？
     for(int j=0;j<N;j=j+1){
-        cin >> value[j] >> weight[j];
+        cin >> weight[j] >> value[j];
     }
     for(int j=0;j<=N;j++){
         for(int k=0;k<MAX_VALUE;k=k+1){
@@ -90,7 +93,7 @@ int main(void){
     ll answerA=0;
     for(int j=0;j<MAX_VALUE;j++){
         if(DP[N][j]<=W){
-            maxChange(answerA,DP[N][j]);
+            answerA=j;
         }
     }
     COUT(answerA);
