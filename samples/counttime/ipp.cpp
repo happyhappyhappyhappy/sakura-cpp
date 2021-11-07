@@ -41,19 +41,35 @@ int main(void){
     // パターン3 j=j+1
     start[2]=system_clock::now();
     for(int j=0;j<MAX_N;j=j+1){
-        for(int k=0;k<MAX_VALUE;k++){
+        for(int k=0;k<MAX_VALUE;k=k+1){
             DP3[j][k]=INF;
         }
     }
     DP3[0][0]=0;
     end[3]=system_clock::now();
-    elaspd[0]=chrono::duration_cast<chrono::microseconds>
+    // それぞれの結果出力
+    // j++の場合
+    elaspd[0]=chrono::duration_cast<chrono::milliseconds>
     (end[0]-start[0]).count();
-    
+    // ++jの場合
+    elaspd[1]=chrono::duration_cast<chrono::milliseconds>
+    (end[1]-start[0]).count();
+    // j=j+1 の場合
+    elaspd[2]=chrono::duration_cast<chrono::milliseconds>
+    (end[2]-start[2]).count();
 
-
-
-
-
+    cout << " i++   : " << elaspd[0] << " μs\n";
+    cout << " ++i   : " << elaspd[1] << " μs\n";
+    cout << " i=i+1 : " << elaspd[2] << " μs\n";    
     return 0;
 }
+/* 結果
+[kaede@cppkaede counttime]$ ./a.out                                 [2021/11/7| 6:32午後]
+ i++   : 113 μs
+ ++i   : 249 μs
+ i=i+1 : -1.63628e+12 μs
+[kaede@cppkaede counttime]$ ./a.out                                 [2021/11/7| 6:32午後]
+ i++   : 141 μs
+ ++i   : 268 μs
+ i=i+1 : -1.63628e+12 μs
+*/
