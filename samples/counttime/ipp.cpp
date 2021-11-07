@@ -63,13 +63,8 @@ int main(void){
     cout << " i=i+1 : " << elaspd[2] << " μs\n";    
     return 0;
 }
-/* 結果
-[kaede@cppkaede counttime]$ ./a.out                                 [2021/11/7| 6:32午後]
- i++   : 113 μs
- ++i   : 249 μs
- i=i+1 : -1.63628e+12 μs
-[kaede@cppkaede counttime]$ ./a.out                                 [2021/11/7| 6:32午後]
- i++   : 141 μs
- ++i   : 268 μs
- i=i+1 : -1.63628e+12 μs
+/*
+i++   : 158 μs
+++i   : 135 μs
+i=i+1 : 298 μs      
 */
