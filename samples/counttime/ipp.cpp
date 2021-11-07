@@ -46,14 +46,14 @@ int main(void){
         }
     }
     DP3[0][0]=0;
-    end[3]=system_clock::now();
+    end[2]=system_clock::now();
     // それぞれの結果出力
     // j++の場合
     elaspd[0]=chrono::duration_cast<chrono::milliseconds>
     (end[0]-start[0]).count();
     // ++jの場合
     elaspd[1]=chrono::duration_cast<chrono::milliseconds>
-    (end[1]-start[0]).count();
+    (end[1]-start[1]).count();
     // j=j+1 の場合
     elaspd[2]=chrono::duration_cast<chrono::milliseconds>
     (end[2]-start[2]).count();
