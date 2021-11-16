@@ -3,10 +3,11 @@
 #endif
 #pragma GCC optimize("O3")
 #include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 using ll=long long;
 // 最後にfflush付けられないか
-#define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n"
+#define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 
 template<class XXX> inline bool maxChange(XXX& x,XXX y){
     if(x<y){
