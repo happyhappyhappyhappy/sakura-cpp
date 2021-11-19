@@ -6,6 +6,14 @@
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
+template<class XXX> inline bool chmin(ll& a,ll b){
+    if(a > b){
+        a = b;
+        return true;
+    }
+    return false;
+}
+
 
 // 固定値
 const int MAX_N=110; // 最大アイテム数
@@ -32,8 +40,14 @@ void initial(void){
 
 int main(void){
     initial();
-    for(int j=0;j<MAX_N;i++){
-
+    int N;
+    ll W;
+    cin >> N >> W;
+    for(int j=0;j<N;j++){
+        cin >> weight[j] >> value[j]
+    }
+    for(int j=0;j<N;j++){
+        
     }
     
     return 0;
