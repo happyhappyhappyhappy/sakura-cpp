@@ -6,7 +6,7 @@
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
-template<class XXX> inline bool chmin(ll& a,ll b){
+template<class XXX> inline bool chmin(XXX& a,XXX b){
     if(a > b){
         a = b;
         return true;
@@ -44,11 +44,25 @@ int main(void){
     ll W;
     cin >> N >> W;
     for(int j=0;j<N;j++){
-        cin >> weight[j] >> value[j]
+        cin >> weight[j] >> value[j];
     }
-    for(int j=0;j<N;j++){
-        
+    for(int item=0;item<=N;item++){
+        for(int sum_value=0;sum_value < MAX_V;sum_value++ ){
+            if(sum_value-value[item] >= 0){
+                // sum_value >= value[item] なら選べる(下限)
+                chmin(DP[item+1][sum_value],DP[item][sum_value-value[item]]+weight[item]);
+            }
+            // ここでは選ばない場合
+            chmin(DP[item+1][sum_value],DP[item][sum_value]);
+        }        
     }
+    ll checkervalue=MAX_V-1;
+    while(checkervalue--){
+        if(DP[N][checkervalue]<=W){
+            break;
+        }
+    }
+    cout << checkervalue << "\n" << flush;
     
     return 0;
     }

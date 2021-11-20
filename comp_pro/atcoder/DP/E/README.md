@@ -22,4 +22,4 @@
 
 ## 結果
 
-* [1回目](./initial/submit1.cpp)
+* [1回目](https://atcoder.jp/contests/dp/submissions/27348716)
