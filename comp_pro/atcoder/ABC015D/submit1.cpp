@@ -87,7 +87,7 @@ int main(void){
             chmax(answer,DP[N][n_shot][n_width]);
         }
     }*/
-    for(int n_shot=0;n_shot<N;n_shot++){
+    for(int n_shot=0;n_shot<K;n_shot++){
         for(int n_width=0;n_width<MAX_WIDTH;n_width++){
             if(DP[N][n_shot][n_width]<=W){
                 chmax(answer,DP[N][n_shot][n_width]);
