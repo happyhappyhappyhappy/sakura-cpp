@@ -28,7 +28,13 @@
 
 * DPの配列は三次元「総枚数」「今まで何枚使ったか」「今までの利用幅はいくつか」
 
-## [自分の答(未完)](https://atcoder.jp/)
+## [自分の答(NG)](https://atcoder.jp/contests/abc015/submissions/27421357)
+
+* 全部の問題でなく一部の問題なので怖い
+
+* 何か[これ](https://mmxsrup.hatenablog.com/entry/2016/09/18/230648)がわかりやすいっぽい。ループで```DP=-1```となるのは難しいところだが
+
+* [解説サーチ](https://duckduckgo.com/?q=%E9%AB%98%E6%A9%8B%E5%90%9B%E3%81%AE%E8%8B%A6%E6%82%A9&t=h_&ia=web)
 
 -----
 
