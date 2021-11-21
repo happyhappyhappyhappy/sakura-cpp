@@ -53,25 +53,16 @@ int main(void){
         { // now shot
             for(int n_width=0;n_width<W;n_width++)
             {
-              if(n_shot==K){  // 枚数問題で貼れない
-                  chmax(DP[a_shot+1][n_shot][n_width],
-                  DP[a_shot][n_shot][n_width]);
-              }  
-              else{
-                  if(n_width+width[a_shot]<=W){ // 枚数も幅も問題なし
-                    chmax(
-                        DP[a_shot+1][n_shot+1][n_width+width[a_shot]],
-                        DP[a_shot][n_shot][n_width]+important[a_shot]
-                    );
-                  }
-                  else{ // 幅に問題があった
-                    chmax(
-                        DP[a_shot+1][n_shot][n_width],
-                        DP[a_shot][n_shot][n_width]
-                    );
-                  }
-
-              }
+                if( n_shot+1 <= K && n_width+width[a_shot] <= W) 
+                // 追加可能の場合
+                {
+                    chmax(DP[a_shot+1][n_shot+1][n_width+width[a_shot]],
+                    DP[a_shot][n_shot][n_width]+important[a_shot]);
+                }
+            // 追加しない、もしくは出来ない場合
+                chmax(DP[a_shot+1][n_shot][n_width],
+                DP[a_shot][n_shot][n_width]);
+                
 
             }
         }
