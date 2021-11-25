@@ -287,3 +287,5 @@ alias most='du -hsx * | sort -rh | head -10'
 alias rp='. ~/.bash_profile'
 # alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
 alias pstree2='ps fx'
+# zsh only mkdir+cd
+alias mkdir='(){mkdir $1;cd $1}'
