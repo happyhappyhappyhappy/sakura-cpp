@@ -68,13 +68,14 @@ int main(void){
         COUT(nShot);
         for(int cShot=0;cShot < N;++cShot) // 入れたショット数
         {
-            // COUT(cShot);
+            COUT(cShot);
             for(int used_width;used_width <= W;++used_width) // 利用済みの幅
             {
                 // 貼ることが出来る場合
-                COUT(nShot);
-                COUT(cShot);
+                // COUT(nShot);
+                // COUT(cShot);
                 COUT(used_width);
+/**
                 if(cShot+1<=K){
                     if(used_width+width[nShot]<= W){
                     cout << "OKCase\n" << flush; 
@@ -82,12 +83,13 @@ int main(void){
                     COUT(cShot);
                     COUT(used_width);
                     chmax(DP[nShot+1][cShot+1][used_width+width[nShot]],
-                        DP[nShot][cShot][used_width]);
+                        DP[nShot][cShot][used_width]+imp[nShot]);
                         }
                     }
                 // 貼らない場合
                 chmax(DP[nShot+1][cShot][used_width],DP[nShot][cShot][used_width]);
-            }
+            **/
+}
         }
     }
     int answer = 0; // 回答の下限
