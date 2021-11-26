@@ -54,48 +54,39 @@ int main(void){
     // 問題のデータ書き込み
     cin >> W; // 最大幅
     cin >> N >> K; // 持っているスクリーンショットの数⇒貼れる数
-    COUT(W);
-    COUT(N);
-    COUT(K);
     // スクショデータの読み込み
     for(int shot=0;shot < N;shot=shot+1){
     cin >> width[shot] >> imp[shot];
     }
     // DP処理開始
-    COUT(N);
-    for(int nShot=0;nShot < N;++nShot) // 入れようかどうか迷っているショット
+    // COUT(N);
+    for(int nShot=0;nShot < N;nShot++) // 入れようかどうか迷っているショット
     {   
-        COUT(nShot);
-        for(int cShot=0;cShot < N;++cShot) // 入れたショット数
+        // COUT(nShot);
+        for(int cShot=0;cShot < N;cShot++) // 入れたショット数
         {
-            COUT(cShot);
-            for(int used_width;used_width <= W;++used_width) // 利用済みの幅
+           //  COUT(cShot);
+            for(int used_width=0;used_width <= W;used_width++) // 利用済みの幅
             {
                 // 貼ることが出来る場合
                 // COUT(nShot);
                 // COUT(cShot);
-                COUT(used_width);
-/**
+                // COUT(used_width);
+                
                 if(cShot+1<=K){
                     if(used_width+width[nShot]<= W){
-                    cout << "OKCase\n" << flush; 
-                    COUT(nShot);
-                    COUT(cShot);
-                    COUT(used_width);
                     chmax(DP[nShot+1][cShot+1][used_width+width[nShot]],
                         DP[nShot][cShot][used_width]+imp[nShot]);
                         }
                     }
                 // 貼らない場合
                 chmax(DP[nShot+1][cShot][used_width],DP[nShot][cShot][used_width]);
-            **/
-}
+            }
         }
     }
     int answer = 0; // 回答の下限
     for(int used_shot=0;used_shot < MAX_SHOT;used_shot++){
         for(int used_width=0;used_width<MAX_WIDTH;used_width++){
-//            COUT(DP[N][used_shot][used_width]);
             chmax(answer,DP[N][used_shot][used_width]);
         }
     }
