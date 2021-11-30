@@ -46,11 +46,26 @@
 			"body": [
 			  "int main(void){",
 			  "",
-			  "initial()",
+			  "initial();",
 			  "return 0;",
 			  "}",
 			  ""
 			],
 			"description": "山中用のmainひな形"
+		  },
+		  "簡単なサンプルを使うためのスニペット": {
+			"prefix": "yamasimple",
+			"body": [
+			  "#include<bits/stdc++.h>",
+			  "using namespace std;",
+			  "using ll=long long;",
+			  "#define COUT(x) cout<<#x<< \" = \" <<(x)<< \" (L\" <<__LINE__<< \")\" <<\"\\n\" << flush",
+			  "",
+			  "int main(void){",
+			  "",
+			  "    return 0;",
+			  "}"
+			],
+			"description": "簡単なサンプルを使うためのスニペット"
 		  }
 }
