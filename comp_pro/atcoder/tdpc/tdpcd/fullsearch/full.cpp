@@ -18,14 +18,14 @@ int main(void){
     initial();
     // TODO コンパイルから
     double allpattern = 6*6*6;
-    for(ll d=1;d<=100;d++){
-        ll counter=0;
-        for(ll f=1;f<=6;f++){
-            for(ll s=1;s<=6;s++){
-                for(ll fo=1;fo<=6;fo++){
-                    ll manu=f*s*fo;
-                    if(manu%d==0){
-                        counter=counter+1;
+    for(double d=1;d<=100;d++){
+        double counter=0;
+        for(double f=1;f<=6;f++){
+            for(double s=1;s<=6;s++){
+                for(double fo=1;fo<=6;fo++){
+                    double manu=f*s*fo;
+                    if((int)manu%(int)d==0){
+                        counter=counter+1.0;
                     }
                 }
             }
@@ -33,8 +33,8 @@ int main(void){
 
         double answer=0.0;
         answer = counter / allpattern;
-        cout << "Case :" << d << 
-        " count : " << counter << " ⇒ " <<  
+        cout << "Case :" << (int)d << 
+        " count : " << (int)counter << " ⇒ " <<  
         answer << "\n" << flush; 
     }
     return 0;
