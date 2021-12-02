@@ -1,7 +1,6 @@
 #include<iostream> // https://cpprefjp.github.io/reference/ostream/flush.html
 #include<thread> // ref https://cpprefjp.github.io/reference/thread/this_thread/sleep_for.html
 #include<chrono> // ref https://cpprefjp.github.io/reference/chrono/duration_aliases.html
-// TODO README.md に今回の経緯を書いておく 2021/11/14
 using namespace std;
 using namespace std::chrono;
 using namespace std::this_thread;

@@ -34,12 +34,13 @@ int main(void){
     while(true){
         threepow = threepow * 3;
         if(tenpow < threepow){
-            // TODO: この文章を作成するところから作成 2021/10/28
-            cout << "2は " << counter << "で 10^18を追い越す.\n";
+            //  この文章を作成するところから作成 2021/10/28
+            cout << "3は " << counter << "で 10^18を追い越す.\n";
             break;
         }
         counter = counter + 1;
     }
+    // TODO : 5のケースを調べてみる
     /**
     cout << fixed << setprecision(9) << "MIN : " << DBL_MIN << 
     " MAX : " << DBL_MAX << "\n";

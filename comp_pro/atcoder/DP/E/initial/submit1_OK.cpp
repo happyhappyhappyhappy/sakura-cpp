@@ -69,7 +69,6 @@ int main(void){
     COUT(W);
     ll value[N];
     ll weight[N];
-    // TODO 入力順序逆か？
     for(int j=0;j<N;j=j+1){
         cin >> weight[j] >> value[j];
     }

@@ -16,7 +16,6 @@ template<class XXX> inline void chmax(XXX& x,XXX y){
 // 大域固定変数
 const int MAX_WIDTH=10100; // 用紙幅
 const int MAX_SHOT=55;
-const int CAN_MAX_SHOT=55; // FIXME:不要だった
 // 入力値単体
 int N; // 取ったスクリーンショットの数
 int W; // 貼れる写真の幅

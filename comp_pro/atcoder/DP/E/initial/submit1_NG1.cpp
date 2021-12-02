@@ -21,7 +21,7 @@ template<class XXX> inline bool changeMax(XXX& x,XXX y){
     return false;
 }
 // 大域変数
-// TODO inf,max_n,max_v にconst を付ければエラー消える気がする
+// inf,max_n,max_v にconst を付ければエラー消える気がする
 ll INF=1LL<<60;
 int MAX_N=110;
 int MAX_V=100100;

@@ -16,7 +16,6 @@ void initial(void){
 
 int main(void){
     initial();
-    // TODO コンパイルから
     double allpattern = 6*6*6;
     for(double d=1;d<=100;d++){
         double counter=0;
