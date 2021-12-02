@@ -28,8 +28,8 @@ class large_class{
 int main(void){
     system_clock::time_point start,end;
     double elaspd;
-    start = system_clock::now();
     large_class x{};
+    start = system_clock::now();
     large_class y(x);
     end = system_clock::now();
     elaspd = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -37,5 +37,8 @@ int main(void){
     return 0;
 }
 /**
- Time is : 20500 nano_s
+ * コピーしている所だけを時間抜粋
+ * 
+ */
+ Time is : 14600 nano_s
 **/
