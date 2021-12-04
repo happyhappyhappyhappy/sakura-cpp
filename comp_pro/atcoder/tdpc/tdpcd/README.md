@@ -35,4 +35,5 @@
 
 * `a[x] =+ b[x]/6`は`a[x] = ( a[x] + b[x] ) / 6`か`a[x] = a[x] + (b[x] / 6`か調べてみる。ちなみに`6`はサイコロの目の数
     * 結果`a=a+(b/6)`
-* another
+* [参考にするページ](https://ben2suzuka.hatenablog.com/entry/8)
+    * まずはこれで打ち込んでみる
