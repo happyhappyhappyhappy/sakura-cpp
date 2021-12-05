@@ -17,7 +17,7 @@ void initial(void){
 int main(void){
     initial();
     double allpattern = 6*6*6;
-    for(double d=1;d<=100;d++){
+    for(double d=1;d<=1000;d++){
         double counter=0;
         for(double f=1;f<=6;f++){
             for(double s=1;s<=6;s++){
