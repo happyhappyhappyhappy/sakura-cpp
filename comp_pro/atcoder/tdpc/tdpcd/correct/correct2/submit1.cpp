@@ -25,9 +25,25 @@ int main(void){
     if( D != 1 ){
         cout << 0.0 << "\n" << fflush;
     }
-    else{
-        cout << pf[0] << ":" << pf[1] 
-        << ":" << pf[2] << "\n" << fflush; 
+    double dp[N+1][pf[0]+1][pf[1]+1][pf[2]+1]=1.0;
+    const int di[6]={0,1,0,2,0,1}; // サイコロに対する2の倍数
+    const int dj[6]=[0,0,1,0,0,1]; // サイコロに対する3の倍数
+    const int dk[6]={0,0,0,0,1,0}; // サイコロに対する5の倍数
+    for(int n=0;n<N;n++){
+        for(int i=0;i<=pf[0];i=i+1){
+            for(int j=0;j<=pf[1];j=j+1){
+                for(int k=0;k<=pf[2];k=k+1){
+                    for(int d=0;d<6;d=d+1){
+                        int ni=min(pf[0],i+di[d]);
+                        int nj=min(pf[1],j+dj[d]);
+                        int nk=min(pf[2],k+dk[d]);
+                        // TODO: ここから
+                        // https://ben2suzuka.hatenablog.com/entry/8
+                        // dp[n+1][ni][nj][nk]=
+                    }
+                }
+            }
+        }
     }
     return 0;
 }
