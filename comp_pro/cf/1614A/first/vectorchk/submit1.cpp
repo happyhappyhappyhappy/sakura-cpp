@@ -14,7 +14,9 @@ int solver(vector<int>& base_data,vector<int>& prices){
     for(auto& e:prices){
         cout << e << " ";
     }
+    cout << "\n" << flush;
     sort(prices.begin(),prices.end());
+    cout << "sort実行後\n" << flush; 
     for(auto& e:prices){
         cout << e << " ";
     }
@@ -26,7 +28,7 @@ int main(void){
     int testcase=0;
     cin >> testcase;
     for(int j=0;j<testcase;j=j+1){
-        int base_d[4];
+        vector<int> base_d(4);
         for(int& e : base_d){
             cin >> e;
         }
