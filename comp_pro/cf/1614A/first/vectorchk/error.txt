@@ -1,0 +1,7 @@
+submit1.cpp: In function ‘int main()’:
+submit1.cpp:38:29: error: invalid initialization of reference of type ‘std::vector<int>&’ from expression of type ‘int [4]’
+   38 |         int answer = solver(base_d,price);
+      |                             ^~~~~~
+submit1.cpp:12:25: note: in passing argument 1 of ‘int solver(std::vector<int>&, std::vector<int>&)’
+   12 | int solver(vector<int>& base_data,vector<int>& prices){
+      |            ~~~~~~~~~~~~~^~~~~~~~~

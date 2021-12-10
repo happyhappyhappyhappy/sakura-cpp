@@ -1,0 +1,54 @@
+./cf/1547B/mymaxmin/sample1.cpp:    for(auto j=0;j<testcase;j++){
+./cf/1547B/mymaxmin/sample2.cpp:    for(auto j=0;j<testcase;j++){
+./cf/1614A/first/vectorchk/submit1.cpp:    for(auto e:prices){
+./cf/1614A/first/vectorchk/submit1.cpp:    for(auto e:prices){
+./cf/1614A/first/vectorchk/submit1.cpp:        for(auto e : base_d){
+./cf/1614A/first/vectorchk/submit1.cpp:        for(auto e : price){
+./cf/1614A/first/vectorchk/sample1.cpp:    for(auto e:base_d){
+./cf/1614A/first/vectorchk/sample1.cpp:    for(auto& e:prob_d){
+./cf/1539B/failedSource/submodule1.cpp:    for(auto itr=charCounter.begin();itr !=charCounter.end();itr++){
+./cf/1539B/failedSource/main1.cpp:    for (auto i = dict.begin(); i != dict.end(); i++)
+./cf/1539B/failedSource/main1.cpp:      for (auto iter=dict.begin(); iter != dict.end(); iter++)
+./cf/1539B/failedSource/submodule_vector.cpp:        auto output_i = char(i+'a');
+./cf/1539B/kenshoDir/mapSample/stringSample/itoatest1.cpp:    auto a = char(charint);
+./cf/1539B/kenshoDir/mapSample/stringSample/itoatest1.cpp:    auto i1 = int('g');
+./cf/1539B/kenshoDir/mapSample/sample1.cpp:    for(auto itr = charMap.begin();itr != charMap.end();itr++ ){
+./cf/1539B/kenshoDir/mapSample/sample2.cpp:    for(auto itr = charMap.begin();itr != charMap.end();itr++ ){
+./cf/1512A/lookspy/worsedataMk.cpp:    for (auto& e:call_list)
+./cf/1512A/lookspy/sample1.cpp:    for (auto&e :copy_callNum)
+./cf/1512A/forsample/inputsample.cpp:    for (auto& e:number)
+./cf/1512A/forsample/inputsample.cpp:    for (auto& e:number)
+./cf/1512A/forsample/forsample.cpp:    for (auto& e : array)
+./cf/1512A/forsample/forsample.cpp:    for(auto& e:vec){
+./cf/1512A/forsample/forsample.cpp:    for (auto& e:mc){
+./cf/1512A/main.cpp:    for (auto i = 0; i < testcase; i=i+1)
+./cf/1512A/sample_vectorcopy/worsedataMk.cpp:    for (auto& e:call_list)
+./atcoder/DP/B/submit1.cpp:    // for(auto &e:h){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:    for(auto x=0;x<110;x=x+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:        for(auto y=0;y<100100;y=y+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:    for(auto x=0;x<N;x=x+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:    for(auto j=0;j<N;j=j+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:        for(auto k=0;k <= W;k=k+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:    for(auto j=0;j<=W;j=j+1){
+./atcoder/DP/D/reviews/review1/submit1_d.cpp:        for(auto k=0;k<=N;k=k+1){
+./atcoder/DP/D/reviews/review1/submit1.cpp:    for(auto x=0;x<110;x=x+1){
+./atcoder/DP/D/reviews/review1/submit1.cpp:        for(auto y=0;y<100100;y=y+1){
+./atcoder/DP/D/reviews/review1/submit1.cpp:    for(auto x=0;x<N;x=x+1){
+./atcoder/DP/D/reviews/review1/submit1.cpp:    for(auto j=0;j<N;j=j+1){
+./atcoder/DP/D/reviews/review1/submit1.cpp:        for(auto k=0;k <= W;k=k+1){
+./atcoder/DP/D/reviews/review1/submit2.cpp:    for(auto x=0;x < 110; x++){
+./atcoder/DP/D/reviews/review1/submit2.cpp:        for(auto y=0;y < 101010;y++)
+./atcoder/DP/D/reviews/review1/submit2.cpp:    for(auto x=0;x < N;x++){
+./atcoder/DP/D/reviews/review1/submit2.cpp:    for(auto j=0;j<N;j++){
+./atcoder/DP/D/reviews/review1/submit2.cpp:        for(auto k=0;k<=W;k++){
+./atcoder/DP/D/reviews/review1/submit2.cpp:    for(auto j=0;j<=W;j++){
+./atcoder/DP/D/reviews/review1/submit2.cpp:        for(auto k=0;k<N;k++){
+./atcoder/DP/A/kensho/oneline.cpp:    for(auto &e:height){
+./atcoder/DP/A/submit_give1.cpp:    for(auto &e: dp){
+./atcoder/DP/A/submit_give1.cpp:    for(auto &e: higher){
+./atcoder/DP/A/submit_get1.cpp:    for(auto &e:height){
+./atcoder/DP/A/submit_get1.cpp:    for(auto &e:dp){
+./atcoder/DP/E/initial/submit1_NG1.cpp:    for(auto x=0;x<MAX_N;x++){
+./atcoder/DP/E/initial/submit1_NG1.cpp:        for(auto y=0;y<MAX_V;y++){
+./atcoder/tdpc/tdpcd/sample/zentienzan.cpp:    auto nxt=0.0;
+./atcoder/tdpc/tdpcd/sample/zentienzan.cpp:    auto dp=0.0;
