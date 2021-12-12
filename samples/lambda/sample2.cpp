@@ -9,5 +9,6 @@ int main(void){
     TEST(10);
     TEST(100);
     TEST(200);
+    TEST(300);
     return 0;
 }
