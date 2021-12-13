@@ -15,4 +15,5 @@ int main(void){
     doubler(10) << "\n" << flush;
     cout << "doubler(123)\t" << 
     doubler(123) << "\n" << flush;
+    return 0;
 }
