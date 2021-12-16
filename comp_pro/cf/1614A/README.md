@@ -16,3 +16,4 @@
 ヒント
 
 * ソートして下から数えれば良くないか
+* [and条件を返す関数](https://cpprefjp.github.io/reference/functional/logical_and.html)
