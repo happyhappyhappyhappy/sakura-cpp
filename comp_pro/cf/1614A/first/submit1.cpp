@@ -11,7 +11,10 @@ void initial(void){
 
 int solver(vector<int>& dataVec,vector<int>& prices){
     int result=0;
-    
+    int n=dataVec[0];// TODO 2021/12/17
+    int l=dataVec[1];
+    int r=dataVec[2];
+    int k=dataVec[3];
     return result;
 }
 
