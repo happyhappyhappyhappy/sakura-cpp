@@ -37,6 +37,7 @@ int main(void){
           for(int& e:price){
               cin >> e;
           }
+// todo int j=0は上で使ってます　k に修正してはどうか
             for(int j=0;j<price.size();j=j+1){
                 cout << price.at(j) << "\n" ;
             }
