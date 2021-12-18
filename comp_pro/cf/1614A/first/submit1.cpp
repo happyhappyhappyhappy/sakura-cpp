@@ -11,10 +11,15 @@ void initial(void){
 
 int solver(vector<int>& dataVec,vector<int>& prices){
     int result=0;
-    int n=dataVec[0];// TODO 2021/12/17
-    int l=dataVec[1];
-    int r=dataVec[2];
-    int k=dataVec[3];
+    int n=dataVec[0]; // チョコレートの数
+    int l=dataVec[1]; // 購入する最低値段
+    int r=dataVec[2]; // 購入する最高値段
+    int k=dataVec[3]; // 所持金
+    for(int j=0;j<prices.size();j=j+1){
+        cout << prices.at(j) << "\n" ;
+    }
+    sort(prices.begin(),prices.end());
+    cout << "\n" << flush;
     return result;
 }
 
@@ -32,6 +37,9 @@ int main(void){
           for(int& e:price){
               cin >> e;
           }
+            for(int j=0;j<price.size();j=j+1){
+                cout << price.at(j) << "\n" ;
+            }
           cout << solver(base_d,price) << "\n" << flush;
     }
     return 0;
