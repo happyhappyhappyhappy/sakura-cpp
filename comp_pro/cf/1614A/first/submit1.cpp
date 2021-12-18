@@ -33,7 +33,8 @@ int main(void){
           for(int& e:base_d){
               cin >> e;
           }  
-          vector<int> price;
+// todo 最初のデータにチョコの数が書いてあります
+          vector<int> price(based_d(0));
           for(int& e:price){
               cin >> e;
           }
