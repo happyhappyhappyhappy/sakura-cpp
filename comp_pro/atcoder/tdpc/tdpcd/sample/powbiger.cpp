@@ -40,7 +40,7 @@ int main(void){
         }
         counter = counter + 1;
     }
-    // TODO : 5のケースを調べてみる
+    // 5のケースを調べてみる
     /**
     cout << fixed << setprecision(9) << "MIN : " << DBL_MIN << 
     " MAX : " << DBL_MAX << "\n";
