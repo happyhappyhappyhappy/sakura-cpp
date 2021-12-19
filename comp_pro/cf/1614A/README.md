@@ -19,4 +19,3 @@
 * [and条件を返す関数](https://cpprefjp.github.io/reference/functional/logical_and.html)
 * [基本だがソートをする関数](https://cpprefjp.github.io/reference/algorithm/sort.html)
 * [for_each関数 表示にまぁまぁ便利](https://cpprefjp.github.io/reference/algorithm/for_each.html)
-

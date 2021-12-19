@@ -9,40 +9,37 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-int solver(vector<int>& dataVec,vector<int>& prices){
-    int result=0;
-    int n=dataVec[0]; // チョコレートの数
-    int l=dataVec[1]; // 購入する最低値段
-    int r=dataVec[2]; // 購入する最高値段
-    int k=dataVec[3]; // 所持金
-    for(int j=0;j<prices.size();j=j+1){
-        cout << prices.at(j) << "\n" ;
-    }
-    sort(prices.begin(),prices.end());
-    cout << "\n" << flush;
-    return result;
+void disp(int x){
+    cout << x << " ";
 }
+// int solver(){
+//     int result=0;
 
+
+//     return result;
+// }
 
 int main(void){
     initial();
-    int testcase=0;
+    int testcase=1;
     cin >> testcase;
-    for(int j=0;j<testcase;j=j+1){
-          vector<int> base_d(4);
-          for(int& e:base_d){
-              cin >> e;
-          }  
-// todo 最初のデータにチョコの数が書いてあります
-          vector<int> price(based_d(0));
-          for(int& e:price){
-              cin >> e;
-          }
-// todo int j=0は上で使ってます　k に修正してはどうか
-            for(int j=0;j<price.size();j=j+1){
-                cout << price.at(j) << "\n" ;
-            }
-          cout << solver(base_d,price) << "\n" << flush;
+    for(int j=1;j<=testcase;j=j+1){
+        // 各テストケースの設定
+        vector<int> base_d(4);
+        for(int& e:base_d){
+            cin >> e;
+        }
+        cout <<  j << " of " << testcase << " の基本設定\n" <<flush;
+        for_each(base_d.begin(),base_d.end(),disp);
+        cout << "\n" << flush;
+        vector<int> prices(base_d[0]);
+        for(int& e:prices){
+            cin >> e;
+        }
+        cout << j << " of " << testcase << " の各値段\n" << flush;
+        for_each(prices.begin(),prices.end(),disp);
+        cout << "\n" << flush;
+        // cout << solver(based_d,prices) << "\n" << flush;
     }
     return 0;
 }
