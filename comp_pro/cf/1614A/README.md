@@ -12,6 +12,9 @@
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
  ---->
 
+## [自分の結果(一回目)](https://codeforces.com/problemset/submission/1614/139994690)
+
+
 -----
 ヒント
 

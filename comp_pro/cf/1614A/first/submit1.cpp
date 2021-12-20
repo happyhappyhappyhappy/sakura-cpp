@@ -36,12 +36,15 @@ int solver(vector<int>& base_d,vector<int>& prices){
         if((have_money-prices[j])<0){
             break;
         }
-        if((base_d[1] < prices[j]) && (prices[j]< base_d[2] ))
+        if((base_d[1] <= prices[j]) && (prices[j]<= base_d[2] ))
         {
             // OK 
             result = result + 1;
             have_money = have_money-prices[j];
-            // TODO :実行確認
+            
+        }
+        else{
+            continue;
         }
     }
     return result;
