@@ -14,7 +14,6 @@
 
 ## [自分の結果(一回目)](https://codeforces.com/problemset/submission/1614/139994690)
 
-
 -----
 ヒント
 
