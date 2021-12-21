@@ -37,3 +37,4 @@
     * 結果`a=a+(b/6)`
 * [参考にするページ](https://ben2suzuka.hatenablog.com/entry/8)
     * まずはこれで打ち込んでみる
+* TODO: '10^18'が2の何乗とか調べるには'log10*18/logX'を使う
