@@ -13,6 +13,7 @@ static int X2max = 60;
 static int X3max = 38;
 static int X5max = 26;
 // ↓static としても変数として配列宣言は出来ない
+// 余地を10にしてください　2021/12/29
 double dp[100+1][60+1][38+1][26+1];
 
 void initial(void){
