@@ -77,14 +77,14 @@ int main(void){
     X5 = 0;
     surpus_D = D;
     not_can_xi=prime_fac(X2,X3,X5,surpus_D);
-    cout << "D = " << D << " :2^ " << X2 << ": 3^ " << X3 << ": 5^ " << X5
-    << ": D残骸 " << surpus_D << "\n" << flush; 
+    // cout << "D = " << D << " :2^ " << X2 << ": 3^ " << X3 << ": 5^ " << X5
+    // << ": D残骸 " << surpus_D << "\n" << flush; 
     if(not_can_xi){
-        cout << "サイコロの目ではDの倍数になりません" << "\n" << flush;
+        // cout << "サイコロの目ではDの倍数になりません" << "\n" << flush;
         cout << 0.0 << "\n" << flush;
         return 0;
     }
-    cout << "動的計画法で求めます" << "\n" << flush;
+    // cout << "動的計画法で求めます" << "\n" << flush;
     // nd ,x2d,x3d,x5dは動的計画法を使っているというサイン
     for(int nd=0;nd < N ; nd=nd+1){
         for(int x2d=0;x2d<=X2;x2d=x2d+1){
@@ -93,36 +93,35 @@ int main(void){
                     int x2min;
                     int x3min;
                     int x5min;
-                    double nowXi=dp[n][x2d][x3d][x5d]/6.0;
+                    double nowXi=dp[nd][x2d][x3d][x5d]/6.0;
                     // Xi が1の値を出した場合
-                    dp[n+1][x2d][x3d][x5d]=dp[n+1][x2d][x3d][x5d]
+                    dp[nd+1][x2d][x3d][x5d]=dp[nd+1][x2d][x3d][x5d]
                     +nowXi;
                     // Xi が2の値を出した場合
                     x2min=min(x2d+1,X2);
-                    dp[n+1][x2min][x3d][x5d]=dp[n+1][x2min][x3d][x5d]
+                    dp[nd+1][x2min][x3d][x5d]=dp[nd+1][x2min][x3d][x5d]
                     +nowXi;
                     // Xi が3の値を出した場合
                     x3min=min(x3d+1,X3);
-                    dp[n+1][x2d][x3min][x5d]=dp[n+1][x2d][x3min][x5d]
+                    dp[nd+1][x2d][x3min][x5d]=dp[nd+1][x2d][x3min][x5d]
                     +nowXi;
                     // Xi が4の値を出した場合
                     x2min=min(x2d+2,X2);
-                    dp[n+1][x2min][x3d][x5d]=dp[n+1][x2min][x3][x5d]
+                    dp[nd+1][x2min][x3d][x5d]=dp[nd+1][x2min][x3d][x5d]
                     +nowXi;
                     // Xi が5の値を出した場合
                     x5min=min(x5d+1,X5);
-                    dp[n+1][x2d][x3d][x5min]=dp[n+1][x2][x3][x5min]
+                    dp[nd+1][x2d][x3d][x5min]=dp[nd+1][x2d][x3d][x5min]
                     +nowXi;
                     // Xiが6の値を出した場合
-                    // TODO: ここから
-
-                    
-
-
-
+                    x2min = min(x2d+1,X2);
+                    x3min = min(x3d+1,X3);
+                    dp[nd+1][x2min][x3min][x5d]=dp[nd+1][x2min][x3min][x5d]
+                    +nowXi;
                 }
             }
         }
     }
+    cout << dp[N][X2][X3][X5] << "\n" << flush;
     return 0;
 }
