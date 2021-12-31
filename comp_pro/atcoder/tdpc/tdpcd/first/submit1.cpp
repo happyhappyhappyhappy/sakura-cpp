@@ -87,7 +87,42 @@ int main(void){
     cout << "動的計画法で求めます" << "\n" << flush;
     // nd ,x2d,x3d,x5dは動的計画法を使っているというサイン
     for(int nd=0;nd < N ; nd=nd+1){
-        ; //for(int x2d=0)
+        for(int x2d=0;x2d<=X2;x2d=x2d+1){
+            for(int x3d=0;x3d <= X3;x3d=x3d+1){
+                for(int x5d=0;x5d <= X5;x5d=x5d+1){
+                    int x2min;
+                    int x3min;
+                    int x5min;
+                    double nowXi=dp[n][x2d][x3d][x5d]/6.0;
+                    // Xi が1の値を出した場合
+                    dp[n+1][x2d][x3d][x5d]=dp[n+1][x2d][x3d][x5d]
+                    +nowXi;
+                    // Xi が2の値を出した場合
+                    x2min=min(x2d+1,X2);
+                    dp[n+1][x2min][x3d][x5d]=dp[n+1][x2min][x3d][x5d]
+                    +nowXi;
+                    // Xi が3の値を出した場合
+                    x3min=min(x3d+1,X3);
+                    dp[n+1][x2d][x3min][x5d]=dp[n+1][x2d][x3min][x5d]
+                    +nowXi;
+                    // Xi が4の値を出した場合
+                    x2min=min(x2d+2,X2);
+                    dp[n+1][x2min][x3d][x5d]=dp[n+1][x2min][x3][x5d]
+                    +nowXi;
+                    // Xi が5の値を出した場合
+                    x5min=min(x5d+1,X5);
+                    dp[n+1][x2d][x3d][x5min]=dp[n+1][x2][x3][x5min]
+                    +nowXi;
+                    // Xiが6の値を出した場合
+                    // TODO: ここから
+
+                    
+
+
+
+                }
+            }
+        }
     }
     return 0;
 }
