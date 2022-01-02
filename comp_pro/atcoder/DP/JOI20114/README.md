@@ -12,9 +12,9 @@
 
 ## その他の方のリンク
 
-    * [その1(python)](https://kakedashi-engineer.appspot.com/2020/06/08/joi2011yod/)
+* [その1](https://kakedashi-engineer.appspot.com/2020/06/08/joi2011yod/)
 
-    * [その2(C++)](https://neguse-atama.hatenablog.com/entry/2021/10/23/084206)
+* [その2](https://neguse-atama.hatenablog.com/entry/2021/10/23/084206)
 
 <!---- 「問題の結果の見方」
  PROBLEMS→問題番号一覧→回答者数→accepted＋言語をセレクトする 
@@ -24,8 +24,8 @@
 
 ## ヒント
 
-    * その1の情報からすると$DP[j番目の列を取る][値がkになる]$として移行していき最後の最終配列を取る。
-    * 初期値は$DP[0][1番目の数]=1$
+* その1の情報からすると$DP[j番目の列を取る][値がkになる]$として移行していき最後の最終配列を取る。
+* 初期値は$DP[0][1番目の数]=0$
 
 <!----
 X
