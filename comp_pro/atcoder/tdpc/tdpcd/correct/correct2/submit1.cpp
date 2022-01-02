@@ -37,7 +37,7 @@ int main(void){
                         int ni=min(pf[0],i+di[d]);
                         int nj=min(pf[1],j+dj[d]);
                         int nk=min(pf[2],k+dk[d]);
-                        // TODO: ここから
+                        // 自分式にやり直した⇒正解したので一旦保留
                         // https://ben2suzuka.hatenablog.com/entry/8
                         // dp[n+1][ni][nj][nk]=
                     }

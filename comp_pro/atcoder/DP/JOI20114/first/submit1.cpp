@@ -28,8 +28,15 @@ int main(void){
     }
     dp[0][value[0]]=1LL;
     for(int ii=0;ii<N-2;i++){
-        // ここから一回パスする
-        if()
+        for(int j=0;j<21;j++){
+            if((j-value[ii+1])>=0){
+                dp[ii+1][j-value[ii+1]]=dp[ii+1][j-value[ii+1]]+dp[ii][j];
+            }
+            if((j+value[ii+1])<20){
+                // TODO: 次の日はこれから始める
+                // dp[]
+            }
+        }
     }
     for(int ii=0;ii<N;ii++){
         cout << value[ii] << " ";

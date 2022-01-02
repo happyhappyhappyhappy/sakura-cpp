@@ -27,11 +27,7 @@
 * [#defineは使わない方が良い](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
 * [constexprの使い方](https://cpprefjp.github.io/lang/cpp11/constexpr.html)
 
-## [自分の答(未完)](https://atcoder.jp/)
-
 -----
-
-## TODO
 
 * `a[x] =+ b[x]/6`は`a[x] = ( a[x] + b[x] ) / 6`か`a[x] = a[x] + (b[x] / 6`か調べてみる。ちなみに`6`はサイコロの目の数
     * 結果`a=a+(b/6)`
