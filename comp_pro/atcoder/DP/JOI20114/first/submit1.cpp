@@ -28,6 +28,7 @@ int main(void){
     }
     dp[0][value[0]]=1LL;
     for(int ii=0;ii<N-2;i++){
+        // ここから一回パスする
         if()
     }
     for(int ii=0;ii<N;ii++){
