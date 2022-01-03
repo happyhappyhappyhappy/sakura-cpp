@@ -30,3 +30,9 @@
 <!----
 X
 ---->
+
+## 結果
+
+* [その1失敗](https://atcoder.jp/contests/joi2011yo/submissions/28308636)
+    * [その2リンク](https://neguse-atama.hatenablog.com/entry/2021/10/23/084206)と比べるとDPの回し方が違うような気がする
+        * 貰う系DPだったので、こっちが渡す系DPにしただけのつもりだけど
