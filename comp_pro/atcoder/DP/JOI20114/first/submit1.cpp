@@ -27,20 +27,31 @@ int main(void){
         cin >> e;
     }
     dp[0][value[0]]=1LL;
-    for(int ii=0;ii<N-2;i++){
+    for(int ii=0;ii<N-2;ii++){
         for(int j=0;j<21;j++){
             if((j-value[ii+1])>=0){
-                dp[ii+1][j-value[ii+1]]=dp[ii+1][j-value[ii+1]]+dp[ii][j];
+                dp[ii+1][j-value[ii+1]]=
+                dp[ii+1][j-value[ii+1]]+dp[ii][j];
             }
-            if((j+value[ii+1])<20){
-                // TODO: 次の日はこれから始める
-                // dp[]
+            if((j+value[ii+1])<MAX_COUNT){
+                 dp[ii+1][j+value[ii+1]]=dp[ii+1][j+value[ii+1]]
+                 +dp[ii][j];
             }
         }
     }
-    for(int ii=0;ii<N;ii++){
-        cout << value[ii] << " ";
+    /**
+    for(int dv=0;dv<MAX_COUNT+1;dv++){
+        cout << N-2 << " " << dv << " = " << dp[N-2][dv] 
+        << "\n" << flush;
     }
-    cout << "\n" << flush;
+    **/
+    /*
+    for(int id=0;id<N;id++){
+        for(int jd=0;jd<10;jd++){
+            cout << dp[id][jd] << " ";
+        }
+        cout << "\n" << flush;
+    }*/
+    // TODO: LAST
     return 0;
 }
