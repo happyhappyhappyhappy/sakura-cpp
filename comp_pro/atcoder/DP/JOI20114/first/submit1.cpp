@@ -45,13 +45,14 @@ int main(void){
         << "\n" << flush;
     }
     **/
-    /*
+   /**
     for(int id=0;id<N;id++){
         for(int jd=0;jd<10;jd++){
             cout << dp[id][jd] << " ";
         }
         cout << "\n" << flush;
-    }*/
-    // TODO: LAST
+    }**/
+    cout << dp[N-2][value[N-1]] << "\n" << flush;
+
     return 0;
 }
