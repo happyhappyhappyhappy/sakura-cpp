@@ -27,6 +27,7 @@ int main(void){
         cin >> e;
     }
     dp[0][value[0]]=1LL;
+    /**
     for(int ii=0;ii<N-2;ii++){
         for(int j=0;j<21;j++){
             if((j-value[ii+1])>=0){
@@ -39,6 +40,8 @@ int main(void){
             }
         }
     }
+    **/
+   // 貰う系DPによる計算
     /**
     for(int dv=0;dv<MAX_COUNT+1;dv++){
         cout << N-2 << " " << dv << " = " << dp[N-2][dv] 
