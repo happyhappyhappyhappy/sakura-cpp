@@ -32,6 +32,12 @@ ll solve(){
         cin >> e;
     }
     DP[0][value[0]]=1;
+    for(int ii=1;ii<number-2;ii++){
+        for(int j=0;j<25;j++){
+            // TODO ここに貰う系のDP処理をする
+        }
+    }
+    /**
     if(value[0]+value[1] <= 20){
         DP[1][value[0]+value[1]]=1LL;
     }
@@ -42,7 +48,7 @@ ll solve(){
         for(int j=2;j<25;j++){
             // if(j-)
         }
-    }
+    }**/
     /**
     for(int ii=0;ii<number;ii++){
         cout << value[ii] << " ";
