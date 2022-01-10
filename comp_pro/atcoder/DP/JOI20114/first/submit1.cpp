@@ -32,30 +32,31 @@ ll solve(){
         cin >> e;
     }
     DP[0][value[0]]=1;
-    for(int ii=1;ii<number-2;ii++){
+    for(int ii=1;ii<number-1;ii++){
         for(int j=0;j<25;j++){
-            // TODO ここに貰う系のDP処理をする
+            // 貰う系DP
+            // 一時的にjとvalueの差を求める位置を変える
+            if(value[ii]-j>=0){
+                DP[ii][j]=DP[ii][j]+DP[ii-1][value[ii]-j];
+            }
+/**            if(j-value[ii]>=0){
+                DP[ii][j]=DP[ii][j]+DP[ii-1][j-value[ii]];
+            }**/   
+            if(j+value[ii]<=20){
+                DP[ii][j]=DP[ii][j]+DP[ii-1][j+value[ii]];
+            }
         }
     }
-    /**
-    if(value[0]+value[1] <= 20){
-        DP[1][value[0]+value[1]]=1LL;
-    }
-    if(value[0]-value[1]>=0){
-        DP[1][value[0]-value[1]]=1LL;
-    }
-    for(int ii=2;ii<number-2;ii++){
-        for(int j=2;j<25;j++){
-            // if(j-)
-        }
-    }**/
     /**
     for(int ii=0;ii<number;ii++){
         cout << value[ii] << " ";
     }**/
 
+    for(int ii=0;ii<21;ii++){
+        cout << DP[number-2][ii] << "  ";
+    }
     cout << "\n" << flush;
-    ll result=0LL;
+    ll result=DP[number-2][value[number-1]];
 
     return result;
 }
