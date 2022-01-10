@@ -35,13 +35,13 @@ ll solve(){
     for(int ii=1;ii<number-1;ii++){
         for(int j=0;j<25;j++){
             // 貰う系DP
-            // 一時的にjとvalueの差を求める位置を変える
-            if(value[ii]-j>=0){
-                DP[ii][j]=DP[ii][j]+DP[ii-1][value[ii]-j];
-            }
-/**            if(j-value[ii]>=0){
+            // 一時的にjとvalueの差を求める位置を変える⇒失敗
+//            if(value[ii]-j>=0){
+//                DP[ii][j]=DP[ii][j]+DP[ii-1][value[ii]-j];
+//            }
+            if(j-value[ii]>=0){
                 DP[ii][j]=DP[ii][j]+DP[ii-1][j-value[ii]];
-            }**/   
+            }   
             if(j+value[ii]<=20){
                 DP[ii][j]=DP[ii][j]+DP[ii-1][j+value[ii]];
             }

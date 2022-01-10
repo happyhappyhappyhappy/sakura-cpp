@@ -27,34 +27,18 @@ int main(void){
         cin >> e;
     }
     dp[0][value[0]]=1LL;
-    /**
     for(int ii=0;ii<N-2;ii++){
         for(int j=0;j<21;j++){
             if((j-value[ii+1])>=0){
                 dp[ii+1][j-value[ii+1]]=
                 dp[ii+1][j-value[ii+1]]+dp[ii][j];
             }
-            if((j+value[ii+1])<MAX_COUNT){
+            if((j+value[ii+1])<=MAX_COUNT){
                  dp[ii+1][j+value[ii+1]]=dp[ii+1][j+value[ii+1]]
                  +dp[ii][j];
             }
         }
     }
-    **/
-   // 貰う系DPによる計算
-    /**
-    for(int dv=0;dv<MAX_COUNT+1;dv++){
-        cout << N-2 << " " << dv << " = " << dp[N-2][dv] 
-        << "\n" << flush;
-    }
-    **/
-   /**
-    for(int id=0;id<N;id++){
-        for(int jd=0;jd<10;jd++){
-            cout << dp[id][jd] << " ";
-        }
-        cout << "\n" << flush;
-    }**/
     cout << dp[N-2][value[N-1]] << "\n" << flush;
 
     return 0;
