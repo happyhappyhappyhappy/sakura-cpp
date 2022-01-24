@@ -84,9 +84,9 @@
 		},
 		"workbench.tree.renderIndentGuides": "always",
 		"terminal.integrated.scrollback": 20000,
-		"terminal.integrated.fontFamily": "JetBrains Mono,Source Han Code JP",
+		"terminal.integrated.fontFamily": "'JetBrains Mono' ,'Courier New', monospace",
 		"editor.fontLigatures": true,
-		"editor.fontFamily": "'Ricty Diminished','JetBrains Mono' 'Courier New', monospace",
+		"editor.fontFamily": "'Ricty Diminished','JetBrains Mono' ,'Courier New', monospace",
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#1f6fd0",
 			"activityBar.activeBorder": "#ee90bb",
