@@ -11,6 +11,18 @@ void initial(void){
 
 int solver(int input){
     int result = 0;
+    int surplus=input % 7;
+    if(surplus == 0){
+        return input;
+    }
+
+    int base_digit=input - input%10;
+    for(int j=0;j<10;j++){
+        result = base_digit + j;
+        if(result % 7 == 0){
+            return result;
+        }
+    }
     return result;
 }
 
