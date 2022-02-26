@@ -1,8 +1,10 @@
 # This alises Original is
 # https://github.com/stephenturner/oneliners#other-generally-useful-aliases-for-your-bashrc
 
-export PS1='\w\\$ '
-
+# export PS1='\w\\$ '
+PROMPT='%#'
+# 最後尾に付くコマンドプロンプトの設定
+RPROMPT='[%~]'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
