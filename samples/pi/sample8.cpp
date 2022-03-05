@@ -21,3 +21,8 @@ int main(void){
     cout << "Pi for 12 : " << pi12 << "\n" << flush;
     return 0;
 }
+/*
+Output
+Pi for 8 : 3.06147
+Pi for 12 : 3.10583
+*/
