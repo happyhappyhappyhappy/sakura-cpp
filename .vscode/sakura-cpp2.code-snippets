@@ -32,6 +32,7 @@
 			  "    ios_base::sync_with_stdio(false);",
 			  "    cin.tie(nullptr);",
 			  "    cout.tie(nullptr);",
+			  "    std::setprecision(12);",
 			  "}"
 			],
 			"description": "出入力等の初期設定"
