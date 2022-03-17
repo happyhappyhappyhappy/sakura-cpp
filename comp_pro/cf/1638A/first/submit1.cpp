@@ -44,7 +44,8 @@ void solve(vector<int>& v){
             break;
         }
     }
-    //  
+    // TODO: 本来あって欲しい値がある要素を探し求める
+    // その後 reverseを使う 
 }
 int main(void){
     initial();
