@@ -30,6 +30,21 @@ bool okperm(vector<int>& v){
 }
 void solve(vector<int>& v){
     int v_size=v.size();
+    vector<int> v_copy(v_size);
+    for(int j=0;j<v_size;j=j+1){
+        v_copy[j] = j+1;
+    }
+    // まずは1,2,3...として途中外れる位置kを探す
+    int k = -1;
+    int k_value = -1;
+    for(int j=0;j<v_size;j++){
+        if(v[j] != v_copy[j]){
+            k=j;
+            k_value=v_copy[j];
+            break;
+        }
+    }
+    //  
 }
 int main(void){
     initial();
@@ -40,24 +55,26 @@ int main(void){
         cin >> element;
         vector<int> v(element);
         // TODO: 値を入れる処理を行ってください
+        for(int j=0;j<element;j=j+1){
+            cin >> v[j];
+        }
+        /**
+         for(int j=0;j<element;j=j+1){
+            cout << v[j] << " ";
+        }
+        cout << "\n" << flush;
+        **/
         bool needmod=false;
         needmod = okperm(v);
-        /**
         if(needmod){
             solve(v);
             }
-        for(auto x:v){
-            cout << x << " ";
+        for(int j=0;j<element;j=j+1){
+            cout << x[j] << " ";
         }
         cout << "\n" << flush;
         v.clear();
         }
-        **/
-       if(needmod!=true){
-           cout << "入れ替えが「必要」です" << "\n" << flush;
-       }else{
-           cout << "入れ替えは「要りません」" << "\n" << flush;
-       }
     }
     return 0;
 }
