@@ -13,4 +13,6 @@
 -----
 ヒント
 
-* 最後に使いたい文字が文字列の偶数番目にあれば良い。
+1 最後に使いたい文字が文字列の偶数番目にあれば良い。
+
+2 [string情報](https://cpprefjp.github.io/reference/string.html)
