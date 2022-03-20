@@ -11,9 +11,18 @@ void initial(void){
 
 bool solver(string inputd,char target){
     bool result=false;
+    /**
     cout << "INPUT STR : " << inputd << "\n" << flush;
     cout << "TARGET CHAR : " << target << "\n" << flush; 
-    
+    **/
+    for(int j=0;j<inputd.size();j++){
+        if(inputd.at(j) == target){
+            if( j % 2 == 0){
+                result = true;
+                return result;
+            }
+        }
+    }
     return result;
 }
 
