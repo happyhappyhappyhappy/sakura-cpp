@@ -3,7 +3,7 @@
 ## [問題のURL](https://codeforces.com/problemset/problem/1650/A)
 
 ## [解説のURL](https://codeforces.com/blog/entry/100712)
-1 まぁ予想通り :smile: :blush:
+- まぁ予想通り :smile: :blush:
 
 ## [この問題の結果](https://codeforces.com/contest/1650/status/A)
 
@@ -14,9 +14,9 @@
 -----
 ヒント
 
-1 最後に使いたい文字が文字列の偶数番目にあれば良い。
+- 最後に使いたい文字が文字列の偶数番目にあれば良い。
 
-2 [string情報](https://cpprefjp.github.io/reference/string.html)
+- [string情報](https://cpprefjp.github.io/reference/string.html)
 
 -----
 ## [1回目提出結果OK](https://codeforces.com/problemset/submission/1650/150214086)

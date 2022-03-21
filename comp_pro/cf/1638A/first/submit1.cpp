@@ -11,17 +11,17 @@ void initial(void){
 
 bool okperm(vector<int>& v){
 
-    bool result=true;
+    bool result=true;/**
     for(auto x:v){
         cout << x << " " ;
     }
-    cout << "\n" << flush;
+    cout << "\n" << flush;**/
     int v_size=v.size();
     // vector<int> answer(v_size);
     for(int j = 0;j<v_size;j++){
         if(v.at(j) != j+1){
-            cout << "要素 :" << v.at(j) << " が " << j+1
-            << "ではありません";
+//            cout << "要素 :" << v.at(j) << " が " << j+1
+//            << "ではありません";
             result = false;
             break;
         }
@@ -37,45 +37,46 @@ void solve(vector<int>& v){
     // まずは1,2,3...として途中外れる位置kを探す
     int k = -1;
     int k_value = -1;
-    for(int j=0;j<v_size;j++){
-        if(v[j] != v_copy[j]){
+    for(int j=0;j<v_size;j++)
+    {
+        if(v[j] != v_copy[j])
+        {
             k=j;
             k_value=v_copy[j];
             break;
         }
     }
-    // TODO: 本来あって欲しい値がある要素を探し求める
-    // その後 reverseを使う 
+    // k_vakueとなる位置を探す
+    int k_value_pos=-1;
+    for(int j=0;v_size;j++)
+    {
+        if(v[j] == k_value)
+        {
+            k_value_pos=j;
+            break;
+        }
+    } 
+    reverse(v.begin()+k,v.begin()+k_value_pos+1);
 }
+
 int main(void){
     initial();
-    int testcase=1;
+    int testcase=0;
     cin >> testcase;
-    for(int j=0;j<testcase;j=j+1){
-        int element;
-        cin >> element;
-        vector<int> v(element);
-        // TODO: 値を入れる処理を行ってください
-        for(int j=0;j<element;j=j+1){
-            cin >> v[j];
+    for(int x=0;x<testcase;x++){
+        int length;
+        cin >> length;
+        vector<int> v(length);
+        for(int y=0;y<length;y++){
+            cin >> v[y];
         }
-        /**
-         for(int j=0;j<element;j=j+1){
-            cout << v[j] << " ";
-        }
-        cout << "\n" << flush;
-        **/
-        bool needmod=false;
-        needmod = okperm(v);
-        if(needmod){
+        if(okperm(v)==false){
             solve(v);
-            }
-        for(int j=0;j<element;j=j+1){
-            cout << x[j] << " ";
+        }
+        for(int y=0;y<length;y++){
+            cout << v[y] << " ";
         }
         cout << "\n" << flush;
-        v.clear();
-        }
     }
     return 0;
 }

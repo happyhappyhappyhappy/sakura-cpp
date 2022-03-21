@@ -36,3 +36,6 @@ reverse(a.begin()+f,a.begin()+t+1);
 ```
 本来は配列の先頭がaをポインタとみて、
 これをa.begin()と見なしてみたところ上手くいった。うれしい。
+
+-----
+## [解答完了1回目](https://codeforces.com/contest/1638/submission/150341222)
