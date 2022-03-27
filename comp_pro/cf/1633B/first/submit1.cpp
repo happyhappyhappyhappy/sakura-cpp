@@ -11,8 +11,29 @@ void initial(void){
 
 int solver(string s){
     int result=-1;
-
-
+    vector<int> box(2);
+    box[0] = 0;
+    box[1] = 0;
+    for(int j=0;j<s.size();j++){
+        if(s.at(j) == '0'){
+            box[0] = box[0] + 1;
+        }
+        else{
+            box[1] = box[1] + 1;
+        }
+    }
+    if(box[0] == box[1]){
+        result = box[0] - 1;
+    }
+    else{
+        if(box[0] > box[1])
+        {
+            result = box[1];
+        }
+        else{
+        result = box[0];
+        }
+    }
     return result;
 }
 
