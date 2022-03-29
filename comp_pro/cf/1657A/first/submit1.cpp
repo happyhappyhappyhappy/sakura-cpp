@@ -16,7 +16,7 @@ bool is_squar(int D){
         check_j=check_j+1;
     }
     if(check_j*check_j==D){
-        cout << check_j*check_j << "\n" << flush;
+//        COUT(check_j*check_j);
         result = true;
     }
     return result;
@@ -25,7 +25,7 @@ bool is_squar(int D){
 int solver(int x,int y){
     int result=-1;
     int sidesum = x*x + y*y;
-    cout << sidesum << "\n" << flush;
+    // COUT(sidesum);
     if(sidesum == 0){
         return 0;
     }

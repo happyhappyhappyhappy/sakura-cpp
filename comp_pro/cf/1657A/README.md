@@ -14,3 +14,7 @@
 ヒント
 
 * 3通りしか値がない
+
+## 解答結果
+
+* [1回目成功](https://codeforces.com/problemset/submission/1657/151318309)
