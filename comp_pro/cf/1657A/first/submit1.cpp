@@ -12,7 +12,7 @@ void initial(void){
 bool is_squar(int D){
     bool result=false;
     int check_j=1;
-    while(check_j*check_j <= D){
+    while(check_j*check_j < D){
         check_j=check_j+1;
     }
     if(check_j*check_j==D){
