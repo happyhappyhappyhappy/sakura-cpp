@@ -2,7 +2,7 @@
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
-// ボツ test2でエラーが出る
+
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -15,18 +15,18 @@ ll solver(int n,ll B,ll x,ll y){
     COUT(x);
     COUT(y);
     **/
-    vector<ll> a(n+1);
-    a[0] = 0;
+    // vector<ll> a(n+1);
+    // a[0] = 0;
+    ll now=0;
     for(ll j=0;j<=n;j++){
-        if(a[j]+x <= B){
-            a[j+1] = a[j] + x;
+        if(now+x <= B){
+            result = result + now;
+            now=now+x;
         }
         else{
-            a[j+1] = a[j] - y;
+            result = result + now;
+            now = now - y;
         }
-    }
-    for(int j=0;j<=n;j=j+1){
-        result = result + a[j];
     }
     return result;
 }

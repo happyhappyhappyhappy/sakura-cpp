@@ -1,4 +1,4 @@
-# \1657B\]\<XY Sequence\>
+# \[1657B\]\<XY Sequence\>
 
 ## [問題のURL](https://codeforces.com/problemset/problem/1657/B)
 
@@ -15,3 +15,10 @@
 ヒント
 
 * 結局のところBの所まで上がれば次は下がるという組み合わせしかなさそう。
+
+## 1回目結果
+
+* [1回目提出NG](https://codeforces.com/problemset/submission/1657/153272175)
+* [1回目提出OK](https://codeforces.com/problemset/submission/1657/153273006)
+
+* どうも数列を配列と見なしたが$ 2*10^{5} $まで要素を入れることは難しかったようだ。
