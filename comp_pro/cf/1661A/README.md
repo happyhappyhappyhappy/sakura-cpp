@@ -20,3 +20,5 @@
 
 * [改めて配列に数値を標準入力する方法](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
 
+## [結果1回目OK](https://codeforces.com/contest/1661/submission/154481669)
+
