@@ -15,4 +15,6 @@
 ヒント
 
 * 数と数の差
+    * 着目点は1点だがこれを見つけるのは難しい…
 
+## [結果1回目OK](https://codeforces.com/problemset/submission/1660/155743789)

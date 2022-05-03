@@ -10,15 +10,25 @@ void initial(void){
 }
 
 string solver(vector<ll> v){
-    // TODO: まずは1個しか値が無い場合を考える 
-    sort(v.begin(),v.end());
-    // TODO: それ以外の数はひたすら比較する
-    /**
-    for(auto& e:v){
-        cout << e << " ";
+    if(v.size()==1){
+        if(v[0] == 1){
+            return "YES";
+        }
+        else{
+            return "NO";
+        }
     }
-    cout << "\n" << flush;
-    **/
+    else
+    {
+        sort(v.begin(),v.end());
+        int allType = v.size();
+        if(v[allType-2]+1<v[allType-1]){
+            return "NO";
+        }
+        else{
+            return "YES";
+        }
+    }
     return "NO";
 }
 int main(void){
