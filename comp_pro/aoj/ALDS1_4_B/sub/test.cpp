@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>
+#include<cstdio>
+#include<cstdlib>
+#include<string>
+#include<iostream>
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
@@ -50,6 +53,7 @@ void inorder(Node* p_u){
     inorder(p_u->p_left);
     inorder(p_u->p_right);
 }
+// FIXME: inorderと中身が変わってません。ソースと照合ください。
 void preorder(Node* p_u){
     if(p_u == p_NIL){
         return;
@@ -68,16 +72,17 @@ void initial(void){
 int main(void){
     initial();
     int n,i,x;
-    string com;
+    char com[20];
     scanf("%d",&n);
     for(int j=0;j<n;j++){
-        cin >> com;
-        if(com == "insert"){
+        scanf("%s",com);
+        cout << "[" << com << "]" << "\n" << flush;
+        if(com[0] == 'i'){
             scanf("%d",&x);
             insert(x);
         }
         else{
-            if(com == "print"){
+            if(com[0] == 'p'){
                 inorder(p_root);
                 printf("\n");
                 preorder(p_root);
