@@ -5,10 +5,10 @@ using ll=long long;
 
 struct Node {
     int key;
-    Node* p_right,p_left,p_parent;
+    Node *p_right,*p_left,*p_parent;
 };
 
-Node* p_root,p_NIL;
+Node *p_root,*p_NIL;
 
 void insert(int k){
     Node* p_y = p_NIL;
@@ -16,8 +16,8 @@ void insert(int k){
     Node* p_z;
     p_z = (Node*)malloc(sizeof(Node));
     p_z->key = k;
-    p_z->pleft = p_NIL;
-    p_z->pright = p_NIL;
+    p_z->p_left = p_NIL;
+    p_z->p_right = p_NIL;
 
     while(p_x != p_NIL){
         p_y = p_x;
@@ -29,23 +29,36 @@ void insert(int k){
         }
     }
     p_z->p_parent =p_y;
-    if(py == pNIL){
-        proot = pz;
+    if(p_y == p_NIL){
+        p_root = p_z;
     }
-    else{ // FIXME: P.213 で かつポインタ変数は先頭にpを付けています
-    // NEXTGO: ポインタ変数のpはp_と付けてください。訳分からなくなります。
-        if(pz->key < py->key){
-            y->left = z;
+    else{ 
+        if(p_z->key < p_y->key){
+            p_y->p_left = p_z;
         }
         else{
-            y->right =  z;
+            p_y->p_right =  p_z;
         }
     }
 }
 
-void inorder(Node* u){
-
+void inorder(Node* p_u){
+    if(p_u == p_NIL){
+        return;
+    }
+    printf(" %d",p_u->key);
+    inorder(p_u->p_left);
+    inorder(p_u->p_right);
 }
+void preorder(Node* p_u){
+    if(p_u == p_NIL){
+        return;
+    }
+    printf(" %d",p_u->key);
+    preorder(p_u->p_left);
+    preorder(p_u->p_right);
+}
+
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -54,6 +67,26 @@ void initial(void){
 
 int main(void){
     initial();
-
+    int n,i,x;
+    string com;
+    scanf("%d",&n);
+    for(int j=0;j<n;j++){
+        cin >> com;
+        if(com == "insert"){
+            scanf("%d",&x);
+            insert(x);
+        }
+        else{
+            if(com == "print"){
+                inorder(p_root);
+                printf("\n");
+                preorder(p_root);
+                printf("\n");
+            }
+            else{
+                printf("Another .....\n");
+            }
+        }
+    }
     return 0;
 }
