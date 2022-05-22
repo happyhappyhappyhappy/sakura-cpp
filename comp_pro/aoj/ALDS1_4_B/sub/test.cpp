@@ -49,8 +49,8 @@ void inorder(Node* p_u){
     if(p_u == p_NIL){
         return;
     }
-    printf(" %d",p_u->key);
     inorder(p_u->p_left);
+    printf(" %d",p_u->key);
     inorder(p_u->p_right);
 }
 // FIXME: inorderと中身が変わってません。ソースと照合ください。
@@ -76,7 +76,7 @@ int main(void){
     scanf("%d",&n);
     for(int j=0;j<n;j++){
         scanf("%s",com);
-        cout << "[" << com << "]" << "\n" << flush;
+//        cout << "[" << com << "]" << "\n" << flush;
         if(com[0] == 'i'){
             scanf("%d",&x);
             insert(x);
@@ -87,9 +87,6 @@ int main(void){
                 printf("\n");
                 preorder(p_root);
                 printf("\n");
-            }
-            else{
-                printf("Another .....\n");
             }
         }
     }
