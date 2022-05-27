@@ -24,7 +24,7 @@ void insert(int x){
             p_x=p_x->p_left;
         }
         else{
-            p_x=p_x->p_right
+            p_x=p_x->p_right;
         }
     }
     p_z->p_parent=p_y;
@@ -33,7 +33,7 @@ void insert(int x){
     }
     else{
         if(p_z->key < p_y->key){
-            p_y->left=p_z;
+            p_y->p_left=p_z;
         }
         else{
             p_y->p_right=p_z;
@@ -42,13 +42,14 @@ void insert(int x){
 }
 
 Node* find(Node *p_u,int k){
-    while(p_u != p_NIL && k!=u->key){
+    while(p_u != p_NIL && k!=p_u->key){
         if(k < p_u->key){
             p_u=p_u->p_left;
+            }
             else{
                 p_u = p_u->p_right;
             }
-        }
+        
     }
     return p_u;
 }
@@ -57,7 +58,7 @@ void inorder(Node *p_u){
     if(p_u == p_NIL){
         return;
     }
-    inorder(p_u->left);
+    inorder(p_u->p_left);
     cout << " " << p_u->key;
     inorder(p_u->p_right);
 }
@@ -71,31 +72,37 @@ void preorder(Node *p_u){
     preorder(p_u->p_right);
 }
 
-int main(void){
+int main(void)
+{
 //    initial();
-    int n,i,x;
-    char com[20];
-    cin >> n;
+    int n,i;
+    string com;
+    scanf("%d",&n);
     for(int j=0;j<n;j=j+1){
         cin >> com;
-        if(com[0] == 'f') // find
+        if(com == "print")
         {
-            scanf("%d",&x);
-            Node *t=find(p_root,x)
+            inorder(p_root);
+            cout << "\n" << flush;
+            preorder(p_root);
+            cout << "\n" << flush;
+            continue;
+        }
+        int x;
+        cin >> x;
+        if(com == "insert"){
+            insert(x);
+        }
+        if(com == "find"){
+            Node *t;
+            t = find(p_root,x);
             if(t != p_NIL){
-                cout << "yes" << "\n" << flush;
+                cout << "yes\n" << flush;
             }
-            else if(com[0] == 'i'){
-                scanf("%d",&x);
-                insert(x);
-            }
-            else if(com[0] == 'p'){
-                inorder(p_root);
-                cout << "\n";
-                preorder(p_root);
-                cout << "\n";
+            else{
+                cout << "no\n" << flush;
             }
         }
     }
-    return 0;
+return 0;
 }
