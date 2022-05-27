@@ -52,9 +52,50 @@ Node* find(Node *p_u,int k){
     }
     return p_u;
 }
+// 木の出力1
+void inorder(Node *p_u){
+    if(p_u == p_NIL){
+        return;
+    }
+    inorder(p_u->left);
+    cout << " " << p_u->key;
+    inorder(p_u->p_right);
+}
+
+void preorder(Node *p_u){
+    if(p_u==p_NIL){
+        return;
+    }
+    cout << " " << p_u->key;
+    preorder(p_u->p_left);
+    preorder(p_u->p_right);
+}
 
 int main(void){
 //    initial();
-    // TODO: ここからP.216
+    int n,i,x;
+    char com[20];
+    cin >> n;
+    for(int j=0;j<n;j=j+1){
+        cin >> com;
+        if(com[0] == 'f') // find
+        {
+            scanf("%d",&x);
+            Node *t=find(p_root,x)
+            if(t != p_NIL){
+                cout << "yes" << "\n" << flush;
+            }
+            else if(com[0] == 'i'){
+                scanf("%d",&x);
+                insert(x);
+            }
+            else if(com[0] == 'p'){
+                inorder(p_root);
+                cout << "\n";
+                preorder(p_root);
+                cout << "\n";
+            }
+        }
+    }
     return 0;
 }
