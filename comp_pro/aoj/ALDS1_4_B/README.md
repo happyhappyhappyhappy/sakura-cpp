@@ -12,4 +12,6 @@
 
 -----
 ヒント
+* 基本螺旋本通りだが、検証した物をベースにこの問題にアレンジする
+    * [テスト用乱数作成](https://www.delftstack.com/ja/howto/cpp/generate-random-number-in-range-cpp/)
 
