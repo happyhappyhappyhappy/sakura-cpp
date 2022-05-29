@@ -7,7 +7,8 @@ struct Node{
     int key;
     Node *p_left,*p_right,*p_parent;
 };
-
+// https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_4_B
+// TODO: 要らないところを削り落として提出する
 Node *p_root=nullptr;
 Node *p_NIL=nullptr;
 
@@ -59,7 +60,7 @@ void inorder(Node *p_u){
         return;
     }
     inorder(p_u->p_left);
-    cout << " " << p_u->key;
+    cout << p_u->key << " ";
     inorder(p_u->p_right);
 }
 /**
@@ -119,14 +120,26 @@ int main(void)
         }
     }
     **/
+   /**
    for(auto &output:S){
        cout << output << " ";
    }
+   cout << "\n" << flush;
+   cout << "Next Line is inorder\n" << flush;
    inorder(p_root);
    cout << "\n" << flush;
    for(auto &output:T){
        cout << output << " ";
    }
    cout << "\n" << flush;
+   **/
+  int count=0;
+  for(int j=0;j<q;j=j+1){
+      if(find(p_root,T[j]) != p_NIL)
+      {
+          count = count + 1;
+      }
+  }
+  cout << count << "\n" << flush;
 return 0;
 }
