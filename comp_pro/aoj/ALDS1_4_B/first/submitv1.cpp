@@ -74,6 +74,18 @@ void preorder(Node *p_u){
 **/
 int main(void)
 {
+    int n,q;
+    cin >> n;
+    vector<long long> S(n);
+    for(auto &input:S){
+        cin >> input;
+        insert(input);
+    }   
+    cin >> q;
+    vector<long long> T(q);
+    for(auto &input:T){
+        cin >> input;
+    }
     
 //    initial();
 /**
@@ -107,5 +119,14 @@ int main(void)
         }
     }
     **/
+   for(auto &output:S){
+       cout << output << " ";
+   }
+   inorder(p_root);
+   cout << "\n" << flush;
+   for(auto &output:T){
+       cout << output << " ";
+   }
+   cout << "\n" << flush;
 return 0;
 }
