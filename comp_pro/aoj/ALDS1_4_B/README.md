@@ -17,4 +17,5 @@
 * 1回目NG🧑 時間制限過ぎる
 * [解説](https://onlinejudge.u-aizu.ac.jp/resources/commentaries/ALDS1_4_B/ja/post?general=Algorithm)を参考、もしくはmapでやるのが良いのかしら
 
+* 何か違和感があると思ったら、「二分探索木」では無く「二分探索」(探索がテーマ)だった
 
