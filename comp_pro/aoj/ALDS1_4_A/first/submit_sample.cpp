@@ -12,7 +12,9 @@ bool searchA(int A[],int n,int key){
     cout << "\n" << flush;
     **/
    int j=0;
+   A[n] = key; // 番兵
     while(A[j] != key){
+ //       cout << j << "番目合わない\n" << flush; 
         j = j + 1;
     }
     if(j!=n){
