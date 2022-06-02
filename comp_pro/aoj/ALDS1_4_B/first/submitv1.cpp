@@ -63,16 +63,6 @@ void inorder(Node *p_u){
     cout << p_u->key << " ";
     inorder(p_u->p_right);
 }
-/**
-void preorder(Node *p_u){
-    if(p_u==p_NIL){
-        return;
-    }
-    cout << " " << p_u->key;
-    preorder(p_u->p_left);
-    preorder(p_u->p_right);
-}
-**/
 int main(void)
 {
     int n,q;
@@ -88,51 +78,6 @@ int main(void)
         cin >> input;
     }
     
-//    initial();
-/**
-    int n,i;
-    string com;
-    scanf("%d",&n);
-    for(int j=0;j<n;j=j+1){
-        cin >> com;
-        if(com == "print")
-        {
-            inorder(p_root);
-            cout << "\n" << flush;
-            preorder(p_root);
-            cout << "\n" << flush;
-            continue;
-        }
-        int x;
-        cin >> x;
-        if(com == "insert"){
-            insert(x);
-        }
-        if(com == "find"){
-            Node *t;
-            t = find(p_root,x);
-            if(t != p_NIL){
-                cout << "yes\n" << flush;
-            }
-            else{
-                cout << "no\n" << flush;
-            }
-        }
-    }
-    **/
-   /**
-   for(auto &output:S){
-       cout << output << " ";
-   }
-   cout << "\n" << flush;
-   cout << "Next Line is inorder\n" << flush;
-   inorder(p_root);
-   cout << "\n" << flush;
-   for(auto &output:T){
-       cout << output << " ";
-   }
-   cout << "\n" << flush;
-   **/
   int count=0;
   for(int j=0;j<q;j=j+1){
       if(find(p_root,T[j]) != p_NIL)

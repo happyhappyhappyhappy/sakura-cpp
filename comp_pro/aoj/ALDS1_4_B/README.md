@@ -14,4 +14,7 @@
 ヒント
 * 基本螺旋本通りだが、検証した物をベースにこの問題にアレンジする
     * [テスト用乱数作成](https://www.delftstack.com/ja/howto/cpp/generate-random-number-in-range-cpp/)
+* 1回目NG🧑 時間制限過ぎる
+* [解説](https://onlinejudge.u-aizu.ac.jp/resources/commentaries/ALDS1_4_B/ja/post?general=Algorithm)を参考、もしくはmapでやるのが良いのかしら
+
 
