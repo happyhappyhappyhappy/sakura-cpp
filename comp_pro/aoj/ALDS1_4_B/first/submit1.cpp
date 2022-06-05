@@ -2,6 +2,7 @@
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
+#define NOTFOUND -1
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -9,28 +10,27 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-int binarySearch(vector<ll> A,ll number){
-    int result = -1;
+int binarySearch(vector<ll> &A,ll number){
+    int result = NOTFOUND;
     int left=0;
     int right=A.size();
-    while(left > right){
+    while(left < right){
         int mid;
         mid = (left+right) / 2;
         if(A[mid] == number){
             return mid;
         }
         else{
-            // BUG!: midを更新するのでは無く,left or rightにmidを入れる
-            if(number < A[mid]){
-                mid = ( left + mid ) / 2;
+            if(number > A[mid]){
+                left = mid + 1;
             }
             else{
-                mid = ( mid + right) / 2;
+                right = mid;
             }
         }
     }
     // 本当に何も無い限りこのまま出力する
-    return result;
+    return NOTFOUND;
 }
 
 int main(void){
@@ -45,8 +45,11 @@ int main(void){
     int q;
     cin >> q;
     vector<ll> T(q);
+    for(auto &x:T){
+        cin >> x;
+    }
     for(int j=0;j<q;j++){
-        if(binarySearch(S,T[j])!=-1){
+        if(binarySearch(S,T[j])!=NOTFOUND){
             answer = answer+1;
         }
     }

@@ -53,7 +53,6 @@ void inorder(Node* p_u){
     printf(" %d",p_u->key);
     inorder(p_u->p_right);
 }
-// FIXME: inorderと中身が変わってません。ソースと照合ください。
 void preorder(Node* p_u){
     if(p_u == p_NIL){
         return;

@@ -8,7 +8,6 @@ struct Node{
     Node *p_left,*p_right,*p_parent;
 };
 // https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_4_B
-// TODO: 要らないところを削り落として提出する
 Node *p_root=nullptr;
 Node *p_NIL=nullptr;
 

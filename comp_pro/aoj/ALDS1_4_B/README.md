@@ -1,6 +1,6 @@
 # \[ALDS1_4_B\]\<二分探索\>
 
-## [問題のURL](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B&lang=ja)
+## [問題のURL](https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_4_B)
 
 ## [解説のURL](https://judge.u-aizu.ac.jp/onlinejudge/commentary.jsp?id=ALDS1_4_B&pattern=post&type=general&filter=Algorithm)
 
@@ -21,5 +21,7 @@
 
 * あと、与えられる数列Sは「小さい方から並んでいる」という前提にある。
 
-
+* TLEで終わる→原因はVectorのコピーにあり[参考](https://teratail.com/questions/233413)
+    * 値を入れるだけならば参照渡しが良いのかしら。それとも関数化をやめるか。
+    * 今後は関数は参照渡しに切り替えてみる
 
