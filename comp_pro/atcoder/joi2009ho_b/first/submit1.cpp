@@ -12,19 +12,32 @@ void initial(void){
 int main(void){
     initial();
     ll result=0;
-    ll suround_d=0;
-    int shop_count_n=0;
-    int pizza_count_m=0;
-    cin >> suround_d >> shop_count_n >> pizza_count_m;
-    vector<ll> shop_pos(shop_count_n+1,0);
-    /** FIXME: ここはshop_pos=0の所にも店があることに注意
-    for(auto x:shop_pos){
+    ll D=0;
+    ll N=0;
+    ll M=0;
+    cin >> D >> N >> M;
+    vector<ll> shop_pos(N+1);
+    vector<ll> cost_pos(M);
+    for(ll j=0;j<N-1;j++){
+        cin >> shop_pos[j];
+    }
+    // 本店を登録
+    shop_pos[N-1]=D;
+    shop_pos[N]=0;
+    sort(shop_pos.begin(),shop_pos.end());
+    for(auto &x:cost_pos){
         cin >> x;
     }
-    **/
-    shop_pos[shop_count_n]=suround_d;
-
-
+    cout << "店の位置一覧\n" << flush;
+    for(ll j=0;j<N+1;j++){
+        cout << shop_pos[j] << " ";
+    }
+    cout << "\n" << flush;
+    cout << "客の位置一覧\n" << flush;
+    for(ll j=0;j<M;j++){
+        cout << cost_pos[j] << " ";
+    }
+    cout << "\n" << flush;
 
     cout << result << "\n" << flush;
     return 0;
