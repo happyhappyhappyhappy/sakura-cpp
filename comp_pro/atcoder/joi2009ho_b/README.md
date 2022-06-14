@@ -13,6 +13,9 @@
 -----
 ヒント
 * C++には[lower_bound関数](https://cpprefjp.github.io/reference/algorithm/lower_bound.html)が存在し、それを用いればすぐ出来る。
-    * 二部探索の改訂版
-    * 敢えて、[ここ](https://qiita.com/drken/items/97e37dd6143e33a64c8c)を見つつ実装してみる。
+    * 二部探索
+    * [ここ](https://qiita.com/drken/items/97e37dd6143e33a64c8c)を見つつサンプル作成。
     * 検証は[ここ](https://github.com/happyhappyhappyhappy/sakura-cpp/tree/master/samples)で公開
+    * 最終的には1回目はlower_bound関数を活用。
+
+## [提出結果1回目OK](https://atcoder.jp/contests/joi2009ho/submissions/32469354)

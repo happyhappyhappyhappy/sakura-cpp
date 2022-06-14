@@ -9,6 +9,20 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+ll solver(vector<ll> &S,ll key){
+    ll result=0;
+    ll size=S.size();
+    if(S[size-1] == key){
+        return 0;
+    }
+    auto itr=lower_bound(S.begin(),S.end(),key);
+    ll after=*itr;
+    --itr;
+    ll before=*itr;
+    result=min(abs(before-key),abs(key-after));
+    return result;
+}
+
 int main(void){
     initial();
     ll result=0;
@@ -28,17 +42,9 @@ int main(void){
     for(auto &x:cost_pos){
         cin >> x;
     }
-    cout << "店の位置一覧\n" << flush;
-    for(ll j=0;j<N+1;j++){
-        cout << shop_pos[j] << " ";
-    }
-    cout << "\n" << flush;
-    cout << "客の位置一覧\n" << flush;
     for(ll j=0;j<M;j++){
-        cout << cost_pos[j] << " ";
+        result = result + solver(shop_pos,cost_pos[j]);
     }
-    cout << "\n" << flush;
-
     cout << result << "\n" << flush;
     return 0;
 }
