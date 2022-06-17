@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll=long long;
-#define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
+#define COUT(x) cout << #x << " = " << (x) << " (L" <<__LINE__<< ")" << "\n" << flush
 // めぐる式二分探索法(一般化の拡張)
 // https://qiita.com/drken/items/97e37dd6143e33a64c8c
 
@@ -17,14 +17,12 @@ bool isGood(ll &mid_pos,ll &key){
 // right-left=1になったときgoodの値を返す→lower_boundと同じ振る舞い
 
 ll now_binary_search(vector<ll> &shops,ll pos){
-    ll result=0;
     ll good;
     ll bad;
     bad = -1; // 0が正解の時の防備
     good = shops.size()+1; // 最大値が正解だったときの防備
     while(abs(good-bad)>1) // 差が丁度1の時に完了
     {
-        cout << "now good = " << good << "bad = " << bad << "continue\n" << flush;
         ll mid = (bad + good) / 2;//二つの中間点
         if(isGood(shops[mid],pos)){
             good = mid; // 条件を満たす良い値を幅寄せする
@@ -33,16 +31,14 @@ ll now_binary_search(vector<ll> &shops,ll pos){
             bad = mid; // 条件に満たない位置を幅寄せする
         }
     }
-    cout << "good = " << good << " bad = " << bad << " finish\n" << flush;
-   return result; 
+   return good; 
 }
 
-ll solver(vector<ll> shops,ll pos){
+ll solver(vector<ll> &shops,ll pos){
     ll result=0;
     ll nearly_pos=0;
     nearly_pos = now_binary_search(shops,pos);
     result = min(abs(shops[nearly_pos]-pos),abs(pos-shops[nearly_pos-1]));
-    cout << pos << "";
     return result;
 }
 

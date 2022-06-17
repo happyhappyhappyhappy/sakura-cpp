@@ -10,3 +10,5 @@
 
 * [1.のパターン](https://atcoder.jp/contests/joi2009ho/submissions/32516168)
 
+* [2.のパターン](https://atcoder.jp/contests/joi2009ho/submissions/32517868)
+
