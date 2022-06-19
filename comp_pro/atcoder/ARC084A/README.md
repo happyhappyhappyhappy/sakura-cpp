@@ -4,6 +4,7 @@
 
 ## [解説のURL(公式)](https://blog.hamayanhamayan.com/entry/2017/11/06/020314)
 
+
 ## [参考](https://drken1215.hatenablog.com/entry/2021/02/25/223800)
 
 ## [この問題の結果](https://atcoder.jp/contests/abc077/submissions?f.Task=arc084_a&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
