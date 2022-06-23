@@ -11,25 +11,27 @@ void initial(void){
 
 ll solver(vector<ll> &A,vector<ll> &B,vector<ll> &C){
     ll result = 0;
-    int SIZE=A.size();
-    for(int j=0;j<SIZE;j++){
-        cout << A[j] << " ";
+    sort(A.begin(),A.end());
+    sort(B.begin(),B.end());
+    sort(C.begin(),C.end());
+    ll SIZE=A.size();
+    for(ll j=0;j<SIZE;j++){
+        ll canA=0; // Aに使える物
+        ll canC=0; // Cに使える物
+        ll keyLarge=B[j];
+        canA = lower_bound(A.begin(),A.end(),keyLarge)-A.begin();
+        // keyLarge以上(keyLarge含む)の物を使用しない。
+        canC = SIZE-(upper_bound(C.begin(),C.end(),keyLarge)-C.begin());
+        // keyLarge以下(keyLarge含む)の物は使用しない
+        // keyLarge以上(keyLarge含まない)の物だけ使用する
+        result = result + canA*canC;
     }
-    cout << endl;
-    for(int j=0;j<SIZE;j++){
-        cout << B[j] << " ";
-    }
-    cout << endl;
-    for(int j=0;j<SIZE;j++){
-        cout << C[j] << " ";
-    }
-    cout << endl;
     return result;
 }
 
 int main(void){
     initial();
-    int N=0;
+    ll N=0;
     cin >> N;
     vector<ll> A(N); // 上の段
     vector<ll> B(N); // 中央
