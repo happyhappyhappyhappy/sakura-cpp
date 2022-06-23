@@ -18,7 +18,7 @@ bool isCheckOK(int value,int key){
 
 int myupb(int key,vector<int> &A){
     int ng=A.size();
-    int ok=-1;
+    int ok=0;
     while(abs(ok-ng)>1){
         int mid;
         mid = (ok+ng)/2;
