@@ -15,3 +15,9 @@
 
 -----
 ヒント
+
+* lower_boundとupper_boundを使う
+
+## [作成結果](https://atcoder.jp/contests/abc077/submissions/32672861)
+
+    * 少々後悔あり、upper_boundはlower_boundと逆かと思って作って見たが、上手くいかなかった。他の言語に使いたかったのだが。
