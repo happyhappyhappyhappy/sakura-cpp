@@ -17,8 +17,8 @@ bool isCheckOK(int value,int key){
 }
 
 int myupb(int key,vector<int> &A){
-    int ng=A.size();
     int ok=0;
+    int ng=A.size();
     while(abs(ok-ng)>1){
         int mid;
         mid = (ok+ng)/2;
@@ -28,8 +28,11 @@ int myupb(int key,vector<int> &A){
         else{
             ng = mid;
         }
+        cout << "-----\n";
+        COUT(ok);
+        COUT(ng);
     }
-    return ok;
+    return ok+1;
 }
 
 int main(void){
