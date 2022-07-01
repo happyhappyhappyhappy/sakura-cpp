@@ -5,7 +5,15 @@ using ll=long long;
 int solver_h(vector<int> &H,int key){
     int left=-1;
     int right=H.size();
-
+    while(abs(right-left)>1){
+        int mid=(right+left)/2;
+        if(key < H[mid]){
+            right = mid;
+        }
+        else{
+            left=mid;
+        }
+    }
     return right;
 }
 int solver_u(vector<int> &UPP,int key){
