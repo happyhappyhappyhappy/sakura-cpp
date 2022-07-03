@@ -3,22 +3,53 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 
-ll lower_bound2(vector<ll> &X,ll key){
-    int left,right;
-    // TODO : ここから
+ll upper_bound2(vector<ll> &X,ll key){
+    ll left,right;
+    left = -1;
     right = X.size();
+    while(abs(right-left)>1){
+        ll mid;
+        mid = (left+right)/2;
+        if(key<X[mid]){
+            right = mid;
+        } 
+        else{
+            left = mid;
+        }
+    }
+    return right;
 }
 
-ll solver(int N,vector<ll> &U,vector<ll> &M,vector<ll> &B){
+ll lower_bound2(vector<ll> &X,ll key){
+    ll left,right;
+    left = -1;
+    right = X.size();
+    while(abs(right-left)>1){
+        ll mid;
+        mid = (right+left)/2;
+        if(key <= X[mid]){
+            right = mid;
+        }
+        else{
+            left = mid;
+        }
+    }
+    return right;
+}
+
+ll solver(ll N,vector<ll> &U,vector<ll> &M,vector<ll> &B){
     ll result=0;
+    
     sort(U.begin(),U.end());
     sort(M.begin(),M.end());
     sort(B.begin(),B.end());
-    for(int j=0;j<M.size();j++){
-        int u_able;
-        int b_able;
+    for(ll j=0;j<N;j++){
+        ll u_able;
+        ll b_able;
+        ll b_result;
         u_able=lower_bound2(U,M[j]);
-        b_able=upper_bound2(B,M[j]);
+        b_result=upper_bound2(B,M[j]);
+        b_able=B.size()-b_result;
         result = u_able*b_able+result;
     }
     return result;
@@ -32,7 +63,7 @@ void initial(void){
 
 int main(void){
     initial();
-    int N;
+    ll N;
     cin >> N;
     vector<ll> A_U(N);
     vector<ll> B_M(N);
@@ -44,7 +75,7 @@ int main(void){
         cin >> x;
     }
     for(auto &x:C_B){
-        cin >> X;
+        cin >> x;
     }
     cout << solver(N,A_U,B_M,C_B) << endl;
     return 0;
