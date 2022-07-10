@@ -8,6 +8,6 @@ int main(void){
     ll inf50 = 1LL<<50;
     ll inf60 = 1LL<<60;
     cout << "32左移動\t" << inf32 << "\n";
-    cout << ""; 
+    cout << "";// TODO: 50左移動から 
     return 0;
 }
