@@ -27,10 +27,19 @@ long long solver(int &N,vector<long long> &HIGH,vector<long long> &SPEED){
         }
         sort(TIME.begin(),TIME.end());
         for(int j=0;j<N;j++){ // 0[秒]からN-1[秒]まで打とうとしてみる
-            if(TIME[j]<j){}// もし、もうリミットを TODO: この時false
+            if(TIME[j]<j)
+            {
+                ok=false;// もし、もうリミットを切ってしまっていたらfalse
+            }
+        }
+        if(ok){ // もし問題なければ
+            top_pos = mid;// もうちょっと下まで行けないか→上の部分を下(mid値)に下ろす
+        }
+        else{ // もし、出来ないと分かったら
+            low_pos = mid; // 下の部分をかさ上げする
         }
     }
-    return result;
+    return top_pos;
 }
 int main(void){
     initial();
@@ -41,6 +50,6 @@ int main(void){
     for(int j=0;j<N;j++){
         cin >> H[j] >> S[j];
     }
-    cout << solver(N,H,S);
+    cout << solver(N,H,S) << "\n";
     return 0;
 }
