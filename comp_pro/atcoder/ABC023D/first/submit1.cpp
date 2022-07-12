@@ -50,6 +50,6 @@ int main(void){
     for(int j=0;j<N;j++){
         cin >> H[j] >> S[j];
     }
-    cout << solver(N,H,S) << "\n";
+    cout << solver(N,H,S) << "\n" << flush;
     return 0;
 }
