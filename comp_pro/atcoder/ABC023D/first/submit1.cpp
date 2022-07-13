@@ -10,7 +10,6 @@ void initial(void){
 }
 
 long long solver(int &N,vector<long long> &HIGH,vector<long long> &SPEED){
-    long long result=0;
     long long top_pos=INF;
     long long low_pos=0;
     while(abs(top_pos-low_pos)>1){
