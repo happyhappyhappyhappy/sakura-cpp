@@ -2,7 +2,7 @@
 
 ## [問題のURL](https://codeforces.com/problemset/problem/1699/A)
 
-## [解説のURL](https://codeforces.com/problemset/problem/1699/A)←問題リンク
+## [解説のURL](https://codeforces.com/blog/entry/104088)
 
 ## [この問題の結果](https://codeforces.com/contest/1699/status/A)
 
