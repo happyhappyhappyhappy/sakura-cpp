@@ -7,8 +7,7 @@ long double f(long double x){
 }
 // 黄金比
 void compute_cd(double &a,double &b,double &c,double &d){
-    double gold;
-    GOLD = (sqrt(5.0)-1.0)/2.0;
+    double GOLD = (sqrt(5.0)-1.0)/2.0;
     // TODO: どうやら全部使うみたいだ
 }
 int main(void){
