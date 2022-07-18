@@ -1,3 +1,3 @@
 # ここで攻略する式
 
-![これ](./CodeCogsEqn3.gif))
+![これ](./CodeCogsEqn3.gif)
