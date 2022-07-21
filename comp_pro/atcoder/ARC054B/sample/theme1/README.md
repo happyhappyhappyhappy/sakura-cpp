@@ -22,4 +22,14 @@
 ```
 現在作成中
 ```
-[参考](https://jetbead.hatenablog.com/entry/20110808/1312820433)
+---
+
+方針転換
+
+他人のソースを使わず**比率＋内分点**で求める。
+
+まずは黄金比の所を「2」として三分として出力する
+
+内分点:internally dividing point
+
+分母:denominator
