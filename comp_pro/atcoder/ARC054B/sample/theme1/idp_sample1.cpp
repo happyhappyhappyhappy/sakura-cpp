@@ -2,12 +2,16 @@
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
-void get_point(double left,double *gleft,
-double *gright,double right){
+void get_point(double left,double &gleft,
+double &gright,double right){
     // 3分探索用仮の黄金比
-    static double GOLD=2.0 
+    static double GOLD=2.0;
+    static double DENOMI=pow((GOLD+1.0),-1.0);
     // static double GOLD= ここに本当の黄金比を入れる
-    // TODO: ここに内分点の公式を当てはめる 2022/07/21
+    // 1:2になる点はgleftの中身になる
+    gleft = (left*2+right)*DENOMI;
+    // 2:1になる点はleftの中身になる
+    gright = (left+right*2)*DENOMI;
 }
 
 void initial(void){
@@ -23,7 +27,7 @@ int main(void){
     cin >> tc;
     while(tc--){
         double left,right;
-        double *g_left,*g_right;// 内分点はポインタにする
+        double g_left,g_right;
         cin >> left >> right;
         get_point(left,g_left,g_right,right);
         cout << left << " " << g_left << " " <<
