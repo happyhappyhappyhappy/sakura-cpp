@@ -13,15 +13,14 @@ double func(double x){
     return pow(x,2.0)-6.0*x+10.0;
 }
 void get_point(double left,double &gleft,double &gright,double right){
-    // 3分探索用仮の黄金比
-    static double GOLD=2.0; // TODO: これを本当の黄金比にする
+    // 黄金比 https://ja.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E6%AF%94
+    static double GOLD=(1.0+sqrt(5.0))*pow(2.0,-1.0); // TODO: これを本当の黄金比にする
     static double DENOMI=pow((GOLD+1.0),-1.0);
     // 1:2になる点はgleftの中身になる
     gleft = (left*GOLD+right)*DENOMI;
     // 2:1になる点はleftの中身になる
     gright = (left+right*GOLD)*DENOMI;
 }
-
 
 int main(void){
     initial();
