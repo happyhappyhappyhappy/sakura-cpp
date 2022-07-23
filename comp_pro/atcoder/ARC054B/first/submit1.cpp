@@ -10,8 +10,9 @@ void initial(void){
     cout.tie(nullptr);
 }
 double func(double value,double P){
-    double denomi = pow(2.0,3.0*value*pow(2.0,-1.0));
-    return value+P*pow(denomi,-1.0);
+//    double denomi = pow(2.0,3.0*value*pow(2.0,-1.0));
+//    return value+P*pow(denomi,-1.0);
+    return value + P * pow(0.5, value / 1.5);
 }
 void golden_point(double left,double &gleft,double &gright,double right){
     static double GOLD=(1.0+sqrt(5.0))*pow(2.0,-1.0); // 黄金比
@@ -35,14 +36,15 @@ double solver(double P){
             // rightを左に寄せる
             right=gright;
         }
+        else
         {
             // leftを左に寄せる
             left=gleft;
-        }
+        }/**
         cout << "TERM " << counter << ":left " << left 
-        << " " << ":right " << right << "\n" << flush;
+        << " " << ":right " << right << "\n" << flush;**/
     }
-    cout << "LAST LEFT: " << left << " RIGHT: " << right << "\n" << flush;  
+    // cout << "LAST LEFT: " << left << " RIGHT: " << right << "\n" << flush;  
     return func((right+left)*pow(2.0,-1.0),P);
 }
 int main(void){
