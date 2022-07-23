@@ -9,25 +9,29 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-double func(double NOW_TIME){
-    return NOW_TIME;
+double func(double value,double P){
+    double denomi = pow(2.0,3.0*value*pow(2.0,-1.0));
+    return value+P*pow(denomi,-1.0);
 }
 void golden_point(double left,double &gleft,double &gright,double right){
-    
+    static double GOLD=(1.0+sqrt(5.0))*pow(2.0,-1.0); // 黄金比
+    static double DENOMI=pow((GOLD+1.0),-1.0); // 分母
+    gleft=(left*GOLD+right)*DENOMI;
+    gright=(left+GOLD*right)*DENOMI;
 }
 
-double solver(double NOW_TIME){
+double solver(double P){
     double left=0.0;
-    double right=NOW_TIME;
+    double right=P;
     int counter=300;
     while(counter--){
-        if(abs(right-left)>0.000000001){
+        if(abs(right-left)<0.000000001){
             break;
         }
         double gleft;
         double gright;
         golden_point(left,gleft,gright,right);
-        if(func(gleft)<func(gright)){
+        if(func(gleft,P)<func(gright,P)){
             // rightを左に寄せる
             right=gright;
         }
@@ -35,16 +39,16 @@ double solver(double NOW_TIME){
             // leftを左に寄せる
             left=gleft;
         }
-        cout << "TERM " << count << ":left " << left 
+        cout << "TERM " << counter << ":left " << left 
         << " " << ":right " << right << "\n" << flush;
     }
     cout << "LAST LEFT: " << left << " RIGHT: " << right << "\n" << flush;  
-    return func((right+left)*pow(2.0,-1.0));
+    return func((right+left)*pow(2.0,-1.0),P);
 }
 int main(void){
     initial();
-    double now_time;
-    cin >> now_time;
-    cout << solver(now_time) << "\n" << flush;
+    double P;
+    cin >> P;
+    cout << solver(P) << "\n" << flush;
     return 0;
 }
