@@ -38,6 +38,12 @@ ll solver(vector<ll> &shops,ll pos){
     ll result=0;
     ll nearly_pos=0;
     nearly_pos = now_binary_search(shops,pos);
+    /**
+    cout << "Nearly_pos : " << nearly_pos << "\n" << flush;
+    if(pos == 0){
+        cout << "Umm pos = 0 ... Nearly pos " << shops[nearly_pos-1] << "\n" << flush;
+    }
+    **/
     result = min(abs(shops[nearly_pos]-pos),abs(pos-shops[nearly_pos-1]));
     return result;
 }
@@ -67,6 +73,12 @@ int main(void){
     for(ll j=0;j<cost_all;j++){
         ll cost_pos;
         cin >> cost_pos;
+        /**
+        if(cost_pos == 0){
+            cout << "Warning cost_pos equal Main Shop\n" << flush;
+        }
+        COUT(cost_pos);
+        **/
         result = result + solver(shop_pos,cost_pos);
     }
     cout << result << "\n" << flush;
