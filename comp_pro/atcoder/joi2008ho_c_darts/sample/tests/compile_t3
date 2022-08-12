@@ -1,0 +1,33 @@
+#!/usr/bin/csh
+
+if ($#argv < 2) then
+   echo Usage: compile_t3 ID Ext 
+   exit 1
+endif
+
+set st=$argv[1]
+set tn=3
+set ext=$argv[2]
+
+if (-f $st'_t'$tn'.'$ext) then
+  if ($ext == "c") then
+    if (-f $st'_t'$tn'.exe') then
+      rm $st'_t'$tn'.exe'
+    endif
+    gcc -o $st'_t'$tn -Wall -O2 $st'_t'$tn'.c' -lm 
+  else if ($ext == "cpp") then
+    if (-f $st'_t'$tn'.exe') then
+      rm $st'_t'$tn'.exe'
+    endif
+    g++ -o $st'_t'$tn -Wall -O2 $st'_t'$tn'.cpp' -lm 
+  else if ($ext == "java") then
+    if (-f $st'_t'$tn'.class') then
+      rm $st'_t'$tn'.class'
+    endif
+    javac -O $st'_t'$tn'.java'
+  else
+    echo Forbidden: $ext 
+  endif
+else
+   echo Not found $st'_t'$tn'.'$ext
+endif

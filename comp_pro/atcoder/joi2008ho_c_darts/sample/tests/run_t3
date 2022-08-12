@@ -1,0 +1,56 @@
+#!/usr/bin/csh
+
+if ($#argv < 3) then
+   echo Usage: run_t3 ID Ext InputNo
+   exit 1
+endif
+
+set task='2008-ho-t'
+set st=$argv[1]
+set tn=3
+set ext=$argv[2]
+set inn=$argv[3]
+set r=0
+
+if ($inn != 1 && $inn != 2 && $inn != 3) then
+  echo Not found $task$tn'-ex-in'$inn
+  exit 1
+endif
+
+if ($ext == "c" || $ext == "cpp") then
+  if (-f $st'_t'$tn'.exe') then
+    echo '  '$st'_t'$tn'.exe,  '$task$tn'-ex-in'$inn
+    echo -n '  time: '
+    if  (-f output.txt) then
+      rm output.txt
+    endif
+    cp -p $task$tn'-ex-in'$inn input.txt
+    time ./$st'_t'$tn 
+    if (-f output.txt) then
+      echo Finished
+    else
+      echo No output.txt
+    endif
+  else
+    echo Not found $st'_t'$tn'.exe'
+  endif
+else if ($ext == "java") then
+  if (-f $st'_t'$tn'.class') then
+    echo '  '$st'_t'$tn'.class,  '$st'_t'$tn'-ex-in'$inn
+    echo -n '  time: '
+    if  (-f output.txt) then
+      rm output.txt
+    endif
+    cp -p $task$tn'-ex-in'$inn input.txt
+    time java $st'_t'$tn
+    if (-f output.txt) then
+      echo Finished
+    else
+      echo No output.txt
+    endif
+  else
+    echo Not found $st'_t'$tn'.class'
+  endif
+else
+  echo Forbidden: $ext
+endif
