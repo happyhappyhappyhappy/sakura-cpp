@@ -10,6 +10,22 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+int upper_bound2(vector<ll> &S,int key){
+    int right=S.size();
+    int left=-1;
+
+    while(right-left>1){
+        int mid = (right+left)*pow(2,-1);
+        if(key < S[mid]){
+            right = mid;
+        }
+        else{
+            left = mid;
+        }
+    }
+    return right;
+}
+
 int main(void){
     initial();
     int N;
@@ -23,10 +39,6 @@ int main(void){
         cin >> P.at(j);
     }
     P.push_back(0);
-    for(int j=0;j<P.size();j=j+1){
-        cout << P[j] << " ";
-    }
-    cout << "\n" << flush;
     vector<ll> doubleP; // 2回Pに当てたときの結果一覧
     for(int j=0;j<P.size();j=j+1){
         for(int k=0;k<P.size();k=k+1){
@@ -34,11 +46,18 @@ int main(void){
         }
     }
     sort(doubleP.begin(),doubleP.end());
-    cerr << doubleP.size() << "\n" << flush;
+    ll answer=0;
     for(int j=0;j<doubleP.size();j++){
-        cerr << doubleP[j] << " ";
+        ll a;
+        a=doubleP[j];
+        int pos;
+        pos = upper_bound2(doubleP,M-a);
+        if(pos == 0){
+            continue;
+        }
+        answer = max(answer,doubleP[j]+doubleP[pos-1]);
     }
-    cerr << "\n" << flush;
+    cout << answer << "\n" << flush;
     return 0;
 }
 
