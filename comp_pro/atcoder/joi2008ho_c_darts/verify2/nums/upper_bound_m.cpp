@@ -17,11 +17,17 @@ int main(void){
     int left = -1;
     while(right-left>1){
         int mid = (right+left)*pow(2,-1);
-        if(X[mid]){}
+        if(B < X[mid]) // 中心点を上回る場合
+        {
+            right = mid;
+        }
+        else{
+            left = mid; // 逆の場合は下を押し上げる
+        }
     }
-    cout << "ポインタ表現: " << *Iter << "\n" << flush;
-    cout << "位置表現: " << Iter - X.begin() << "\n" << flush;
-    if(Iter==X.begin()){
+    cout << "ポインタ表現: " << X[right] << "\n" << flush;
+    cout << "位置表現: " << right << "\n" << flush;
+    if(right == 0){
         cout << "位置表現はX.begin()と同じです\n" << flush;
     }
     else{
