@@ -4,7 +4,7 @@
 
 ## [解説のURL](https://drken1215.hatenablog.com/entry/2021/06/12/113100)
 
- * 直接の解説はslideshareにありました
+ * 直接の解説はslideshareにありました X
 
 ## [この問題の結果](https://atcoder.jp/contests/abc023/submissions?f.Task=abc023_d&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
 
