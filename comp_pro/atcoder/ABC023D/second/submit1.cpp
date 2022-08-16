@@ -10,6 +10,7 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+// ll solver(int,ll,ll)
 
 int main(void){
     initial();
