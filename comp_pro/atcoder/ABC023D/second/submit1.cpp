@@ -3,7 +3,7 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__)
-const long long MAX_HIGH=1LL<<50;
+const long long MAX_HIGH=1LL<<60;
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -11,30 +11,19 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-ll solver(int target,vector<ll> high,vector<ll> speed){
+ll solver(int &target,vector<ll> &high,vector<ll> &speed){
     ll top=MAX_HIGH;
     ll under=0;
-    /**
-    for(int j=0;j<target;j=j+1){
-        cout << high.at(j) << " ";
-    }
-    cout << "\n" << flush;
-    for(int j=0;j<target;j=j+1){
-        cout << high.at(j) << " ";
-    }
-    cout << "\n" << flush;
-    **/
-   // TODO: vector型 h を high に変更すること
     while(top-under>1){
         bool flag=true;
-        vector<ll> remainTime(target);
+        vector<ll> remainTime(target,0);
         ll mid=(top+under)*pow(2,-1);
         for(int j=0;j<target;j++){ 
-            if(mid<h[j]){ // 風船の初期高度が判定高度を超えていたらダメ。
+            if(mid<high[j]){ // 風船の初期高度が判定高度を超えていたらダメ。
                 flag=false;
             }
             else{
-                remainTime[j] = (mid-h[j]) * pow(speed[j],-1);
+                remainTime[j] = (mid-high[j]) * pow(speed[j],-1);
             }
         }
         sort(remainTime.begin(),remainTime.end());
@@ -43,13 +32,13 @@ ll solver(int target,vector<ll> high,vector<ll> speed){
                 flag=false;
             }
         }
-        if(flug){ // true:まだまだ余裕ありそう→上位の位置を下げる→中心地へ
+        if(flag){ // true:まだまだ余裕ありそう→上位の位置を下げる→中心地へ
             top=mid;
         }
         else{ // false:失敗する。→下位の位置を中心値に上げる
             under=mid;
         }
-        debug("上位 %lld, 下位%lld\n",top,under);
+//        debug("上位 %lld, 下位%lld\n",top,under);
     }
 
     return top;
