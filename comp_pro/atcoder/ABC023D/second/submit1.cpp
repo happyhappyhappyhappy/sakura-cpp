@@ -14,7 +14,7 @@ void initial(void){
 ll solver(int &target,vector<ll> &high,vector<ll> &speed){
     ll top=MAX_HIGH;
     ll under=0;
-    while(top-under>1){
+    while(top-under>1){// TODO: absを付けてみる？
         bool flag=true;
         vector<ll> remainTime(target,0);
         ll mid=(top+under)*pow(2,-1);
