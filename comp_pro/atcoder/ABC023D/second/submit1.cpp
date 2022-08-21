@@ -14,16 +14,16 @@ void initial(void){
 ll solver(int &target,vector<ll> &high,vector<ll> &speed){
     ll top=MAX_HIGH;
     ll under=0;
-    while(top-under>1){// TODO: absを付けてみる？
+    while(abs(top-under)>1){
         bool flag=true;
         vector<ll> remainTime(target,0);
-        ll mid=(top+under)*pow(2,-1);
+        ll mid=(top+under)/2;
         for(int j=0;j<target;j++){ 
             if(mid<high[j]){ // 風船の初期高度が判定高度を超えていたらダメ。
                 flag=false;
             }
             else{
-                remainTime[j] = (mid-high[j]) * pow(speed[j],-1);
+                remainTime[j] = (mid-high[j])/speed[j];
             }
         }
         sort(remainTime.begin(),remainTime.end());
