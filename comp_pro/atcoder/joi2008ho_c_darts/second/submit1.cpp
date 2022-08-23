@@ -10,6 +10,21 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+int lower_bound_m(vector<ll> &X,ll key){
+    int right=X.size();
+    int left=-1;
+    while(abs(right-left)>1){
+        int mid=(right+left)/2;
+        if(key < X[mid]){
+            right = mid;
+        }
+        else{
+            left = mid;
+        }
+    }
+    return right;
+}
+
 int main(void){
     initial();
     int N;
@@ -24,8 +39,20 @@ int main(void){
     }
     vector<ll> D2; // ダーツを二回投げて得られる点数
     for(int j=0;j<P.size();j=j+1){
-        
+        for(int k=0;k<P.size();k=k+1){
+            D2.push_back(P[j]+P[k]);
+        }
     }
-
+    sort(D2.begin(),D2.end());
+    ll answer=0;
+    for(long long int j=0;j<D2.size();j=j+1){
+        int pos=lower_bound_m(D2,M-D2[j]);
+        if(pos==0){ // M突破しているから0点しかない
+            continue;
+        }
+        pos = pos - 1;
+        answer=max(answer,D2[j]+D2[pos]);
+    }
+    cout << answer << "\n" << flush;
     return 0;
 }

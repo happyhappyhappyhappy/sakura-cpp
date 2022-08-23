@@ -1,5 +1,7 @@
 # \[JOI本戦2008C\]\<ダーツ\>
 
+## [atCoderへのリンク(回答用)](https://atcoder.jp/contests/joi2008ho/tasks/joi2008ho_c)
+
 ## [本家問題(pdf)](./problem.pdf)
 
 ## [本家解説(pdf)](./editorial.pdf)
