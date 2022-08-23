@@ -1,7 +1,8 @@
-# \[問題番号\]\<問題名\>
+# \[JOI本戦2008C\]\<ダーツ\>
 
-## [本家問題+解説のURL](https://www.ioi-jp.org/joi/2007/2008-ho-prob_and_sol/index.html)
+## [本家問題(pdf)](./problem.pdf)
 
+## [本家解説(pdf)]
 この中のpdfに含まれている。
 <!--  この辺にリンク作成 --->
 
