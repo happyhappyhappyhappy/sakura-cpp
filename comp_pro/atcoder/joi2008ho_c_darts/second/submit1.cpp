@@ -16,7 +16,7 @@ int lower_bound_m(vector<ll> &X,ll key){
     while(abs(right-left)>1){
         int mid=(right+left)/2;
        // if(key < X[mid]){
-if(key <= X[mid]){ // TODO これするとめぐる式lowになるので確認
+        if(key <= X[mid]){ 
             right = mid;
         }
         else{
