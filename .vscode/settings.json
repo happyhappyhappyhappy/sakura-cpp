@@ -110,7 +110,8 @@
         "titleBar.activeBackground": "#233b6c",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#233b6c99",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "commandCenter.border": "#e7e7e799"
     },
     "peacock.remoteColor": "#233B6C",
     "git.autofetch": true
