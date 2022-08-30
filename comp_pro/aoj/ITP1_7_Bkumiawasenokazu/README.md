@@ -9,6 +9,7 @@
 ヒント
 
 * ~~[next_permutation(C++)](https://cpprefjp.github.io/reference/algorithm/next_permutation.html)の練習~~
+    
     3つ選択するとしたらこれはpermutationではなく「combination」になる。
 
 
