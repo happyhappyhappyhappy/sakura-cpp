@@ -6,5 +6,14 @@ using ll=long long;
 
 int main(void){
 
+    int MAX=9;
+    int FORMAX=MAX+1;
+    for(int j=1;j<FORMAX;j++){
+        for(int k=j+1;k<FORMAX;k++){
+            for(int m=k+1;m<FORMAX;m++){
+                cout << j << "," << k << "," << m << "\n" << flush;
+            }
+        }
+    }
     return 0;
 }
