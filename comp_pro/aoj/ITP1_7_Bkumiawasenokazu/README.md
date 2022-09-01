@@ -4,6 +4,10 @@
 
 ## [この問題の結果](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_7_B)
 
+## 自作結果
+
+1. [1回目](https://github.com/happyhappyhappyhappy/sakura-cpp/blob/master/comp_pro/aoj/ALDS1_11_Bfukasayuusentansaku/first/submit.cpp)
+
 ---
 
 ヒント
