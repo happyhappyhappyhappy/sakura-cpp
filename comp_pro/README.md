@@ -10,6 +10,8 @@
 
     * [自作解](https://github.com/happyhappyhappyhappy/sakura-cpp/blob/master/comp_pro/aoj/ALDS1_11_Bfukasayuusentansaku/first/submit.cpp):smiley:
 
+1. [105](https://atcoder.jp/contests/abc106/tasks/abc106_b)
+
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
 1. [深さ優先探索](https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_11_B)
