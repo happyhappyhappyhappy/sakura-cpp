@@ -15,8 +15,10 @@
     * とりあえず取り出しが可能かどうか調べてみる
 
 "atcg".find(与えられた文字列から一つ)==npos →存在しない
-逆を見る
-false 
+
+    * findメソッドの挙動を確認したい
+
+[findメソッド参考リンク](https://cpprefjp.github.io/reference/string/basic_string/find.html)
 
 | 回数 | 達成日 |
 | --- | ----- |
