@@ -34,17 +34,17 @@ int solver(string &inStr){
         }
     }**/
     for(int L=0;L<strlen;L=L+1){
-        for(int R=L;R<N;R=R+1){
+        for(int R=L;R<strlen;R=R+1){
             bool ok=true;
-            for(int x=L;x<R+1;x=x+1){
-                cout << inStr[x];
-                if(STR.find(inStr[x])==string::npos){
+            for(int pos=L;pos<=R;pos=pos+1){
+                if(STR.find(inStr[pos])==string::npos){
                     ok=false;
                 }
             }
-            cout << "\n" << flush;
             if(ok){
-                cout << "全部見つかりました\n" <<  flush;
+                if(result < R-L+1){
+                    result = R-L+1;
+                }
             }
         }
     }
