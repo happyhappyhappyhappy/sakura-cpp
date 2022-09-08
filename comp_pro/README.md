@@ -14,6 +14,8 @@
 
 1. [ATCoder](https://atcoder.jp/contests/abc122/tasks/abc122_b)
 
+1. [カラオケ](https://atcoder.jp/contests/pakencamp-2019-day3/tasks/pakencamp_2019_day3_c)
+
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
 1. [深さ優先探索](https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_11_B)
