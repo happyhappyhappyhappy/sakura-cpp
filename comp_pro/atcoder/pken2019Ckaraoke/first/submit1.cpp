@@ -25,12 +25,7 @@ ll solver(vector<vector<ll>> &A,ll &N,ll &M){
         for(ll sng2=sng1+1;sng2<M;sng2=sng2+1){
             ll nowScore=0;
             for(ll person=0;person<N;person=person+1){
-                if(A[person][sng1] < A[person][sng2]){
-                    nowScore=nowScore+A[person][sng2];
-                }
-                else{
-                    nowScore=nowScore+A[person][sng1];
-                }
+                nowScore=nowScore+max(A[person][sng1],A[person][sng2]);
             }
             chmin(answer,nowScore);
         }
