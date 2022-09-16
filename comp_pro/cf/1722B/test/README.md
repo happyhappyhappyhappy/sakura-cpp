@@ -1,4 +1,6 @@
-# 指定した文字を、すべて別の文字に替える方法
+# 検証フォルダ
+
+## 文字列置換
 
 どうやら、すぐ思いついた[string.replace関数](https://cpprefjp.github.io/reference/string/basic_string/replace.html)には件名の様な機能は無いので、他の手を打つ必要がある。
 
@@ -21,3 +23,31 @@
 
 [サンプル](./sample2.cpp)
 
+```text
+変更前: YAMANAKA
+変更後: YBMBNBKB
+```
+
+## 文字列一致
+
+[c++の仕様](https://cpprefjp.github.io/reference/string/basic_string/compare.html)
+
+### 一致したとき、しなかった時の戻し値。
+
+[作成プログラム](./compare.cpp)
+
+* 一致した場合→0を返す
+
+```text
+文字列1: YAMANAKAKOJI
+文字列2: YAMANAKAKOJI
+戻し値: 0
+```
+
+* 一致しない場合→まずは0以外を返す
+
+```text
+文字列1: YAMANAKAKOJI
+文字列2: YAMANAKEKOJI
+戻し値: -4
+```
