@@ -10,17 +10,36 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+void strChanger(string &str,string fromStr,string toStr){
+    std::string::size_type pos=0;
+    while((pos=str.find(fromStr,pos))!=string::npos){
+        str.replace(pos,fromStr.length(),toStr);
+        pos=pos+toStr.length();
+    }
+}
+
 string solver(string &first,string &second){
-    
-
-
+    // 文字列置換 G,B-> X
+    strChanger(first,"G","X");
+    strChanger(first,"B","X");
+    strChanger(second,"G","X");
+    strChanger(second,"B","X");
+    int judge=first.compare(second);
+    if(judge == 0){
+        return "YES";
+    }
+    else{
+        return "NO";
+    }
+    return "NO";
 }
 
 int main(void){
     initial();
     int testcase=0;
     cin >> testcase;
-    while(--testcase){
+    for(int ie=0;ie<testcase;ie=ie+1)
+    {
         int str_len;
         cin >> str_len;
         string prob_str1;
