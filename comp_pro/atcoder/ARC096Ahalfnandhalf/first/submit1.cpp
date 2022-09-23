@@ -3,7 +3,13 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__)
-#define MAXINT 
+
+
+template<typename X> void chmin(X &a,X &b){
+    if(b<a){
+        a=b;
+    }
+}
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -12,7 +18,7 @@ void initial(void){
 }
 
 int solver(int A,int B,int AB,int X,int Y){
-    int result = 1<<28;
+    int result = INT_MAX;
     int surplusX=0;
     int surplusY=0;
     for(int j=0;j<=2*pow(10,5);j=j+2){
@@ -23,6 +29,17 @@ int solver(int A,int B,int AB,int X,int Y){
         else{
             surplusX=0;
         }
+        if(eachPizza < Y){
+            surplusY=Y-eachPizza;
+        }
+        else{
+            surplusY=0;
+        }
+        int nowSum=j*AB+surplusX*A+surplusY*B;
+        // chmin(result,nowSum);
+        if(nowSum<result){
+            result = nowSum;
+        } 
     }
     return result;
 }
