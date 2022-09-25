@@ -8,6 +8,8 @@ int main(void){
     string S;
     int N;
     cin >> N >> S;
-    for(auto &c:)
+    for(auto &c:S){
+        c = c - '0';
+    }
     return 0;
 }
