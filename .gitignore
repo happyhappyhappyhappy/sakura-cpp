@@ -11,3 +11,4 @@ core
 *.cast
 *.zip
 sample*.txt
+error.txt
