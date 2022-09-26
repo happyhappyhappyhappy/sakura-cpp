@@ -3,6 +3,7 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__)
+#define STREND std::string::npos
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -11,18 +12,28 @@ void initial(void){
 }
 
 bool pinCheck(string &base,int j,int k,int m){
-    int strLeng=base.length();
-    int j_pos,k_pos,m_pos;
+    std::string::size_type j_pos,k_pos,m_pos;
     string j_c = to_string(j);
     string k_c = to_string(k);
     string m_c = to_string(m);
-    // cout << j_c << k_c << m_c << "\n" << flush;
+     cout << j_c << k_c << m_c << "\n" << flush;
     j_pos=base.find(j_c);
-    if(j_pos==string::npos){
+    if(j_pos==STREND){
+        cout << base <<  " には1桁目 " << j_c << "発見できず\n" << flush; 
         return false;
     }
-    // k,mを検索
-    // TODO: pos = s.find(find_word, pos + find_word.length());
+    // kを検索
+    k_pos=base.find(k_c,j_pos+j_c.length());
+    if(k_pos==STREND){
+        cout << base <<  " には2桁目 " << k_c << "発見できず\n" << flush; 
+        return false;
+    }
+    // m を検索
+    m_pos=base.find(m_c,k_pos+k_c.length());
+    if(m_pos==STREND){
+        return false;
+    }
+    cout << k_c << j_c << m_c << " をPINにできます\n" << flush;
     return true;
     }
 
