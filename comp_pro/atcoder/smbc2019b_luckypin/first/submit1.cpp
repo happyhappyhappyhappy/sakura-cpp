@@ -16,16 +16,13 @@ bool pinCheck(string &base,int j,int k,int m){
     string j_c = to_string(j);
     string k_c = to_string(k);
     string m_c = to_string(m);
-     cout << j_c << k_c << m_c << "\n" << flush;
     j_pos=base.find(j_c);
     if(j_pos==STREND){
-        cout << base <<  " には1桁目 " << j_c << "発見できず\n" << flush; 
         return false;
     }
     // kを検索
     k_pos=base.find(k_c,j_pos+j_c.length());
     if(k_pos==STREND){
-        cout << base <<  " には2桁目 " << k_c << "発見できず\n" << flush; 
         return false;
     }
     // m を検索
@@ -33,7 +30,6 @@ bool pinCheck(string &base,int j,int k,int m){
     if(m_pos==STREND){
         return false;
     }
-    cout << k_c << j_c << m_c << " をPINにできます\n" << flush;
     return true;
     }
 
