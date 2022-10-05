@@ -6,8 +6,12 @@
 
 ## [この問題の結果](https://codeforces.com/contest/1729/status/B)
 
+## 自作結果
+
+* [1回目C++](https://codeforces.com/problemset/submission/1729/174726248)
+
 | 回数 | 達成日 | 言語 |
 | --- | ----- | ---- |
-| 1回目 |  |  |
+| 1回目 | 2022/10/05 | C++ |
 | 2回目 |  |  |
 | 3回目 |  |  |
