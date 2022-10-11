@@ -5,7 +5,7 @@ using ll=long long;
 #define debug(...) fprintf(stderr,__VA_ARGS__)
 template <class X> bool chmin(X &a, X b) { if (a > b) {a = b; return true;} return false; }
 ll MAX_LENG=(1LL<<60)/2;
-// TODO: 52という数値は配列にして何個目か？
+
 int main(void){
     ll testcase;
     cin >> testcase;
@@ -26,5 +26,10 @@ int main(void){
             cout << enter_pos << "で最小値入れ替えが発生しました\n" << flush;
         }
     }
+    sort(A.begin(),A.end());
+    for(int j=0;j<A.size();j=j+1){
+        cout << j << " : " << A[j] << " ";
+    }
+    cout << "\n" << flush;
     return 0;
 }
