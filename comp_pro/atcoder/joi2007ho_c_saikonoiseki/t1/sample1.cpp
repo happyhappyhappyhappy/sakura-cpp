@@ -18,5 +18,10 @@ int main(void){
     for(int j=0;j<coord_point;j=j+1){
         cin >> Point[j].first >> Point[j].second ;
     }
+    sort(Point.begin(),Point.end());
+    for(int j=0;j < coord_point;j=j+1){
+        cout << Point[j].first << " "
+        <<  Point[j].second << "\n" << flush;
+    }
     return 0;
 }
