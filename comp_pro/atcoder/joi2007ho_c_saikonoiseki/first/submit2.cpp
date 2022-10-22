@@ -19,6 +19,20 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+// 事前に方眼紙の範囲に含まれているか確認
+// ここにある座標は結局falseになるここと
+// 方眼紙からはみ出たところをチェックしてエラーになることを排除
+bool checkOutOfRange(int v){ 
+    if(v < 0){              
+        return true;
+    }
+    if(MAXSIDE <= v){
+        return true;
+    }
+    return false;
+}
+
+
 bool exitCheck(P &A,P &B,set<P> HASHIRA){
     P C,D;
     ll x1,y1,x2,y2;
