@@ -1,6 +1,9 @@
 # \[2007年情報オリンピックC\]\<最古の遺跡\>
 
-[各種情報](https://www.ioi-jp.org/joi/2006/2007-ho-prob_and_sol/index.html)
+
+[提出先](https://atcoder.jp/contests/joi2007ho/tasks/joi2007ho_c)
+
+[問題本文等の情報リンク](https://www.ioi-jp.org/joi/2006/2007-ho-prob_and_sol/index.html)
 
 ## 問題
 
@@ -16,7 +19,7 @@ pdfになるので若干こちらで把握したことを説明。
 
 
 
-## [この問題の結果](./kaisetu.pdf)
+## [この問題の解説](./kaisetu.pdf)
 
 ---
 

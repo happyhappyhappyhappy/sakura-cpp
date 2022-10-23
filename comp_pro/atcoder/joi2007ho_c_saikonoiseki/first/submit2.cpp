@@ -33,7 +33,7 @@ bool checkOutOfRange(int v){
 }
 
 
-bool exitCheck(P &A,P &B,set<P> HASHIRA){
+bool exitCheck(P &A,P &B){
     P C,D;
     ll x1,y1,x2,y2;
     x1 = A.first;
@@ -44,27 +44,29 @@ bool exitCheck(P &A,P &B,set<P> HASHIRA){
     C.second= y2 + (x2-x1);
     D.first = x1 - ( y2-y1);
     D.second = y1 + (x2-x1);
-    // TODO: 方眼値内にあることを確認
+    // 方眼値内にあることを確認
     // 超えていたらこの段階でfalse
-
-    // ここでC,Dに対応する方眼のフラグがtrueになっていれば良い
-
+    if(checkOutOfRange(C.first) || checkOutOfRange(C.second) ||
+    checkOutOfRange(D.first) || checkOutOfRange(D.second))
+    {
+        return false;
+    }
+    if(SQ[C.first][C.second] == true && 
+    SQ[D.first][D.second] == true)
+    {
+        return true;
+    }
     return false;
 }
 
 int solver(int pt,vector<P> &Point){
     int result = 0;
     sort(Point.begin(),Point.end());
-    set<P> HASHIRA;
-    for(int j=0;j<pt;j=j+1){
-        HASHIRA.insert(Point[j]);
-    }
     for(int j=0;j<pt;j=j+1){
         for(int k=j+1;k<pt;k=k+1){
             P A=Point[j];
             P B=Point[k];
-            debug("J=%d,K=%dについて調査中\n",j,k);
-            if(exitCheck(A,B,HASHIRA)){
+            if(exitCheck(A,B)){
                 int diffab=(A.first-B.first)*(A.first-B.first)+
                 (A.second-B.second)*(A.second-B.second);
                 chmax(result,diffab);
@@ -81,6 +83,7 @@ int main(void){
     vector<P> Point(coordpoint);
     for(int j=0;j<coordpoint;j=j+1){
         cin >> Point[j].first >> Point[j].second;
+        SQ[Point[j].first][Point[j].second]=true;
     }
     cout << solver(coordpoint,Point) << "\n" << flush;
     return 0;
