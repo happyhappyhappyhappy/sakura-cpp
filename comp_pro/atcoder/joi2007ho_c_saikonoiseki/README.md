@@ -27,6 +27,7 @@ pdfになるので若干こちらで把握したことを説明。
 
 * [1回目TLE](https://atcoder.jp/contests/joi2007ho/submissions/35807304)
   * データがでかくなるとどうもやらかしてしまう様だ。
+* [1回目OK]()
 
 ヒント
 
