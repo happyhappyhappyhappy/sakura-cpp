@@ -23,6 +23,7 @@
 1. [古代の遺跡](https://atcoder.jp/contests/joi2007ho/tasks/joi2007ho_c)
    * [自作解](https://atcoder.jp/contests/joi2007ho/submissions/35920444)
      * 一回set型にデータをしまったらTLEになったので、柱の有無をビットマップの様に扱って再テストした。  
+1. [星座探し](https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_d)
 
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
