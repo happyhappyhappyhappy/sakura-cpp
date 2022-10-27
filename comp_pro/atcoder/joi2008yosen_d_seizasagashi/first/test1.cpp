@@ -3,7 +3,7 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__);
-#define bufcl setvbuf(stdout, (char *)NULL, _IONBF, 0); 
+#define ERRFLUSH setvbuf(stderr, (char *)NULL, _IONBF, 0); 
 template<class XXX> void chmin(XXX &x,XXX y){
     if(x > y){
         x = y;
@@ -12,7 +12,8 @@ template<class XXX> void chmin(XXX &x,XXX y){
 
 int main(void){
 
-    debug("test\n");
-    bufcl;
+    int figure_cnt;
+    cin >> figure_cnt;
+    vector<vector<int>> fig(figure_cnt,vector<int>(2,0));
     return 0;
 }
