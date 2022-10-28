@@ -1,0 +1,12 @@
+./tdpc/tdpcd/correct/submitCOMP.cpp:typedef pair< int , int > pint;
+./tdpc/tdpcd/correct/submitCOMP.cpp:typedef pair<ll,ll> pll;
+./tdpc/tdpcd/correct/submitCOMP.cpp:template < class T1, class T2> ostream& operator <<(ostream &s, pair<T1,T2> P){ return s<<'<' <<P.first<< ", " <<P.second<< '>' ;}
+./tdpc/tdpcd/map/map1.cpp:    mapOfWords.insert(make_pair("earth",1));
+./tdpc/tdpcd/map/map1.cpp:    mapOfWords.insert(make_pair("moon",2));
+./tdpc/tdpcd/map/map1.cpp:       if(mapOfWords.insert(make_pair("earth", 1)).second == false){
+./tdpc/tdpcd/map/map1.cpp:    if(mapOfWords.insert(make_pair("earth",1)).second == false){
+./joi2007ho_c_saikonoiseki/first/ok1.cpp:	set<pair<int,int>> xy_set;
+./joi2007ho_c_saikonoiseki/first/submit1.cpp:typedef pair<int,int> P;
+./joi2007ho_c_saikonoiseki/first/submit1_p.cpp:int solver(int count,vector<vector<int>> &T,set<pair<int,int>> &HASHIRA){
+./joi2007ho_c_saikonoiseki/first/submit1_p.cpp:    set<pair<int,int>> HASHIRA;
+./joi2007ho_c_saikonoiseki/first/submit2.cpp:typedef pair<int,int> P;

@@ -24,7 +24,7 @@
 			"#define COUT(x) cout<<#x<< \" = \" <<(x)<< \" (L\" <<__LINE__<< \")\" <<\"\\n\" << flush",
 			"#define debug(...) fprintf(stderr,__VA_ARGS__)",
 			"template<class XXX> void chmin(XXX &x,XXX y){",
-            "    if(x < y){",
+            "    if(x > y){",
             "        x = y;",
             "    }",
             "}"
