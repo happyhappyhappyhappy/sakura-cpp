@@ -18,6 +18,13 @@ void initial(void){
 
 bool solver(int fig_cnt,int photo_cnt,vector<vector<int>> FIG,
 vector<vector<int>> PHOTO,int &ans_x,int &ans_y){
+    map<pair<int,int>,int> collate_map;
+    for(int j=0;j<fig_cnt;j=j+1){
+        for(int k=0;k<photo_cnt;k=K+1){
+            // TODO: ここに星座座標と地図座標との移動長さを
+            // 求めてcollate_mapにcollate_map[{x,y}]++;と入れる
+        }
+    }
     ans_x=fig_cnt;
     ans_y=photo_cnt;
     return true;
