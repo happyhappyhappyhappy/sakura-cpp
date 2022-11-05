@@ -1,18 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__)
 template<class XXX> void chmin(XXX &x,XXX y){
     if(x > y){
         x = y;
     }
-}
-// 10番目の問題がTLEになってしまう。再度設定。
-void initial(void){
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
 }
 
 bool solver(vector<int> &A,int Q){
@@ -32,7 +25,6 @@ bool solver(vector<int> &A,int Q){
 }
 
 int main(void){
-    initial();
     int n;
     cin >> n;
     vector<int> A(n);
