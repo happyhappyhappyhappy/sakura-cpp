@@ -14,30 +14,20 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+void initialSum(int count,vector<int> &A,set<int> &sumSet){
+    for(int bit=0;bit < (1<<count);bit=bit+1){
+        int inQ=0;
+        for(int pos=0;pos<count;pos=pos+1){
+            int filterCheck;
+            filterCheck = bit & (1<<pos);
+            if(filterCheck!=0){
+                inQ = inQ + A[pos];
+            }
+        }
+        sumSet.insert(inQ);
+    }
 
-bool solver(int q_sum,int pos,vector<int> &A){
-// 前提チェック
-    // 番兵ここから
-    // 条件に達した
-    if(q_sum == 0){
-        return true;
-    }
-    if(q_sum < 0){
-        // これ以上やっても仕方ない
-        return false;
-    }
-    // 最後まで調べた
-    if(A.size() <= pos){
-        return false;
-    }
-    
-    // 番兵ここまで
-    bool selected,unselected;
-    selected = solver(q_sum-A[pos],pos+1,A);
-    unselected = solver(q_sum,pos+1,A);
-    return selected || unselected;
 }
-
 int main(void){
     initial();
     int elem;
@@ -46,12 +36,14 @@ int main(void){
     for(int j=0;j<elem;j=j+1){
         cin >> A[j];
     }
-    int qs;
-    cin >> qs;
-    while(qs--){
-        int Q;
-        cin >> Q;
-        if(solver(Q,0,A)){
+    set<int> sumSet;
+    initialSum(elem,A,sumSet);
+    int q_num;
+    cin >> q_num;
+    while(q_num--){
+        int q;
+        cin >> q;
+        if(1 <= sumSet.count(q)){
             cout << "yes\n" << flush;
         }
         else{

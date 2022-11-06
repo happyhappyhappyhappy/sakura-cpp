@@ -17,17 +17,21 @@ void initial(void){
 
 bool solver(int q_sum,int pos,vector<int> &A){
 // 前提チェック
+    debug("余り%dの状態で%d番目の検索に入ります\n",q_sum,pos);
     // 番兵ここから
     // 条件に達した
     if(q_sum == 0){
+        debug("合計が引き切れました->条件達成!!\n");
         return true;
     }
     if(q_sum < 0){
         // これ以上やっても仕方ない
+        debug("合計が引き切れました\n");
         return false;
     }
     // 最後まで調べた
     if(A.size() <= pos){
+        debug("最後まで検索しました\n");
         return false;
     }
     
@@ -51,6 +55,7 @@ int main(void){
     while(qs--){
         int Q;
         cin >> Q;
+        debug("===%dの調査開始===\n",Q);
         if(solver(Q,0,A)){
             cout << "yes\n" << flush;
         }
