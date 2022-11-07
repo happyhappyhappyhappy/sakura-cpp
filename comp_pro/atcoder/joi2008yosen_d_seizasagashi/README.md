@@ -12,9 +12,10 @@ https://scrapbox.io/Example0911/JOI_08%E4%BA%88%E9%81%B8_D_%E6%98%9F%E5%BA%A7%E6
 ---
 
 * [1回目OK](https://atcoder.jp/contests/joi2008yo/submissions/36089231)
+* [2回目OK](https://atcoder.jp/contests/joi2008yo/submissions/36304829)
 
 | 回数 | 達成日 | 言語 |
 | --- | ----- | ---- |
 | 1回目 | 2022年10月30日 | C++ |
-| 2回目 |  |  |
+| 2回目 | 2022年11月7日 | python(pypy3) |
 | 3回目 |  |  |
