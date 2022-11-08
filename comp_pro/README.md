@@ -22,8 +22,18 @@
 
 1. [古代の遺跡](https://atcoder.jp/contests/joi2007ho/tasks/joi2007ho_c)
    * [自作解](https://atcoder.jp/contests/joi2007ho/submissions/35920444)
-     * 一回set型にデータをしまったらTLEになったので、柱の有無をビットマップの様に扱って再テストした。  
+     * 一回set型にデータをしまったらTLEになったので、柱の有無をビットマップの様に扱って再テストした。
+     * pythonではMLEになるのでset型にしたら解決した  
 1. [星座探し](https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_d)
+   1. 自作解C++
+   2. 自作解python
+      * collections.Counterクラス様々
+
+### [bit全探索]
+
+1. [ALDS_5_A総当たり](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja)
+   1. 解説の様に再帰のアルゴリズムを使わないとTLEになるので注意
+2. [switch](https://atcoder.jp/contests/abc128/tasks/abc128_c)
 
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
