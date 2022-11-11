@@ -27,6 +27,16 @@ void _main() {
 	int ans = 0;
 	for(int msk=0; msk < (1 << N);msk=msk+1) {
 		debug("---フィルターコード %d 検索開始---\n",msk);
+        debug("==== ただいまのスイッチ操作状況 ====\n");
+        for(int switchc=0;switchc < N;switchc=switchc+1){
+            if((msk & (1<<switchc))!=0){
+                debug("%d 番目のスイッチON\n",switchc);
+            }
+            else{
+                debug("%d 番目のスイッチOFF\n",switchc);
+            }
+        }
+        debug("==== 状況をお伝えしました ====\n");
         int ok = 0;
 		for(int m=0;m<M;m=m+1) {
 			int cnt = 0;
@@ -35,19 +45,19 @@ void _main() {
                 debug("%d番目の電球,%d番目のスイッチについて\n",m,s);  
                      if (msk & (1 << s))
                         { 
-                            debug("フィルター%dの組み合わせは %dで参入\n",msk,s);
+                            debug("フィルター%dの組み合わせは %dで条件満たす\n",msk,s);
                             cnt=cnt+1;
                         }
                     else{
-                        debug("フィルター%dの組み合わせは %dでは\n",msk,s);
+                        debug("フィルター%dの組み合わせは %dでは条件満たさず\n",msk,s);
                     }
                  }
 			if (cnt % 2 == P[m]) {
-                debug("%d番目OK\n",m);
+                debug("%d番目点灯しました\n",m);
                 ok=ok+1;
                 }
                 else{
-                    debug("%d番目:奇数、偶数が合わずNG\n",m);
+                    debug("%d番目:奇数、偶数が合わず点灯しない\n",m);
                 }
 		}
         debug("フィルター %d について、点灯した合計 %d / %d \n",msk,ok,M);
