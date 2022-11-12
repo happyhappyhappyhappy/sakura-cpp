@@ -16,6 +16,7 @@ void initial(void){
 }
 
 // デバッグ用スイッチパターンチェック
+/**
 void d_switch_pattern(int allsw,int bit){
     debug("=====\n スイッチパターン %dの時\n=====\n",bit);
     for(int j=0;j < allsw;j=j+1){
@@ -28,9 +29,10 @@ void d_switch_pattern(int allsw,int bit){
         }
     }
 }
+**/
 int light_cnt(int &bit,int &switches,int &lamps,vector<int> &relative,
 vector<vector<int>> &LANDS,vector<int> ODDS){
-    d_switch_pattern(switches,bit);
+//    d_switch_pattern(switches,bit);
     int count=0;
     for(int j=0;j<lamps;j=j+1){
         int cond=0;
@@ -46,7 +48,7 @@ vector<vector<int>> &LANDS,vector<int> ODDS){
             count = count + 1;
         }
     }
-    debug("点灯した数 %d 個\n",count);
+//    debug("点灯した数 %d 個\n",count);
     return count;
 }
 
@@ -79,16 +81,5 @@ int main(void){
         }
     }
     cout << answer << "\n" << flush;
-    // SW_CNTが正しく入っているか確認 OK!
-    /**
-    for(int j=0;j<M;j=j+1){
-        debug("電球 %d のスイッチ条件\n",j);
-        for(int k=0;k<SW_CNT[j];k=k+1){
-            debug("%d ",SW[j][k]);
-        }
-        debug("\nが[ON]の時\n");
-    }
-    **/
-
     return 0;
 }
