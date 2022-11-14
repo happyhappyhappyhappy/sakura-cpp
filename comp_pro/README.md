@@ -29,11 +29,14 @@
    2. 自作解python
       * collections.Counterクラス様々
 
-### [bit全探索]
+### bit全探索
 
 1. [ALDS_5_A総当たり](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja)
    1. 解説の様に再帰のアルゴリズムを使わないとTLEになるので注意
-2. [switch](https://atcoder.jp/contests/abc128/tasks/abc128_c)
+2. [switches](https://atcoder.jp/contests/abc128/tasks/abc128_c)
+   1. データの格納法(各ランプの必要スイッチ数とスイッチ名)を慎重にする
+3. [派閥](https://atcoder.jp/contests/abc002/tasks/abc002_4)
+   1. 作成中
 
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
