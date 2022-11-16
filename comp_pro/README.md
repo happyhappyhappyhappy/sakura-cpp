@@ -29,7 +29,7 @@
    2. 自作解python
       * collections.Counterクラス様々
 
-### bit全探索
+### [bit全探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%85%A8%E6%8E%A2%E7%B4%A2%E3%83%93%E3%83%83%E3%83%88%E5%85%A8%E6%8E%A2%E7%B4%A2)
 
 1. [ALDS_5_A総当たり](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja)
    1. 解説の様に再帰のアルゴリズムを使わないとTLEになるので注意
