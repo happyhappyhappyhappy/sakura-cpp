@@ -17,7 +17,7 @@ void initial(void){
 
 void nowFIXed(int bit,int R){
     // TODO: これを持って何が固定されるかされないかチェックする
-    debug("====ここで固定される物====\n");
+    debug("====--%d--ここで固定される物====\n",bit);
 
     for(int j=0;j<R;j=j+1){
         if((bit & (1<<j))!=0)
@@ -40,14 +40,17 @@ int main(void){
             cin >> main_net[j][k];
         }
     }
-    for(int j=0;j<R;j=j+1){
-        for(int k=0;k<C;k=k+1){
-            cout << main_net[j][k] << " ";
-        }
-        cout << "\n" << flush;
-    }
+    // for(int j=0;j<R;j=j+1){
+    //     for(int k=0;k<C;k=k+1){
+    //         cout << main_net[j][k] << " ";
+    //     }
+    //     cout << "\n" << flush;
+    // }
     for(int bit=0;bit<(1<<R);bit=bit+1){
-        nowFIXed(bit,R);
+        // nowFIXed(bit,R);
+        for(int j=0;j<R;j=j+1){
+            
+        }
     }
     return 0;
 }
