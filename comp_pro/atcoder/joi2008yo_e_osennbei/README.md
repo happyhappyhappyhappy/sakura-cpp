@@ -6,14 +6,13 @@
 
 ## [この問題の結果](https://atcoder.jp/contests/joi2008yo/submissions?f.Task=joi2008yo_e&f.LanguageName=C%2B%2B&f.Status=AC&f.User=)
 
+## 自作結果
 
----
-
-ヒント
+* [1回目OK](https://atcoder.jp/contests/joi2008yo/submissions/36844091)
 
 | 回数 | 達成日 | 言語 |
 | --- | ----- | ---- |
-| 1回目 |  |  |
+| 1回目 | 2022年11月27日 | C++ |
 | 2回目 |  |  |
 | 3回目 |  |  |
 
