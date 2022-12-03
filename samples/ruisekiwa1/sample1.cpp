@@ -24,10 +24,10 @@ struct CumulativeSum {
     for(int i = 1; i < data.size(); i++) {
       data[i] += data[i - 1];
     }
-    for(int j=0;j<data.size();j=j+1){
-        debug("%d ",data[j]);
-    }
-    debug("\n");
+    // for(int j=0;j<data.size();j=j+1){
+    //     debug("%d ",data[j]);
+    // }
+    // debug("\n");
   }
 
   T fold(int r) const {
