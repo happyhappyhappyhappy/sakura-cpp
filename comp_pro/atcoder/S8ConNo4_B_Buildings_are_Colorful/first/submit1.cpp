@@ -46,12 +46,14 @@ int solver(int &N,vector<int> &H,int &K){
             if(lpos==0){
                 continue;
             }
-            int maxbuild=H[0];
+            int maxbuild=Ht[0];
             for(int m=1;m<lpos;m=m+1){
                 chmax(maxbuild,H[m])
             }
-            if(H[lpos] < maxbuild ){
-                now_cost = now_cost + (maxbuild-H[lpos])+1;
+            if(Ht[lpos] < maxbuild ){
+int geta=maxbuild-Ht[lpos]+1;
+                now_cost = now_cost + geta;
+                Ht[lpos]=Ht[lpos]+geta;
             }
             chmin(result,now_cost); // TODO: これでコンパイル開始 2022年12月4日
         }
