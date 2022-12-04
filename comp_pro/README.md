@@ -41,6 +41,7 @@
 3. [派閥](https://atcoder.jp/contests/abc002/tasks/abc002_4)
    1. 作成中
 4. [おせんべい](https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_e)
+5. [Square869120Contest_No4_B_Buildings are Colorful](https://atcoder.jp/contests/s8pc-4/tasks/s8pc_4_b)
 
 ### [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
 
