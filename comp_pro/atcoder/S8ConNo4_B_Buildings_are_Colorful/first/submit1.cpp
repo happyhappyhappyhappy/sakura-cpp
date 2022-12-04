@@ -38,6 +38,8 @@ int solver(int &N,vector<int> &H,int &K){
 //            debug("ここから先は処理せず\n");
             continue;
         }
+        vector<int> Ht(N);
+        copy(H.begin(),H.end(),Ht.begin());
         int now_cost=0;
         for(int k=0;k<pos.size();k=k+1){
             int lpos=pos[k];
