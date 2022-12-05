@@ -35,7 +35,6 @@ int solver(int &N,vector<int> &H,int &K){
             }
         }
         if(pos.size()!=K){
-//            debug("ここから先は処理せず\n");
             continue;
         }
         vector<int> Ht(N);
@@ -48,15 +47,17 @@ int solver(int &N,vector<int> &H,int &K){
             }
             int maxbuild=Ht[0];
             for(int m=1;m<lpos;m=m+1){
-                chmax(maxbuild,H[m])
+                chmax(maxbuild,Ht[m]);
             }
             if(Ht[lpos] < maxbuild ){
-int geta=maxbuild-Ht[lpos]+1;
+                int geta=maxbuild-Ht[lpos]+1;
                 now_cost = now_cost + geta;
+                // TODO: 問題点 now_costが何故反映できないか。個々の値で反映している
+                debug("pos=%d 最高値=%d 下駄=%d 累積=%d \n",lpos,maxbuild,geta,now_cost);
                 Ht[lpos]=Ht[lpos]+geta;
             }
-            chmin(result,now_cost); // TODO: これでコンパイル開始 2022年12月4日
         }
+        chmin(result,now_cost);
         // debug("----- j = %d の時 に見えていたい 建物-----\n",j);
         // for(int k=0;k<pos.size();k=k+1){
         //     debug("%d ",pos[k]);
