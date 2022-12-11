@@ -8,6 +8,10 @@
 
 ---
 
+## 提出結果
+
+* [2回目OK](https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=7163735#1)
+    * その前にコンパイルエラー→難しいコードを削除
 ヒント
 
 | 回数 | 達成日 |
