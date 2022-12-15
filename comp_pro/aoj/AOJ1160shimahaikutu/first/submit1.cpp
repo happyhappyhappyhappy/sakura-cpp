@@ -9,14 +9,33 @@ template<class XXX> void chmin(XXX &x,XXX y){
     }
 }
 
+int H,W;
+
+bool out_of_Grid(int y,int x){
+    if(y<0){
+        return true;
+    }
+    if(x<0){
+        return true;
+    }
+    if(H<=y){
+        return true;
+    }
+    if(W<=x){
+        return true;
+    }
+    return false;
+}
 
 void dfs(vector<vector<int>> &G,int h,int w){
     G[h][w]=0; // 自分の所は探索済みにする
-    for(dx = -1;dx <= 1;dx=dx+1){
-        for(dy = -1;dy <=1 ;dy=dy+1){
-            // TODO: ここから 八方向探索
-            // 解説 https://qiita.com/drken/items/a803d4fc4a727e02f7ba#%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE%E9%A1%9E%E9%A1%8C
-            // 問題 https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp
+    for(int dx = -1;dx <= 1;dx=dx+1){
+        for(int dy = -1;dy <=1 ;dy=dy+1){
+            if(out_of_Grid(h+dy,w+dx))
+            {
+                continue;
+            }
+            dfs(G,h+dy,w+dx);
         }
     }
 }
@@ -53,7 +72,7 @@ int main(void){
                 cin >> G[j][k];
             }
         }
-        int count;
+        int count=0;
         for(int h=0;h<H;h=h+1){
             for(int w=0;w<W;w=w+1){
                 if(G[h][w]==0){
@@ -77,9 +96,19 @@ int main(void){
         }
         cout << "\n\n" << flush;
         **/
+       cout << count << "\n" << flush;
     }
+
     return 0;
 }
-
+/**
+± % ./a.out < testcase1.txt                                    !1499
+0
+2
+6
+8
+14
+9
+**/
 
 
