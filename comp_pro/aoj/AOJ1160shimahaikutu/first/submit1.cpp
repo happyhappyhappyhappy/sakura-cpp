@@ -28,6 +28,7 @@ bool out_of_Grid(int y,int x){
 }
 
 void dfs(vector<vector<int>> &G,int h,int w){
+    debug("Now (%d,%d)\n",h,w);
     G[h][w]=0; // 自分の所は探索済みにする
     for(int dx = -1;dx <= 1;dx=dx+1){
         for(int dy = -1;dy <=1 ;dy=dy+1){
@@ -35,6 +36,10 @@ void dfs(vector<vector<int>> &G,int h,int w){
             {
                 continue;
             }
+            if(G[h+dy][w+dx]==0){
+                continue;
+            }
+            debug("next = (%d,%d)\n",h+dy,w+dx);
             dfs(G,h+dy,w+dx);
         }
     }
@@ -66,6 +71,7 @@ int main(void){
     int H;
     while(cin >> W >> H){
         if(H == 0 || W == 0)break;
+        debug("This is Grid Hight=%d Width=%d\n",H,W);
         vector<vector<int>> G(H,vector<int>(W,0));
         for(int j=0;j<H;j=j+1){
             for(int k=0;k<W;k=k+1){
