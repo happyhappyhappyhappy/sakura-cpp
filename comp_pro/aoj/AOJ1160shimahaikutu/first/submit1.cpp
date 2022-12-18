@@ -11,53 +11,57 @@ template<class XXX> void chmin(XXX &x,XXX y){
 
 int H,W;
 
-bool out_of_Grid(int y,int x){
-    if(y<0){
+bool out_of_Grid(int nh,int nw,int H,int W){
+    if(nh<0){
         return true;
     }
-    if(x<0){
+    if(nw<0){
         return true;
     }
-    if(H<=y){
+    if(H<=nh){
         return true;
     }
-    if(W<=x){
+    if(W<=nw){
         return true;
     }
     return false;
 }
 
 void dfs(vector<vector<int>> &G,int h,int w){
-    debug("Now (%d,%d)\n",h,w);
+    int gw = G[0].size();
+    int gh = G.size();
     G[h][w]=0; // 自分の所は探索済みにする
-    for(int dx = -1;dx <= 1;dx=dx+1){
-        for(int dy = -1;dy <=1 ;dy=dy+1){
-            if(out_of_Grid(h+dy,w+dx))
+    for(int dw = -1;dw <= 1;dw=dw+1){
+        for(int dh = -1;dh <=1 ;dh=dh+1){
+            int nh = h+dh;
+            int nw = w+dw;
+            if(out_of_Grid(nh,nw,gh,gw))
             {
                 continue;
             }
-            if(G[h+dy][w+dx]==0){
+            if(G[nh][nw]==0){
                 continue;
             }
-            debug("next = (%d,%d)\n",h+dy,w+dx);
-            dfs(G,h+dy,w+dx);
+            dfs(G,nh,nw);
         }
     }
 }
-void show1(vector<vector<int>> &G,int h,int w)
+void show1(vector<vector<int>> &G)
 {
-    for(int j=0;j<H;j=j+1){
-        for(int k=0;k<W;k=k+1){
+    int nh = G.size();
+    int nw = G[0].size();
+    for(int j=0;j<nh;j=j+1){
+        for(int k=0;k<nw;k=k+1){
             if(G[j][k]==1){
-                cout << " o" ;
+                debug(" o");
             }
             else{
-                cout << " x" ;
+                debug(" x") ;
             }
         }
-        cout << "\n" << flush;
+        debug("\n");
     }
-    cout << "\n\n" << flush;
+    debug("\n\n");
 }
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -71,7 +75,7 @@ int main(void){
     int H;
     while(cin >> W >> H){
         if(H == 0 || W == 0)break;
-        debug("This is Grid Hight=%d Width=%d\n",H,W);
+        // debug("\n地図[%d,%d]の深さ優先探索開始\n",H,W);
         vector<vector<int>> G(H,vector<int>(W,0));
         for(int j=0;j<H;j=j+1){
             for(int k=0;k<W;k=k+1){
@@ -84,6 +88,8 @@ int main(void){
                 if(G[h][w]==0){
                     continue;
                 }
+                // debug("\n段階 %dの地図の様子\n",count+1);
+//                show1(G);
                 dfs(G,h,w);
                 count = count+1;
             }
