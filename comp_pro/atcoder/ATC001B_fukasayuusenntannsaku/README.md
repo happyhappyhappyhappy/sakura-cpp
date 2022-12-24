@@ -14,7 +14,7 @@
 ## 提出履歴
 
 * [1回目再帰](https://atcoder.jp/contests/atc001/submissions/37458009)
-* [1回目stack]()
+* [1回目stack](https://atcoder.jp/contests/atc001/submissions/me)
 
 | 回数 | 達成日 | 言語 |
 | --- | ----- | ---- |
