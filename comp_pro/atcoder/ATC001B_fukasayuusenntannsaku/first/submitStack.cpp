@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<stack>
 using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
@@ -25,6 +24,8 @@ bool inMap(int cy,int cx,int Hy,int Wx){ // 地図の中に次の点があるか
     }
     return true;
 }
+
+
 
 void showMap(vector<vector<char>> &G,int Hy,int Wx){
 
@@ -71,10 +72,7 @@ int main(void){
     ccx=0;
     bool looked=false;
     while(!S.empty()){
-        stackList(S);
         pair<int,int> cp=S.top();// 取り出す
-        // TODO: 2022年12月25日ここの箇所から実行、最後に\nを忘れずに
-        debug(" ->[%d,%d]",cp.first,cp.second);
         cx=cp.second;
         cy=cp.first;
         S.pop(); // コンテナ末尾の削除

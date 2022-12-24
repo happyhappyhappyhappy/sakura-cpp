@@ -11,6 +11,8 @@
 
 ヒント
 
+* [stackの情報](https://cpprefjp.github.io/reference/stack/stack.html)
+
 ## 提出履歴
 
 * [1回目再帰](https://atcoder.jp/contests/atc001/submissions/37458009)
