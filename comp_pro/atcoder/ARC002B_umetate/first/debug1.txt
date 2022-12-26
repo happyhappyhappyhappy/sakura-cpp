@@ -1,0 +1,900 @@
+----- (0,0) を島にした場合 ここから -----
+Vxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,0) を島にした場合 ここまで -----
+----- (0,1) を島にした場合 ここから -----
+xVxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,1) を島にした場合 ここまで -----
+----- (0,2) を島にした場合 ここから -----
+xxVxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,2) を島にした場合 ここまで -----
+----- (0,3) を島にした場合 ここから -----
+xxxVxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,3) を島にした場合 ここまで -----
+----- (0,4) を島にした場合 ここから -----
+xxxxVxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,4) を島にした場合 ここまで -----
+----- (0,5) を島にした場合 ここから -----
+xxxxxVxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,5) を島にした場合 ここまで -----
+----- (0,6) を島にした場合 ここから -----
+xxxxxxVxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,6) を島にした場合 ここまで -----
+----- (0,7) を島にした場合 ここから -----
+xxxxxxxVxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,7) を島にした場合 ここまで -----
+----- (0,8) を島にした場合 ここから -----
+xxxxxxxxVx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,8) を島にした場合 ここまで -----
+----- (0,9) を島にした場合 ここから -----
+xxxxxxxxxV
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (0,9) を島にした場合 ここまで -----
+----- (1,0) を島にした場合 ここから -----
+xxxxxxxxxx
+Voooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (1,0) を島にした場合 ここまで -----
+----- (1,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooVx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (1,8) を島にした場合 ここまで -----
+----- (1,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxV
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (1,9) を島にした場合 ここまで -----
+----- (2,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+Vxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (2,0) を島にした場合 ここまで -----
+----- (2,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xVoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (2,1) を島にした場合 ここまで -----
+----- (2,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooVxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (2,7) を島にした場合 ここまで -----
+----- (2,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxVx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (2,8) を島にした場合 ここまで -----
+----- (2,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxV
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (2,9) を島にした場合 ここまで -----
+----- (3,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+Vxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,0) を島にした場合 ここまで -----
+----- (3,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xVxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,1) を島にした場合 ここまで -----
+----- (3,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxVoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,2) を島にした場合 ここまで -----
+----- (3,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooVxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,6) を島にした場合 ここまで -----
+----- (3,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxVxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,7) を島にした場合 ここまで -----
+----- (3,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxVx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,8) を島にした場合 ここまで -----
+----- (3,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxV
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (3,9) を島にした場合 ここまで -----
+----- (4,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+Vxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,0) を島にした場合 ここまで -----
+----- (4,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xVxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,1) を島にした場合 ここまで -----
+----- (4,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxVxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,2) を島にした場合 ここまで -----
+----- (4,3) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxVoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,3) を島にした場合 ここまで -----
+----- (4,5) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoVxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,5) を島にした場合 ここまで -----
+----- (4,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxVxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,6) を島にした場合 ここまで -----
+----- (4,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxVxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,7) を島にした場合 ここまで -----
+----- (4,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxVx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,8) を島にした場合 ここまで -----
+----- (4,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxV
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (4,9) を島にした場合 ここまで -----
+----- (5,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+Vxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,0) を島にした場合 ここまで -----
+----- (5,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xVxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,1) を島にした場合 ここまで -----
+----- (5,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxVxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,2) を島にした場合 ここまで -----
+----- (5,3) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxVxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,3) を島にした場合 ここまで -----
+----- (5,4) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxVxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,4) を島にした場合 ここまで -----
+----- (5,5) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxVxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,5) を島にした場合 ここまで -----
+----- (5,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxVxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,6) を島にした場合 ここまで -----
+----- (5,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxVxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,7) を島にした場合 ここまで -----
+----- (5,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxVx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,8) を島にした場合 ここまで -----
+----- (5,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxV
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (5,9) を島にした場合 ここまで -----
+----- (6,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+Vxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,0) を島にした場合 ここまで -----
+----- (6,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xVxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,1) を島にした場合 ここまで -----
+----- (6,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxVxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,2) を島にした場合 ここまで -----
+----- (6,3) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxVoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,3) を島にした場合 ここまで -----
+----- (6,5) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoVxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,5) を島にした場合 ここまで -----
+----- (6,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxVxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,6) を島にした場合 ここまで -----
+----- (6,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxVxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,7) を島にした場合 ここまで -----
+----- (6,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxVx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,8) を島にした場合 ここまで -----
+----- (6,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxV
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (6,9) を島にした場合 ここまで -----
+----- (7,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+Vxxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,0) を島にした場合 ここまで -----
+----- (7,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xVxoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,1) を島にした場合 ここまで -----
+----- (7,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxVoooxxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,2) を島にした場合 ここまで -----
+----- (7,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooVxxx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,6) を島にした場合 ここまで -----
+----- (7,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxVxx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,7) を島にした場合 ここまで -----
+----- (7,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxVx
+xxoooooxxx
+xxxxxxxxxx
+----- (7,8) を島にした場合 ここまで -----
+----- (7,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxV
+xxoooooxxx
+xxxxxxxxxx
+----- (7,9) を島にした場合 ここまで -----
+----- (8,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+Vxoooooxxx
+xxxxxxxxxx
+----- (8,0) を島にした場合 ここまで -----
+----- (8,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xVoooooxxx
+xxxxxxxxxx
+----- (8,1) を島にした場合 ここまで -----
+----- (8,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooVxx
+xxxxxxxxxx
+----- (8,7) を島にした場合 ここまで -----
+----- (8,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxVx
+xxxxxxxxxx
+----- (8,8) を島にした場合 ここまで -----
+----- (8,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxV
+xxxxxxxxxx
+----- (8,9) を島にした場合 ここまで -----
+----- (9,0) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+Vxxxxxxxxx
+----- (9,0) を島にした場合 ここまで -----
+----- (9,1) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xVxxxxxxxx
+----- (9,1) を島にした場合 ここまで -----
+----- (9,2) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxVxxxxxxx
+----- (9,2) を島にした場合 ここまで -----
+----- (9,3) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxVxxxxxx
+----- (9,3) を島にした場合 ここまで -----
+----- (9,4) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxVxxxxx
+----- (9,4) を島にした場合 ここまで -----
+----- (9,5) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxVxxxx
+----- (9,5) を島にした場合 ここまで -----
+----- (9,6) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxVxxx
+----- (9,6) を島にした場合 ここまで -----
+----- (9,7) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxVxx
+----- (9,7) を島にした場合 ここまで -----
+----- (9,8) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxVx
+----- (9,8) を島にした場合 ここまで -----
+----- (9,9) を島にした場合 ここから -----
+xxxxxxxxxx
+xoooooooxx
+xxoooooxxx
+xxxoooxxxx
+xxxxoxxxxx
+xxxxxxxxxx
+xxxxoxxxxx
+xxxoooxxxx
+xxoooooxxx
+xxxxxxxxxV
+----- (9,9) を島にした場合 ここまで -----

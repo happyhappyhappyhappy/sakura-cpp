@@ -27,88 +27,40 @@ void GCopy(vector<vector<char>> &G,vector<vector<char>> &G2){
     }
 }
 
-void dfs(vector<vector<char>> &G,int j,int k){
-    int dj[]={0,0,1,-1};
-    int dk[]={1,-1,0,0};
-    stack<pair<int,int>> ST;
-    G[j][k] = 'V';
-    debug("-----(%d,%d)を埋め立てた開始図-----\n",j,k);
-    for(int x=0;x<LEN;x=x+1){
-        for(int y=0;y<LEN;y=y+1){
-            debug("%c",G[x][y]);
-        }
-        debug("\n");
-    }
-    ST.push(make_pair(j,k));
-    while(!ST.empty()){
-        pair<int,int> pos = ST.top();
-        ST.pop();
-        for(int x=0;x<4;x=x+1)
-        {
-            int nextj = pos.first+dj[x];
-            int nextk = pos.second+dk[x];
-            if( 0 <= nextj &&
-            nextj < 10 &&
-            0 <= nextk &&
-            nextk < 10
-            ){
-                if(G[nextj][nextk] == 'o'){
-                    G[nextj][nextk] = 'V';
-                    ST.push(make_pair(nextj,nextk));
-                    debug("(%d,%d)->OK\n",nextj,nextk);
-                }
-            }
-            else{
-                debug("(%d,%d)->NG\n",nextj,nextk);
-            }
-        }
-    }
-    debug("-----(%d,%d)を埋め立てた場合:終了図-----\n",j,k);
-    for(int x=0;x<LEN;x=x+1){
-        for(int y=0;y<LEN;y=y+1){
-            debug("%c",G[x][y]);
-        }
-        debug("\n");
-    }
-}
-
-bool dfsmain(vector<vector<char>> &G){
+void GShow(vector<vector<char>> &G){
     for(int j=0;j<LEN;j=j+1){
         for(int k=0;k<LEN;k=k+1){
-            if(G[j][k] == 'o'){
-                dfs(G,j,k);
-            }
+            debug("%c",G[j][k]);
         }
+        debug("\n");
     }
-
-    return false;
 }
 
-bool solver(vector<vector<char>> &G,queue<pair<int,int>> &lands){
+void dfs(vector<vector<char>> &G,int &sx,int &sy){
+    debug("----- (%d,%d) を島にした場合 ここから -----\n",sx,sy);
+    int dx[] = {0,0,1,-1};
+    int dy[] = {1,-1,0,0};
+    G[sx][sy] = 'V';
+    GShow(G);
+    int cx = sx;
+    int cy = sy;
+debug("----- (%d,%d) を島にした場合 ここまで -----\n",sx,sy);
+    // stack<pair<int,int>> ST;
+    // ST.push(make_pair(cx,cy));
+}
+
+bool solver(vector<vector<char>> &G,vector<pair<int,int>> &lands)
+{
     vector<vector<char>> GFree(LEN,vector<char>(LEN));
     bool answer=false;
-    /**
-    for(int j=0;j<LEN;j=j+1){
-        for(int k=0;k<LEN;k=k+1){
-            debug("%c",GFree[j][k]);
-        }
-        debug("\n");
-    }
-    **/
-    while(!lands.empty()){
+    for(int j=0;j<lands.size();j=j+1){
         GCopy(G,GFree);
-        pair<int,int> toLand=lands.front();
-        // debug("->(%d,%d)",toLand.first,toLand.second);
-        lands.pop();
-        GFree[toLand.first][toLand.second]='o';
+        pair<int,int> toLand=lands.at(j);
+        int toLandx=toLand.first;
+        int toLandy=toLand.second;
         bool result=false;
-        result = dfsmain(GFree);
-        if(result){
-            answer=true;
-            break; // 島になっていた
-        }
-    }
-    // debug("\n");
+        dfs(GFree,toLandx,toLandy);
+       }
     return true;
 }
 
@@ -117,41 +69,20 @@ int main(void){
     // 島の地図G
     vector<vector<char>> G(LEN,vector<char>(LEN));
     // 現在の島の位置
-    queue<pair<int,int>> LANDS;
+    vector<pair<int,int>> LANDS;
     // 地図を取り込む
     for(int j=0;j<LEN;j=j+1){
         for(int k=0;k<LEN;k=k+1){
             cin >> G[j][k];
         }
     }
-    // 正しく取れているか＆'%c'で出力できるか確認
-    for(int j=0;j<LEN;j=j+1){
-        for(int k=0;k<LEN;k=k+1){
-            debug("%c",G[j][k]);
-        }
-        debug("\n");
-    }
    for(int j=0;j<LEN;j=j+1){
         for(int k=0;k<LEN;k=k+1){
             if(G[j][k]=='x'){
-               LANDS.push(make_pair(j,k));
+               LANDS.push_back(make_pair(j,k));
             }
         }
    }
-   /**
-    * queueのテスト
-   */
-  /**
-    while(!LANDS.empty()){
-        pair<int,int> pos;
-        pos=LANDS.front();
-        debug("-> (%d,%d)",pos.first,pos.second);
-        LANDS.pop();
-    }
-    debug("\n");
-    **/
-
-// 本体
    if(solver(G,LANDS)){
         cout << Y << flush;
    }
