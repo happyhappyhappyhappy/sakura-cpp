@@ -12,4 +12,3 @@ core
 *.zip
 sample*.txt
 error.txt
-*debug*.txt
