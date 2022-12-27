@@ -37,16 +37,58 @@ void GShow(vector<vector<char>> &G){
 }
 
 void dfs(vector<vector<char>> &G,int &sx,int &sy){
-    debug("----- (%d,%d) を島にした場合 ここから -----\n",sx,sy);
+    debug("----- (%d,%d) を島にした場合 初期状態ここから -----\n",sx,sy);
     int dx[] = {0,0,1,-1};
     int dy[] = {1,-1,0,0};
     G[sx][sy] = 'V';
     GShow(G);
     int cx = sx;
     int cy = sy;
-debug("----- (%d,%d) を島にした場合 ここまで -----\n",sx,sy);
-    // stack<pair<int,int>> ST;
-    // ST.push(make_pair(cx,cy));
+debug("----- (%d,%d) を島にした場合 初期状態ここまで -----\n",sx,sy);
+    stack<pair<int,int>> ST;
+    ST.push(make_pair(cx,cy));
+    while(!ST.empty()){
+        pair<int,int> thispos = ST.top(); // Last Get
+        ST.pop(); // Last throw
+        for(int j=0;j<4;j=j+1){
+            // 4方向に進める
+            int nx = thispos.first+dx[j];
+            int ny = thispos.second+dy[j];
+            // 次に行けるかチェック
+            // (1) 0 未満になったらアウト
+            if( nx < 0 || ny < 0 ){
+                debug("(%d,%d)->(%d,%d) : 0未満なのでNG\n"
+                ,thispos.first,thispos.second,nx,xy);
+                continue;
+            }
+            // 枠を超えたのであうと
+            if( 10 <= nx || 10 <= ny ){
+                debug("(%d,%d)->(%d,%d) : 10以上なのでNG\n"
+                ,thispos.first,thispos.second,nx,xy);
+                continue;
+            }
+            // 海なのでアウト
+            if( G[nx][ny] = 'x' ){
+                debug("(%d,%d)->(%d,%d) : 海なのでNG\n"
+                ,thispos.first,thispos.second,nx,xy);
+                continue;
+            }
+            // すでに検索済みなのでアウト
+            if( G[nx][ny] = 'V' ){
+                debug("(%d,%d)->(%d,%d) : 検索済みなのでNG\n"
+                ,thispos.first,thispos.second,nx,xy);
+                continue;
+            }
+            // 問題がないならVを埋めてスタックに入れる→次の検索対象
+            G[nx][ny] = 'V';
+            ST.push(make_pair(nx,ny));
+        }
+
+    }
+    debug("----- (%d,%d) を島にした場合 検索完了状態ここから -----\n",sx,sy);
+    GShow(G);
+    debug("----- (%d,%d) を島にした場合 検索完了状態ここまで -----\n",sx,sy);
+
 }
 
 bool solver(vector<vector<char>> &G,vector<pair<int,int>> &lands)
