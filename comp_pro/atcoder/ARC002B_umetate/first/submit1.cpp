@@ -58,25 +58,25 @@ debug("----- (%d,%d) を島にした場合 初期状態ここまで -----\n",sx,
             // (1) 0 未満になったらアウト
             if( nx < 0 || ny < 0 ){
                 debug("(%d,%d)->(%d,%d) : 0未満なのでNG\n"
-                ,thispos.first,thispos.second,nx,xy);
+                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 枠を超えたのであうと
             if( 10 <= nx || 10 <= ny ){
                 debug("(%d,%d)->(%d,%d) : 10以上なのでNG\n"
-                ,thispos.first,thispos.second,nx,xy);
+                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 海なのでアウト
-            if( G[nx][ny] = 'x' ){
+            if( G[nx][ny] == 'x' ){
                 debug("(%d,%d)->(%d,%d) : 海なのでNG\n"
-                ,thispos.first,thispos.second,nx,xy);
+                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // すでに検索済みなのでアウト
-            if( G[nx][ny] = 'V' ){
+            if( G[nx][ny] == 'V' ){
                 debug("(%d,%d)->(%d,%d) : 検索済みなのでNG\n"
-                ,thispos.first,thispos.second,nx,xy);
+                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 問題がないならVを埋めてスタックに入れる→次の検索対象
@@ -85,10 +85,6 @@ debug("----- (%d,%d) を島にした場合 初期状態ここまで -----\n",sx,
         }
 
     }
-    debug("----- (%d,%d) を島にした場合 検索完了状態ここから -----\n",sx,sy);
-    GShow(G);
-    debug("----- (%d,%d) を島にした場合 検索完了状態ここまで -----\n",sx,sy);
-
 }
 
 bool solver(vector<vector<char>> &G,vector<pair<int,int>> &lands)
@@ -102,12 +98,20 @@ bool solver(vector<vector<char>> &G,vector<pair<int,int>> &lands)
         int toLandy=toLand.second;
         bool result=false;
         dfs(GFree,toLandx,toLandy);
+        // TODO: 2022年12月28日 ここに下のコードを追加
+        // &Gと参照渡しにしているので大丈夫と思う
+        /**
+        debug("----- (%d,%d) を島にした場合 検索完了状態ここから -----\n",sx,sy);
+        GShow(GFree);
+        debug("----- (%d,%d) を島にした場合 検索完了状態ここまで -----\n",sx,sy);
+        **/
        }
     return true;
 }
 
 int main(void){
     initial();
+    debug("「埋め立て」のデバッグ出力\n");
     // 島の地図G
     vector<vector<char>> G(LEN,vector<char>(LEN));
     // 現在の島の位置
