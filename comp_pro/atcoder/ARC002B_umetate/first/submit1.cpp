@@ -19,12 +19,29 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+bool isExit_o(vector<vector<char>> &G){
+    int W = G[0].size();
+    int H = G.size();
+    bool result = false;
+    for(int jh=0;jh<H;jh=jh+1){
+        for(int kw=0;kw<W;kw=kw+1){
+            if(G[jh][kw] == 'o'){
+                result = true;
+            }
+        }
+    }
+    return result; // Vしか無い場合は最初の設定通りfalseを返す
+}
 void GCopy(vector<vector<char>> &G,vector<vector<char>> &G2){
+    for(int x=0;x<G.size();x=x+1){
+        copy(G[x].begin(),G[x].end(),G2[x].begin());
+    }
+    /**
     for(int j=0;j<LEN;j=j+1){
         for(int k=0;k<LEN;k=k+1){
             G2[j][k]=G[j][k];
         }
-    }
+    }**/
 }
 
 void GShow(vector<vector<char>> &G){
@@ -37,14 +54,11 @@ void GShow(vector<vector<char>> &G){
 }
 
 void dfs(vector<vector<char>> &G,int &sx,int &sy){
-    debug("----- (%d,%d) を島にした場合 初期状態ここから -----\n",sx,sy);
     int dx[] = {0,0,1,-1};
     int dy[] = {1,-1,0,0};
     G[sx][sy] = 'V';
-    GShow(G);
     int cx = sx;
     int cy = sy;
-debug("----- (%d,%d) を島にした場合 初期状態ここまで -----\n",sx,sy);
     stack<pair<int,int>> ST;
     ST.push(make_pair(cx,cy));
     while(!ST.empty()){
@@ -57,26 +71,18 @@ debug("----- (%d,%d) を島にした場合 初期状態ここまで -----\n",sx,
             // 次に行けるかチェック
             // (1) 0 未満になったらアウト
             if( nx < 0 || ny < 0 ){
-                debug("(%d,%d)->(%d,%d) : 0未満なのでNG\n"
-                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 枠を超えたのであうと
             if( 10 <= nx || 10 <= ny ){
-                debug("(%d,%d)->(%d,%d) : 10以上なのでNG\n"
-                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 海なのでアウト
             if( G[nx][ny] == 'x' ){
-                debug("(%d,%d)->(%d,%d) : 海なのでNG\n"
-                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // すでに検索済みなのでアウト
             if( G[nx][ny] == 'V' ){
-                debug("(%d,%d)->(%d,%d) : 検索済みなのでNG\n"
-                ,thispos.first,thispos.second,nx,ny);
                 continue;
             }
             // 問題がないならVを埋めてスタックに入れる→次の検索対象
@@ -98,20 +104,15 @@ bool solver(vector<vector<char>> &G,vector<pair<int,int>> &lands)
         int toLandy=toLand.second;
         bool result=false;
         dfs(GFree,toLandx,toLandy);
-        // TODO: 2022年12月28日 ここに下のコードを追加
-        // &Gと参照渡しにしているので大丈夫と思う
-        /**
-        debug("----- (%d,%d) を島にした場合 検索完了状態ここから -----\n",sx,sy);
-        GShow(GFree);
-        debug("----- (%d,%d) を島にした場合 検索完了状態ここまで -----\n",sx,sy);
-        **/
+        if(!isExit_o(GFree)){
+            return true;
+        }
        }
-    return true;
+    return false;
 }
 
 int main(void){
     initial();
-    debug("「埋め立て」のデバッグ出力\n");
     // 島の地図G
     vector<vector<char>> G(LEN,vector<char>(LEN));
     // 現在の島の位置
@@ -138,5 +139,3 @@ int main(void){
 
     return 0;
 }
-
-

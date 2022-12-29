@@ -1,6 +1,6 @@
 「埋め立て」のデバッグ出力
 ----- (0,0) を島にした場合 初期状態ここから -----
-Vxxxxxxxxx
+Sxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -11,6 +11,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,0) を島にした場合 初期状態ここまで -----
+----- (0,0) を島にした場合 初期状態ここから -----
 (0,0)->(0,1) : 海なのでNG
 (0,0)->(0,-1) : 0未満なのでNG
 (0,0)->(1,0) : 海なのでNG
@@ -28,7 +29,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,0) を島にした場合 検索完了状態ここまで -----
 ----- (0,1) を島にした場合 初期状態ここから -----
-xVxxxxxxxx
+xSxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -39,6 +40,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,1) を島にした場合 初期状態ここまで -----
+----- (0,1) を島にした場合 初期状態ここから -----
 (0,1)->(0,2) : 海なのでNG
 (0,1)->(0,0) : 海なのでNG
 (0,1)->(-1,1) : 0未満なのでNG
@@ -104,7 +106,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,1) を島にした場合 検索完了状態ここまで -----
 ----- (0,2) を島にした場合 初期状態ここから -----
-xxVxxxxxxx
+xxSxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -115,6 +117,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,2) を島にした場合 初期状態ここまで -----
+----- (0,2) を島にした場合 初期状態ここから -----
 (0,2)->(0,3) : 海なのでNG
 (0,2)->(0,1) : 海なのでNG
 (0,2)->(-1,2) : 0未満なのでNG
@@ -180,7 +183,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,2) を島にした場合 検索完了状態ここまで -----
 ----- (0,3) を島にした場合 初期状態ここから -----
-xxxVxxxxxx
+xxxSxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -191,6 +194,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,3) を島にした場合 初期状態ここまで -----
+----- (0,3) を島にした場合 初期状態ここから -----
 (0,3)->(0,4) : 海なのでNG
 (0,3)->(0,2) : 海なのでNG
 (0,3)->(-1,3) : 0未満なのでNG
@@ -256,7 +260,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,3) を島にした場合 検索完了状態ここまで -----
 ----- (0,4) を島にした場合 初期状態ここから -----
-xxxxVxxxxx
+xxxxSxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -267,6 +271,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,4) を島にした場合 初期状態ここまで -----
+----- (0,4) を島にした場合 初期状態ここから -----
 (0,4)->(0,5) : 海なのでNG
 (0,4)->(0,3) : 海なのでNG
 (0,4)->(-1,4) : 0未満なのでNG
@@ -332,7 +337,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,4) を島にした場合 検索完了状態ここまで -----
 ----- (0,5) を島にした場合 初期状態ここから -----
-xxxxxVxxxx
+xxxxxSxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -343,6 +348,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,5) を島にした場合 初期状態ここまで -----
+----- (0,5) を島にした場合 初期状態ここから -----
 (0,5)->(0,6) : 海なのでNG
 (0,5)->(0,4) : 海なのでNG
 (0,5)->(-1,5) : 0未満なのでNG
@@ -408,7 +414,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,5) を島にした場合 検索完了状態ここまで -----
 ----- (0,6) を島にした場合 初期状態ここから -----
-xxxxxxVxxx
+xxxxxxSxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -419,6 +425,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,6) を島にした場合 初期状態ここまで -----
+----- (0,6) を島にした場合 初期状態ここから -----
 (0,6)->(0,7) : 海なのでNG
 (0,6)->(0,5) : 海なのでNG
 (0,6)->(-1,6) : 0未満なのでNG
@@ -484,7 +491,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,6) を島にした場合 検索完了状態ここまで -----
 ----- (0,7) を島にした場合 初期状態ここから -----
-xxxxxxxVxx
+xxxxxxxSxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -495,6 +502,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,7) を島にした場合 初期状態ここまで -----
+----- (0,7) を島にした場合 初期状態ここから -----
 (0,7)->(0,8) : 海なのでNG
 (0,7)->(0,6) : 海なのでNG
 (0,7)->(-1,7) : 0未満なのでNG
@@ -560,7 +568,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,7) を島にした場合 検索完了状態ここまで -----
 ----- (0,8) を島にした場合 初期状態ここから -----
-xxxxxxxxVx
+xxxxxxxxSx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -571,6 +579,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,8) を島にした場合 初期状態ここまで -----
+----- (0,8) を島にした場合 初期状態ここから -----
 (0,8)->(0,9) : 海なのでNG
 (0,8)->(0,7) : 海なのでNG
 (0,8)->(1,8) : 海なのでNG
@@ -588,7 +597,7 @@ xxoooooxxx
 xxxxxxxxxx
 ----- (0,8) を島にした場合 検索完了状態ここまで -----
 ----- (0,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxV
+xxxxxxxxxS
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
@@ -599,6 +608,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (0,9) を島にした場合 初期状態ここまで -----
+----- (0,9) を島にした場合 初期状態ここから -----
 (0,9)->(0,10) : 10以上なのでNG
 (0,9)->(0,8) : 海なのでNG
 (0,9)->(1,9) : 海なのでNG
@@ -617,7 +627,7 @@ xxxxxxxxxx
 ----- (0,9) を島にした場合 検索完了状態ここまで -----
 ----- (1,0) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
-Voooooooxx
+Soooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
@@ -627,6 +637,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (1,0) を島にした場合 初期状態ここまで -----
+----- (1,0) を島にした場合 初期状態ここから -----
 (1,0)->(1,-1) : 0未満なのでNG
 (1,0)->(2,0) : 海なのでNG
 (1,0)->(0,0) : 海なのでNG
@@ -693,7 +704,7 @@ xxxxxxxxxx
 ----- (1,0) を島にした場合 検索完了状態ここまで -----
 ----- (1,8) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
-xoooooooVx
+xoooooooSx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
@@ -703,6 +714,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (1,8) を島にした場合 初期状態ここまで -----
+----- (1,8) を島にした場合 初期状態ここから -----
 (1,8)->(1,9) : 海なのでNG
 (1,8)->(2,8) : 海なのでNG
 (1,8)->(0,8) : 海なのでNG
@@ -769,7 +781,7 @@ xxxxxxxxxx
 ----- (1,8) を島にした場合 検索完了状態ここまで -----
 ----- (1,9) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
-xoooooooxV
+xoooooooxS
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
@@ -779,6 +791,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (1,9) を島にした場合 初期状態ここまで -----
+----- (1,9) を島にした場合 初期状態ここから -----
 (1,9)->(1,10) : 10以上なのでNG
 (1,9)->(1,8) : 海なのでNG
 (1,9)->(2,9) : 海なのでNG
@@ -798,7 +811,7 @@ xxxxxxxxxx
 ----- (2,0) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
 xoooooooxx
-Vxoooooxxx
+Sxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
@@ -807,6 +820,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (2,0) を島にした場合 初期状態ここまで -----
+----- (2,0) を島にした場合 初期状態ここから -----
 (2,0)->(2,1) : 海なのでNG
 (2,0)->(2,-1) : 0未満なのでNG
 (2,0)->(3,0) : 海なのでNG
@@ -826,7 +840,7 @@ xxxxxxxxxx
 ----- (2,1) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
 xoooooooxx
-xVoooooxxx
+xSoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
@@ -835,6 +849,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (2,1) を島にした場合 初期状態ここまで -----
+----- (2,1) を島にした場合 初期状態ここから -----
 (2,1)->(2,0) : 海なのでNG
 (2,1)->(3,1) : 海なのでNG
 (1,1)->(1,0) : 海なのでNG
@@ -902,7 +917,7 @@ xxxxxxxxxx
 ----- (2,7) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
 xoooooooxx
-xxoooooVxx
+xxoooooSxx
 xxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
@@ -911,6 +926,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (2,7) を島にした場合 初期状態ここまで -----
+----- (2,7) を島にした場合 初期状態ここから -----
 (2,7)->(2,8) : 海なのでNG
 (2,7)->(3,7) : 海なのでNG
 (1,7)->(1,8) : 海なのでNG
@@ -978,7 +994,7 @@ xxxxxxxxxx
 ----- (2,8) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
 xoooooooxx
-xxoooooxVx
+xxoooooxSx
 xxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
@@ -987,6 +1003,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (2,8) を島にした場合 初期状態ここまで -----
+----- (2,8) を島にした場合 初期状態ここから -----
 (2,8)->(2,9) : 海なのでNG
 (2,8)->(2,7) : 海なのでNG
 (2,8)->(3,8) : 海なのでNG
@@ -1006,7 +1023,7 @@ xxxxxxxxxx
 ----- (2,9) を島にした場合 初期状態ここから -----
 xxxxxxxxxx
 xoooooooxx
-xxoooooxxV
+xxoooooxxS
 xxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
@@ -1015,6 +1032,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (2,9) を島にした場合 初期状態ここまで -----
+----- (2,9) を島にした場合 初期状態ここから -----
 (2,9)->(2,10) : 10以上なのでNG
 (2,9)->(2,8) : 海なのでNG
 (2,9)->(3,9) : 海なのでNG
@@ -1035,7 +1053,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-Vxxoooxxxx
+Sxxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1043,6 +1061,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,0) を島にした場合 初期状態ここまで -----
+----- (3,0) を島にした場合 初期状態ここから -----
 (3,0)->(3,1) : 海なのでNG
 (3,0)->(3,-1) : 0未満なのでNG
 (3,0)->(4,0) : 海なのでNG
@@ -1063,7 +1082,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xVxoooxxxx
+xSxoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1071,6 +1090,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,1) を島にした場合 初期状態ここまで -----
+----- (3,1) を島にした場合 初期状態ここから -----
 (3,1)->(3,2) : 海なのでNG
 (3,1)->(3,0) : 海なのでNG
 (3,1)->(4,1) : 海なのでNG
@@ -1091,7 +1111,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xxVoooxxxx
+xxSoooxxxx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1099,6 +1119,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,2) を島にした場合 初期状態ここまで -----
+----- (3,2) を島にした場合 初期状態ここから -----
 (3,2)->(3,1) : 海なのでNG
 (3,2)->(4,2) : 海なのでNG
 (2,2)->(2,1) : 海なのでNG
@@ -1167,7 +1188,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xxxoooVxxx
+xxxoooSxxx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1175,6 +1196,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,6) を島にした場合 初期状態ここまで -----
+----- (3,6) を島にした場合 初期状態ここから -----
 (3,6)->(3,7) : 海なのでNG
 (3,6)->(4,6) : 海なのでNG
 (2,6)->(2,7) : 海なのでNG
@@ -1243,7 +1265,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xxxoooxVxx
+xxxoooxSxx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1251,6 +1273,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,7) を島にした場合 初期状態ここまで -----
+----- (3,7) を島にした場合 初期状態ここから -----
 (3,7)->(3,8) : 海なのでNG
 (3,7)->(3,6) : 海なのでNG
 (3,7)->(4,7) : 海なのでNG
@@ -1271,7 +1294,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xxxoooxxVx
+xxxoooxxSx
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1279,6 +1302,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,8) を島にした場合 初期状態ここまで -----
+----- (3,8) を島にした場合 初期状態ここから -----
 (3,8)->(3,9) : 海なのでNG
 (3,8)->(3,7) : 海なのでNG
 (3,8)->(4,8) : 海なのでNG
@@ -1299,7 +1323,7 @@ xxxxxxxxxx
 xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
-xxxoooxxxV
+xxxoooxxxS
 xxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
@@ -1307,6 +1331,7 @@ xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (3,9) を島にした場合 初期状態ここまで -----
+----- (3,9) を島にした場合 初期状態ここから -----
 (3,9)->(3,10) : 10以上なのでNG
 (3,9)->(3,8) : 海なのでNG
 (3,9)->(4,9) : 海なのでNG
@@ -1328,13 +1353,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-Vxxxoxxxxx
+Sxxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,0) を島にした場合 初期状態ここまで -----
+----- (4,0) を島にした場合 初期状態ここから -----
 (4,0)->(4,1) : 海なのでNG
 (4,0)->(4,-1) : 0未満なのでNG
 (4,0)->(5,0) : 海なのでNG
@@ -1356,13 +1382,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xVxxoxxxxx
+xSxxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,1) を島にした場合 初期状態ここまで -----
+----- (4,1) を島にした場合 初期状態ここから -----
 (4,1)->(4,2) : 海なのでNG
 (4,1)->(4,0) : 海なのでNG
 (4,1)->(5,1) : 海なのでNG
@@ -1384,13 +1411,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxVxoxxxxx
+xxSxoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,2) を島にした場合 初期状態ここまで -----
+----- (4,2) を島にした場合 初期状態ここから -----
 (4,2)->(4,3) : 海なのでNG
 (4,2)->(4,1) : 海なのでNG
 (4,2)->(5,2) : 海なのでNG
@@ -1412,13 +1440,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxVoxxxxx
+xxxSoxxxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,3) を島にした場合 初期状態ここまで -----
+----- (4,3) を島にした場合 初期状態ここから -----
 (4,3)->(4,2) : 海なのでNG
 (4,3)->(5,3) : 海なのでNG
 (3,3)->(3,2) : 海なのでNG
@@ -1488,13 +1517,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxxoVxxxx
+xxxxoSxxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,5) を島にした場合 初期状態ここまで -----
+----- (4,5) を島にした場合 初期状態ここから -----
 (4,5)->(4,6) : 海なのでNG
 (4,5)->(5,5) : 海なのでNG
 (3,5)->(3,6) : 海なのでNG
@@ -1564,13 +1594,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxxoxVxxx
+xxxxoxSxxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,6) を島にした場合 初期状態ここまで -----
+----- (4,6) を島にした場合 初期状態ここから -----
 (4,6)->(4,7) : 海なのでNG
 (4,6)->(4,5) : 海なのでNG
 (4,6)->(5,6) : 海なのでNG
@@ -1592,13 +1623,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxxoxxVxx
+xxxxoxxSxx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,7) を島にした場合 初期状態ここまで -----
+----- (4,7) を島にした場合 初期状態ここから -----
 (4,7)->(4,8) : 海なのでNG
 (4,7)->(4,6) : 海なのでNG
 (4,7)->(5,7) : 海なのでNG
@@ -1620,13 +1652,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxxoxxxVx
+xxxxoxxxSx
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,8) を島にした場合 初期状態ここまで -----
+----- (4,8) を島にした場合 初期状態ここから -----
 (4,8)->(4,9) : 海なのでNG
 (4,8)->(4,7) : 海なのでNG
 (4,8)->(5,8) : 海なのでNG
@@ -1648,13 +1681,14 @@ xxxxxxxxxx
 xoooooooxx
 xxoooooxxx
 xxxoooxxxx
-xxxxoxxxxV
+xxxxoxxxxS
 xxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (4,9) を島にした場合 初期状態ここまで -----
+----- (4,9) を島にした場合 初期状態ここから -----
 (4,9)->(4,10) : 10以上なのでNG
 (4,9)->(4,8) : 海なのでNG
 (4,9)->(5,9) : 海なのでNG
@@ -1677,12 +1711,13 @@ xoooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
-Vxxxxxxxxx
+Sxxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (5,0) を島にした場合 初期状態ここまで -----
+----- (5,0) を島にした場合 初期状態ここから -----
 (5,0)->(5,1) : 海なのでNG
 (5,0)->(5,-1) : 0未満なのでNG
 (5,0)->(6,0) : 海なのでNG
@@ -1705,12 +1740,13 @@ xoooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
-xVxxxxxxxx
+xSxxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (5,1) を島にした場合 初期状態ここまで -----
+----- (5,1) を島にした場合 初期状態ここから -----
 (5,1)->(5,2) : 海なのでNG
 (5,1)->(5,0) : 海なのでNG
 (5,1)->(6,1) : 海なのでNG
@@ -1733,12 +1769,13 @@ xoooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
-xxVxxxxxxx
+xxSxxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (5,2) を島にした場合 初期状態ここまで -----
+----- (5,2) を島にした場合 初期状態ここから -----
 (5,2)->(5,3) : 海なのでNG
 (5,2)->(5,1) : 海なのでNG
 (5,2)->(6,2) : 海なのでNG
@@ -1761,12 +1798,13 @@ xoooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
-xxxVxxxxxx
+xxxSxxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (5,3) を島にした場合 初期状態ここまで -----
+----- (5,3) を島にした場合 初期状態ここから -----
 (5,3)->(5,4) : 海なのでNG
 (5,3)->(5,2) : 海なのでNG
 (5,3)->(6,3) : 海なのでNG
@@ -1789,12 +1827,13 @@ xoooooooxx
 xxoooooxxx
 xxxoooxxxx
 xxxxoxxxxx
-xxxxVxxxxx
+xxxxSxxxxx
 xxxxoxxxxx
 xxxoooxxxx
 xxoooooxxx
 xxxxxxxxxx
 ----- (5,4) を島にした場合 初期状態ここまで -----
+----- (5,4) を島にした場合 初期状態ここから -----
 (5,4)->(5,5) : 海なのでNG
 (5,4)->(5,3) : 海なのでNG
 (4,4)->(4,5) : 海なのでNG
@@ -1886,1308 +1925,3 @@ xxxVVVxxxx
 xxVVVVVxxx
 xxxxxxxxxx
 ----- (5,4) を島にした場合 検索完了状態ここまで -----
------ (5,5) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxVxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,5) を島にした場合 初期状態ここまで -----
-(5,5)->(5,6) : 海なのでNG
-(5,5)->(5,4) : 海なのでNG
-(5,5)->(6,5) : 海なのでNG
-(5,5)->(4,5) : 海なのでNG
------ (5,5) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxVxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,5) を島にした場合 検索完了状態ここまで -----
------ (5,6) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxVxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,6) を島にした場合 初期状態ここまで -----
-(5,6)->(5,7) : 海なのでNG
-(5,6)->(5,5) : 海なのでNG
-(5,6)->(6,6) : 海なのでNG
-(5,6)->(4,6) : 海なのでNG
------ (5,6) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxVxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,6) を島にした場合 検索完了状態ここまで -----
------ (5,7) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxVxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,7) を島にした場合 初期状態ここまで -----
-(5,7)->(5,8) : 海なのでNG
-(5,7)->(5,6) : 海なのでNG
-(5,7)->(6,7) : 海なのでNG
-(5,7)->(4,7) : 海なのでNG
------ (5,7) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxVxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,7) を島にした場合 検索完了状態ここまで -----
------ (5,8) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxVx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,8) を島にした場合 初期状態ここまで -----
-(5,8)->(5,9) : 海なのでNG
-(5,8)->(5,7) : 海なのでNG
-(5,8)->(6,8) : 海なのでNG
-(5,8)->(4,8) : 海なのでNG
------ (5,8) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxVx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,8) を島にした場合 検索完了状態ここまで -----
------ (5,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxV
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,9) を島にした場合 初期状態ここまで -----
-(5,9)->(5,10) : 10以上なのでNG
-(5,9)->(5,8) : 海なのでNG
-(5,9)->(6,9) : 海なのでNG
-(5,9)->(4,9) : 海なのでNG
------ (5,9) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxV
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (5,9) を島にした場合 検索完了状態ここまで -----
------ (6,0) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-Vxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,0) を島にした場合 初期状態ここまで -----
-(6,0)->(6,1) : 海なのでNG
-(6,0)->(6,-1) : 0未満なのでNG
-(6,0)->(7,0) : 海なのでNG
-(6,0)->(5,0) : 海なのでNG
------ (6,0) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-Vxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,0) を島にした場合 検索完了状態ここまで -----
------ (6,1) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xVxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,1) を島にした場合 初期状態ここまで -----
-(6,1)->(6,2) : 海なのでNG
-(6,1)->(6,0) : 海なのでNG
-(6,1)->(7,1) : 海なのでNG
-(6,1)->(5,1) : 海なのでNG
------ (6,1) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xVxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,1) を島にした場合 検索完了状態ここまで -----
------ (6,2) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxVxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,2) を島にした場合 初期状態ここまで -----
-(6,2)->(6,3) : 海なのでNG
-(6,2)->(6,1) : 海なのでNG
-(6,2)->(7,2) : 海なのでNG
-(6,2)->(5,2) : 海なのでNG
------ (6,2) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxVxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,2) を島にした場合 検索完了状態ここまで -----
------ (6,3) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxVoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,3) を島にした場合 初期状態ここまで -----
-(6,3)->(6,2) : 海なのでNG
-(6,3)->(5,3) : 海なのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(6,3) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(7,4)->(6,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 検索済みなのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
------ (6,3) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxVVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxxxxxxxx
------ (6,3) を島にした場合 検索完了状態ここまで -----
------ (6,5) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoVxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,5) を島にした場合 初期状態ここまで -----
-(6,5)->(6,6) : 海なのでNG
-(6,5)->(5,5) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(6,5) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(7,4)->(6,4) : 検索済みなのでNG
-(6,4)->(6,5) : 検索済みなのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
------ (6,5) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVVxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxxxxxxxx
------ (6,5) を島にした場合 検索完了状態ここまで -----
------ (6,6) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxVxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,6) を島にした場合 初期状態ここまで -----
-(6,6)->(6,7) : 海なのでNG
-(6,6)->(6,5) : 海なのでNG
-(6,6)->(7,6) : 海なのでNG
-(6,6)->(5,6) : 海なのでNG
------ (6,6) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxVxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,6) を島にした場合 検索完了状態ここまで -----
------ (6,7) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxVxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,7) を島にした場合 初期状態ここまで -----
-(6,7)->(6,8) : 海なのでNG
-(6,7)->(6,6) : 海なのでNG
-(6,7)->(7,7) : 海なのでNG
-(6,7)->(5,7) : 海なのでNG
------ (6,7) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxVxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,7) を島にした場合 検索完了状態ここまで -----
------ (6,8) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxVx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,8) を島にした場合 初期状態ここまで -----
-(6,8)->(6,9) : 海なのでNG
-(6,8)->(6,7) : 海なのでNG
-(6,8)->(7,8) : 海なのでNG
-(6,8)->(5,8) : 海なのでNG
------ (6,8) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxVx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,8) を島にした場合 検索完了状態ここまで -----
------ (6,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxV
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,9) を島にした場合 初期状態ここまで -----
-(6,9)->(6,10) : 10以上なのでNG
-(6,9)->(6,8) : 海なのでNG
-(6,9)->(7,9) : 海なのでNG
-(6,9)->(5,9) : 海なのでNG
------ (6,9) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxV
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (6,9) を島にした場合 検索完了状態ここまで -----
------ (7,0) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-Vxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,0) を島にした場合 初期状態ここまで -----
-(7,0)->(7,1) : 海なのでNG
-(7,0)->(7,-1) : 0未満なのでNG
-(7,0)->(8,0) : 海なのでNG
-(7,0)->(6,0) : 海なのでNG
------ (7,0) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-Vxxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,0) を島にした場合 検索完了状態ここまで -----
------ (7,1) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xVxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,1) を島にした場合 初期状態ここまで -----
-(7,1)->(7,2) : 海なのでNG
-(7,1)->(7,0) : 海なのでNG
-(7,1)->(8,1) : 海なのでNG
-(7,1)->(6,1) : 海なのでNG
------ (7,1) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xVxoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,1) を島にした場合 検索完了状態ここまで -----
------ (7,2) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxVoooxxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,2) を島にした場合 初期状態ここまで -----
-(7,2)->(7,1) : 海なのでNG
-(7,2)->(6,2) : 海なのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 検索済みなのでNG
-(8,3)->(8,2) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 検索済みなのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
------ (7,2) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxVVVVxxxx
-xxVVVVVxxx
-xxxxxxxxxx
------ (7,2) を島にした場合 検索完了状態ここまで -----
------ (7,6) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooVxxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,6) を島にした場合 初期状態ここまで -----
-(7,6)->(7,7) : 海なのでNG
-(7,6)->(6,6) : 海なのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 検索済みなのでNG
-(8,5)->(8,6) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(7,5)->(7,6) : 検索済みなのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
------ (7,6) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVVxxx
-xxVVVVVxxx
-xxxxxxxxxx
------ (7,6) を島にした場合 検索完了状態ここまで -----
------ (7,7) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxVxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,7) を島にした場合 初期状態ここまで -----
-(7,7)->(7,8) : 海なのでNG
-(7,7)->(7,6) : 海なのでNG
-(7,7)->(8,7) : 海なのでNG
-(7,7)->(6,7) : 海なのでNG
------ (7,7) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxVxx
-xxoooooxxx
-xxxxxxxxxx
------ (7,7) を島にした場合 検索完了状態ここまで -----
------ (7,8) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxVx
-xxoooooxxx
-xxxxxxxxxx
------ (7,8) を島にした場合 初期状態ここまで -----
-(7,8)->(7,9) : 海なのでNG
-(7,8)->(7,7) : 海なのでNG
-(7,8)->(8,8) : 海なのでNG
-(7,8)->(6,8) : 海なのでNG
------ (7,8) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxVx
-xxoooooxxx
-xxxxxxxxxx
------ (7,8) を島にした場合 検索完了状態ここまで -----
------ (7,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxV
-xxoooooxxx
-xxxxxxxxxx
------ (7,9) を島にした場合 初期状態ここまで -----
-(7,9)->(7,10) : 10以上なのでNG
-(7,9)->(7,8) : 海なのでNG
-(7,9)->(8,9) : 海なのでNG
-(7,9)->(6,9) : 海なのでNG
------ (7,9) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxV
-xxoooooxxx
-xxxxxxxxxx
------ (7,9) を島にした場合 検索完了状態ここまで -----
------ (8,0) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-Vxoooooxxx
-xxxxxxxxxx
------ (8,0) を島にした場合 初期状態ここまで -----
-(8,0)->(8,1) : 海なのでNG
-(8,0)->(8,-1) : 0未満なのでNG
-(8,0)->(9,0) : 海なのでNG
-(8,0)->(7,0) : 海なのでNG
------ (8,0) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-Vxoooooxxx
-xxxxxxxxxx
------ (8,0) を島にした場合 検索完了状態ここまで -----
------ (8,1) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xVoooooxxx
-xxxxxxxxxx
------ (8,1) を島にした場合 初期状態ここまで -----
-(8,1)->(8,0) : 海なのでNG
-(8,1)->(9,1) : 海なのでNG
-(8,1)->(7,1) : 海なのでNG
-(8,2)->(8,1) : 検索済みなのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,3)->(8,2) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
------ (8,1) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xVVVVVVxxx
-xxxxxxxxxx
------ (8,1) を島にした場合 検索完了状態ここまで -----
------ (8,7) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooVxx
-xxxxxxxxxx
------ (8,7) を島にした場合 初期状態ここまで -----
-(8,7)->(8,8) : 海なのでNG
-(8,7)->(9,7) : 海なのでNG
-(8,7)->(7,7) : 海なのでNG
-(8,6)->(8,7) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(8,5)->(8,6) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(6,3) : 海なのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
------ (8,7) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVVxx
-xxxxxxxxxx
------ (8,7) を島にした場合 検索完了状態ここまで -----
------ (8,8) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxVx
-xxxxxxxxxx
------ (8,8) を島にした場合 初期状態ここまで -----
-(8,8)->(8,9) : 海なのでNG
-(8,8)->(8,7) : 海なのでNG
-(8,8)->(9,8) : 海なのでNG
-(8,8)->(7,8) : 海なのでNG
------ (8,8) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxVx
-xxxxxxxxxx
------ (8,8) を島にした場合 検索完了状態ここまで -----
------ (8,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxV
-xxxxxxxxxx
------ (8,9) を島にした場合 初期状態ここまで -----
-(8,9)->(8,10) : 10以上なのでNG
-(8,9)->(8,8) : 海なのでNG
-(8,9)->(9,9) : 海なのでNG
-(8,9)->(7,9) : 海なのでNG
------ (8,9) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxV
-xxxxxxxxxx
------ (8,9) を島にした場合 検索完了状態ここまで -----
------ (9,0) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-Vxxxxxxxxx
------ (9,0) を島にした場合 初期状態ここまで -----
-(9,0)->(9,1) : 海なのでNG
-(9,0)->(9,-1) : 0未満なのでNG
-(9,0)->(10,0) : 10以上なのでNG
-(9,0)->(8,0) : 海なのでNG
------ (9,0) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-Vxxxxxxxxx
------ (9,0) を島にした場合 検索完了状態ここまで -----
------ (9,1) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xVxxxxxxxx
------ (9,1) を島にした場合 初期状態ここまで -----
-(9,1)->(9,2) : 海なのでNG
-(9,1)->(9,0) : 海なのでNG
-(9,1)->(10,1) : 10以上なのでNG
-(9,1)->(8,1) : 海なのでNG
------ (9,1) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xVxxxxxxxx
------ (9,1) を島にした場合 検索完了状態ここまで -----
------ (9,2) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxVxxxxxxx
------ (9,2) を島にした場合 初期状態ここまで -----
-(9,2)->(9,3) : 海なのでNG
-(9,2)->(9,1) : 海なのでNG
-(9,2)->(10,2) : 10以上なのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 検索済みなのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,3)->(8,2) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
------ (9,2) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxVxxxxxxx
------ (9,2) を島にした場合 検索完了状態ここまで -----
------ (9,3) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxVxxxxxx
------ (9,3) を島にした場合 初期状態ここまで -----
-(9,3)->(9,4) : 海なのでNG
-(9,3)->(9,2) : 海なのでNG
-(9,3)->(10,3) : 10以上なのでNG
-(8,3)->(9,3) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(7,4)->(7,3) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
------ (9,3) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxVxxxxxx
------ (9,3) を島にした場合 検索完了状態ここまで -----
------ (9,4) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxVxxxxx
------ (9,4) を島にした場合 初期状態ここまで -----
-(9,4)->(9,5) : 海なのでNG
-(9,4)->(9,3) : 海なのでNG
-(9,4)->(10,4) : 10以上なのでNG
-(8,4)->(9,4) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(8,3) : 検索済みなのでNG
-(7,3)->(6,3) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(7,4) : 検索済みなのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,5)->(8,4) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(8,5)->(7,5) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
------ (9,4) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxxVxxxxx
------ (9,4) を島にした場合 検索完了状態ここまで -----
------ (9,5) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxVxxxx
------ (9,5) を島にした場合 初期状態ここまで -----
-(9,5)->(9,6) : 海なのでNG
-(9,5)->(9,4) : 海なのでNG
-(9,5)->(10,5) : 10以上なのでNG
-(8,5)->(9,5) : 検索済みなのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(6,3) : 海なのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(8,5) : 検索済みなのでNG
-(8,6)->(9,6) : 海なのでNG
-(8,6)->(7,6) : 海なのでNG
------ (9,5) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxxxVxxxx
------ (9,5) を島にした場合 検索完了状態ここまで -----
------ (9,6) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxVxxx
------ (9,6) を島にした場合 初期状態ここまで -----
-(9,6)->(9,7) : 海なのでNG
-(9,6)->(9,5) : 海なのでNG
-(9,6)->(10,6) : 10以上なのでNG
-(8,6)->(8,7) : 海なのでNG
-(8,6)->(9,6) : 検索済みなのでNG
-(8,6)->(7,6) : 海なのでNG
-(8,5)->(8,6) : 検索済みなのでNG
-(8,5)->(9,5) : 海なのでNG
-(7,5)->(7,6) : 海なのでNG
-(7,5)->(8,5) : 検索済みなのでNG
-(7,5)->(6,5) : 海なのでNG
-(7,4)->(7,5) : 検索済みなのでNG
-(7,4)->(8,4) : 検索済みなのでNG
-(6,4)->(6,5) : 海なのでNG
-(6,4)->(6,3) : 海なのでNG
-(6,4)->(7,4) : 検索済みなのでNG
-(6,4)->(5,4) : 海なのでNG
-(7,3)->(7,4) : 検索済みなのでNG
-(7,3)->(7,2) : 海なのでNG
-(7,3)->(6,3) : 海なのでNG
-(8,3)->(8,4) : 検索済みなのでNG
-(8,3)->(9,3) : 海なのでNG
-(8,3)->(7,3) : 検索済みなのでNG
-(8,2)->(8,3) : 検索済みなのでNG
-(8,2)->(8,1) : 海なのでNG
-(8,2)->(9,2) : 海なのでNG
-(8,2)->(7,2) : 海なのでNG
-(8,4)->(8,5) : 検索済みなのでNG
-(8,4)->(8,3) : 検索済みなのでNG
-(8,4)->(9,4) : 海なのでNG
-(8,4)->(7,4) : 検索済みなのでNG
------ (9,6) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxVxxxxx
-xxxVVVxxxx
-xxVVVVVxxx
-xxxxxxVxxx
------ (9,6) を島にした場合 検索完了状態ここまで -----
------ (9,7) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxVxx
------ (9,7) を島にした場合 初期状態ここまで -----
-(9,7)->(9,8) : 海なのでNG
-(9,7)->(9,6) : 海なのでNG
-(9,7)->(10,7) : 10以上なのでNG
-(9,7)->(8,7) : 海なのでNG
------ (9,7) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxVxx
------ (9,7) を島にした場合 検索完了状態ここまで -----
------ (9,8) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxVx
------ (9,8) を島にした場合 初期状態ここまで -----
-(9,8)->(9,9) : 海なのでNG
-(9,8)->(9,7) : 海なのでNG
-(9,8)->(10,8) : 10以上なのでNG
-(9,8)->(8,8) : 海なのでNG
------ (9,8) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxVx
------ (9,8) を島にした場合 検索完了状態ここまで -----
------ (9,9) を島にした場合 初期状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxV
------ (9,9) を島にした場合 初期状態ここまで -----
-(9,9)->(9,10) : 10以上なのでNG
-(9,9)->(9,8) : 海なのでNG
-(9,9)->(10,9) : 10以上なのでNG
-(9,9)->(8,9) : 海なのでNG
------ (9,9) を島にした場合 検索完了状態ここから -----
-xxxxxxxxxx
-xoooooooxx
-xxoooooxxx
-xxxoooxxxx
-xxxxoxxxxx
-xxxxxxxxxx
-xxxxoxxxxx
-xxxoooxxxx
-xxoooooxxx
-xxxxxxxxxV
------ (9,9) を島にした場合 検索完了状態ここまで -----
