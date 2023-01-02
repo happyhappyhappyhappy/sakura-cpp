@@ -13,4 +13,4 @@ core
 sample*.txt
 error.txt
 testdir
-
+nogit*.txt

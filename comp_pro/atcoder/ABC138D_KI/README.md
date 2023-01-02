@@ -3,7 +3,8 @@
 ## [問題のURL](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
 ## [解説のURL](https://blog.hamayanhamayan.com/entry/2019/08/19/024030)
-    * [imos法解説](https://imoz.jp/algorithms/imos_method.html)
+
+[imos法解説](https://imoz.jp/algorithms/imos_method.html)
 
 ## [この問題の結果]()
 
