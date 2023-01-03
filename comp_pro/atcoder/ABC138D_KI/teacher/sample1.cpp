@@ -13,6 +13,7 @@ vector<int> E[201010];
 int val[201010];
 //---------------------------------------------------------------------------------------------------
 void dfs(int cu, int pa = -1) {
+	#define fore(i,a) for(auto &i:a)
 	fore(to, E[cu]) if(pa != to) {
 		val[to] += val[cu];
 		dfs(to, cu);
