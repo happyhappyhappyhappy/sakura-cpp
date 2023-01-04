@@ -53,8 +53,7 @@ void dfs(int v,int p,vector<ll> &res){
         continue;
     }
     dfs(e,v,res);
-
-   }
+}
 }
 
 void initial(void){
