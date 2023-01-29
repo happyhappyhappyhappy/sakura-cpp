@@ -47,7 +47,7 @@ void dfs(int y,int x,int nowArea){
         dfs(y-1,x,nowArea+1);
     }
     if ( G[x][y+1] == 1){
-        dfs(y+1,x,nowArea);
+        dfs(y+1,x,nowArea+1);
     }
     G[x][y] = 1;
     // もう全部0の場合
