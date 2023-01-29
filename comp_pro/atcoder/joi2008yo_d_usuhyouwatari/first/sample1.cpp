@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#define debug(...) fprintf(stderr,__VA_ARGS__)
 using namespace std;
 
 vector<vector<int>> Grid(100, vector<int>(100, 0));
@@ -9,6 +10,7 @@ int dy[4] = {1,0,-1,0};
 int h, w;
 
 void tansaku(vector<vector<int>>& Grid, int si, int sj, int cnt){
+    debug("探索(%d,%d) 割った数 %dで次の探索をします\n",si,sj,cnt);
     Grid[si][sj] = 0;
     bool step_fg = false;
     for(int i=0;i<4;i++){
