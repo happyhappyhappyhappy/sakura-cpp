@@ -30,28 +30,32 @@ void gCopy(vector<vector<int>> &fromG,vector<vector<int>> &toG){
 }
 
 void dfs(int y,int x,int nowArea){
-    debug("dfs [%d][%d]にて調査\n",x,y);
+    debug("-> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,x,y);
     // 以降debugコマンドの中身には「\t」を先頭に追加
     // 今の位置の氷を割る
     G[x][y] = 0;
     // 左
     if( G[x-1][y] == 1){
-        dfs(y,x-1,nowArea);
+        dfs(y,x-1,nowArea+1);
     }
     // 右
     if( G[x+1][y] == 1){
-        dfs(y,x+1,nowArea);
+        dfs(y,x+1,nowArea+1);
     }
     // 上
     if ( G[x][y-1] == 1 ){
-        dfs(y-1,x,nowArea);
+        dfs(y-1,x,nowArea+1);
     }
     if ( G[x][y+1] == 1){
         dfs(y+1,x,nowArea);
     }
     G[x][y] = 1;
-    if( G[x-1][y] || G[x+1][y] == 0)
-    chmax(maxArea,nowArea);
+    // もう全部0の場合
+    if( ( G[x-1][y] || G[x+1][y] || G[x][y+1] || G[x][y-1]) == 0)
+    {
+        debug("\t(%d,%d)ではもう前後左右には行けません\n",x,y);
+        chmax(maxArea,nowArea+1);
+    }
 }
 
 int main(void){
