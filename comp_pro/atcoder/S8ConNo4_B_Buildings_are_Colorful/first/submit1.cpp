@@ -52,7 +52,6 @@ int solver(int &N,vector<int> &H,int &K){
             if(Ht[lpos] < maxbuild ){
                 int geta=maxbuild-Ht[lpos]+1;
                 now_cost = now_cost + geta;
-                // TODO: 問題点 now_costが何故反映できないか。個々の値で反映している
                 debug("pos=%d 最高値=%d 下駄=%d 累積=%d \n",lpos,maxbuild,geta,now_cost);
                 Ht[lpos]=Ht[lpos]+geta;
             }

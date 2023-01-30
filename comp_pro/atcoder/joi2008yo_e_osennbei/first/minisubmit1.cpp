@@ -22,7 +22,6 @@ void initial(void){
 }
 
 void nowFIXed(int bit,int R){
-    // TODO: これを持って何が固定されるかされないかチェックする
     debug("====--%d--ここで固定される物====\n",bit);
 
     for(int j=0;j<R;j=j+1){

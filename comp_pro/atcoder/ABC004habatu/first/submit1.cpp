@@ -26,7 +26,6 @@ void initial(void){
 void nowInfo(int bit,int N){
     for(int j=0;j<N;j=j+1){
         if((bit & (1<<j)!=0)){
-            // TODO: bit毎の情報を取り出す
         }
     }
 }
@@ -37,8 +36,8 @@ int main(void){
     cin >> N >> M;
     for(int j=1;j<=M;j=j+1){
         int x,y;// 知り合いであるx,y
-        cin >> x >> y; 
-        R[x-1][y-1]=true; 
+        cin >> x >> y;
+        R[x-1][y-1]=true;
         R[y-1][x-1]=true;
         R[x-1][x-1]=true; // 自己関連x
         R[y-1][y-1]=true; // 自己関連y

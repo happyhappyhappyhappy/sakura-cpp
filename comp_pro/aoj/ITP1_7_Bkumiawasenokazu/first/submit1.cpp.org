@@ -28,11 +28,10 @@ int main(void){
                 }
             }
         }
-        // TODO: ここに答えを書く
         cin >> n >> x;
         if(n==0 && x==0){
             flag=false;
-        }    
+        }
     }
     return 0;
 }

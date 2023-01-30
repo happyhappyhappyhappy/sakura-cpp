@@ -8,15 +8,6 @@ template<class XXX> void chmin(XXX &x,XXX y){
         x = y;
     }
 }
-// TODO: とりあえず
-// https://atcoder.jp/contests/abc128/submissions/5778021
-// をコピーペーストしてどう入力されるか見ておく
-/**
- #define rep(i,a,b) for(int i=a;i<b;i++)
-#define rrep(i,a,b) for(int i=a;i>=b;i--)
-#define fore(i,a) for(auto &i:a)
-#define all(x) (x).begin(),(x).end()
-*/
 int main(void){
 
     int N,M; // スイッチの数,電球の数
@@ -24,14 +15,14 @@ int main(void){
     vector<vector<int>> S(10,vector<int>(0)); // Sはint型のvectorになっている
     vector<int> P(10); // 2で割った値がこの値になっていれば光る
     for(int j=0;j<M;j=j+1) // 電球jはスイッチがONになっていれば光る前提か
-    {   
+    {
         int pat ;
         cin >> pat;
         for(int k=0;k<pat;k=k+1){
             int s;
             cin >> s;
             s=s-1; // 0-indexにする
-            S[j].push_back(s); 
+            S[j].push_back(s);
         }
 //        debug("%d の要素の数は %ld です\n",j,S[j].size());
     }

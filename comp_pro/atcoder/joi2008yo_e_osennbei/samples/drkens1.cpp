@@ -4,7 +4,6 @@ using namespace std;
 
 void fixPos(int bit,int bitsize){
     for(int j=0;j<bitsize;j=j+1){
-        // TODO : bit列の動きとこの中でのL.22状況を書く
         if()
         debug("%dは固定されています",j);
     }

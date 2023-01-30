@@ -73,7 +73,6 @@ int main(void){
     while(!S.empty()){
         stackList(S);
         pair<int,int> cp=S.top();// 取り出す
-        // TODO: 2022年12月25日ここの箇所から実行、最後に\nを忘れずに
         debug(" ->[%d,%d]",cp.first,cp.second);
         cx=cp.second;
         cy=cp.first;

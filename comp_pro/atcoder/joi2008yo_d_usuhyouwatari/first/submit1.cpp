@@ -8,10 +8,14 @@ template<class XXX> void chmax(XXX &x,XXX y){
         x = y;
     }
 }
+// TODO: 自作とサンプルのハイブリッド->実行確認 2023年1月30日
 
 // 大域変数
 vector<vector<int>> G; // 湖の表
-int maxArea=0;
+int maxArea=0; // 最大数
+// 上下左右進行表
+vector<int> dw[4]={1,-1,0,0};
+vector<int> dh[4]={0,0,1,-1};
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -29,43 +33,59 @@ void gCopy(vector<vector<int>> &fromG,vector<vector<int>> &toG){
     }
 }
 
-void dfs(int y,int x,int nowArea){
-    debug("-> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,x,y);
+void dfs(int h,int w,int nowArea){
+    debug("-> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,h,w);
     // 以降debugコマンドの中身には「\t」を先頭に追加
     // 今の位置の氷を割る
-    G[x][y] = 0;
+    G[h][w] = 0;
     // 左
-    if( G[x-1][y] == 1){
-        dfs(y,x-1,nowArea+1);
+
+    // if( G[x-1][y] == 1){
+    //     dfs(y,x-1,nowArea+1);
+    // }
+    // // 右
+    // if( G[x+1][y] == 1){
+    //     dfs(y,x+1,nowArea+1);
+    // }
+    // // 上
+    // if ( G[x][y-1] == 1 ){
+    //     dfs(y-1,x,nowArea+1);
+    // }
+    // if ( G[x][y+1] == 1){
+    //     dfs(y+1,x,nowArea+1);
+    // }
+    bool step_ok=false;
+    for(int j=0;j<4;j=j+1){
+        int nh = h + dh[j];
+        int nw = w + dw[j];
+        if(G[nh][nw]==1){
+            dfs(nh,nw,nowArea+1);
+            step_ok=true;
+        }
     }
-    // 右
-    if( G[x+1][y] == 1){
-        dfs(y,x+1,nowArea+1);
+    if(step_ok==false){
+        debug("(%d,%d)から上下左右に進めないので計算します\n",h,w);
+        chmax(maxArea,nowArea);
     }
-    // 上
-    if ( G[x][y-1] == 1 ){
-        dfs(y-1,x,nowArea+1);
+    else{
+        debug("(%d,%d)から上下左右に進めます。次行きます\n",h,w)
     }
-    if ( G[x][y+1] == 1){
-        dfs(y+1,x,nowArea+1);
-    }
+    // もう元に戻す+引き返す
+
     G[x][y] = 1;
-    // もう全部0の場合
-    if( ( G[x-1][y] || G[x+1][y] || G[x][y+1] || G[x][y-1]) == 0)
-    {
-        debug("\t(%d,%d)ではもう前後左右には行けません\n",x,y);
-        chmax(maxArea,nowArea+1);
-    }
+    nowArea=nowArea-1;
+    // もう全部0の場合 -> step_ok 変数で処理に変えました
+
 }
 
 int main(void){
     initial();
-    int mx,ny;
-    cin >> mx >> ny;
-    G.resize(ny+2,vector<int>(mx+2));
-    vector<vector<int>> Gtmp(mx,vector<int>(ny));
-    for(int j=0;j<ny;j=j+1){
-        for(int k=0;k<mx;k=k+1){
+    int mw,nh;
+    cin >> mw >> nh;
+    G.resize(nh+2,vector<int>(mw+2));
+    vector<vector<int>> Gtmp(nh,vector<int>(mw));
+    for(int j=0;j<nh;j=j+1){
+        for(int k=0;k<mw;k=k+1){
             int nowStatus;
             cin >> nowStatus;
             Gtmp[j][k]=nowStatus;
@@ -78,10 +98,10 @@ int main(void){
     //     }
     //     debug(" \n");
     // }
-    for(int y=0;y<G.size();y=y+1){
-        for(int x=0;x<G[0].size();x=x+1){
-            if(G[x][y]==1){
-                dfs(x,y,0);
+    for(int h=0;h<G.size();h=h+1){
+        for(int w=0;w<G[0].size();w=w+1){
+            if(G[h][w]==1){
+                dfs(h,w,0);
             }
         }
     }
