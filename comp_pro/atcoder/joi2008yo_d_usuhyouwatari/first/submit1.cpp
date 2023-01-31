@@ -73,7 +73,8 @@ void dfs(int h,int w,int nowArea){
     // もう元に戻す+引き返す
 
     G[x][y] = 1;
-    nowArea=nowArea-1;
+    // TODO: もしかしたら下の行は要らないかも　
+   nowArea=nowArea-1;
     // もう全部0の場合 -> step_ok 変数で処理に変えました
 
 }
