@@ -3,19 +3,20 @@ using namespace std;
 using ll=long long;
 #define COUT(x) cout<<#x<< " = " <<(x)<< " (L" <<__LINE__<< ")" <<"\n" << flush
 #define debug(...) fprintf(stderr,__VA_ARGS__)
-template<class XXX> void chmax(XXX &x,XXX y){
+template<class XXX> bool chmax(XXX &x,XXX y){
     if(x < y){
         x = y;
+        return true;
     }
+    return false;
 }
-// TODO: 自作とサンプルのハイブリッド->実行確認 2023年1月30日
 
 // 大域変数
 vector<vector<int>> G; // 湖の表
 int maxArea=0; // 最大数
 // 上下左右進行表
-vector<int> dw[4]={1,-1,0,0};
-vector<int> dh[4]={0,0,1,-1};
+vector<int> dw={1,-1,0,0};
+vector<int> dh={0,0,1,-1};
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -34,7 +35,7 @@ void gCopy(vector<vector<int>> &fromG,vector<vector<int>> &toG){
 }
 
 void dfs(int h,int w,int nowArea){
-    debug("-> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,h,w);
+    // debug("<開始> -> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,h,w);
     // 以降debugコマンドの中身には「\t」を先頭に追加
     // 今の位置の氷を割る
     G[h][w] = 0;
@@ -54,28 +55,32 @@ void dfs(int h,int w,int nowArea){
     // if ( G[x][y+1] == 1){
     //     dfs(y+1,x,nowArea+1);
     // }
-    bool step_ok=false;
+    bool step_ok=false; // 次に何かしらの移動を行ったか示す
     for(int j=0;j<4;j=j+1){
         int nh = h + dh[j];
         int nw = w + dw[j];
         if(G[nh][nw]==1){
             dfs(nh,nw,nowArea+1);
-            step_ok=true;
+            step_ok=true; // 移動を実行した
         }
     }
     if(step_ok==false){
-        debug("(%d,%d)から上下左右に進めないので計算します\n",h,w);
-        chmax(maxArea,nowArea+1);
+        // debug("(%d,%d)から上下左右に進めないのでこの段階の長さを「%d」と枝刈りします\n",h,w,nowArea+1);
+        if(chmax(maxArea,nowArea+1)){
+            // debug("\t最長距離を--%d--に更新しました\n",maxArea);
+        }
+        else
+        {
+            // debug("\t最長記録は変わりません\n");
+        }
     }
     else{
-        debug("(%d,%d)から上下左右に進めます。次行きます\n",h,w)
+        // debug("(%d,%d)から上下左右に進めます。次に行ってます\n",h,w);
     }
     // もう元に戻す+引き返す
 
-    G[x][y] = 1;
-    // TODO: もしかしたら下の行は要らないかも　
-   nowArea=nowArea-1;
-    // もう全部0の場合 -> step_ok 変数で処理に変えました
+    G[h][w] = 1;
+    // debug("<終了> -> 深さ %d : dfs [%d][%d]にて調査\n",nowArea,h,w);
 
 }
 
@@ -99,10 +104,9 @@ int main(void){
     //     }
     //     debug(" \n");
     // }
-    for(int h=0;h<G.size();h=h+1){
-        for(int w=0;w<G[0].size();w=w+1){
+    for(int h=0;h<(int)G.size();h=h+1){
+        for(int w=0;w<(int)G[0].size();w=w+1){
             if(G[h][w]==1){
-            // ここですでに一枚割れるから1になるかも
                 dfs(h,w,0);
             }
         }

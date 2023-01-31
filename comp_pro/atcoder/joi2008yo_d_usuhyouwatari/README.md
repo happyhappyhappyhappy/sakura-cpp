@@ -10,3 +10,5 @@
 
 ## [参考](https://atug.tokyo/?p=270#toc4)
 
+## 自作プログラム
+* [1回目OK](https://atcoder.jp/contests/joi2009yo/submissions/38503234)
