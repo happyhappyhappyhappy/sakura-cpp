@@ -65,7 +65,7 @@ void dfs(int h,int w,int nowArea){
     }
     if(step_ok==false){
         debug("(%d,%d)から上下左右に進めないので計算します\n",h,w);
-        chmax(maxArea,nowArea);
+        chmax(maxArea,nowArea+1);
     }
     else{
         debug("(%d,%d)から上下左右に進めます。次行きます\n",h,w)
@@ -102,6 +102,7 @@ int main(void){
     for(int h=0;h<G.size();h=h+1){
         for(int w=0;w<G[0].size();w=w+1){
             if(G[h][w]==1){
+            // ここですでに一枚割れるから1になるかも
                 dfs(h,w,0);
             }
         }
