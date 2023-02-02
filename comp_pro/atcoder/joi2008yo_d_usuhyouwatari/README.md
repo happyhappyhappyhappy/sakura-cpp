@@ -12,3 +12,9 @@
 
 ## 自作プログラム
 * [1回目OK](https://atcoder.jp/contests/joi2009yo/submissions/38503234)
+
+* [2回目OK](https://atcoder.jp/contests/joi2009yo/submissions/38544456)
+
+## 補足
+
+* デバッグログを出すようにするヘッダーファイルを作成した。[ここ](../../../comp_pro/debug.h)
