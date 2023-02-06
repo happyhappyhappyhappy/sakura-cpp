@@ -1,9 +1,12 @@
 #include<bits/stdc++.h>
 #ifdef LOCAL
 #include"/code/sakura-cpp/comp_pro/debug.h"
+#include"/code/sakura-cpp/comp_pro/touristdebug.h"
 #else
 #define debug1(...) 42
 #define debug2(...) 42
+#define to_string(...) 42
+#define debug(...) 42
 #endif
 using namespace std;
 using ll=long long;
@@ -36,15 +39,6 @@ int moving(int R,int C,int bit,vector<vector<int>> G){
             chline.push_back(j);
         }
     }
-    // debug1("bit = %d の時の chain\n",bit);
-    // if((int)chline.size()==0){
-    //     debug1("無し");
-    // }
-    // for(int j=0;j<(int)chline.size();j=j+1){
-    //     debug1(" %d",chline[j]);
-    // }
-    // debug1("\n");
-    // 行を反転
     debug1("行 反転前\n");
     show(R,C,G);
     for(int j=0;j<(int)chline.size();j=j+1){
@@ -55,7 +49,16 @@ int moving(int R,int C,int bit,vector<vector<int>> G){
     }
     debug1("行 反転後\n");
     show(R,C,G);
-    // TODO: 列を見ていって多い物の個数を足す(一応基準は1 figure1)
+    for(int j=0;j<C;j=j+1){
+        int figure1 = 0;
+        for(int k=0;k<R;k=k+1){
+            if(G[k][j]==1){
+                figure1=figure1+1;
+            }
+        }
+        nowsum=nowsum+max(figure1,R-figure1);
+    }
+    debug1("bit = %d の場合の取り得る値 %d\n",bit,nowsum);
     return nowsum;
 }
 
@@ -76,12 +79,6 @@ int main(void){
         chmax(result,nowsum);
     }
     cout << result << "\n" << flush;
-    // for(int j=0;j<R;j=j+1){
-    //     for(int k=0;k<C;k=k+1){
-    //         debug1(" %d",M[j][k]);
-    //     }
-    //     debug1("\n");
-    // }
     return 0;
 }
 

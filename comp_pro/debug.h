@@ -15,8 +15,8 @@
                   "[%s] %s:%u # " fmt "\n", \
                   __DATE__, __FILE__, \
                   __LINE__, ##__VA_ARGS__ \
-        )
-    #define debug1(...) fprintf(stderr,__VA_ARGS__)
+        ) // debug2懇切丁寧にしたもの
+    #define debug1(...) fprintf(stderr,__VA_ARGS__) // debug1従来の形
     #define COUT(x) cout<<#x<< " = " <<(x)<< \
     " (L" <<__LINE__<< ")" <<"\n" << flush
 #endif /* NDEBUG */
