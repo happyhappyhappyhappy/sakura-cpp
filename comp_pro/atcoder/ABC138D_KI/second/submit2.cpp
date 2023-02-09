@@ -11,7 +11,7 @@
 #endif
 using namespace std;
 using ll=long long;
-using Graph=vector<vector<int>>
+using Graph=vector<vector<int>>;
 Graph G;
 
 
@@ -26,13 +26,26 @@ int main(void){
     int N,Q;
     cin >> N >> Q;
     G.resize(N,vector<int>());
-    for(int j=0;j<N;j=j+1){
+    for(int j=0;j<N-1;j=j+1){
         int point1,point2;
         cin >> point1 >> point2;
+        debug(point1);
+        debug(point2);
         point1 = point1 - 1;
         point2 = point2 - 1;
+        debug1("%d に %dを入れました\n",point1,point2);
+        debug1("%d に %dを入れました\n",point2,point1);
         G[point1].push_back(point2);
         G[point2].push_back(point1);
+    }
+
+    for(int j=0;j<N;j=j+1){
+        debug1(" %d:",j);
+        for(int k=0;k < (int)G[j].size();k=k+1){
+            debug1(" %d",G[j][k]);
+        }
+        debug1(" \n");
+    }
     return 0;
 }
 
