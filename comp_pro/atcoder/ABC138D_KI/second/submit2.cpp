@@ -21,6 +21,11 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+// TODO: ここの実装化
+void dfs(int now,int before,vector<int> &val){
+
+}
+
 int main(void){
     initial();
     int N,Q;
@@ -46,6 +51,14 @@ int main(void){
         }
         debug1(" \n");
     }
+    vector<int> val(N,0);
+    for(int j=0;j<Q;j=j+1){
+        int n,q;
+        cin >> n >> q;
+        n = n-1;
+        val[n]=val[n]+q;
+    }
+    debug(val);
     return 0;
 }
 
