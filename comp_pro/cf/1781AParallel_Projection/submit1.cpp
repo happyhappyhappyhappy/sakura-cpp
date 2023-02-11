@@ -21,17 +21,10 @@ void initial(void){
 int solver(int &w,int &d,int &h,int &a ,int &b,int &f,int &g){
     int ans=h;
     int x1 = abs(a-f);
-    int x2 = 2*w-a-f;
-    // TODO
-    // int y1 = abs;
-
-    debug1("----- データ一覧 -----\n");
-    debug(w);
-    debug(d);
-    debug(h);
-    debug(a);
-    debug(f);
-    debug(g);
+    int x2 = 2*w-abs(a-f);
+    int y1 = abs(b+g);
+    int y2 = 2*d-b-g;
+    ans = ans + min(x1,x2) + min(y1,y2);
     return ans;
 }
 
@@ -39,12 +32,14 @@ int main(void){
     initial();
     int testcase=0;
     cin >> testcase;
-    while(--testcase){
+    for(int j=0;j<testcase;j=j+1)
+    {
         int ans=-1;
         int w,d,h,a,b,f,g;
         cin >> w >> d >> h;
         cin >> a >> b >> f >> g;
         ans = solver(w,d,h,a,b,f,g);
+        cout << ans << "\n" << flush;
     }
     return 0;
 }
