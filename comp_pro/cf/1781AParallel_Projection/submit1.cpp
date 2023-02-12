@@ -18,13 +18,20 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-int solver(int &w,int &d,int &h,int &a ,int &b,int &f,int &g){
-    int ans=h;
-    int x1 = abs(a-f);
-    int x2 = 2*w-abs(a-f);
-    int y1 = abs(b+g);
-    int y2 = 2*d-b-g;
-    ans = ans + min(x1,x2) + min(y1,y2);
+int solver(int tcase,int &w,int &d,int &h,int &a ,int &b,int &f,int &g){
+    debug1("----- No. %d 計算部分 -----\n",tcase);
+    int ans=0;
+    int left=a+f+abs(b-g)+h;
+    int right=(2*w-a-f)+abs(b-g)+h;
+    int up = (2*d-b-g)+abs(a-f)+h;
+    int down = (b+g)+abs(a-f)+h;
+    debug(left);
+    debug(right);
+    debug(up);
+    debug(down);
+    int lr = min(left,right);
+    int du = min(down,up);
+    ans = min(lr,du);
     return ans;
 }
 
@@ -38,7 +45,7 @@ int main(void){
         int w,d,h,a,b,f,g;
         cin >> w >> d >> h;
         cin >> a >> b >> f >> g;
-        ans = solver(w,d,h,a,b,f,g);
+        ans = solver(j+1,w,d,h,a,b,f,g);
         cout << ans << "\n" << flush;
     }
     return 0;

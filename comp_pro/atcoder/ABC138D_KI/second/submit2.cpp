@@ -22,8 +22,21 @@ void initial(void){
 }
 
 // TODO: ここの実装化
-void dfs(int now,int before,vector<int> &val){
-
+void dfs(int v,int p,vector<int> &val){
+    if(p != -1){
+        val[v]=val[v]+val[p];
+    }
+    for(int j=0;j<(int)G[v].size();j=j+1){
+        int next = G[v][j];
+        if(next == p){
+            // 親ノードから来た処理は実行しない。
+            // 複数ノードから来ることはないので一つのみ
+            continue;
+        }
+        else{
+            dfs(next,v,val);
+        }
+    }
 }
 
 int main(void){
@@ -34,22 +47,10 @@ int main(void){
     for(int j=0;j<N-1;j=j+1){
         int point1,point2;
         cin >> point1 >> point2;
-        debug(point1);
-        debug(point2);
         point1 = point1 - 1;
         point2 = point2 - 1;
-        debug1("%d に %dを入れました\n",point1,point2);
-        debug1("%d に %dを入れました\n",point2,point1);
         G[point1].push_back(point2);
         G[point2].push_back(point1);
-    }
-
-    for(int j=0;j<N;j=j+1){
-        debug1(" %d:",j);
-        for(int k=0;k < (int)G[j].size();k=k+1){
-            debug1(" %d",G[j][k]);
-        }
-        debug1(" \n");
     }
     vector<int> val(N,0);
     for(int j=0;j<Q;j=j+1){
@@ -58,7 +59,11 @@ int main(void){
         n = n-1;
         val[n]=val[n]+q;
     }
-    debug(val);
+    dfs(0,-1,val);
+    for(int j=0;j<(int)val.size();j=j+1){
+        cout << val[j] << " " ;
+    }
+    cout << "\n" << flush;
     return 0;
 }
 
