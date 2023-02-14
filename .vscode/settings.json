@@ -115,5 +115,6 @@
     },
     "peacock.remoteColor": "#233B6C",
     "git.autofetch": true,
-    "files.eol": "\r\n"
+    "files.eol": "\r\n",
+    "code-runner.runInTerminal": true
 }
