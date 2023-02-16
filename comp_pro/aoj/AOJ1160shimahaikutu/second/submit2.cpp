@@ -27,6 +27,26 @@ void showG(int X,int Y, vector<vector<int>> &G,int testcase){
     }
 }
 
+void dfs(vector<vector<int>> &G,int h,int w){
+    debug("Search Start");
+    G[h][w]=0;
+    debug1("G[%d,%d]は削除しました\n",h,w);
+    vector<int> dh = {1,1,1,0,0,-1,-1,-1};
+    vector<int> dw = {-1,0,1,1,-1,1,0,-1};
+    for(int j=0;j<8;j=j+1){
+        int ddh=h+dh[j];
+        int ddw=w+dw[j];
+        if(G[ddh][ddw]==-1 || G[ddh][ddw]==0){
+            debug(G[ddh][ddw]);
+            debug1("G[%d][%d]は島ではないので検索しない\n",ddh,ddw);
+            continue;
+        }
+        debug1("引き続いて深く検索する\n");
+        dfs(G,ddh,ddw);
+    }
+    debug("Search END");
+}
+
 int main(void){
     initial();
     int testcase=1;
@@ -50,7 +70,8 @@ int main(void){
         for(int j=0;j<H+2;j=j+1){
             for(int k=0;k<W+2;k=k+1){
                 if(G[j][k] == 1){
-                    search(j,k);
+                    dfs(G,j,k);
+                    answer=answer+1;
                 }
             }
         }
