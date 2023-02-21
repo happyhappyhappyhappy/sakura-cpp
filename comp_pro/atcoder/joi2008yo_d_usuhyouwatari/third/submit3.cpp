@@ -52,15 +52,12 @@ void dfs(vector<vector<int>> &G,int h,int w,int depth){
             dfs(G,nextH,nextW,depth+1);
         }
     }
-    if(nowFile){
-        debug1("(%d,%d)で詰みました 深さは%dです\n",depth+1);
+    if(nowFine==false){
+        debug1("(%d,%d)で詰みました 深さは%dです\n",w,h,depth+1);
         if(maxtile<depth+1){
             maxtile=depth+1;
         }
         G[h][w]=1;
-    }
-    else{
-        debug1("(%d,%d)このロジックは通るのだろうか\n",h,w);
     }
 }
 
@@ -82,6 +79,8 @@ int main(void){
             }
         }
     }
+    // TODO: 2023/02/22 これを出せるか確認
+    cout << maxtile << "\n" << flush;
     return 0;
 }
 
