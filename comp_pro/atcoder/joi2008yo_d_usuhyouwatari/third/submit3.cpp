@@ -21,7 +21,6 @@ void initial(void){
 }
 
 void GShow(int M,int N,vector<vector<int>> &G){
-    debug1("INSERT\n");
     for(int j=0;j<N;j=j+1){
         for(int k=0;k<M;k=k+1){
             debug1(" %d",G[j][k]);
@@ -30,8 +29,39 @@ void GShow(int M,int N,vector<vector<int>> &G){
     }
 }
 
-void dfs(vector<vector<int>> G,int j,int k,int deepth){
-    // TODO: HERE
+void dfs(vector<vector<int>> &G,int h,int w,int depth){
+    // まず今の所を割る
+    G[h][w]=0;
+    // 右へ→左へ→上へ→下へ
+    vector<int> dw={1,-1,0,0};
+    vector<int> dh={0,0,1,-1};
+    // 詰んだか否か確認するフラグ
+    bool nowFine=true;
+    // もとの位置を戻す
+    for(int j=0;j<(int)dw.size();j=j+1){
+        int nextH = h+dh[j];
+        int nextW = w+dw[j];
+        int nextInfo=G[nextH][nextW];
+        if(nextInfo != 1){
+            debug1("(%d,%d)は%dのため渡れない\n",nextW,nextH,nextInfo);
+            continue;
+        }
+        else{
+            debug1("(%d,%d)は渡れる→次の再帰へ\n",nextW,nextH);
+            nowFine=false;
+            dfs(G,nextH,nextW,depth+1);
+        }
+    }
+    if(nowFile){
+        debug1("(%d,%d)で詰みました 深さは%dです\n",depth+1);
+        if(maxtile<depth+1){
+            maxtile=depth+1;
+        }
+        G[h][w]=1;
+    }
+    else{
+        debug1("(%d,%d)このロジックは通るのだろうか\n",h,w);
+    }
 }
 
 int main(void){
@@ -44,12 +74,11 @@ int main(void){
             cin >> G[j+1][k+1];
         }
     }
-    GShow((int) G[0].size(),(int) G.size(),G);
     int result;
-    for(int j=0;j<(int)G.size();j=j+1){
-        for(int k=0;k<(int)G[0].size();k=k+1){
-            if(G[j][k]==1){
-                dfs(G,j,k,0);
+    for(int h=0;h<(int)G.size();h=h+1){
+        for(int w=0;w<(int)G[0].size();w=w+1){
+            if(G[h][w]==1){
+                dfs(G,h,w,0);
             }
         }
     }
