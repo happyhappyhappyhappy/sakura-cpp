@@ -16,7 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"yamanaka header snippet": {
-		"prefix": "yamaheader",
+		"prefix": "yamaheader_old",
 		"body": [
 			"#include<bits/stdc++.h>",
 			"using namespace std;",
@@ -29,7 +29,7 @@
             "    }",
             "}"
 		],
-		"description": "ヘッダー宣言をする"
+		"description": "ヘッダー宣言をする(中古)"
 		},
 		"山中 初期化": {
 			"prefix": "yamaini",
@@ -76,12 +76,12 @@
 			"description": "簡単なサンプルを使うためのスニペット"
 		  },
 		  "改ヘッダー宣言": {
-			"prefix": "yamaheader2",
+			"prefix": "yamaheader",
 			"body": [
 			  "#include<bits/stdc++.h>",
 			  "#ifdef LOCAL",
 			  "#include\"/code/sakura-cpp/comp_pro/debug.h\"",
-			  "#include\"/code/sakura-cpp/comp_pro/touristdebug.h\"",
+			  "#include\"/code/sakura-cpp/comp_pro/t_debug.h\"",
 			  "#else",
 			  "#define debug1(...) 42",
 			  "#define debug2(...) 42",
