@@ -51,14 +51,14 @@ int main(void){
         int v = que.front(); // 先頭を取り出し
         que.pop(); // 先頭を削除
         debug(v);
-        for(int j=0;j<(int)G[v].size();j=j+1){
-            int nextv = G[v][j];
-            if(dist[nextv] != -1){
-                debug1("節 %d はすでに訪問済 結果 : %d\n",nextv,dist[nextv]);
-            }else{
-                dist[nextv]=dist[v]+1;
-                que.push(nextv);
+        for(int nextv: G[v]){ // TODO: forをいつもやるように入れる。nextv=G[v][j]で
+            if(dist[nextv]!=-1){ // 発見済み→次へ行く
+                debug1("nextv %d は 発見済み 深さ %d\n",nextv,dist[nextv]);
+                continue;
             }
+            dist[nextv]=dist[v]+1;
+            debug(v,nextv,dist[nextv]);
+            que.push(nextv);
         }
     }
     for(int v=0;v<N;v=v+1){
