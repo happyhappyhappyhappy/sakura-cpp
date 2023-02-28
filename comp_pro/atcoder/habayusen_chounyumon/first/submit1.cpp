@@ -34,6 +34,6 @@ int main(void){
     queue<int> que;
     que.push(0);
     dist[0] = 0;
-    while
+    while // TODO: 「何の情報がどうなるまで永遠に実行する。それは何か？」
     return 0;
 }
