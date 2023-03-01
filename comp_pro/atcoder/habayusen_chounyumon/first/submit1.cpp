@@ -34,6 +34,21 @@ int main(void){
     queue<int> que;
     que.push(0);
     dist[0] = 0;
-    while // TODO: 「何の情報がどうなるまで永遠に実行する。それは何か？」
+    while(que.empty()==false){
+        int nowpos = que.front();
+        for(int j=0;j<N;j++){
+            if(G[nowpos][j]==true){
+                if(dist[j]!=-1){
+                    continue;
+                }
+                que.push(j);
+                dist[j]=dist[nowpos]+1;
+            }
+        }
+        que.pop();
+    }
+    for(int j=0;j<N;j=j+1){
+        cout << j << " : " << dist[j] << "\n" << flush;
+    }
     return 0;
 }
