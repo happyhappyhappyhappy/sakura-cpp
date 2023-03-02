@@ -33,17 +33,37 @@ int main(void){
     for(int j=0;j<N;j++){
         int tmp,point;
         cin >> tmp >> point;
-        point = point -1 ; // 0-indexに修正
         for(int k=0;k<point;k=k+1){
             int nextpos;
             cin >> nextpos;
             nextpos=nextpos-1; // 0-indexに修正
-
             G[j].push_back(nextpos);
-            G[nextpos].push_back(j);
+            // 逆は無い G[nextpos].push_back(j);
         }
     }
     showG(G);
+    vector<int> dist(N,-1);
+    queue<int> que;
+    // 初期化
+    dist[0]=0;
+    que.push(0);
+    while(que.empty()==false){
+        int pos=que.front();
+        for(int j=0;j<(int)G[pos].size();j=j+1){
+            int nextpos=G[pos][j];
+            if(dist[nextpos]!=-1){ // もうすでに計算済み
+                continue;
+            }
+            else{
+                que.push(nextpos);
+                dist[nextpos]=dist[pos]+1;
+            }
+        }
+        que.pop();
+    }
+    for(int j=0;j<N;j=j+1){
+        cout << j+1 << " " << dist[j] << "\n" << flush;
+    }
     return 0;
 }
 
