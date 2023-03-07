@@ -32,7 +32,11 @@ int main(void){
     int R,C,sy,sx,gy,gx;
     cin >> R >> C;
     cin >> sy >> sx;
+    sy=sy-1;
+    sx=sx-1;
     cin >> gy >> gx;
+    gy=gy-1;
+    gx=gx-1;
     vector<vector<int>> G(R,vector<int>(C,0));
     vector<vector<int>> D(R,vector<int>(C,0)); // 訪問済みか否かを確認する
     // 未訪問 0 訪問済み 1 訪問不可 -1
@@ -47,8 +51,11 @@ int main(void){
             }
         }
     }
+    debug1("-----Gの中身-----\n");
     GShow(R,C,G);
+    debug1("-----Dの中身-----\n");
     GShow(R,C,D);
+    debug1("-----Lの中身-----\n");
     GShow(R,C,L);
     // 幅優先探索開始
     queue<pair<int,int>> que;
@@ -67,7 +74,8 @@ int main(void){
             int ny,nx;
             ny = nowpos.first+dh[j];
             nx = nowpos.second+dw[j];
-            if(G[ny][nx]==-1){ // 訪問できない
+            debug(make_pair(ny,nx));
+            if(D[ny][nx]==-1){ // 訪問できない
                 debug1("[%d][%d]は訪問不可->飛びます\n",ny,nx);
                 continue;
             }
