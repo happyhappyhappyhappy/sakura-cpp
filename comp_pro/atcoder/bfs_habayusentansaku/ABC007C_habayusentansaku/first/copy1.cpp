@@ -11,6 +11,7 @@
 #endif
 using namespace std;
 using ll=long long;
+const int YS_MAX_INT=1<<29;
 
 int H,W,sx,sy,gx,gy;
 char c[1009][1009];
@@ -28,6 +29,7 @@ void initial(void){
 int main(void){
     initial();
     cin >> H >> W >> sx >> sy >> gx >> gy;
+    debug(make_pair(gx,gy));
     for(int j=1;j<= H;j=j+1){
         for(int k=1;k<= W;k=k+1){
             cin >> c[j][k];
@@ -35,8 +37,14 @@ int main(void){
     }
     for(int j=1;j<=H;j=j+1){
         for(int k=1;k<=W;k=k+1){
-            dist[j][k] = (1<<30);
+            dist[j][k] = YS_MAX_INT;
         }
+    }
+    for(int j=1;j<=10;j=j+1){
+        for(int k=1;k<=10;k=k+1){
+            debug1("%c",c[j][k]);
+        }
+        debug1("\n");
     }
     Q.push(make_pair(sx,sy));
     dist[sx][sy]=0;
@@ -49,12 +57,15 @@ int main(void){
             int qy = py+dy[j];
             char nowpos=c[qx][qy];
             if(nowpos != '.'){
+                debug1("( %d , %d )は %c の為飛ばします\n",qx,qy,nowpos);
                 continue;
             }
-            if(dist[qx][qy]!=(1<<30)){
+            if(dist[qx][qy]!=(YS_MAX_INT)){
                 // 通過済み。しかもここでは遅れている。
+                debug1("( %d , %d )は 通過済み 距離 %d のため飛ばします\n",qx,qy,dist[qx][qy]);
                 continue;
             }
+            debug1("( %d , %d )へ続けます\n",qx,qy);
             // 上で最初に設定した値で無ければこれは行けると見て移動
             dist[qx][qy]=dist[px][py]+1;
             Q.push(make_pair(qx,qy));
