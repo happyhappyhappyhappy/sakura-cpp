@@ -28,10 +28,43 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+void dfs(int v,int p,int c){
+    dir[v]=c;
+    for(int j=0;j<(int)G[v].size();j=j+1){
+        Edge e = G[v][j];
+        debug(e.first,e.second);
+        if(e.first == p){
+            debug1("自分自身を見ているのでスキップ\n");
+            continue;
+        }
+        if(isOdd(e.second)){ // TODO: isOddのコーディング
+            dfs(e.first,v,1-c);
+        }
+        else{
+            dfs(e.first,v,c);
+        }
+    }
+}
+
 int main(void){
     initial();
     cin >> N;
     G.assign(N,vector<Edge>());
+    for(int j=0;j<N-1;j=j+1){
+        int u,v;
+        ll w;
+        cin >> u >> v >> w;
+        u=u-1;// 1-indexから0-index
+        v=v-1;
+        G[u].push_back(Edge(v,w));
+        G[v].push_back(Edge(u,w));
+
+    }
+    dir.assign(N,0);
+    dfs(0,-1,1);
+    for(int j=0;j<N;j=j+1){
+        cout << v << "\n" << flush;
+    }
     return 0;
 }
 
