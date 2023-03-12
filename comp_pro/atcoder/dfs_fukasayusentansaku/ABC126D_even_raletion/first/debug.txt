@@ -1,0 +1,12 @@
+[e.first,e.second]: 2 8
+[e.first,e.second]: 1 10
+[e.first,e.second]: 4 2
+[e.first,e.second]: 1 2
+自分自身を見ているのでスキップ
+[e.first,e.second]: 2 10
+自分自身を見ているのでスキップ
+[e.first,e.second]: 0 8
+自分自身を見ているのでスキップ
+[e.first,e.second]: 3 2
+[e.first,e.second]: 2 2
+自分自身を見ているのでスキップ

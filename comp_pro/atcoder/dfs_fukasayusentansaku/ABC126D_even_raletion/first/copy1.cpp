@@ -10,9 +10,9 @@
 #define debug_out(...) 42
 #endif
 using namespace std;
-using ll=long long;
-using Edge=pair<int,long long>
-using Graph=vector<vector<Edge>>
+using ll =long long;
+using Edge = pair<int,long long>;
+using Graph = vector<vector<Edge>>;
 
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
@@ -27,7 +27,6 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-
 void dfs(int v,int p,int c){
     dir[v]=c;
     for(int j=0;j<(int)G[v].size();j=j+1){
@@ -37,7 +36,7 @@ void dfs(int v,int p,int c){
             debug1("自分自身を見ているのでスキップ\n");
             continue;
         }
-        if(isOdd(e.second)){ // TODO: isOddのコーディング
+        if(e.second & 1){
             dfs(e.first,v,1-c);
         }
         else{
@@ -58,12 +57,11 @@ int main(void){
         v=v-1;
         G[u].push_back(Edge(v,w));
         G[v].push_back(Edge(u,w));
-
     }
     dir.assign(N,0);
     dfs(0,-1,1);
     for(int j=0;j<N;j=j+1){
-        cout << v << "\n" << flush;
+        cout << dir[j] << "\n" << flush;
     }
     return 0;
 }
