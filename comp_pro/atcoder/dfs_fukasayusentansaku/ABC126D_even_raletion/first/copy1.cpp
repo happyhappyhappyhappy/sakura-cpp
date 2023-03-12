@@ -30,10 +30,8 @@ void initial(void){
 
 int main(void){
     initial();
-    // TODO: sample1.cppのL.75に手直しする
-    while(cin >> N){
-        G.assign(N,vector<Edge>());
-    }
+    cin >> N;
+    G.assign(N,vector<Edge>());
     return 0;
 }
 
