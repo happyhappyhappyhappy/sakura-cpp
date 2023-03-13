@@ -91,7 +91,7 @@
             "indent": 4
         }
     },
-    "editor.fontFamily": "JetBrains Mono, Ricty Diminished,UDEVGothic ,Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "Ricty Diminished,JetBrains Mono,UDEVGothic ,Consolas, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "JetBrains Mono,Source Han Code JP",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#2f5092",
