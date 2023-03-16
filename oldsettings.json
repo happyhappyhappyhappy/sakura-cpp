@@ -91,6 +91,7 @@
             "indent": 4
         }
     },
+    "editor.fontFamily": "Ricty Diminished,'JetBrains Mono NL,Fira Code,UDEV Gothic JPDOC',MesloLGS NF, ,Consolas, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "JetBrains Mono,Source Han Code JP",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#2f5092",
@@ -116,5 +117,4 @@
     "git.autofetch": true,
     "files.eol": "\r\n",
     "code-runner.runInTerminal": true
-    // "editor.fontLigatures": true
 }
