@@ -1,12 +1,12 @@
-[e.first,e.second]: 2 8
-[e.first,e.second]: 1 10
-[e.first,e.second]: 4 2
-[e.first,e.second]: 1 2
-自分自身を見ているのでスキップ
-[e.first,e.second]: 2 10
-自分自身を見ているのでスキップ
-[e.first,e.second]: 0 8
-自分自身を見ているのでスキップ
-[e.first,e.second]: 3 2
-[e.first,e.second]: 2 2
-自分自身を見ているのでスキップ
+solverの中
+根 0 のやりとり
+[now_e]: (1, 2)
+1 に対して 長さ 2
+根 1 のやりとり
+[now_e]: (0, 2)
+0 に対して 長さ 2
+[now_e]: (2, 1)
+2 に対して 長さ 1
+根 2 のやりとり
+[now_e]: (1, 1)
+1 に対して 長さ 1

@@ -12,7 +12,7 @@
 using namespace std;
 using ll=long long;
 using Edge=pair<int,long long>;
-using // TODO: 2023/03/18 ここから開始
+using P2P=pair<int,int>; // 根から根情報 TO,FROM
 using Graph=vector<vector<Edge>>;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
@@ -25,6 +25,34 @@ void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+}
+
+void solver(void){
+    debug1("solverの中\n");
+    stack<P2P> mystack;
+    // まずGの中を確認してみる
+    /*
+    for(int j=0;j<(int)G.size();j=j+1){
+        debug1("根 %d のやりとり\n",j);
+        for(int k=0;k<(int)G[j].size();k=k+1){
+            Edge now_e = G[j][k];
+            debug(now_e);
+            debug1("%d に対して 長さ %lld\n",
+            now_e.first,now_e.second);
+        }
+    }*/
+    // 根本的な所「0」の情報を与えてwhileを回す
+    P2P baseT = make_pair(0,-1);
+    c_code[0]=0;
+    mystack.push(baseT);
+    while(mystack.empty()==false){
+        P2P npos = mystack.pop();
+        if(npos.second != -1){
+            for(int j=0;j<(int)G[npos.first].size();j=j+1){
+                // ここから開始
+            }
+        }
+    }
 }
 
 int main(void){
@@ -42,6 +70,10 @@ int main(void){
         G[u].push_back(Edge(v,w));
         G[v].push_back(Edge(u,w));
     }
-
+    solver();
+    for(int j=0;j<N;j=j+1){
+        cout << c_code[j] << " ";
+    }
+    cout << "\n" << flush;
     return 0;
 }
