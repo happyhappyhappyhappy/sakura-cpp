@@ -47,6 +47,7 @@ void solver(void){
     mystack.push(baseT);
     while(mystack.empty()==false){
         P2P npos = mystack.top();
+        mystack.pop();
         if(npos.second != -1){
             for(int j=0;j<(int)G[npos.first].size();j=j+1){
                 Edge nextpos = G[npos.first][j];
@@ -58,7 +59,9 @@ void solver(void){
                 }
                 else{
                     if(int(nextpos_dis & 1)==1){
+                        // TODO: c_codeセットしているかコマンド出してみて
                         c_code[nextpos_ind]=1-c_code[npos.first];
+
                         mystack.push(make_pair(nextpos_ind,npos.first));
                     }
                     else{
