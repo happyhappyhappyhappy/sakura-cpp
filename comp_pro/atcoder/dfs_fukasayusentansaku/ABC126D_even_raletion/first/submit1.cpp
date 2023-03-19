@@ -46,10 +46,26 @@ void solver(void){
     c_code[0]=0;
     mystack.push(baseT);
     while(mystack.empty()==false){
-        P2P npos = mystack.pop();
+        P2P npos = mystack.top();
         if(npos.second != -1){
             for(int j=0;j<(int)G[npos.first].size();j=j+1){
-                // ここから開始
+                Edge nextpos = G[npos.first][j];
+                int nextpos_ind = nextpos.first;
+                ll nextpos_dis = nextpos.second;
+                if(nextpos_ind == npos.second){
+                    debug1("上に戻っているだけなので無視\n");
+                    continue;
+                }
+                else{
+                    if(int(nextpos_dis & 1)==1){
+                        c_code[nextpos_ind]=1-c_code[npos.first];
+                        mystack.push(make_pair(nextpos_ind,npos.first));
+                    }
+                    else{
+                        c_code[nextpos_ind]=c_code[npos.first];
+                        mystack.push(make_pair(nextpos_ind,npos.first));
+                    }
+                }
             }
         }
     }
