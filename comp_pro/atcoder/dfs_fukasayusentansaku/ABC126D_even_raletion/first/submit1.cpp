@@ -28,10 +28,6 @@ void initial(void){
 }
 
 void solver(void){
-    debug1("solverの中\n");
-    stack<P2P> mystack;
-    // まずGの中を確認してみる
-    /*
     for(int j=0;j<(int)G.size();j=j+1){
         debug1("根 %d のやりとり\n",j);
         for(int k=0;k<(int)G[j].size();k=k+1){
@@ -39,46 +35,6 @@ void solver(void){
             debug(now_e);
             debug1("%d に対して 長さ %lld\n",
             now_e.first,now_e.second);
-        }
-    }*/
-    // 根本的な所「0」の情報を与えてwhileを回す
-    P2P baseT = make_pair(0,-1);
-    c_code[0]=0;
-    mystack.push(baseT);
-    while(mystack.empty()==false){
-        bool isFlug=mystack.empty();
-        debug(isFlug);
-        P2P npos = mystack.top();
-        debug(npos);
-        mystack.pop();
-        debug(npos.second);
-        // if(npos.second != -1){
-        // debug1("npos.second!=-1には入っている\n");
-        for(int j=0;j<(int)G[npos.first].size();j=j+1){
-            Edge nextpos = G[npos.first][j];
-            debug(nextpos);
-            int nextpos_ind = nextpos.first;
-            ll nextpos_dis = nextpos.second;
-            if(nextpos_ind == npos.second){
-                debug1("上に戻っているだけなので無視\n");
-                continue;
-            }
-            else{
-                if(npos.second != -1){
-                    debug(nextpos_dis);
-                    ll check = nextpos_dis & 1;
-                    debug(check);
-                    if(nextpos_dis & 1){
-                        c_code[nextpos_ind]=1-c_code[npos.first];
-                        debug("c_code[%d] は %d になりました\n",c_code[nextpos_ind]);
-                        mystack.push(make_pair(nextpos_ind,npos.first));
-                    }
-                    else{
-                        c_code[nextpos_ind]=c_code[npos.first];
-                        mystack.push(make_pair(nextpos_ind,npos.first));
-                    }
-                }
-            }
         }
     }
 }
