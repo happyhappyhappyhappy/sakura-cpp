@@ -58,7 +58,7 @@ void solver(void){
                     continue;
                 }
                 else{
-                    if(int(nextpos_dis & 1)==1){
+                    if(nextpos_dis & 1){
                         // TODO: c_codeセットしているかコマンド出してみて
                         c_code[nextpos_ind]=1-c_code[npos.first];
 
