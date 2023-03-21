@@ -116,6 +116,6 @@
     "git.autofetch": true,
     "files.eol": "\r\n",
     "code-runner.runInTerminal": true,
-    "editor.fontFamily": "Ricty Diminished,JetBrains Mono,Fira Code,'UDEV Gothic JPDOC',MesloLGS NF, ,Consolas, 'Courier New', monospace"
-    // "editor.fontLigatures": true
+    // "editor.fontFamily": "Fira Code,JetBrains Mono,Ricty Diminished,'UDEV Gothic JPDOC',MesloLGS NF, ,Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true
 }

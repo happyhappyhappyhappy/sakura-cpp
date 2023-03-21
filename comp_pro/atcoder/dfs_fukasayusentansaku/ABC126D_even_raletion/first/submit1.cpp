@@ -11,7 +11,7 @@
 #endif
 using namespace std;
 using ll=long long;
-using Edge=pair<int,long long>;
+using Edge=pair<int,ll>;
 using P2P=pair<int,int>; // 根から根情報 TO,FROM
 using Graph=vector<vector<Edge>>;
 const double pi = 3.141592653589793238;
