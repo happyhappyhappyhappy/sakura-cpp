@@ -27,16 +27,29 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-void solver(void){
-    for(int j=0;j<(int)G.size();j=j+1){
-        debug1("根 %d のやりとり\n",j);
-        for(int k=0;k<(int)G[j].size();k=k+1){
-            Edge now_e = G[j][k];
-            debug(now_e);
-            debug1("%d に対して 長さ %lld\n",
-            now_e.first,now_e.second);
+void dfs(int to,int from,int color){
+    c_code[to]=color;
+    for(int j=0;j<(int)G[to].size();j=j+1){
+        Edge nextpos = G[to][j];
+        int nextpos_to=nextpos.first;
+        ll nextpos_dir=nextpos.second;
+        if(nextpos_to == from){
+            continue;
+        }
+        else{
+            if(nextpos_dir & 1){
+                dfs(nextpos_to,to,1-c_code[to]);
+            }
+            else{
+                dfs(nextpos_to,to,c_code[to]);
+            }
         }
     }
+
+}
+
+void solver(void){
+    dfs(0,-1,1);
 }
 
 int main(void){
