@@ -16,7 +16,9 @@
                   __DATE__, __FILE__, \
                   __LINE__, ##__VA_ARGS__ \
         ) // debug2懇切丁寧にしたもの
-    #define debug1(...) fprintf(stderr,__VA_ARGS__) // debug1従来の形
+    #define debug(...) fprintf(stderr,__VA_ARGS__) // debug1従来の形(にしていた)
+                                                   // 20230323 こちらをよく使うので
+                                                    // これをdebugに、tourist版はdebugtに変更
     #define COUT(x) cout<<#x<< " = " <<(x)<< \
     " (L" <<__LINE__<< ")" <<"\n" << flush
 #endif /* NDEBUG */

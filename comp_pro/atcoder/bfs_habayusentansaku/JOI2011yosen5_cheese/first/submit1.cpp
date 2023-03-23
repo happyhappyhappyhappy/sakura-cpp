@@ -39,7 +39,7 @@ int main(void){
         }
     }
     for(int j=0;j<H+2;j=j+1){
-        for(int k=0;k<W+)
+        // TODO: ここから for(int k=0;k<W+)
     }
     return 0;
 }
