@@ -59,7 +59,7 @@ int main(void){
             cin >> G[h][w];
         }
     }
-    ShowG(H+2,W+2,G);
+    // ShowG(H+2,W+2,G);
     queue<POS> Q ;
     Q.push(make_pair(0,0));
     int answer=0;
@@ -68,8 +68,9 @@ int main(void){
         Q.pop();
         int nowposh = nowpos.first;
         int nowposw = nowpos.second;
+        debug("現在、(H,W)=(%d,%d)にいます\n",nowposh,nowposw);
         if(visited[nowposh][nowposw] == 1){
-            debug("(%d,%d)は通過済み\n",nowposh,nowposw);
+        //    debug("(%d,%d)は通過済み\n",nowposh,nowposw);
             continue;
         }
         visited[nowposh][nowposw]=1;
@@ -84,7 +85,7 @@ int main(void){
                 nextposw = nowposw+dw_even[j];
             }
             if(isgo(nextposh,nextposw,H+2,W+2)==false){
-                debug("(%d,%d)は枠内ではないので却下\n",nextposh,nextposw);
+             //   debug("(%d,%d)は枠内ではないので却下\n",nextposh,nextposw);
                 continue;
             }
             else{
@@ -100,6 +101,7 @@ int main(void){
                 }
             }
         }
+        visited[nowposh][nowposw]=1;
  // 使用済み
     }
     cout << answer << "\n" << flush;
