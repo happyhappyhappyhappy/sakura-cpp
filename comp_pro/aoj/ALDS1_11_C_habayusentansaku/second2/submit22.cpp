@@ -46,7 +46,7 @@ int main(void){
     initial();
     cin >> N;
     G.assign(N,vector<int>(N,yamaMAX_INT));
-    dist.assign(N,yamaMAX_INT);
+    dist.assign(N,-1);
     for(int j=0;j<N;j=j+1){
         int u;
         cin >> u;
@@ -60,6 +60,29 @@ int main(void){
             G[u][v] = 1;
         }
     }
-    GShow(N);
+    dist[0]=0;
+    queue<int> Q;
+    Q.push(0);
+    while(Q.empty()!=true){
+        int g = Q.front();
+        Q.pop();
+        for(int j=0;j<N;j=j+1){
+            if(G[g][j] == yamaMAX_INT){
+                continue;
+            }
+            else{
+                if(dist[j]!=-1){
+                    continue;
+                }
+                else{
+                    dist[j]=dist[g]+1;
+                    Q.push(j);
+                }
+            }
+        }
+    }
+    for(int j=0;j<N;j=j+1){
+        cout << j+1 << " " << dist[j] << "\n" << flush;
+    }
     return 0;
 }
