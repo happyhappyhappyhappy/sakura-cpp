@@ -61,7 +61,7 @@ int main(void){
             cin >> G[h][w];
         }
     }
-    // ShowG(H+2,W+2,G);
+    ShowG(H+2,W+2,G);
     queue<POS> Q ;
     Q.push(make_pair(0,0));
     int answer=0;
@@ -72,7 +72,7 @@ int main(void){
         int nowposw = nowpos.second;
         debug("現在、(H,W)=(%d,%d)にいます\n",nowposh,nowposw);
         if(visited[nowposh][nowposw] == 1){
-        //    debug("(%d,%d)は通過済み\n",nowposh,nowposw);
+            debug("(%d,%d)は通過済み\n",nowposh,nowposw);
             continue;
         }
         visited[nowposh][nowposw]=1;
@@ -106,6 +106,7 @@ int main(void){
         visited[nowposh][nowposw]=1;
  // 使用済み
     }
+    ShowG(H+2,W+2,visited);
     cout << answer << "\n" << flush;
     return 0;
 }
