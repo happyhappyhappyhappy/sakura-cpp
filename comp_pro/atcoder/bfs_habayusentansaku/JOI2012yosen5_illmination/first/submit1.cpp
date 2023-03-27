@@ -16,97 +16,81 @@ const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
 
-// 大域変数
-vector<vector<int>> G;
-vector<vector<int>> visited;
-int H,W;
-static vector<int> dh_even={-1,0,1,1,0,-1};
-static vector<int> dw_even={0,1,1,-1,-1,-1};
-static vector<int> dh_odd={-1,0,1,1,0,-1};
-static vector<int> dw_odd={1,1,1,0,-1,0};
-static vector<char*> dhdwto={"右上へ","真右へ","右下へ",
-"左下へ","真左へ","左上へ"};
-
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-void ShowG(int H,int W,vector<vector<int>> &G){
-    for(int j=0;j<H;j=j+1){
-        for(int k=0;k<W;k=k+1){
-            debug(" %d",G[j][k]);
-        }
-        debug("\n");
-    }
-    debug("\n\n");
-}
-bool isgo(int h,int w,int H,int W){
-    if(h < 0 || w < 0){
-        return false;
-    }
-    if(H <= h || W <= w){
-        return false;
-    }
-    return true;
-}
 
 int main(void){
     initial();
+    int H,W;
+    vector<int> even_dh={-1,0,1,1,0,-1};
+    vector<int> even_dw={0,1,0,-1,-1,-1};
+    vector<int> odd_dh={-1,0,1,1,0,-1};
+    vector<int> odd_dw={1,1,1,0,-1,0};
+
     cin >> W >> H;
-    G.assign(H+2,vector<int>(W+2,0));
-    visited.assign(H+2,vector<int>(W+2,0));
-    for(int h = 1 ; h<=H ; h=h+1){
-        for(int w=1;w<=W;w=w+1 ){
-            cin >> G[h][w];
+    vector<vector<int>> G(H+2,vector<int>(W+2,0));
+    vector<vector<int>> V(H+2,vector<int>(W+2,0));
+    for(int j=1;j<=H;j=j+1){
+        for(int k=1;k<=W;k=k+1){
+            cin >> G[j][k];
         }
     }
-    ShowG(H+2,W+2,G);
-    queue<POS> Q ;
+    queue<POS> Q;
     Q.push(make_pair(0,0));
     int answer=0;
     while(Q.empty()==false){
-        POS nowpos = Q.front();
-        Q.pop();
-        int nowposh = nowpos.first;
-        int nowposw = nowpos.second;
-        debug("現在、(H,W)=(%d,%d)にいます\n",nowposh,nowposw);
-        if(visited[nowposh][nowposw] == 1){
-            debug("(%d,%d)は通過済み\n",nowposh,nowposw);
-            continue;
+        POS nowpos = Q.front();Q.pop();
+        int nowposH = nowpos.first;
+        int nowposW = nowpos.second;
+
+        debug("(%d,%d)に入りました\n",nowposH,nowposW);
+        vector<int> dh;
+        vector<int> dw;
+        if(nowposH % 2 == 1){
+            dh = odd_dh;
+            dw = odd_dw;
         }
-        visited[nowposh][nowposw]=1;
+        else{
+            dh = even_dh;
+            dw = even_dw;
+        }
         for(int j=0;j<6;j=j+1){
-            int nextposh,nextposw;
-            if(nowposh % 2 == 1 ){
-                nextposh = nowposh+dh_odd[j];
-                nextposw = nowposw+dw_odd[j];
-            }
-            else{
-                nextposh = nowposh+dh_even[j];
-                nextposw = nowposw+dw_even[j];
-            }
-            if(isgo(nextposh,nextposw,H+2,W+2)==false){
-             //   debug("(%d,%d)は枠内ではないので却下\n",nextposh,nextposw);
+            int ddh = dh[j];
+            int ddw = dw[j];
+            int nextposH = nowposH+ddh;
+            int nextposW = nowposW+ddw;
+            debug("\t(%d,%d)について検索します\n",nextposH,nextposW);
+            if(nextposH < 0 || nextposW < 0 ||
+            H+2 <= nextposH || W+2 <= nextposW){
+                debug("\t(%d,%d)は範囲外です\n",nextposH,nextposW);
                 continue;
             }
             else{
-                if(G[nextposh][nextposw]==1){
-                    answer = answer +1;
-                    debug("     %s 処理をしたら(%d,%d)に衝突した\n 現在の壁 %d\n",
-                    dhdwto[j],nextposh,nextposw,answer);
+                if(G[nextposH][nextposW]==1){
+                    debug("\t(%d,%d)は建物に入っています→カウント",nextposH,nextposW);
+                    answer=answer+1;
+                    debug(" %d\n",answer);
+                    continue;
                 }
                 else{
-                    if(visited[nextposh][nextposw]==0){
-                        Q.push(make_pair(nextposh,nextposw));
+                    if(V[nextposH][nextposW]==1){
+                        debug("\t(%d,%d)は訪問済みです\n",nextposH,nextposW);
+                        continue;
+                    }
+                    else{
+                        debug("\t\t(%d,%d)をこれから検索します\n",nextposH,nextposW);
+                        Q.push(make_pair(nextposH,nextposW));
+                        V[nextposH][nextposW]=1;
                     }
                 }
             }
+
         }
-        visited[nowposh][nowposw]=1;
- // 使用済み
     }
-    ShowG(H+2,W+2,visited);
     cout << answer << "\n" << flush;
     return 0;
 }
+
