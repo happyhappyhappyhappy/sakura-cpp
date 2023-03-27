@@ -24,6 +24,8 @@ static vector<int> dh_even={-1,0,1,1,0,-1};
 static vector<int> dw_even={0,1,1,-1,-1,-1};
 static vector<int> dh_odd={-1,0,1,1,0,-1};
 static vector<int> dw_odd={1,1,1,0,-1,0};
+static vector<char*> dhdwto={"右上へ","真右へ","右下へ",
+"左下へ","真左へ","左上へ"};
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -91,8 +93,8 @@ int main(void){
             else{
                 if(G[nextposh][nextposw]==1){
                     answer = answer +1;
-                    debug("(%d,%d)に衝突した\n 現在の壁 %d\n",
-                    nextposh,nextposw,answer);
+                    debug("     %s 処理をしたら(%d,%d)に衝突した\n 現在の壁 %d\n",
+                    dhdwto[j],nextposh,nextposw,answer);
                 }
                 else{
                     if(visited[nextposh][nextposw]==0){
