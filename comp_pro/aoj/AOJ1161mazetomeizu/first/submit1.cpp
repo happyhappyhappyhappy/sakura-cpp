@@ -33,7 +33,7 @@ int H,W;
 int main(void){
     initial();
     while(true){
-        cin >> H >> W;
+        cin >> W >> H;
         if(H == 0 && W == 0){
             break;
         }
@@ -42,18 +42,39 @@ int main(void){
                 cin >> wall_vert[j][k];
             }
             if(j == H-1){
+                debug("jが %d まで行きました。抜けます。\n",j);
                 continue;
             }
             for(int k=0;k<W;k=k+1){
                 cin >> wall_hori[j][k];
             }
         }
-        debug("\n垂直の壁の情報\n");
+        debug("\t垂直の壁の情報\n");
         for(int j=0;j<H;j=j+1){
             for(int k=0;k<W-1;k=k+1){
                 int d = wall_vert[j][k];
-                // TODO: ここから打ち直し
+                if(d == yamaMAX_INT){
+                    debug(" *");
+                }
+                else{
+                    debug("%2d",d);
+                }
             }
+            debug("\n");
+        }
+        debug("\n\n");
+        debug("\t水平の壁の情報\n");
+        for(int j=0;j<H-1;j=j+1){
+            for(int k=0;k<W;k=k+1){
+                int d = wall_hori[j][k];
+                if(d == yamaMAX_INT){
+                    debug(" *");
+                }
+                else{
+                    debug("%2d",d);
+                }
+            }
+            debug("\n");
         }
     }
     return 0;
