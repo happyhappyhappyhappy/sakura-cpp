@@ -1,0 +1,275 @@
+submit1.cpp: In function ‘ll solver(ll)’:
+submit1.cpp:43:19: error: no matching function for call to ‘std::tuple<long long int, bool, bool, bool>::tuple(int)’
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:892:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Args2 ...>&&) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  892 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:892:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:880:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Args2 ...>&&) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  880 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:880:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:869:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Args2 ...>&) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  869 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:869:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:857:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Args2 ...>&) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  857 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:857:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:849:9: note: candidate: ‘template<class _Alloc> std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Elements>&&) [with _Alloc = _Alloc; _Elements = {long long int, bool, bool, bool}]’
+  849 |         tuple(allocator_arg_t __tag, const _Alloc& __a, tuple&& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:849:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:844:9: note: candidate: ‘template<class _Alloc> std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Elements>&) [with _Alloc = _Alloc; _Elements = {long long int, bool, bool, bool}]’
+  844 |         tuple(allocator_arg_t __tag, const _Alloc& __a, const tuple& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:844:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 3 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:837:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, _UElements&& ...) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  837 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:837:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects at least 2 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:827:9: note: candidate: ‘template<class _Alloc, class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, _UElements&& ...) [with _Alloc = _Alloc; _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  827 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:827:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects at least 2 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:819:9: note: candidate: ‘template<class _Alloc, bool _NotEmpty, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<const long long int&, const bool&, const bool&, const bool&>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const _Elements& ...) [with _Alloc = _Alloc; bool _NotEmpty = _NotEmpty; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<const _Elements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  819 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:819:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 6 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:811:9: note: candidate: ‘template<class _Alloc, bool _NotEmpty, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<const long long int&, const bool&, const bool&, const bool&>(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const _Elements& ...) [with _Alloc = _Alloc; bool _NotEmpty = _NotEmpty; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<const _Elements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  811 |         tuple(allocator_arg_t __tag, const _Alloc& __a,
+      |         ^~~~~
+/usr/include/c++/11/tuple:811:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 6 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:805:9: note: candidate: ‘template<class _Alloc, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<std::is_object<_Tp>::value>::__is_implicitly_default_constructible(), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&) [with _Alloc = _Alloc; typename std::enable_if<std::tuple<_Elements>::_TCC<std::is_object<_Alloc>::value>::__is_implicitly_default_constructible(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  805 |         tuple(allocator_arg_t __tag, const _Alloc& __a)
+      |         ^~~~~
+/usr/include/c++/11/tuple:805:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 2 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:796:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(std::tuple<_Args1 ...>&&) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  796 |         tuple(tuple<_UElements...>&& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:796:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   mismatched types ‘std::tuple<_Tps ...>’ and ‘int’
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:787:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(std::tuple<_Args1 ...>&&) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  787 |         tuple(tuple<_UElements...>&& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:787:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   mismatched types ‘std::tuple<_Tps ...>’ and ‘int’
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:777:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const std::tuple<_Args1 ...>&) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  777 |         tuple(const tuple<_UElements...>& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:777:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   mismatched types ‘const std::tuple<_Tps ...>’ and ‘int’
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:767:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const std::tuple<_Args1 ...>&) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<const _UElements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  767 |         tuple(const tuple<_UElements...>& __in)
+      |         ^~~~~
+/usr/include/c++/11/tuple:767:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   mismatched types ‘const std::tuple<_Tps ...>’ and ‘int’
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:754:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(_UElements&& ...) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_explicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  754 |         tuple(_UElements&&... __elements)
+      |         ^~~~~
+/usr/include/c++/11/tuple:754:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/tuple:752:55: error: no type named ‘type’ in ‘struct std::enable_if<false, bool>’
+  752 |                _ExplicitCtor<_Valid, _UElements...> = false>
+      |                                                       ^~~~~
+/usr/include/c++/11/tuple:746:9: note: candidate: ‘template<class ... _UElements, bool _Valid, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(_UElements&& ...) [with _UElements = {_UElements ...}; bool _Valid = _Valid; typename std::enable_if<std::tuple<_Elements>::_TCC<_Valid>::__is_implicitly_constructible<_UElements ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  746 |         tuple(_UElements&&... __elements)
+      |         ^~~~~
+/usr/include/c++/11/tuple:746:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/tuple:744:55: error: no type named ‘type’ in ‘struct std::enable_if<false, bool>’
+  744 |                _ImplicitCtor<_Valid, _UElements...> = true>
+      |                                                       ^~~~
+/usr/include/c++/11/tuple:738:9: note: candidate: ‘template<bool _NotEmpty, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Cond>::__is_explicitly_constructible<const long long int&, const bool&, const bool&, const bool&>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const _Elements& ...) [with bool _NotEmpty = _NotEmpty; typename std::enable_if<std::tuple<_Elements>::_TCC<_Dummy>::__is_explicitly_constructible<const _Elements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  738 |         tuple(const _Elements&... __elements)
+      |         ^~~~~
+/usr/include/c++/11/tuple:738:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 4 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:731:9: note: candidate: ‘template<bool _NotEmpty, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<_Cond>::__is_implicitly_constructible<const long long int&, const bool&, const bool&, const bool&>(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const _Elements& ...) [with bool _NotEmpty = _NotEmpty; typename std::enable_if<std::tuple<_Elements>::_TCC<_Dummy>::__is_implicitly_constructible<const _Elements& ...>(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  731 |         tuple(const _Elements&... __elements)
+      |         ^~~~~
+/usr/include/c++/11/tuple:731:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 4 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:724:9: note: candidate: ‘template<class _Dummy, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<std::is_void<_Tp>::value>::__is_explicitly_default_constructible(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple() [with _Dummy = _Dummy; typename std::enable_if<std::tuple<_Elements>::_TCC<std::is_void<_Dummy>::value>::__is_explicitly_default_constructible(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  724 |         tuple()
+      |         ^~~~~
+/usr/include/c++/11/tuple:724:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 0 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:717:9: note: candidate: ‘template<class _Dummy, typename std::enable_if<std::tuple<long long int, bool, bool, bool>::_TCC<std::is_void<_Tp>::value>::__is_implicitly_default_constructible(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple() [with _Dummy = _Dummy; typename std::enable_if<std::tuple<_Elements>::_TCC<std::is_void<_Dummy>::value>::__is_implicitly_default_constructible(), bool>::type <anonymous> = <anonymous>; _Elements = {long long int, bool, bool, bool}]’
+  717 |         tuple()
+      |         ^~~~~
+/usr/include/c++/11/tuple:717:9: note:   template argument deduction/substitution failed:
+submit1.cpp:43:19: note:   candidate expects 0 arguments, 1 provided
+   43 |         num753 T(3);
+      |                   ^
+In file included from /usr/include/c++/11/functional:54,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h:65,
+                 from submit1.cpp:1:
+/usr/include/c++/11/tuple:760:17: note: candidate: ‘constexpr std::tuple<_Elements>::tuple(std::tuple<_Elements>&&) [with _Elements = {long long int, bool, bool, bool}]’
+  760 |       constexpr tuple(tuple&&) = default;
+      |                 ^~~~~
+/usr/include/c++/11/tuple:760:23: note:   no known conversion for argument 1 from ‘int’ to ‘std::tuple<long long int, bool, bool, bool>&&’
+  760 |       constexpr tuple(tuple&&) = default;
+      |                       ^~~~~~~
+/usr/include/c++/11/tuple:758:17: note: candidate: ‘constexpr std::tuple<_Elements>::tuple(const std::tuple<_Elements>&) [with _Elements = {long long int, bool, bool, bool}]’
+  758 |       constexpr tuple(const tuple&) = default;
+      |                 ^~~~~
+/usr/include/c++/11/tuple:758:23: note:   no known conversion for argument 1 from ‘int’ to ‘const std::tuple<long long int, bool, bool, bool>&’
+  758 |       constexpr tuple(const tuple&) = default;
+      |                       ^~~~~~~~~~~~
+submit1.cpp:44:10: error: no match for ‘operator[]’ (operand types are ‘num753’ {aka ‘std::tuple<long long int, bool, bool, bool>’} and ‘int’)
+   44 |         T[0]=make_tuple(num*10+3,true,has5,has7);
+      |          ^
+submit1.cpp:45:10: error: no match for ‘operator[]’ (operand types are ‘num753’ {aka ‘std::tuple<long long int, bool, bool, bool>’} and ‘int’)
+   45 |         T[1]=make_tuple(num*10+5,has3,true,has7);
+      |          ^
+submit1.cpp:46:10: error: no match for ‘operator[]’ (operand types are ‘num753’ {aka ‘std::tuple<long long int, bool, bool, bool>’} and ‘int’)
+   46 |         T[2]=make_tuple(num*10+7,has3,has5,true);
+      |          ^
+submit1.cpp:48:21: error: no match for ‘operator[]’ (operand types are ‘num753’ {aka ‘std::tuple<long long int, bool, bool, bool>’} and ‘int’)
+   48 |             S.push(T[j]);
+      |                     ^
