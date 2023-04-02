@@ -40,7 +40,7 @@ ll solver(ll N){
         if ((has3 && has5 && has7)==true){
             answer = answer+1;
         }
-        num753 T(3);
+        vector<num753> T(3);
         T[0]=make_tuple(num*10+3,true,has5,has7);
         T[1]=make_tuple(num*10+5,has3,true,has7);
         T[2]=make_tuple(num*10+7,has3,has5,true);
