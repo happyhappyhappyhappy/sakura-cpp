@@ -38,6 +38,7 @@ ll solver(ll N){
             continue;
         }
         if ((has3 && has5 && has7)==true){
+            debugt(num);
             answer = answer+1;
         }
         vector<num753> T(3);
