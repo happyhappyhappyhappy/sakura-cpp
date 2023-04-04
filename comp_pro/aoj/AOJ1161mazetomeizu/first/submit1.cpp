@@ -39,10 +39,11 @@ bool canGo1(int posh,int posw,int dh2,int dw2){
     // 枠外に出てしまうケース
     int nexth = posh + dh2;
     int nextw = posw + dw2;
-    if(nexth < 0 && H<= nexth){
+    // TODO: 2023/04/06下の2行は&&でなく||もう一回実験する。
+    if(nexth < 0 || H<= nexth){
         return false;
     }
-    if(nextw < 0 && W <= nextw){
+    if(nextw < 0 || W <= nextw){
         return false;
     }
     debug("(%d,%d)から進行(%d,%d)で枠内にはできます\n",posh,posw,dh2,dw2);
