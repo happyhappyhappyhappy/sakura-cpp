@@ -46,26 +46,39 @@ bool canGo1(int posh,int posw,int dh2,int dw2){
         return false;
     }
     debug("(%d,%d)から進行(%d,%d)で枠内にはできます\n",posh,posw,dh2,dw2);
+    // すでに値が埋まっている場合ケース
+    if(dist[nexth][nextw]!=yamaMAX_INT){
+        return false;
+    }
     return true;
 }
 
 bool canGo2(int posh,int posw,int dh2,int dw2){
 // 行きたいのだが行けない
     // 右に行きたい
-    if(dw2 == 1 && dh2 == 0 && wall_vert[posh][posw]==1 ){
-        return false;
+    if(dw2 == 1 && dh2 == 0  ){
+        if(wall_vert[posh][posw]==1){
+            return false;
+        }
     }
     // 下に行きたい
-    if(dw2 == 0 && dh2 == 1 && wall_hori[posh][posw]==1){
-        return false;
+    if(dw2 == 0 && dh2 == 1){
+        if(wall_hori[posh][posw]==1)
+        {
+            return false;
+        }
     }
     // 左に行きたい
-    if(dw2 == -1 && dh2 == 0 && wall_veri[posh][posw-1]==1){
-        return false;
-    }
+    if(dw2 == -1 && dh2 == 0){
+            if(wall_vert[posh][posw-1]==1){
+                return false;
+            }
+        }
     // 上に行きたい
-    if(dw2 == 0 && dh2 == -1 && wall_hori[posh-1][posw]==1){
-        return false;
+    if(dw2 == 0 && dh2 == -1){
+        if(wall_hori[posh-1][posw]==1){
+            return false;
+            }
     }
     debug("(%d,%d)から進行(%d,%d)で行けます\n",posh,posw,dh2,dw2);
     return true;
@@ -110,43 +123,17 @@ int main(void){
                     int nh = ph+dh[j];
                     int nw = pw+dw[j];
                     dist[nh][nw]=dist[ph][pw]+1;
-                    npos=make_pair(nh,nw);
+                    POS npos=make_pair(nh,nw);
                     Q.push(npos);
                 }
                 }
             }
+            int last = dist[H-1][W-1];
+            if(last==yamaMAX_INT){
+                cout << "0\n" << flush;
+            }
+            else{
+                cout << last << "\n" << flush;
+            }
         }
-        // debug("\t垂直の壁の情報\n");
-        // for(int j=0;j<H;j=j+1){
-        // // for(int j=0;j<11;j=j+1){
-        //     for(int k=0;k<W-1;k=k+1){
-        // //    for(int k=0;k<11;k=k+1){
-        //         int d = wall_vert[j][k];
-        //         if(d == yamaMAX_INT){
-        //             debug(" *");
-        //         }
-        //         else{
-        //             debug("%2d",d);
-        //         }
-        //     }
-        //     debug("\n");
-        // }
-        // debug("\n\n");
-        // debug("\t水平の壁の情報\n");
-        // for(int j=0;j<H-1;j=j+1){
-        // // for(int j=0;j<11;j=j+1){
-        //     for(int k=0;k<W;k=k+1){
-        // //    for(int k=0;k<11;k=k+1){
-        //         int d = wall_hori[j][k];
-        //         if(d == yamaMAX_INT){
-        //             debug(" *");
-        //         }
-        //         else{
-        //             debug("%2d",d);
-        //         }
-        //     }
-        //     debug("\n");
-        // }
-    }
-    return 0;
 }
