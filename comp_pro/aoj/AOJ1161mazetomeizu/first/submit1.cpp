@@ -84,6 +84,49 @@ bool canGo2(int posh,int posw,int dh2,int dw2){
     debug("(%d,%d)から進行(%d,%d)で行けます\n",posh,posw,dh2,dw2);
     return true;
 }
+/** 参考 chatGPTにリファクタリングして貰った
+ *
+以下のようにリファクタリングできます：
+
+1. 冗長なコメントの削除
+
+関数名や変数名から、すでに何をしているかが明示されているので、不要なコメントを削除しましょう。
+
+2. 変数名の修正
+
+わかりにくい変数名を見つけたら、意味のある名前に修正しましょう。例えば、"dh2"や"dw2"は、何の略称か分からないので、適切な名前に変更します。
+
+3. 関数を単純化
+
+`canGo1`と`canGo2`は、ほとんど同じことをしています。そこで、`canGo`という名前の新しい関数を作成し、これらの関数を置き換えます。また、引数の順序を"posh"、"posw"、"dh"、"dw"に変更します。
+
+新しいコード：
+
+bool canGo(int posh, int posw, int dh, int dw)
+{
+    // 枠外に出てしまうケース
+    int nexth = posh + dh;
+    int nextw = posw + dw;
+    if (nexth < 0 || nexth >= H || nextw < 0 || nextw >= W) {
+        return false;
+    }
+    // 壁で行けないケース
+    if ((dw == 1 && dh == 0 && wall_vert[posh][posw] == 1) || // 右
+        (dw == 0 && dh == 1 && wall_hori[posh][posw] == 1) || // 下
+        (dw == -1 && dh == 0 && wall_vert[posh][posw - 1] == 1) || // 左
+        (dw == 0 && dh == -1 && wall_hori[posh - 1][posw] == 1)) // 上
+    {
+        return false;
+    }
+    // すでに値が埋まっている場合ケース
+    if (dist[nexth][nextw] != yamaMAX_INT) {
+        return false;
+    }
+    return true;
+}
+-- 完了 --
+
+**/
 
 int main(void){
     initial();
