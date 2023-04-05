@@ -22,7 +22,7 @@ vector<vector<int>> wall_vert(40,vector<int>(40,yamaMAX_INT));
 // 水平方向の壁 H個
 vector<vector<int>> wall_hori(40,vector<int>(40,yamaMAX_INT));
 // 距離
-vector<vector<int>> dist(40,vector<int>(40,yamaMAX_INT));
+vector<vector<int>> dist;
 // 上下左右12時から右回り90度
 vector<int> dh={1,0,-1,0};
 vector<int> dw={0,1,0,-1};
@@ -92,6 +92,7 @@ int main(void){
         if(H == 0 && W == 0){
             break;
         }
+        dist.assign(40,vector<int>(40,yamaMAX_INT));
         for(int j=0;j<H;j=j+1){
             for(int k=0;k<W-1;k=k+1){
                 cin >> wall_vert[j][k];
@@ -107,7 +108,7 @@ int main(void){
         queue<POS> Q;
         POS p = make_pair(0,0);
         Q.push(p);
-        dist[p.first][p.second]=0;
+        dist[p.first][p.second]=1;
         while(Q.empty()==false){
             POS np = Q.front();Q.pop();
             int ph = np.first;
@@ -129,6 +130,19 @@ int main(void){
                 }
                 }
             }
+            for(int h=0;h<H;h=h+1){
+                for(int w=0;w<W;w=w+1){
+                    int num=dist[h][w];
+                    if(num == yamaMAX_INT){
+                        debug(" *");
+                    }
+                    else{
+                        debug("%2d",num);
+                    }
+                }
+                debug("\n");
+            }
+            debug("\n");
             int last = dist[H-1][W-1];
             if(last==yamaMAX_INT){
                 cout << "0\n" << flush;
