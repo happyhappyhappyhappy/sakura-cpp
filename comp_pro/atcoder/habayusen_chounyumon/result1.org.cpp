@@ -51,7 +51,7 @@ int main(void){
         int v = que.front(); // 先頭を取り出し
         que.pop(); // 先頭を削除
         debug(v);
-        for(int nextv: G[v]){ // TODO: forをいつもやるように入れる。nextv=G[v][j]で
+        for(int nextv: G[v]){ //  forをいつもやるように入れる。nextv=G[v][j]で
             if(dist[nextv]!=-1){ // 発見済み→次へ行く
                 debug1("nextv %d は 発見済み 深さ %d\n",nextv,dist[nextv]);
                 continue;

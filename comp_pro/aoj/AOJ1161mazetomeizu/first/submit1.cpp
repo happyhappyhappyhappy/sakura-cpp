@@ -39,7 +39,6 @@ bool canGo1(int posh,int posw,int dh2,int dw2){
     // 枠外に出てしまうケース
     int nexth = posh + dh2;
     int nextw = posw + dw2;
-    // TODO: 2023/04/06下の2行は&&でなく||もう一回実験する。
     if(nexth < 0 || H<= nexth){
         return false;
     }

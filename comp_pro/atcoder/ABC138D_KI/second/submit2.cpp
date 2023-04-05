@@ -21,7 +21,6 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-// TODO: ここの実装化
 void dfs(int v,int p,vector<int> &val){
     if(p != -1){
         val[v]=val[v]+val[p];
