@@ -11,7 +11,6 @@
 #endif
 using namespace std;
 using ll=long long;
-// TODO: 深さ探索で使うtupleの定義をここに書く
 using Edge=pair<int,ll>;
 using Stem=tuple<int,int,int>;
 const double pi = 3.141592653589793238;
@@ -34,13 +33,22 @@ void solve(int &N,vector<vector<Edge>> &G,vector<int> &c_code){
         int from = get<1>(st);
         int ncolor = get<2>(st);
         c_code[to]=ncolor;
+        S.pop();
         for(int j=0;j<(int)G[to].size();j=j+1){
             Edge e = G[to][j];
             if(e.first == from){
                 continue;
             }
             else{
-                // if(e.se)
+                ll dist=e.second;
+                if(dist & 1){
+                    Stem nextS=make_tuple(e.first,to,1-c_code[to]);
+                    S.push(nextS);
+                }
+                else{
+                    Stem nextS=make_tuple(e.first,to,c_code[to]);
+                    S.push(nextS);
+                }
             }
         }
     }
