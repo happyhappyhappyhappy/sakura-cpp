@@ -80,8 +80,8 @@
 			"body": [
 			  "#include<bits/stdc++.h>",
 			  "#ifdef LOCAL",
-			  "#include\"/code/sakura-cpp/comp_pro/debug.h\"",
-			  "#include\"/code/sakura-cpp/comp_pro/t_debug.h\"",
+			  "#include\"/wrk/sakura-cpp/comp_pro/debug.h\"",
+			  "#include\"/wrk/sakura-cpp/comp_pro/t_debug.h\"",
 			  "#else",
 			  "#define debug(...) 42",
 			  "#define debug2(...) 42",

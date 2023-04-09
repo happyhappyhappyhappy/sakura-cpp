@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #ifdef LOCAL
-#include"/code/sakura-cpp/comp_pro/debug.h"
-#include"/code/sakura-cpp/comp_pro/t_debug.h"
+#include"/wrk/sakura-cpp/comp_pro/debug.h"
+#include"/wrk/sakura-cpp/comp_pro/t_debug.h"
 #else
 #define debug(...) 42
 #define debug2(...) 42
@@ -11,7 +11,9 @@
 #endif
 using namespace std;
 using ll=long long;
+// TODO: 深さ探索で使うtupleの定義をここに書く
 using Edge=pair<int,ll>;
+using Stem=tuple<int,int,int>;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
@@ -22,25 +24,47 @@ void initial(void){
     cout.tie(nullptr);
 }
 
-void solve(int &N,vector<vector<Edge> &G,vector<int> &c_code){
+void solve(int &N,vector<vector<Edge>> &G,vector<int> &c_code){
+    stack<Stem> S;
+
+    S.push(make_tuple(0,-1,1));
+    while(S.empty()==false){
+        Stem st=S.top();
+        int to = get<0>(st);
+        int from = get<1>(st);
+        int ncolor = get<2>(st);
+        c_code[to]=ncolor;
+        for(int j=0;j<(int)G[to].size();j=j+1){
+            Edge e = G[to][j];
+            if(e.first == from){
+                continue;
+            }
+            else{
+                // if(e.se)
+            }
+        }
+    }
+    // 下はとりあえずデータは正しく出ていることを確認するまで。
+/*
     for(int j=0;j<N;j=j+1){
-        debug("根%5dについて関連している木\n",j);
+        debug("根[%5d]について関連している木\n",j);
         for(int k=0;k<(int)G[j].size();k=k+1){
             Edge e = G[j][k];
             int r=e.first;
             ll d=e.second;
-            debug("  ",r,d); // TODO:ここからスタート
+            if()
+            // debug("-> %d : %lld  \n",r,d);
         }
     }
-
+*/
 }
 
 int main(void){
     initial();
     int N;
     cin >> N;
-    G.assign(N,vector<Edge>());
-    c_code.assign(N,0);
+    vector<vector<Edge>> G(N,vector<Edge>());
+    vector<int> c_code(N,0);
     for(int j=0;j<N-1;j=j+1){
         int from,to;
         ll dist;
