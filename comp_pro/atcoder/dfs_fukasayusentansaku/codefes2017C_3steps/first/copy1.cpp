@@ -25,7 +25,7 @@ int N,M;
 vector<vector<int>> G;
 vector<int> dir;
 
-bool isbi = true;
+bool isbi = true; // 2部グラフかどうかの判定
 
 void showG(void){
     for(int j=0;j<(int)G.size();j=j+1){
@@ -37,23 +37,65 @@ void showG(void){
     }
 }
 
+void dfs(int v,int d){
+    dir[v]=d;
+    for(int j=0;j<(int)G[v].size();j=j+1){
+        int check=G[v][j];
+        if(dir[check]==-1){
+            debug("まだ未探索の %2d の位置に %2d を入れていきます\n",check,1-d);
+            dfs(check,1-d);
+        }
+        else{
+            if(dir[check]==1-d){
+                debug("dir[%d]=%dの為飛ばします\n",check,1-d);
+                continue;
+            }
+            else{
+                debug("dir[%d]!=%dの無い為二部グラフと分かりました\n",check,1-d);
+                isbi=false; // 二部グラフでは無い
+            }
+        }
+    }
+}
+
 int main(void){
     initial();
     cin >> N >> M;
-    // debug("%3d %3d\n",N,M);
     dir.assign(N,-1);
     G.assign(N,vector<int>());
     for(int j=0;j<M;j=j+1){
-        debug("辺 %2d\n",j);
+    //        debug("辺 %2d\n",j);
         int u=0;
         int v=0;
         cin >> u >> v;
-        debug("得られた値 %2d <-> %2d\n",u,v);
+    //    debug("得られた値 %2d <-> %2d\n",u,v);
         u = u-1;
         v = v-1;
         G[u].push_back(v);
         G[v].push_back(u);
     }
-    // showG();
+    showG();
+    dfs(0,0);
+    int result;
+    if(isbi){
+        debug("Gは二部グラフになります\n");
+        int B=0;
+        int W=0;
+        for(int j=0;j<N;j=j+1){
+            if(dir[j]==0){
+                W=W+1;
+            }
+            else{
+                B=B+1;
+            }
+            debug("黒 : %2d 個,白 : %2d 個\n",B,W);
+            result = W*B-M;
+        }
+    }
+    else{
+        debug("Gは一筆書きができるオイラーグラフです\n");
+        result = (N*(N-1))/2-M;
+    }
+    cout << result << "\n" << flush;
     return 0;
 }
