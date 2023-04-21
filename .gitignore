@@ -17,3 +17,4 @@ nogit*.txt
 ngdebug*.txt
 ./python/
 testcase/
+/testcase/
