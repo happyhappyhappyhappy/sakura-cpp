@@ -68,8 +68,12 @@ int main(void){
             }
         }
     }
-    // 年の為に出力
-    debug("スタート:%t %d,%t %d\n");
+    // 念の為に出力
+    debug("スタート (%d , %d)\n",F[0].first,F[0].second);
+    for(int j=1;j<=N;j=j+1){
+        debug("工場 %d (%d , %d)\n",j,F[j].first,F[j].second);
+    }
+
     return 0;
 }
 
