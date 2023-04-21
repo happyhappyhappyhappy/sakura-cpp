@@ -34,6 +34,15 @@ void showG(int MAXH,int MAXW){
     debug("\n");
 }
 
+int solver(pos &fromP,pos &toP){
+    debug("( %d , %d )->( %d , %d )探索\n",fromP.first,fromP.second,
+    toP.first,toP.second);
+
+
+    // メモ dist図の掃除
+    return 1;
+}
+
 int main(void){
     initial();
     int H,W,N;
@@ -73,7 +82,14 @@ int main(void){
     for(int j=1;j<=N;j=j+1){
         debug("工場 %d (%d , %d)\n",j,F[j].first,F[j].second);
     }
-
+    // 一応 S->1までを調べる
+    int result=0;
+    for(int n=1;n<=N;n=n+1){
+        int eachdist=0;
+        eachdist = solver(F[n-1],F[n]);
+        result = result + eachdist;
+    }
+    cout << result << "\n" << flush;
     return 0;
 }
 
