@@ -11,20 +11,65 @@
 #endif
 using namespace std;
 using ll=long long;
+using pos=pair<int,int>;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
 const int MAXSIZE = 1010;
-vector<vector<char>> G(MAXSIZE,vector<char>(MAXSIZE,'X'));
-vector<vector<int>> dist; // TODO ここからスタート
+vector<vector<char>> G(MAXSIZE,vector<char>(MAXSIZE,'#'));
+vector<vector<int>> dist(MAXSIZE,vector<int>(MAXSIZE,yamaMAX_INT));
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
 
+void showG(int MAXH,int MAXW){
+    for(int h=0;h<MAXH;h=h+1){
+        for(int w=0;w<MAXW;w=w+1){
+            debug(" %c",G[h][w]);
+        }
+        debug("\n");
+    }
+    debug("\n");
+}
+
 int main(void){
     initial();
+    int H,W,N;
+    cin >> H >> W >> N;
+    // 図面の取り込み
+    for(int h=1;h<=H;h=h+1){
+        for(int w=1;w<=W;w=w+1){
+            cin >> G[h][w] ;
+        }
+    }
+    showG(H+2,W+2);
+    // 位置の集計
+    vector<pos> F(N+1);
+    // Sを探す
+    for(int h=0;h<H+2;h=h+1){
+        for(int w=0;w<W+2;w=w+1){
+            if(G[h][w]=='S'){
+                F[0]=make_pair(h,w);
+                break;
+            }
+        }
+    }
+    // 工場の位置の記録
+    for(int n=1;n<=N;n=n+1){
+        char obj='0'+n;
+        for(int w=0;w<W+2;w=w+1){
+            for(int h=0;h<H+2;h=h+1){
+                if(G[w][h] == obj){
+                    F[n]=make_pair(w,h);
+                    break;
+                }
+            }
+        }
+    }
+    // 年の為に出力
+    debug("スタート:%t %d,%t %d\n");
     return 0;
 }
 
