@@ -16,8 +16,11 @@ const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
 const int MAXSIZE = 1010;
-vector<vector<char>> G(MAXSIZE,vector<char>(MAXSIZE,'#'));
+vector<vector<char>> G(MAXSIZE,vector<char>(MAXSIZE,'X'));
 vector<vector<int>> dist(MAXSIZE,vector<int>(MAXSIZE,yamaMAX_INT));
+int H;
+int W;
+int N;
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -25,6 +28,7 @@ void initial(void){
 }
 
 void showG(int MAXH,int MAXW){
+    debug("H = %d : W = %d\n",MAXH,MAXW);
     for(int h=0;h<MAXH;h=h+1){
         for(int w=0;w<MAXW;w=w+1){
             debug(" %c",G[h][w]);
@@ -34,13 +38,69 @@ void showG(int MAXH,int MAXW){
     debug("\n");
 }
 
-int solver(pos &fromP,pos &toP){
+void showDist(int H2,int W2){
+    debug("H = %d : W = %d\n",H2,W2);
+    for(int h=0;h<H2;h=h+1){
+        for(int w=0;w<W2;w=w+1){
+            if(dist[h][w] == yamaMAX_INT){
+                debug("   X");
+            }
+            else{
+                debug(" %2d",dist[h][w]);
+                }
+        }
+        debug("\n");
+    }
+    debug("\n");
+}
+
+int solver(pos &fromP,pos &toP,int H2,int W2){
+    int answer=0;
     debug("( %d , %d )->( %d , %d )探索\n",fromP.first,fromP.second,
     toP.first,toP.second);
-
-
-    // メモ dist図の掃除
-    return 1;
+    int sh = fromP.first;
+    int sw = fromP.second;
+    int gh = toP.first;
+    int gw = toP.second;
+    vector<int> dh={1,0,-1,0};
+    vector<int> dw={0,1,0,-1};
+    queue<pos> P;
+    dist[sh][sw]=0;
+    P.push(fromP);
+    while(P.empty()==false){
+        pos npos=P.front();
+        P.pop();
+        int nposh=npos.first;
+        int nposw=npos.second;
+        debug("今 (%d,%d)について調査中\n",nposh,nposw);
+        if(nposh==gh && nposw== gw){
+            answer=dist[nposh][nposw];
+            break;
+        }
+        for(int j=0;j<4;j=j+1){
+            int nextposh=nposh+dh[j];
+            int nextposw=nposw+dw[j];
+            if(dist[nextposh][nextposw]!=yamaMAX_INT){
+            debug("dist[%d][%d]=%d\n",nextposh,nextposw,
+                dist[nextposh][nextposw]);
+                continue;
+            }
+            else{
+                if(G[nextposh][nextposw]=='X'){
+                    debug("G[%d][%d]=%c\n",nextposh,nextposw,G[nextposh][nextposw]);
+                    continue;
+                }
+                else{
+                pos nextpos = make_pair(nextposh, nextposw);
+                P.push(nextpos);
+                dist[nextposh][nextposw] = dist[nposh][nposw] + 1;
+                }
+            }
+        }
+    }
+    showDist(H2+2,W2+2);
+    dist.assign(MAXSIZE,vector<int>(MAXSIZE,yamaMAX_INT));
+    return answer;
 }
 
 int main(void){
@@ -84,11 +144,14 @@ int main(void){
     }
     // 一応 S->1までを調べる
     int result=0;
+    /* 最終版は下の行。testcase3までは一つ合わせる
     for(int n=1;n<=N;n=n+1){
         int eachdist=0;
         eachdist = solver(F[n-1],F[n]);
         result = result + eachdist;
-    }
+    }*/
+    // cout << result << "\n" << flush;
+    result = solver(F[0],F[1],H,W);
     cout << result << "\n" << flush;
     return 0;
 }
