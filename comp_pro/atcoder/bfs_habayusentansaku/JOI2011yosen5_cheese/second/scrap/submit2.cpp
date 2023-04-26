@@ -26,38 +26,8 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-
-void showG(int MAXH,int MAXW){
-    debug("H = %d : W = %d\n",MAXH,MAXW);
-    for(int h=0;h<MAXH;h=h+1){
-        for(int w=0;w<MAXW;w=w+1){
-            debug(" %c",G[h][w]);
-        }
-        debug("\n");
-    }
-    debug("\n");
-}
-
-void showDist(int H2,int W2){
-    debug("H = %d : W = %d\n",H2,W2);
-    for(int h=0;h<H2;h=h+1){
-        for(int w=0;w<W2;w=w+1){
-            if(dist[h][w] == yamaMAX_INT){
-                debug("   X");
-            }
-            else{
-                debug(" %2d",dist[h][w]);
-                }
-        }
-        debug("\n");
-    }
-    debug("\n");
-}
-
 int solver(pos &fromP,pos &toP,int H2,int W2){
     int answer=0;
-    debug("( %d , %d )->( %d , %d )探索\n",fromP.first,fromP.second,
-    toP.first,toP.second);
     int sh = fromP.first;
     int sw = fromP.second;
     int gh = toP.first;
@@ -72,7 +42,6 @@ int solver(pos &fromP,pos &toP,int H2,int W2){
         P.pop();
         int nposh=npos.first;
         int nposw=npos.second;
-        debug("今 (%d,%d)について調査中\n",nposh,nposw);
         if(nposh==gh && nposw== gw){
             answer=dist[nposh][nposw];
             break;
@@ -81,13 +50,10 @@ int solver(pos &fromP,pos &toP,int H2,int W2){
             int nextposh=nposh+dh[j];
             int nextposw=nposw+dw[j];
             if(dist[nextposh][nextposw]!=yamaMAX_INT){
-            debug("dist[%d][%d]=%d\n",nextposh,nextposw,
-                dist[nextposh][nextposw]);
                 continue;
             }
             else{
                 if(G[nextposh][nextposw]=='X'){
-                    debug("G[%d][%d]=%c\n",nextposh,nextposw,G[nextposh][nextposw]);
                     continue;
                 }
                 else{
@@ -98,14 +64,12 @@ int solver(pos &fromP,pos &toP,int H2,int W2){
             }
         }
     }
-    showDist(H2+2,W2+2);
     dist.assign(MAXSIZE,vector<int>(MAXSIZE,yamaMAX_INT));
     return answer;
 }
 
 int main(void){
     initial();
-    int H,W,N;
     cin >> H >> W >> N;
     // 図面の取り込み
     for(int h=1;h<=H;h=h+1){
@@ -113,10 +77,7 @@ int main(void){
             cin >> G[h][w] ;
         }
     }
-    showG(H+2,W+2);
-    // 位置の集計
     vector<pos> F(N+1);
-    // Sを探す
     for(int h=0;h<H+2;h=h+1){
         for(int w=0;w<W+2;w=w+1){
             if(G[h][w]=='S'){
@@ -128,30 +89,22 @@ int main(void){
     // 工場の位置の記録
     for(int n=1;n<=N;n=n+1){
         char obj='0'+n;
-        for(int w=0;w<W+2;w=w+1){
-            for(int h=0;h<H+2;h=h+1){
-                if(G[w][h] == obj){
+        for(int h=0;h<H+2;h=h+1){
+            for(int w=0;w<W+2;w=w+1){
+                if(G[h][w] == obj){
                     F[n]=make_pair(w,h);
                     break;
                 }
             }
         }
     }
-    // 念の為に出力
-    debug("スタート (%d , %d)\n",F[0].first,F[0].second);
-    for(int j=1;j<=N;j=j+1){
-        debug("工場 %d (%d , %d)\n",j,F[j].first,F[j].second);
-    }
-    // 一応 S->1までを調べる
+
     int result=0;
-    /* 最終版は下の行。testcase3までは一つ合わせる
     for(int n=1;n<=N;n=n+1){
         int eachdist=0;
-        eachdist = solver(F[n-1],F[n]);
+        eachdist = solver(F[n-1],F[n],H,W);
         result = result + eachdist;
-    }*/
-    // cout << result << "\n" << flush;
-    result = solver(F[0],F[1],H,W);
+    }
     cout << result << "\n" << flush;
     return 0;
 }
