@@ -15,7 +15,7 @@ using pos=pair<int,int>;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
-
+// TODO: 令和5年4月27日(木) debug周りを手直ししてください
 // 大域変数
 vector<vector<char>> G;
 // vector<vector<int>> dir;
@@ -65,6 +65,8 @@ void showDir(vector<vector<int>> &dir,int H,int W){
 
 int solver(pos F,pos T,int H,int W){
     vector<vector<int>> dir(H,vector<int>(W,yamaMAX_INT));
+    debugt(F);
+    debugt(T);
     int result=0;
     int sh = F.first;
     int sw = F.second;
@@ -75,7 +77,7 @@ int solver(pos F,pos T,int H,int W){
     queue<pos> Q;
     Q.push(F);
     dir[sh][sw]=0;
-    debugt(F);
+
     while(Q.empty()==false){
         pos n = Q.front();
         Q.pop();
@@ -100,6 +102,9 @@ int solver(pos F,pos T,int H,int W){
             }
         }
     showDir(dir,H,W);
+    debugt(F);
+    debugt(T);
+    debug("解答 %d\n",result);
     return result;
 }
 int main(void){
@@ -115,7 +120,7 @@ int main(void){
         }
     }
     // showG(GH,GW);
-    vector<pos> F(N,make_pair(-1,-1));
+    vector<pos> F(N+1,make_pair(-1,-1));
     F[0] = getpos(GH,GW,'S');
     debug("スタート位置 ( %d , %d )\n",F[0].first,F[0].second);
     // 拡張
@@ -125,10 +130,15 @@ int main(void){
         debug("%d 番目 ( %d , %d )\n",n,F[n].first,F[n].second);
     }
     // int res=0;
-    vector<int> eachr(N-1,0);
-    int X;
-    X = solver(F[0],F[1],GH,GW);
-    cout << X << "\n" << flush;
+    for(int j=0;j<N;j=j+1){
+        debugt(F[j]);
+        debugt(F[j+1]);
+    }
+    int answer=0;
+    for(int j=1;j<=N;j=j+1){
+        answer = solver(F[j-1],F[j],GH,GW)+answer;
+    }
+    cout << answer << "\n" << flush;
     return 0;
 }
 
