@@ -37,7 +37,7 @@
   -std=gnu++98                Conform to the ISO 1998 C++ standard revised by the 2003 technical corrigendum
   -std=gnu11                  Conform to the ISO 2011 C standard with GNU extensions.
   -std=gnu17                  Conform to the ISO 2017 C standard (published in 2018) with GNU extensions.
-  -std=gnu18                  Conform to the ISO 2017 C standard (published in 2018) with GNU extensions. 
+  -std=gnu18                  Conform to the ISO 2017 C standard (published in 2018) with GNU extensions.
   -std=gnu1x                  Deprecated in favor of -std=gnu11.  Same as -std=gnu11.
   -std=gnu2x                  Conform to the ISO 202X C standard draft with GNU extensions (experimental and
   -std=gnu89                  Conform to the ISO 1990 C standard with GNU extensions.  Same as -std=gnu90.
@@ -51,3 +51,4 @@
   -std=iso9899:2011           Conform to the ISO 2011 C standard.  Same as -std=c11.
   -std=iso9899:2017           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
   -std=iso9899:2018           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
+XXX
