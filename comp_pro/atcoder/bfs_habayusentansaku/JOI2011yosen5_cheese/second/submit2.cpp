@@ -15,7 +15,6 @@ using pos=pair<int,int>;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 58;
-// TODO: 令和5年4月27日(木) debug周りを手直ししてください
 // 大域変数
 vector<vector<char>> G;
 // vector<vector<int>> dir;
