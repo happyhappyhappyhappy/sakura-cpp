@@ -35,10 +35,38 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+void showDP(vector<vector<int>>& dp,int N,int W){
+    for(int j=0;j<=N;j=j+1){
+        for(int k=0;k<=W;k=k+1){
+            debug(" %3d",dp[j][k]);
+        }
+        debug("\n");
+    }
+    debug("\n");
+}
+
 int main(void){
     initial();
     int N,W;
     cin >> N >> W;
-
+    vector<int> v(N,0);
+    vector<int> w(N,0);
+    vector<vector<int>> dp(110,vector<int>(10100,0));
+    for(int j=0;j<N;j=j+1){
+        cin >> v[j] >> w[j];
+    }
+    for(int j=0;j<N;j=j+1){
+        for(int sum_kg=0;sum_kg<=W;sum_kg=sum_kg+1){
+            // j番目の品物を選ぶ場合
+            if(w[j]<=sum_kg){
+                chmax(dp[j+1][sum_kg],dp[j][sum_kg-w[j]]+v[j]);
+            }
+            else{
+                chmax(dp[j+1][sum_kg],dp[j][sum_kg]);
+            }
+        }
+        showDP(dp,N,W);
+    }
+    cout << dp[N][W] << "\n" << flush;
     return 0;
 }
