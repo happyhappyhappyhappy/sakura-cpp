@@ -12,7 +12,8 @@
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
-const int yamaMAX_INT = 1 << 29;
+// const int yamaMAX_INT = 1 << 29;
+const int yamaMAX_INT = 70000;
 const ll yamaMAX_LL = 1LL << 58;
 template<class XXX> bool chmin(XXX &a,XXX b){
     if(b<a){
@@ -28,10 +29,24 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-
+void showDP(int K,int S){
+    for(int k=1;k<=K;k=k+1){
+        for(int s=1;s<=S;s=s+1){
+            if(dp[k][s]==yamaMAX_INT){
+                debug(" INF");
+            }
+            else{
+                debug(" %3d",dp[k][s]);
+            }
+        }
+        debug("\n");
+    }
+    debug("\n");
+}
 int main(void){
     initial();
     int S,K;
+    cin >> S >> K;
     vector<int> C(30,0);
     for(int j=1;j<=K;j=j+1){
         cin >> C[j];
@@ -43,12 +58,14 @@ int main(void){
         dp[j][0]=0;
     }
     for(int j=1;j<=K;j=j+1){
-        int nowm=C[j];
         for(int k=1;k<=S;k=k+1){
-            if(k-nowm<0){
-                dp[j][k]=dp[j-1][k];// TODO: 以下サンプルと照らし合わせ
+            if(0<=(k-C[j])){
+                dp[j][k]=min(dp[j-1][k],dp[j][k-C[j]]+1);
             }
+            chmin(dp[j][k],dp[j-1][k]);
         }
+        showDP(K,S);
     }
+    cout << dp[K][S] << "\n" << flush;
     return 0;
 }

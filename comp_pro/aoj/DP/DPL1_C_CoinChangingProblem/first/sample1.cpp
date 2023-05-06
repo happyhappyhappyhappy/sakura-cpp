@@ -43,6 +43,7 @@ Int min_coin() {
 
       table[m][n] = min(table[m-1][n], table[m][n-coin] + 1);
     }
+    showDP(M,N);
   }
 
   return table[M][N];
