@@ -18,7 +18,7 @@ const int NMAX=1010;
 vector<vector<int>> dp(NMAX,vector<int>(NMAX,0));
 template<class XXX> bool chmax(XXX &a,XXX &b){
     if(a<b){
-        b=a;
+        a=b;
         return true;
     }
     return false;
@@ -44,11 +44,12 @@ int main(void){
     initial();
     int n;
     cin >> n;
-    int NX=n+1;
     while(n--){
-        debug("----- Problem %d-----\n",NX-n);
+        debug("----- Problem %d-----\n",n);
         string X;
         string Y;
+        cin >> X;
+        cin >> Y;
         int xs=(int)X.size();
         int ys=(int)Y.size();
         X = ' '+X;
@@ -57,7 +58,10 @@ int main(void){
         for(int j=1;j<=xs;j=j+1){
             for(int k=1;k<=ys;k=k+1){
                 if(X[j]==Y[k]){
+                    debug("Xの %d 番目と Yの %d 番目は同じ「%c」です\n"
+                    ,j,k,X[j]);
                     dp[j][k]=dp[j-1][k-1]+1;
+                    debugt(dp[j][k]);
                 }
                 else{
                     dp[j][k]=max(dp[j-1][k],dp[j][k-1]);
