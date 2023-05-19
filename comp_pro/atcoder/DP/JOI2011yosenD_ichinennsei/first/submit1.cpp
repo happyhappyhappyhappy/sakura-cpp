@@ -22,7 +22,7 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-
+/**
 void showDP(){
     int H = (int)DP.size();
     int W = (int)DP[0].size();
@@ -34,7 +34,7 @@ void showDP(){
     }
     debug("\n\n");
 }
-
+**/
 ll solver(vector<int> &A,int &R){
     int dp_elem=(int)A.size();
     DP.assign(dp_elem,vector<ll>(21,0LL));
@@ -48,7 +48,7 @@ ll solver(vector<int> &A,int &R){
                 DP[j+1][X-A[j+1]]=DP[j+1][X-A[j+1]]+DP[j][X];
             }
         }
-        showDP();
+//     showDP();
     }
     return DP[dp_elem-1][R];
 }
