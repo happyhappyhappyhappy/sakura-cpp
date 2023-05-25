@@ -21,7 +21,17 @@ void initial(void){
     cout.tie(nullptr);
 }
 
+int solver(string M){
+    int res = (int)M.size()+1;
+    const char* sM;
+
+    return res;
+}
+
 int main(void){
     initial();
+    string M;
+    cin >> M;
+    cout << solver(M) << "\n" << flush;
     return 0;
 }
