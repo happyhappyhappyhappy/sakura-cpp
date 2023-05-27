@@ -20,8 +20,28 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+int solver(int N,int M,int K,vector<vector<int>> &C,vector<vector<int>> &INB){
+    int answer=0;
 
+
+    return answer;
+}
 int main(void){
     initial();
+    int N=0;
+    int M=0;
+    int K=0;
+    cin >> N >> M;
+    vector<vector<int>> C(M,vector<int>(2,0));
+    for(int j=0;j<M;j=j+1){
+        cin >> C[j][0] >> C[j][1];
+    }
+    vector<int> BOX(N+1,0);
+    cin >> K;
+    vector<vector<int>> INB(K,vector<int>(2,0));
+    for(int j=0;j<K;j=j+1){
+        cin >> INB[j][0] >> INB[j][1];
+    }
+    cout << solver(N,M,K,C,INB) << "\n" << flush;
     return 0;
 }
