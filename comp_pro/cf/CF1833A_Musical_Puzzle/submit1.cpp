@@ -23,9 +23,13 @@ void initial(void){
 int solver(string str){
     int res=0;
     int strcount=(int)str.size();
-    vector<string> devideString(strcount-1);
-    // TODO:2023-05-30 19:26:39 以降はここからスタート
-    debug("Now String is %s...\n",str.c_str());
+    map<string,int> M;
+    for(int j=0;j<strcount-1;j=j+1){
+        string twochar=string{str[j],str[j+1]};
+        M[twochar]=M[twochar]+1;
+        debug("%3d -> %s\n",j,twochar.c_str());
+    }
+    res=M.size();
     return res;
 }
 int main(void){
