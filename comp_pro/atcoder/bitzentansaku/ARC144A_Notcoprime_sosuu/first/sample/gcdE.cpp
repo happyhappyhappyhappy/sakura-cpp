@@ -1,4 +1,7 @@
 #include<bits/stdc++.h>
+// 拡張ユークリッド互除法も含めたもの。
+// 逆元の余りを求めるロジックのため互いに素以外はあまり使わない
+//2023-06-03 19:24:24
 #ifdef LOCAL
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
 #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
@@ -32,7 +35,6 @@ ll gcd(ll x,ll y){
         return gcd(y,z);
     }
 }
-/**
 ll gcdExt(ll a,ll b,ll &x,ll &y){
     debug("a = %3lld ,b = %3lld , x = %3lld , y = %3lld で入りました",
     a,b,x,y);
@@ -51,7 +53,6 @@ ll gcdExt(ll a,ll b,ll &x,ll &y){
     debug("x = %3lld, y = %3lld になりました\n",x,y);
     return d;
 }
-**/
 
 int main(void){
     initial();
@@ -60,5 +61,10 @@ int main(void){
     cin >> M >> N;
     ll res=gcd(M,N);
     cout << "従来のユークリッドのみ -> " << res << "\n" << flush;
+    ll x=-1;
+    ll y=-1;
+    res = gcdExt(M,N,x,y);
+    cout << "拡張ユークリッド -> " << res << "\n" << flush;
+    cout <<  "逆元手がかり ->  " << x << " or " << (x+N) << "\n" << flush;
     return 0;
 }
