@@ -54,17 +54,32 @@ void showPrime(void){
 int main(void){
     initial();
     showPrime();
+    int N=0;
+    cin >> N;
+    vector<ll> prob(N,1);
+    for(int j=0;j<N;j=j+1){
+        cin >> prob[j];
+    }
+    debug("互いに素以外としたいものは ->");
+    for(int j=0;j<N;j=j+1){
+        debug("%3lld ",prob[j]);
+    }
+    debug("\n");
     int allLen=(int)P50.size();
     for(ll j=(1<<allLen)-1;j > 0;j=j-1){
         vector<ll> primeChain={};
         for(int k=0;k<allLen;k=k+1){
             int flug=(j>>k) & 1;
             if(flug == 1){
-                primeChain.push_back(P50[j]);
+                primeChain.push_back(P50[k]);
             }
         }
-        //2023-06-04 18:11:39 休憩 TODO:
-        for(int k=0;primeChain)
+        ll ntimes=1LL;
+        for(int k=0;k<(int)primeChain.size();k=k+1){
+            ntimes=ntimes*primeChain[k];
+        }
+        // ntimesに求まった式が入った
+        // debug2("%3lld で作る積は %3lldです",j,ntimes);
     }
     return 0;
 }
