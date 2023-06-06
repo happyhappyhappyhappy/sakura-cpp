@@ -18,6 +18,14 @@ const ll MAXP=50;
 
 vector<ll> P50={};
 
+
+ll myGCD(ll M,ll N){
+    if(N==0){
+        return M;
+    }
+    return myGDC(N,M%N);
+}
+
 void mkPrime(ll X){
     vector<bool> isPrime(X,true);
     isPrime[0]=false;
@@ -80,6 +88,7 @@ int main(void){
         }
         // ntimesに求まった式が入った
         // debug2("%3lld で作る積は %3lldです",j,ntimes);
+        // TODO: myGCDを使ってprob[]と互いに素で無いntimesを見つける
     }
     return 0;
 }
