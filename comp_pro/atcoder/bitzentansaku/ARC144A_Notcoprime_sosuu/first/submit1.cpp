@@ -61,7 +61,7 @@ void showPrime(void){
 }
 int main(void){
     initial();
-    showPrime();
+    // showPrime();
     int N=0;
     cin >> N;
     ll answer=yamaMAX_LL;
@@ -69,11 +69,12 @@ int main(void){
     for(int j=0;j<N;j=j+1){
         cin >> prob[j];
     }
-    debug("互いに素以外としたいものは ->");
+    /** debug("互いに素以外としたいものは ->");
     for(int j=0;j<N;j=j+1){
         debug("%3lld ",prob[j]);
     }
     debug("\n");
+    **/
     int allLen=(int)P50.size();
     for(ll j=(1<<allLen)-1;j > 0;j=j-1){
         vector<ll> primeChain={};
@@ -98,13 +99,13 @@ int main(void){
             }
         }
         if(noPrimeFlug){
-            debug("%3lld はすべての与えられた数値とは素ではありませんでした\n",ntimes);
+        //    debug("%3lld はすべての与えられた数値とは素ではありませんでした\n",ntimes);
             if(ntimes<answer){
-                debug("%3lld を最小値に設定します\n",ntimes);
+        //        debug("%3lld を最小値に設定します\n",ntimes);
                 answer=ntimes;
             }
         }
-        cout << answer << "\n" << flush;
     }
+    cout << answer << "\n" << flush;
     return 0;
 }
