@@ -29,6 +29,7 @@ int main(void){
     for(int j=0;j<N;j=j+1){
         cin >> A[j];
     }
+    // TODO:ここからpythonで写経してみる
     ans =
     return 0;
 }
