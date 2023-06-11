@@ -128,5 +128,16 @@
 				"}"
 				],
 				"description": "山中のC++スニペット全部20230604"
-			}
+			},
+			"chmix書式": {
+				"prefix": "yamachmix",
+				"body": [
+				  "  template<class XXX> void chmin(XXX &x,XXX y){",
+				  "    if(x > y){",
+				  "        x = y;",
+				  "    }",
+				  "}"
+				],
+				"description": "chmix書式"
+			  }
 }
