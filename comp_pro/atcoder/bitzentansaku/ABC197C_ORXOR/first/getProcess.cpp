@@ -33,17 +33,33 @@ int main(void){
     int NK=N-1;
     vector<vector<int>> XORTable;
     vector<int> ORList;
-    for(int j=1;j<((1<<NK)-1);j=j+1){
-        ORList.push_back(0);
+    // for(int j=0;j<(1<<NK);j=j+1){ 全部探索します
+    for(int j=0;j<((1<<NK)-1);j=j+1){
+        debug("===== %4d の場合の分布 =====\n",j);
+        ORList.push_back(A[0]);
         for(int k=0;k<NK;k=k+1){
             int Fl=j>>k;
-            if((FL & 1) == 1){// 区切る
+            if((Fl & 1) == 1){// 区切らない
+                ORList.push_back(A[k+1]);
+            }
+            else{// 区切る
                 XORTable.push_back(ORList);
-
-
+                ORList.clear();
+                ORList.push_back(A[k+1]);
             }
         }
+        XORTable.push_back(ORList);
+        ORList.clear(); // 使い回しのため一旦クリア
+        debug("XORTABLEの列数=%3d\n",(int)XORTable.size());
+        for(int k=0;k<(int)XORTable.size();k=k+1){
+            ORList=XORTable[k];
+            for(int m=0;m<(int)ORList.size();m=m+1){
+                debug(" %3d",ORList[m]);
+            }
+            debug("\n");
+            ORList.clear();
+        }
+        XORTable.clear(); // これをしないと前と同じテストが入ってしまう
     }
-
     return 0;
 }

@@ -12,7 +12,7 @@
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
-const int yamaMAX_INT = 1 << 29;
+const int yamaMAX_INT = 1 << 30;
 const ll yamaMAX_LL = 1LL << 60;
 template<class XXX> void chmin(XXX &x,XXX y){
     if(x > y){
@@ -24,6 +24,7 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+/***
 void showTable(vector<vector<int>> &T){
     vector<int> L;
     for(int j=0;j<(int)T.size();j=j+1){
@@ -35,6 +36,7 @@ void showTable(vector<vector<int>> &T){
         L.clear();
     }
 }
+***/
 int solver(int N,vector<int>& A){
     int res=yamaMAX_INT;
     int K=N-1; // 区切りの個数 sample1ならば 3-1->2で良い
@@ -58,7 +60,7 @@ int solver(int N,vector<int>& A){
         }
         XORT.push_back(ORL);
         ORL.clear();
-        showTable(XORT);
+        // showTable(XORT);
         // まず一列ずつORを求める
         int orv;
         vector<int> xorl;
