@@ -12,7 +12,7 @@
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
-const int yamaMAX_INT = 1 << 29;
+const int yamaMAX_INT = 1 << 30;
 const ll yamaMAX_LL = 1LL << 60;
 template<class XXX> void chmin(XXX &x,XXX y){
     if(x > y){
@@ -40,7 +40,7 @@ int solver(int N,vector<int>& A){
     int K=N-1; // 区切りの個数 sample1ならば 3-1->2で良い
     int PT = 1<<K;
     debug("総数 : %3d\n",PT);
-    for(int j=0;j<(PT-1);j=j+1){
+    for(int j=0;j<PT;j=j+1){
         // 入れ物準備
         vector<vector<int>> XORT;
         vector<int> ORL;

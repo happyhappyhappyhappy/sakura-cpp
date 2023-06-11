@@ -24,7 +24,7 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-/**
+/***
 void showTable(vector<vector<int>> &T){
     vector<int> L;
     for(int j=0;j<(int)T.size();j=j+1){
@@ -36,13 +36,14 @@ void showTable(vector<vector<int>> &T){
         L.clear();
     }
 }
-**/
+***/
 int solver(int N,vector<int>& A){
     int res=yamaMAX_INT;
     int K=N-1; // 区切りの個数 sample1ならば 3-1->2で良い
     int PT = 1<<K;
-    // debug("総数 : %3d\n",PT);
-    for(int j=0;j<PT;j=j+1){
+    debug("総数 : %3d\n",PT);
+    // 一列になっても良しとした 2023-06-11 18:53:48
+    for(int j=0;j<(PT-1);j=j+1){
         // 入れ物準備
         vector<vector<int>> XORT;
         vector<int> ORL;
