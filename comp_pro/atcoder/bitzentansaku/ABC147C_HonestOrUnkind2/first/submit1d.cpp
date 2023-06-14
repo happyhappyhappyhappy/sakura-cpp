@@ -20,7 +20,39 @@ void initial(void){
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
+int solver(int N,vector<vector<pair<int,int>> &E){
+    int res=0;
+    for(int j=0;j<N;j=j+1){
+        vector<pair<int,int>> SList;
+        SList = E[j];
+        debug("Mr.%3d talk ",j);
+        for(int k=0;(int)SList.size();k=k+1){
+            pair<int,int> talk=SList[k];
+            int w=talk.first;
+            int horu=talk.second;
+            debug("\t%3d is %3d\n",w,horu);
+        }
+        debug("\n");
+    }
+    return res;
+}
 int main(void){
     initial();
+    int N=0;
+    cin >> N;
+    vector<vector<pair<int,int>> E;
+    for(int j=0;j<N;j=j+1){
+        int M=0;
+        cin >> M;
+        vector<pair<int,int>> SList;
+        for(int k=0;k<M;k=k+1){
+            int w=0;
+            int horu=0;
+            cin >> w >> horu ;
+            SList[k]=make_pair(w-1,horu);
+        }
+        E.push_back(SList);
+    }
+    cout << solver(N,E) << "\n" << flush;
     return 0;
 }
