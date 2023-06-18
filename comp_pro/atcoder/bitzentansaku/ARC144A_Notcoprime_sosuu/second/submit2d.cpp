@@ -30,9 +30,11 @@ void primeSet(void){
     isPrime[1]=false;
     for(ll j=0;j<P_MAX;j=j+1){
         if(isPrime[j]==false){
+       //     debug("%3lld は 素数ではないとわかるので外します\n",j);
             continue;
         }
         for(ll k=j*2;k<P_MAX;k=k+j){
+     //       debug("%3lld は素数でないと分かりました。候補から外します\n",k);
             isPrime[k]=false;
         }
     }
@@ -52,10 +54,11 @@ ll mygcd(ll M,ll N){
     return d;
 }
 
-ll solver(const vector<ll> &Obj){
+ll solver(vector<ll> &Obj){
     ll ans = yamaMAX_LL;
     ll p50size=(ll)P50.size();
     vector<ll> timeObj;
+    debug("50までの素数の数は %lld です\n",p50size);
     for(ll j=1;j<(1<<p50size);j=j+1){
         ll primeTime = 1;
         for(ll k=0;k<p50size;k=k+1){
@@ -65,17 +68,20 @@ ll solver(const vector<ll> &Obj){
             }
         }
         ll Objsize=Obj.size();
+        debug("求める数の個数: %3lld\n",Objsize);
         bool flag=true;
-        for(ll k=0;k<Objsize;k=k+1)
-            {
-            if( mygcd(primeTime,Obj[k])==1)
-                {
-                    flag=false;
-                }
+        for(ll k=0;k<Objsize;k=k+1){
+            if( mygcd(primeTime,Obj[k])==1){
+                debug("%lld と %lld が互いに素でした\n",primeTime,Obj[k]);
+                flag=false;
+            }
             }
         if(flag==true)
         {
-            chmin(ans,primeTime);
+            if(chmin(ans,primeTime))
+            {
+                debug("最小値が %3lld に代わりました\n",ans);
+            }
         }
     }
     return ans;
@@ -88,6 +94,10 @@ void initial(void){
 }
 int main(void){
     initial();
+//    for(ll j=0;j<(int)P50.size();j=j+1){
+//        debug("%3lld ",P50[j]);
+//    }
+//    debug("\n");
     ll N;
     cin >> N;
     vector<ll> objectValue(N);
