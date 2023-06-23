@@ -42,8 +42,6 @@ void showVector2(vector<vector<int>> &G){
 
 int main(void){
     initial();
-    // TODO: https://atcoder.jp/contests/abc167/tasks/abc167_c の入力作成
-    // 2023-05-19 19:12:14 3回目終了
     int N=0;
     int M=0;
     int X=0;

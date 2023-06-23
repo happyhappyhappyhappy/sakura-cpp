@@ -90,7 +90,6 @@ int main(void){
         }
         // ntimesに求まった式が入った
         // debug2("%3lld で作る積は %3lldです",j,ntimes);
-        // TODO: myGCDを使ってprob[]と互いに素で無いntimesを見つける
         bool noPrimeFlug=true;
         for(int j=0;j<(int)prob.size();j=j+1){
             if(myGCD(prob[j],ntimes)==1){

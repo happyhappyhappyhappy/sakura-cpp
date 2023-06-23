@@ -19,82 +19,86 @@ template<class XXX> void chmin(XXX &x,XXX y){
         x = y;
     }
 }
-ll G;
-vector<ll> bs; // 各問題の数
-vector<ll> cs; // コンプリートスコア
+// 大域変数
+int D; // 問題数
+ll G; // 目標点
 
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-ll solver(int D,ll G){
+string bitCode(int B){
+    string res="";
+    for(int j=0;j<D;j=j+1){
+        if(((B>>j)&1)==1){
+            res=res+"1";
+        }
+        else{
+            res=res+"0";
+        }
+    }
+    return res;
+}
+ll solver(vector<ll> &tc,vector<ll> &tp,vector<ll> &cp){
     ll res=0;
     for(int j=0;j<D;j=j+1){
-        res=res+bs[j];
+        res=res+tc[j];
     }
-    for(ll bit=0;bit<(1<<D);bit=bit+1){
-        string bitChain="";
+    for(int bit=0;bit<(1<<D);bit=bit+1){
+        string bc=bitCode(bit);
+        ll sum=0; // 得点合計
+        ll count=0; // テスト合計数
+        debug("----- 回答完了コード : %s -----\n",bc.c_str());
         for(int j=0;j<D;j=j+1){
-            if((bit>>j) & 1){
-                bitChain.append("1");
+            int j1=j+1;
+            int bitFlg=(bit>>j)&1;
+            if(bitFlg==1){
+                debug("%3d 問目をコンプリートしました\n",j1);
+                sum=sum+tp[j]*tc[j]+cp[j];
+                count=count+tc[j];
+                debug("現在の得点 %3lld 完了テスト数 %3lld\n",
+                sum,count);
+            }else{
+                debug("%3d 問目は未着手\n",j1);
             }
-            else{
-                bitChain.append("0");
-            }
-        }
-        debug("検索フラグコード -- %s --\n",bitChain.c_str());
-        ll sum=0;
-        ll count=0;
-        for(int j=0;j<D;j=j+1){
-            if(((bit>>j) & 1)==1){
-                int j1=j+1;
-                debug("%3d 問目を全部解いた物とできる。\n",j1);
-                sum=sum+cs[j]+bs[j]*(j1*100);
-                count = count+bs[j];
-            }
-        }
+        } // 指定問題の解答完了
         if(G <= sum){
-            debug("合計 %lldになり条件 %lldを満たしました。最小値を%lldと比較します\n",
-            sum,G,count);
+            debug("bit指定問題だけで条件をみたしました(%lld/%lld)。この値を渡します。\n",
+            sum,G);
             chmin(res,count);
         }
         else{
-            debug("合計が%lldだけだったので貪欲法に入ります\n",sum);
+            debug("bit指定の問題では条件を満たせませんでした(%lld/%lld)。高ポイントのものから貪欲法に入ります。\n",
+            sum,G);
+            debug("これから開発\n");
             for(int j=D-1;0<=j;j=j-1){
                 int j1=j+1;
-                if(((bit>>j)&1)==1){
-                    debug("%d 問目は回答済みなのでスキップします\n",j1);
+                int bitFlg=(bit>>j)&1;
+                if(bitFlg==1){
+                    debug("%d 問目はコンプリート済みですよね。スキップします\n",j1);
                     continue;
                 }
-                for(int k=0;k<bs[j];k=k+1){
-                    if(G <= sum){
-                        debug("ここで合計が %lld と 条件 %lld を超えましたので貪欲法ループを抜けます。これまでの問題数 %lld を最終結果とします\n",
-                        sum,G,count);
-                        break;
-                    }
-                    debug("%d の %d テストがOKになりました\n",j1,k);
-                    sum = sum+100*j1;
-                    count = count+1;
+                else{
+                    // TODO: j番目を一テストずつ解いていく
+                    // 変数はkを利用
+                    // 2023-06-23 19:29:54
                 }
             }
-            debug("最終的には 合計 %lldにて %lldを超えていると思いますの最低数 %lld を %lldと比較します\n",
-            sum,G,count,res);
-            chmin(res,count);
         }
     }
     return res;
 }
 int main(void){
     initial();
-    int N=0;
-    ll C=0;
-    cin >> N >> C;
-    bs.resize(N);
-    cs.resize(N);
-    for(int j=0;j<N;j=j+1){
-        cin >> bs[j] >> cs[j];
+    cin >> D >> G;
+    vector<ll> TC(D);
+    vector<ll> CP(D);
+    vector<ll> TP(D);
+    for(int j=0;j<D;j=j+1){
+        TP[j]=100*(j+1);
+        cin >> TC[j] >> CP[j];
     }
-    cout << solver(N,C) << "\n" << flush;
+    cout << solver(TC,TP,CP) << "\n" << flush;
     return 0;
 }

@@ -51,4 +51,3 @@
   -std=iso9899:2011           Conform to the ISO 2011 C standard.  Same as -std=c11.
   -std=iso9899:2017           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
   -std=iso9899:2018           Conform to the ISO 2017 C standard (published in 2018).  Same as -std=c17.
-XXX

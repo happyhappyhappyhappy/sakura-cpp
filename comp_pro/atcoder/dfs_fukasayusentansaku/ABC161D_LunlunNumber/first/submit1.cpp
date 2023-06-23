@@ -20,7 +20,7 @@ const ll resultMAX=4000000000;
 vector<ll> lunlun;
 
 void lunlun_make(ll seed){
-    stack<ll> ST;// TODO: ここからスタート
+    stack<ll> ST;
     ST.push(seed);
     while(ST.empty()==false){
         ll nowNum = ST.top();// 取り出しにはtop

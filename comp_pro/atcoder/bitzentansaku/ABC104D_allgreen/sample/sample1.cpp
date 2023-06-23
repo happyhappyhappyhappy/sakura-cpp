@@ -65,7 +65,7 @@ int main(void){
                 res = min(res,num);
             }
             else{
-                debug("解けなかったので貪欲法へ飛ぶ\n"); // TODO 2023-06-20 19:42:24
+                debug("解けなかったので貪欲法へ飛ぶ\n");
                 for(int j=D-1;0<=j;j=j-1){
                     if(bit & (1<<j)){
                         continue;

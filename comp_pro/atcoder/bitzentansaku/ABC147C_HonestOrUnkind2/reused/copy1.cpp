@@ -42,7 +42,6 @@ int main(void){
             }
         }
     }
-    // TODO: 中身を見てください多分2次元になっていると思う
     debug("うその数 %d\n",(int)liars[1].size());
     debug("正直者の数 %d\n",(int)honests[1].size());
     return 0;
