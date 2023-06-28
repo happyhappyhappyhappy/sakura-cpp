@@ -1,14 +1,6 @@
 #include<bits/stdc++.h>
-#ifdef LOCAL
-#include"/wrk/sakura-cpp/comp_pro/debug.h"
-#include"/wrk/sakura-cpp/comp_pro/t_debug.h"
-#else
-#define debug(...) 42
-#define debug2(...) 42
-#define debugt(...) 42
-#define to_string(...) 42
-#define debug_out(...) 42
-#endif
+// TODO 提出する
+// 2023-06-28 19:32:02
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
@@ -43,28 +35,7 @@ void initial(void){
         b[j]=b[j]-1;
     }
 }
-void showCheck(void){
-    debug("N=%3d,M=%3d,Q=%3d\n",N,M,Q);
-    for(int j=0;j<Q;j=j+1){
-        debug("b[%d]=%3d - a[%d]=%3d ? c[%3d]=%3d -> get d[%3d]=%3d\n",
-        j,b[j],j,a[j],j,c[j],j,d[j]);
-    }
-}
-void showA(int C,vector<int> &A){
-    if(C==0){
-        debug("今Aには何も入っていません\n");
-        return;
-    }
-    debug("ただ今のA↓\n");
-    for(int j=0;j<C;j=j+1)
-    {
-        debug(" %3d",A[j]);
-    }
-    debug("\n");
-    return;
-}
 int dfs(int C,vector<int> &A){
-    showA(C,A);
     if(C == N){
         int score=0;
         for(int j=0;j<Q;j=j+1){
@@ -86,19 +57,13 @@ int dfs(int C,vector<int> &A){
         int nowres=0;
         A.push_back(j);
         nowres=dfs(C+1,A);
-        if(res<nowres){
-            debug("L.%3d in C=%3d: %3d < %3d 最大値を %3dと変更しました\n"
-            ,__LINE__,C,res,nowres,nowres);
-            res=nowres;
-        }
+        chmax(res,nowres);
         A.pop_back();
     }
     return res;
 }
 int main(void){
     initial();
-    // showCheck();
-
     vector<int> A;
     int res;
     res=dfs(0,A);
