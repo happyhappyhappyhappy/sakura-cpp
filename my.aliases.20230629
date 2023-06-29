@@ -1,0 +1,49 @@
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
+alias u='clear; cd ../; pwd; ls -lhGgo'
+alias d='clear; cd -; ls -lhGgo'
+
+alias ls="ls -1p --color=auto"
+alias l="ls -lhGgo"
+alias ll="ls -lh"
+alias la="ls -lhGgoA"
+alias lt="ls -lhGgotr"
+alias lS="ls -lhGgoSr"
+alias lhead="ls -lhGgo | head"
+alias ltail="ls -lhGgo | tail"
+alias lmore='ls -lhGgo | more'
+
+function mcd { mkdir -p "$1" && cd "$1";}
+alias showpath='echo $PATH | tr ":" "\n" | nl'
+alias c="clear"
+alias cl="clear"
+alias ckear="clear"
+alias clr="clear"
+
+alias :q="exit"
+alias ext="exit"
+alias xt="exit"
+alias by="exit"
+alias bye="exit"
+alias die="exit"
+alias quit="exit"
+
+
+alias sai="sudo apt install -y"
+alias sau="sudo apt update"
+alias update="sudo apt update -qq"
+alias upgrade="sudo apt upgrade -y"
+
+alias dgpp="g++ -D LOCAL -Wall"
+# alias wgpp="g++ -Wall -Wl,--stack,1048576000"
+# ↑何故か--stackなるオプションは無いと出た。削除。普通に戻す
+# 2023-06-29 18:05:28
+alias sshstart="eval \"$(ssh-agent -s)\""
+alias sapt="sudo apt "
+alias atcoderstack="ulimit -S -s 1048576"
+# ↑stackサイズをatcoderに合わせる。SegmentionFailtのメッセージが出たときに念のため
+# 2023-06-29 18:06:37
