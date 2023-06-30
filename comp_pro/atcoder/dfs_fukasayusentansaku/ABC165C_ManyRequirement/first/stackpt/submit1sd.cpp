@@ -1,5 +1,3 @@
-// TODO: 問題内容のローカル変数をすべてグローバルに変更
-// 2023-06-29 19:33:44
 #include<bits/stdc++.h>
 #ifdef LOCAL
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
@@ -24,14 +22,19 @@ template<class XXX> void chmax(XXX &x,XXX y){
 }
 // 大域変数 当初全部ローカルにしてましたがさすがにコーディングの無駄
 // が多すぎたためこちらに設定します。2023-06-29 19:31:51
+int N,M,Q; // N:数列Aの長さ,M:数列Aが取り得る最大,Q:質問数
+vector<int> a(Q),b(Q); // 差を求めたい数列Aの位置
+// ちなみに「1-index」から「0-index」へ修正する
+vector<int> c(Q); // ↑で求めた差
+vector<int> d(Q); // 一致していたときの点数
+
 
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-void showConfig(int N,int M,int Q,
-vector<int> &a,vector<int> &b,vector<int> &c,vector<int> &d){
+void showConfig(void){
     debug("数列Aの長さ:%d\n",N);
     debug("数列の取り得る値の最大:%d\n",M);
     debug("質問数:%d\n",Q);
@@ -41,47 +44,67 @@ vector<int> &a,vector<int> &b,vector<int> &c,vector<int> &d){
     }
     return ;
 }
-int getScore(int N,vector<int> &X){
+void showA(int L,vector<int> &X){
+    debug("---ただ今の中身---\n");
+    if(L == 0){
+        debug("ありません");
+    }else{
+        for(int j=0;j<L;j=j+1){
+            debug(" %3d",X[j]);
+        }
+    }
+    debug("\n");
+    return;
+}
+int getScore(vector<int> &X){
     int res=0;
-
-
+    for(int j=0;j<Q;j=j+1){
+        int diff = X[b[j]]-X[a[j]];
+        if(diff == c[j]){
+            res=res+d[j];
+        }
+    }
     return res;
 }
-int solver(vector<int> &A,int N,int M,int Q,
-vector<int> &a,vector<int> &b,vector<int> &c,vector<int> &d){
+int solver(void){ // もしかしたらAは要らないかも
     int res=0;
-    showConfig(N,M,Q,a,b,c,d);
+    vector<int> A;
+    // showConfig();
     stack<dfs> S;
     S.push(make_pair(0,A));
     while(S.empty()==false){
-        dfs D = S.top();
-        int leng=D.first;
-        vector<int> NowA=D.second;
+        dfs n_dfs=S.top();
+        S.pop();
+        int leng=n_dfs.first;
+        vector<int> n_A=n_dfs.second;
+        showA(leng,n_A);
         if(leng==N){
-            debug("完成したのでスコアを計算します\n")
-            debug("尚、現在の数列は ")
-            for(int j=0;j<N;j=j+1){
-                debug(" %4d",NowA[j]);
-            }
-            debug("\n");
-            int score=getScore(NowA,N,a,b,c,d);
+            int score=0;
+            score = getScore(n_A);
             chmax(res,score);
-        }
-
+        }else{
+            int start_num;
+            if(leng==0){
+                start_num=1;
+            }else{
+                start_num=n_A[leng];
+            }
+            // NOTE: ここで徐々に数をN個まで増やしたいがダメだったので
+            // stack殺法はペンディングします 2023-06-30 16:49:47
+            // LIST構造のコピーで無ければダメなのかね
+            for(int j=start_num;j<M;j=j+1){
+                n_A.push_back(j);
+                S.push(make_pair(leng+1,n_A));
+                n_A.pop_back();
+            }
         }
     }
-
     return res;
 }
 int main(void){
     initial();
     int res;
-    int N,M,Q; // N:数列Aの長さ,M:数列Aが取り得る最大,Q:質問数
     cin >> N >> M >> Q;
-    vector<int> a(Q),b(Q); // 差を求めたい数列Aの位置
-    // ちなみに「1-index」から「0-index」へ修正する
-    vector<int> c(Q); // ↑で求めた差
-    vector<int> d(Q); // 一致していたときの点数
     a.resize(Q);
     b.resize(Q);
     c.resize(Q);
@@ -91,8 +114,7 @@ int main(void){
         a[j]=a[j]-1;
         b[j]=b[j]-1;
     }
-    vector<int> A;
-    res = solver(A,N,M,Q,a,b,c,d);
+    res = solver(); // もしかしたらA要らないかも
     cout << res << "\n";
     return 0;
 }

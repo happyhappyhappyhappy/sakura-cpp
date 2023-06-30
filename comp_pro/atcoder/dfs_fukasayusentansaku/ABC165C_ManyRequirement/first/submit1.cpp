@@ -1,6 +1,4 @@
 #include<bits/stdc++.h>
-// TODO 提出する
-// 2023-06-28 19:32:02
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
