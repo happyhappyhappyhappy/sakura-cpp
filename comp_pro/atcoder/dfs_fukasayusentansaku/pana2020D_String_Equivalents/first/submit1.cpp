@@ -29,10 +29,12 @@ void dfs(string str,int pos){
     for(int j=0;j<pos;j=j+1){
         char x = 'a'+j;
         string nstr=str+x;
+        debug("nstr=%s , str=%s\n",nstr.c_str(),str.c_str());
         dfs(nstr,pos);
     }
     char x = 'a'+pos;
     string nstr=str+x;
+    debug("nstr=%s , str=%s\n",nstr.c_str(),str.c_str());
     // これで次のアルファベットを使える
     dfs(nstr,pos+1);
 }
