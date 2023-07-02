@@ -14,35 +14,25 @@ using ll=long long;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 60;
-int N;
-vector<string> A;
+
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 }
-void dfs(string str,int pos){
-    int length=(int)str.size();
-    if(length == N){
-        cout << str << "\n" << flush;
-        return;
-    }
-    for(int j=0;j<pos;j=j+1){
-        char x = 'a'+j;
-        string nstr=str+x;
-        debug("nstr=%s , str=%s\n",nstr.c_str(),str.c_str());
-        dfs(nstr,pos);
-    }
-    char x = 'a'+pos;
-    string nstr=str+x;
-    debug("nstr=%s , str=%s\n",nstr.c_str(),str.c_str());
-    // これで次のアルファベットを使える
-    dfs(nstr,pos+1);
-}
 int main(void){
     initial();
+    vector<string> X;
+    int N=3;
     cin >> N;
-    string str="";
-    dfs(str,0);
+    for(int j=0;j<N;j=j+1){
+        string x;
+        cin >> x;
+        X.push_back(x);
+    }
+    sort(X.begin(),X.end());
+    for(int j=0;j<int(X.size());j=j+1){
+        cout << X[j] << "\n" << flush;
+    }
     return 0;
 }

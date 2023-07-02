@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+// 失敗版 辞書順に失敗した
 #ifdef LOCAL
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
 #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
@@ -59,9 +60,7 @@ void solver(void){
 int main(void){
     initial();
     solver();
-    sort(STR.begin(),STR.end());
-    for(string &s:STR){
-        cout << s << "\n" << flush;
-    }
+    // TODO: STRをソートし、出力してください2023-07-01 19:31:34
+    // 不安であればvector<string> のソースサンプルを作ってみる
     return 0;
 }
