@@ -60,7 +60,6 @@ void solver(void){
 int main(void){
     initial();
     solver();
-    // TODO: STRをソートし、出力してください2023-07-01 19:31:34
     // 不安であればvector<string> のソースサンプルを作ってみる
     return 0;
 }
