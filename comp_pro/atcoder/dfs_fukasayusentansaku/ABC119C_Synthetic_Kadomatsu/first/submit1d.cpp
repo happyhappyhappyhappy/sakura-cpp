@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 #ifdef LOCAL
-// #include"/wrk/sakura-cpp/comp_pro/debug.h"
-// #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
-#include<debug/debug.h>
-#include<debug/tdebug.h>
+#include"/wrk/sakura-cpp/comp_pro/debug.h"
+#include"/wrk/sakura-cpp/comp_pro/t_debug.h"
+// #include<debug/debug.h>
+// #include<debug/tdebug.h>
 #else
 #define debug(...) 42
 #define debug2(...) 42
@@ -16,7 +16,11 @@ using ll=long long;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 60;
-
+template<class XXX> void chmin(XXX &x,XXX y){
+    if(x > y){
+        x = y;
+    }
+}
 // グローバル変数
 int N; // 手持ちの竹の数
 int A,B,C; // 完成させる長さ
@@ -36,16 +40,19 @@ void showData(void){
 }
 int dfs(int n,int a,int b,int c){
     if(n == N){
-        int minL = min(a,b,c);
+        int minL = yamaMAX_INT;
+        chmin(minL,a);
+        chmin(minL,b);
+        chmin(minL,c);
         if(minL>0){
             debug("竹そのものは揃っているので[%d,%d,%d]増減魔法で調整\n",a,b,c);
             int sumMP=0;
             vector<int> MP(3,0);
-            MP[0] = abs(a,A);
-            MP[1] = abs(b,B);
-            MP[2] = abs(c,C);
+            MP[0] = abs(a-A);
+            MP[1] = abs(b-B);
+            MP[2] = abs(c-C);
             for(int j=0;j<3;j=j+1){
-                sumMP=MP[j];
+                sumMP=sumMP+MP[j];
             }
             debug("単純計算 魔法量 %d\n",sumMP);
             debug("しかし、竹を置くだけは魔法を利用しないので初回合成魔法 30MP は削って返す\n");
@@ -64,19 +71,23 @@ int dfs(int n,int a,int b,int c){
             if(c <= 0){
                 debug("Cを作成出来ません\n");
             }
-            return pow(10^9);
+            return pow(10,9);
         }
     }
+    int minMP=yamaMAX_INT;
     int mp0 = dfs(n+1,a,b,c); // n本目の竹はどこにも合成しない
     debug("%d 本目の竹は使わなかったときの最小 %d\n",n,mp0);
+    chmin(minMP,mp0);
     int mpA = dfs(n+1,a+L[n],b,c)+10; // n本目の竹はAに使う
     debug("%d 本目の竹を A に使ったときの最小 %d\n",n,mpA);
+    chmin(minMP,mpA);
     int mpB = dfs(n+1,a,b+L[n],c)+10; // n本目の竹はBに使う
     debug("%d 本目の竹を B に使ったときの最小 %d\n",n,mpB);
+    chmin(minMP,mpB);
     int mpC = dfs(n+1,a,b,c+L[n])+10; // n本目の竹はCに使う
     debug("%d 本目の竹を C に使ったときの最小 %d\n",n,mpC);
-    int minmp = min(mp0,mpA,mpB,mpC); // それぞれ使ったときの最小魔法を決める
-    return minmp;
+    chmin(minMP,mpC);
+    return minMP;
 }
 int solver(void){
     int res=0;

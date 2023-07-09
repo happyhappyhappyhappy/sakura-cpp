@@ -37,14 +37,11 @@ int main(void){
         M.push_back(nn);
     }
     debug("----与えられたList----\n");
-    int minnum=yamaMAX_INT;
     for(auto &a:M){
         debug(" %d",a);
-        chmin(minnum,a);
     }
     debug("\n");
-    // 答え 配列ではダメ
-    // debug("最小値 :  %d\n",min(M));
-    debug("最小値 :  %d\n",minnum);
+    int x = *(min_element(M.begin(),M.end()));
+    debug("最小値 :  %d\n",x);
     return 0;
 }
