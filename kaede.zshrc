@@ -22,13 +22,13 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 "lukerandall" \
 "gozilla" \
 "kphoen" \
-"jonathan" \
+# "jonathan" \ フルパス長い 除外2023-06-24 15:55:24
 "minimal" \
 "gnzh" \
 "nanotech" \
-"agnoster" \
-"miloshadzic" \ )
-
+# "agnoster" \ フルパス長い 除外2023-06-24 15:55:40
+"miloshadzic" \
+)
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
