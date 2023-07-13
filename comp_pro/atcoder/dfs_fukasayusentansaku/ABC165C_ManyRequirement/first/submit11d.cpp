@@ -1,4 +1,14 @@
 #include<bits/stdc++.h>
+#ifdef LOCAL
+#include"/wrk/sakura-cpp/comp_pro/debug.h"
+#include"/wrk/sakura-cpp/comp_pro/t_debug.h"
+#else
+#define debug(...) 42
+#define debug2(...) 42
+#define debugt(...) 42
+#define to_string(...) 42
+#define debug_out(...) 42
+#endif
 using namespace std;
 using ll=long long;
 const double pi = 3.141592653589793238;
@@ -32,6 +42,12 @@ void initial(void){
         b[j]=b[j]-1; // 同上
     }
 }
+void showQ(void){
+    for(int j=0;j<Q;j=j+1){
+        debug("Q.%d -> b[%d] - a[%d] = c[%d]  point.%d\n",
+        j+1,b[j],a[j],c[j],d[j]);
+    }
+}
 int score(vector<int> &A){ // 配列Aの個数はNと判明している
     int total=0;
     for(int j=0;j<Q;j=j+1){
@@ -42,9 +58,16 @@ int score(vector<int> &A){ // 配列Aの個数はNと判明している
     return total;
 }
 int dfs(int n,vector<int> &A){
+    debug("-----今の %d 個の数列-----\n",n);
+    for(auto &e:A){
+        debug(" %d ",e);
+    }
+    debug("\n");
     int res=0;
     if(n == N){
+        debug("最大値になったので最終計算します\n");
         res=score(A);
+        debug("この時の値は %d です\n",res);
         return res;
     }
     else{
@@ -66,6 +89,7 @@ int dfs(int n,vector<int> &A){
 }
 int main(void){
     initial();
+    showQ();
     vector<int> A;
     cout << dfs(0,A) << "\n" << flush;
     return 0;
