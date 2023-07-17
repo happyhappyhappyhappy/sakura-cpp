@@ -14,6 +14,11 @@ using ll=long long;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 60;
+template<class XXX> void chmax(XXX &x,XXX y){
+    if(x < y){
+        x = y;
+    }
+}
 vector<vector<int>> HONEST; // 発言時正直テーブル
 vector<vector<int>> LIAR; // 発言時ウソつきテーブル
 int N; // 発言者数
@@ -68,22 +73,58 @@ void showHorL(void){
         }
     }
 }
+void showBit(int n,int Base){
+    debug("-----\n");
+    for(int s=0;s<Base;s=s+1){
+        int F = (n>>s)&1;
+        if(F==1){
+            debug(" 正 ");
+        }
+        else{
+            debug(" 嘘 ");
+        }
+    }
+    debug("\n");
+    debug("-----\n");
+}
 int solver(void){
     int ans=0;
     // showHorL();
     for(int b=1;b<(1<<N);b=b+1){
-        bool ok=true;
-        int total=0;
+        // b : bit列
+        debug("--- bit : %d の時の検証 ---\n",b);
+        showBit(b,N);
+        bool ok=true;// この時インタビューと実際に矛盾無し
+        int total=0;// カウント
         for(int s=0;s<N;s=s+1){
-            int H_FL = (B>>S) & 1;
-            if(H_FL==1){
-
+            // s:各人の情報
+            int H_FL = (b>>s)&1;
+            debugt(H_FL);
+            if(H_FL==1)
+            {
+                total=total+1;
+                for(auto &p:HONEST[s])
+                {
+                    int honeQ = (b >> p)&1;
+                    if(honeQ==0){
+                        debug(" %d が言う正直もの-> %d -> 正直者では無く矛盾\n",s,p);
+                        ok=false;
+                    }
+                }
+                for(auto &p:LIAR[s]){
+                    int liarQ=(b>>p)&1;
+                    if(liarQ==1){
+                        debug(" %d が言ううそつき-> %d -> ウソつきでは無く矛盾\n",s,p);
+                        ok=false;
+                    }
+                }
             }
         }
+        if(ok){
+            debug("この仮定においては矛盾では無い\n");
+            chmax(ans,total);
+        }
     }
-
-
-
     return ans;
 }
 int main(void){
