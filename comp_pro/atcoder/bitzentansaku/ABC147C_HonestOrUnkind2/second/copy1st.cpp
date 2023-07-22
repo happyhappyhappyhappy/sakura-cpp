@@ -110,6 +110,9 @@ int solver(void){
                         debug(" %d が言う正直もの-> %d -> 正直者では無く矛盾\n",s,p);
                         ok=false;
                     }
+                    else{
+                        debug(" %d が言う正直もの-> %d -> 正直者ですので正解です\n",s,p);
+                    }
                 }
                 for(auto &p:LIAR[s]){
                     int liarQ=(b>>p)&1;
@@ -117,7 +120,13 @@ int solver(void){
                         debug(" %d が言ううそつき-> %d -> ウソつきでは無く矛盾\n",s,p);
                         ok=false;
                     }
+                    else{
+                        debug(" %d が言ううそつき-> %d -> ウソつきなので正しいです\n",s,p);
+                    }
                 }
+            }
+            else{
+                debug("この場合 発言者 %d の言葉は無視しています\n",s);
             }
         }
         if(ok){
