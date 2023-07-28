@@ -58,6 +58,7 @@ int dfs(int x,int y,int a){
 int main(void){
     initial();
     cin >> H >> W >> A >> B;
-
+    int ans=dfs(0,0,A);
+    cout << ans << "\n" << flush;
     return 0;
 }
