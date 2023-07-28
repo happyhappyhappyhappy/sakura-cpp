@@ -24,11 +24,12 @@ void initial(void){
     cout.tie(nullptr);
 }
 int dfs(int x,int y,int a){
+    debug("現在位置()")
     if(H == y) {
         debug("H=%d,y=%d\n",H,y);
         int tf=int(a==0);
         debug("tf=%d\n",tf);
-        return a == 0;
+        return tf;
     }
     if(W == x){
         return dfs(0,y+1,a);
