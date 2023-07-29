@@ -36,7 +36,7 @@ int dfs(int n,int a,int b,int c){
             debug("a = %d , b = %d , c = %d\n",a,b,c);
             debug("内容はともかく計算できそうなので求めます\n");
         }else{
-// TODO: 2023-07-08 19:31:23 n==Nのロジックをまず書きましょう
+//  2023-07-08 19:31:23 n==Nのロジックをまず書きましょう
         }
     }
     return nowans;
