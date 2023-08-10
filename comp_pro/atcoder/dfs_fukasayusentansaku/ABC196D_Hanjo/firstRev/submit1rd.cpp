@@ -37,7 +37,7 @@ void initial(void){
 void dfs(int h,int w,int a){ // 今いる縦軸 h,横軸 w,残枚数 a
     if(h == H){// 全探索終了
         if(a == 0){// 残り無し
-            ans = ans+1;
+            res = res+1;
             return;
         }
         else{ // 残りがある->正しくない設置方法
@@ -48,16 +48,31 @@ void dfs(int h,int w,int a){ // 今いる縦軸 h,横軸 w,残枚数 a
         dfs(h+1,0,a);
         return;
     }
-    if(R[h][w]==1){// すでに使用している(上の行で縦置きした場合)
+    if(R[h][w]==1){// すでに使用している(上の行で縦置きした場合に多い)
         dfs(h,w+1,a);
         return;
     }
     // それ以外
     // 横に置きたい場合
     if((a != 0) && (w+1 < W) && (R[h][w+1]==0)){
-        // TODO: ここから
+        R[h][w]=1;
+        R[h][w+1]=1;
+        dfs(h,w+1,a-1);
+        // 次工程のため後片付け
+        R[h][w]=0;
+        R[h][w+1]=0;
     }
-
+    if((0<a) && (h+1 < H ) && (R[h+1][w]==0)){
+        // 縦置きをしたい
+        R[h][w]=1;
+        R[h+1][w]=1;
+        dfs(h,w+1,a-1);
+        R[h][w]=0;
+        R[h+1][w]=0;
+    }
+    // 何も置かない
+    dfs(h,w+1,a);
+    return;
 }
 int main(void){
     initial();
