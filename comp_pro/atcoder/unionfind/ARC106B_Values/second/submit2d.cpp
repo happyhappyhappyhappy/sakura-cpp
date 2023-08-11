@@ -3,7 +3,7 @@
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
 #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
 #else
-#define debug(...) 42
+// #define debug(...) 42
 #define debug2(...) 42
 #define debugt(...) 42
 #define to_string(...) 42
@@ -41,11 +41,9 @@ class UnionFind{
             a = find(a);
             b = find(b);
             if(a!=b){
-                // TODO: m_size->m_sizesに修正
-                // 2023-08-10 19:30:00
                 if(m_sizes[a]<m_sizes[b]){
-                    debug("m_sizes[%d] = %d < m_sizes[%d] = %dのため,%d<->%d\n",
-                    a,m_size[a],a,m_size[b],a,b);
+                    // debug("m_sizes[%d] = %d < m_sizes[%d] = %dのため,%d<->%d\n",
+                    // a,m_sizes[a],b,m_sizes[b],a,b);
                     swap(a,b);
                 }
                 m_sizes[a]=m_sizes[a]+m_sizes[b];
@@ -72,6 +70,7 @@ void initial(void){
 int main(void){
     initial();
     cin >> N >> M;
+    // debug("N->%d\n",N);
     A.resize(N);
     B.resize(N);
     for(int j=0;j<N;j=j+1){
@@ -86,9 +85,30 @@ int main(void){
         cin >> c >> d;
         uf.merge(c-1,d-1);
     }
+//    debug("N->%d\n",N);
+/**
     for(int j=0;j<N;j=j+1){
         int x = uf.find(j);
         debug("%3dの根->%3d\n",j,x);
+    }
+    **/
+    vector<ll> diff(N,0); // 同じ根は同じ変数に入れられる様計算
+    for(int j=0;j<N;j=j+1){
+        int x = uf.find(j);
+        diff[x]=diff[x]+(A[j]-B[j]);
+    }
+    bool ok=true;
+    for(int j=0;j<N;j=j+1){
+        if(diff[j]!=0){
+            ok=false;
+            break;
+        }
+    }
+    if(ok){
+        cout << "Yes\n" << flush;
+    }
+    else{
+        cout << "No\n" << flush;
     }
     return 0;
 }
