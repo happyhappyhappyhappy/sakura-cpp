@@ -3,7 +3,7 @@
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
 #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
 #else
-#define debug(...) 42
+// #define debug(...) 42
 #define debug2(...) 42
 #define debugt(...) 42
 #define to_string(...) 42
@@ -14,7 +14,6 @@ using ll=long long;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 60;
-// TODO: まずはdebugを取り除いてください
 // グローバル変数
 int H,W,A,B; // H 高さ W 幅 A 1x2(2x1)の畳 B 1x1の畳
 // used 利用状態 0 何も置いてない 1 畳を置いている -1 境目(何も置けない・チェック用)

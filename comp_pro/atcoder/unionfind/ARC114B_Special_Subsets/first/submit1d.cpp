@@ -3,7 +3,7 @@
 #include"/wrk/sakura-cpp/comp_pro/debug.h"
 #include"/wrk/sakura-cpp/comp_pro/t_debug.h"
 #else
-#define debug(...) 42
+// #define debug(...) 42
 #define debug2(...) 42
 #define debugt(...) 42
 #define to_string(...) 42
@@ -14,7 +14,7 @@ using ll=long long;
 const double pi = 3.141592653589793238;
 const int yamaMAX_INT = 1 << 29;
 const ll yamaMAX_LL = 1LL << 60;
-const ll MOD=998244353
+const ll MOD=998244353;
 // グローバル変数
 vector<ll> pow2tbl;
 
@@ -35,7 +35,7 @@ class UnionFind{
             m_parents[j]=find(m_parents[j]);
             return m_parents[j];
         }
-        int merge(int a,int b){
+        void merge(int a,int b){
             a=find(a);
             b=find(b);
             if(a!=b){
@@ -66,15 +66,40 @@ void initial(void){
     cout.tie(nullptr);
 }
 void mkPow2Tbl(int N){
-    pow2tbl.resize(N);
+    pow2tbl.resize(N+1);
     pow2tbl[0]=1;
-    // TODO ここから2の階乗のテーブルを作っていく＋作成時に余りを求めオーバーフローを防ぐ
-    // 2023-08-13 19:32:49
+    for(int j=1;j<N+1;j=j+1){
+        pow2tbl[j]=(pow2tbl[j-1]*2)%MOD;
+    }
 }
 int main(void){
     initial();
     int N;
     cin >> N;
     mkPow2Tbl(N);
+    UnionFind uf = UnionFind(N);
+    for(int j=0;j<N;j=j+1){
+        int inp;
+        cin >> inp;
+        uf.merge(j,inp-1);
+    }
+    /**
+    for(int j=0;j<N;j=j+1){
+        debug("%d root-> %d\n",j,uf.find(j));
+    }
+    **/
+    vector<int> group_check(N,0);
+    for(int j=0;j<N;j=j+1){
+        int x = uf.find(j);
+        group_check[x]=group_check[x]+1;
+    }
+    int groups=0;
+    for(int j=0;j<N;j=j+1){
+        if(group_check[j]!=0){
+            groups=groups+1;
+        }
+    }
+//    debug("グループの数: %d\n",groups);
+    cout << pow2tbl[groups]-1 << "\n" << flush;
     return 0;
 }
