@@ -82,6 +82,7 @@
 			  "#ifdef LOCAL",
 			  "#include\"/wrk/sakura-cpp/comp_pro/debug.h\"",
 			  "#include\"/wrk/sakura-cpp/comp_pro/t_debug.h\"",
+			  "#include\"/wrk/sakura-cpp/lib/dump.hpp\"",
 			  "#else",
 			  "#define debug(...) 42",
 			  "#define debug2(...) 42",
