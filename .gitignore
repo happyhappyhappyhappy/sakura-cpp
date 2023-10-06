@@ -19,4 +19,4 @@ ngdebug*.txt
 testcase/
 testcase
 hpp
-cpp-dump
+*cpp-dump*
