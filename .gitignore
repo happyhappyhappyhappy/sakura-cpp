@@ -18,6 +18,5 @@ ngdebug*.txt
 ./python/
 testcase/
 testcase
-hpp
 *cpp-dump*
 lib/debug/cpp-dump
