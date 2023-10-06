@@ -1,0 +1,3 @@
+[submodule "lib/debug/cpp-dump"]
+	path = lib/debug/cpp-dump
+	url = https://github.com/philip82148/cpp-dump
