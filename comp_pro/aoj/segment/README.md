@@ -1,0 +1,2 @@
+lasegsample.cpp
+はatcoder以外で遅延セグメント木を使う場合のヘッダーを含んでいます。
