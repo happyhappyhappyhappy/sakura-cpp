@@ -26,6 +26,7 @@ S e(){
     return INF;
 }
 // TODO: ここからacl使うよーと言う感じで作成する
+// 2023-10-24 19:32:14
 
 void initial(void){
     ios_base::sync_with_stdio(false);
