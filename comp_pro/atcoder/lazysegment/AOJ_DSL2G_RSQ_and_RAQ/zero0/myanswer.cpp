@@ -37,9 +37,11 @@ struct LazySegmentTree{
         }
     }
     void eval(int k,int l,int r){
+        debug("k = %d,l = %d,r = %dの場合を評価します\n",k,l,r);
         if(lazy[k]!=0){
             node[k]=node[k]+lazy[k];
             if(1 < r-l){
+                debug("lazy[%d,%d]+lazy[%d]/2=%lld+%lld\n",2*k+1,2*k+2,k,lazy[2*k+1],lazy[k]/2);
                 lazy[2*k+1]=lazy[2*k+1]+lazy[k]/2;
                 lazy[2*k+2]=lazy[2*k+2]+lazy[k]/2;
             }
@@ -47,6 +49,8 @@ struct LazySegmentTree{
         }
     }
     void add(int a,int b,ll x,int k=0,int l=0,int r=-1){
+        debug("exe next add(%d,%d,%lld) start!\n",a,b,x);
+        debug("exe add(%d,%d,%lld,%d,%d,%d)\n",a,b,x,k,l,r);
         if(r<0){
             r = n;
         }
@@ -55,6 +59,7 @@ struct LazySegmentTree{
             return;
         }
         if(a <= l && r <= b){
+            debug("lazy[%d]=lazy[%d]+(%d-%d)*%lld\n",k,k,r,l,x);
             lazy[k]=lazy[k]+(r-l)*x;
             eval(k,l,r);
         }
@@ -97,6 +102,7 @@ int main(void){
         if(query == 0){
             int s,t,x;
             cin >> s >> t >> x;
+            debug("Queue %d to %d , plus %d\n",s-1,t,x);
             seg.add(s-1,t,x);
         }
         else{
