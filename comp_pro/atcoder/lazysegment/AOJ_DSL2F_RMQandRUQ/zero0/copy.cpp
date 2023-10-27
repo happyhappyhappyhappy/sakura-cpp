@@ -60,7 +60,34 @@ public:
         if(r < 0){
             r = n;
         }
-        // TODO: base.cpp L52から開始
-        // 2023-10-26 19:34:02
+        lazyEvaluate(k,l,r);
+        if(b <= l || r <= a){
+            return INF;
+        }
+        if(a <= l && r <= b){
+            return node[k];
+        }
+        int vl = find(a,b,2*k+1,l,(l+r)/2);
+        int vr = find(a,b,2*k+2,(l+r)/2,r);
+        return min(vl,vr);
     }
+};
+int main(){
+    cin >> N >> Q;
+    LazySegmentTree seg(vector<int>(N,INF));
+    for(int j=0;j<Q;j=j+1){
+        int query;
+        cin >> query;
+        if(query == 0){
+            int s,t,x;
+            cin >> s >> t >> x;
+            seg.update(s,t+1,x);
+        }
+        else{
+            int s,t;
+            cin >> s >> t;
+            cout << seg.find(s,t+1) << endl;
+        }
+    }
+    return 0;
 }
