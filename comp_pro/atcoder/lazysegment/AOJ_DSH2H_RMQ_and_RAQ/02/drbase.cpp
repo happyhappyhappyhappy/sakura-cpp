@@ -124,6 +124,7 @@ template<class Monoid, class Action> struct LazySegmentTree {
         if (l == r) return;
         l += offset, r += offset;
         for (int h = log; h >= 1; --h) {
+            // l(r)をビットと見た場合右から数えて h ビット目が0であるときです。
             if (((l >> h) << h) != l) push_lazy(l >> h);
             if (((r >> h) << h) != r) push_lazy((r - 1) >> h);
         }
