@@ -18,9 +18,13 @@
         using X = long long;
         using M = long long;
         auto fx = [](X x1, X x2) -> X { return x1 + x2; };
+        ↑各node同士の何を求めるのか?(RMQならmin(x1,x2))
         auto fa = [](X x, M m) -> X { return x + m; };
+        ↑与えられた値をlazyからデータへどう反映するか?(RUQではmだけ)
         auto fm = [](M m1, M m2) -> M { return m1 + m2; };
+        ↑与えられた値同士を下へどうするか(RUQなら上の値のみ)
         auto fp = [](M m, long long n) -> M { return m * n; };
+        ↑与えられた値をどう加工するか(RMQは不要 mのみ)
         long long ex = 0;
         long long em = 0;
         SegTreeLazyProportional<X, M> rsq(n, fx, fa, fm, fp, ex, em);

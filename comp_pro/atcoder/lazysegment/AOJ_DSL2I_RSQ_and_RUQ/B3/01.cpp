@@ -48,18 +48,22 @@ struct SegTreeLazyProportional{
     }
     void build(){
         for(int k=n-2;0<=k;k=k-1){
+//     auto fx = [](X x1,X x2)->X{return x1+x2;};
             dat[k]=fx(dat[2*k+1],dat[2*k+2]);
         }
     }
     void eval(int k,int len){
         if(lazy[k]==em)return;
         if(k<n-1){
+//          auto fm = [](M m1,M m2)->M{return m2;};
             lazy[k*2+1]=fm(lazy[k*2+1],lazy[k]);
             lazy[k*2+2]=fm(lazy[k*2+2],lazy[k]);
         }
+//     auto fa = [](X x,M m)->X {return m;};
+//     auto fp = [](M m,long long n)->M{return m*n};
         dat[k]=fa(dat[k],fp(lazy[k],len));
+        lazy[k]=em;
     }
-    lazy[k]=em;
     void update(int a,int b,M x,int k,int l,int r){
         eval(k,r-l);
         if(a<=l && r <= b){
@@ -69,12 +73,43 @@ struct SegTreeLazyProportional{
             int mid=(l+r)>>1;
             update(a,b,x,k*2+1,l,mid);
             update(a,b,x,k*2+2,mid,r);
+//     auto fx = [](X x1,X x2)->X{return x1+x2;};
             dat[k]=fx(dat[k*2+1],dat[k*2+2]);
         }
     }
-    // TODO : 3引数のupdate(L.91)からスタート
-    // TODO : 2023-11-20 19:35:49
-}
+    void update(int a,int b,M x){
+        update(a,b,x,0,0,n);
+    }
+    X query_sub(int a,int b,int k,int l,int r){
+        eval(k,r-l);
+        if(r <= a || b <= l){
+            return ex;
+        }else if(a <= l && r <= b){
+            return dat[k];
+        }else{
+            int mid=(r+l)>>1;
+            X vl=query_sub(a,b,k*2+1,l,mid);
+            X vr=query_sub(a,b,k*2+2,mid,r);
+//     auto fx = [](X x1,X x2)->X{return x1+x2;};
+            return fx(vl,vr);
+        }
+    }
+    X query(int a,int b){
+        return query_sub(a,b,0,0,n);
+    }
+    inline X operator[](int a){
+        return query(a,a+1);
+    }
+    void print(void){
+        for(int j=0;j<n;j=j+1){
+            cout << (*this)[j];
+            if(j!=n-1){
+                cout << ",";
+        }
+    }
+    cout << "\n" << flush;
+    }
+};
 
 void initial(void){
     ios_base::sync_with_stdio(false);
@@ -83,5 +118,37 @@ void initial(void){
 }
 int main(void){
     initial();
-    return 0;
+    int n,q;
+    cin >> n >> q;
+    using X = long long;
+    using M = long long;
+    auto fx = [](X x1,X x2)->X{return x1+x2;};
+    auto fa = [](X x,M m)->X {return m;};
+    auto fm = [](M m1,M m2)->M{return m2;};
+    auto fp = [](M m,long long n)->M{return m*n;};
+    long long ex=0;
+    long long em=numeric_limits<int>::max();
+    SegTreeLazyProportional<X,M>
+        rsq(n,fx,fa,fm,fp,ex,em);
+    vector<long long> ans;
+    for(int j=0;j<q;j=j+1){
+        int c;
+        cin >> c;
+        if(c==0){
+            int s,t;
+            long long x;
+            cin >> s >> t >> x;
+            rsq.update(s,t+1,x);
+        }else{
+            int s,t;
+            cin >> s >> t;
+            long long val;
+            rsq.print();
+            val = rsq.query(s,t+1);
+            ans.push_back(val);
+        }
+    }
+    for(auto e:ans){
+        cout << e << "\n" << flush;
+    }
 }
