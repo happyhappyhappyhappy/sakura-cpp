@@ -73,6 +73,5 @@ int main() {
             cout << "INF" << endl;
         }
     }
-
     return 0;
 }
