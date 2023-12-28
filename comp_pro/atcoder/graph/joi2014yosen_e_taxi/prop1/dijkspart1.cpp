@@ -21,7 +21,52 @@ struct Edge{
 };
 using Graph=vector<vector<Edge>>;
 const long long INF = (1LL<<60);
+void dijkstra(const Graph &G,int s,vector<long long> &dis,vector<int> &prev){
+    using P = pair<long long,int>;
+    int N = (int)G.size();
+    dis.assign(N,INF);
+    prev.assign(N,-1);
+    priority_queue<P,vector<P>,greater<P>> pq;
+    dis[s]=0;
+    pq.emplace(dis[s],s);
+    // for(int j=0;j<(int)dis.size();j=j+1){
+    //     if(dis[j] == INF){
+    //         debug("%d is 限界値\n",j);
+    //     }else{
+    //         debug("%d is %lld\n",j,dis[j]);
+    //     }
+    // }
+    while(pq.empty()==false){
+        P p = pq.top();
+        pq.pop();
+        int v=p.second;
+        if(dis[v]<p.first){
+            continue;
+        }
+        for(auto &e:G[v]){
+            long long x = dis[v]+e.cost;
+            if(x < dis[e.to]){
+                dis[e.to]=x;
+                prev[e.to]=v;
+                pq.emplace(dis[e.to],e.to);
+            }
+        }
+    }
+    // for(int j=0;j<N;j=j+1){
+    //     debug("町 %d: ",j);
+    //     for(auto &e:G[j]){
+    //         long long cst=e.cost;
+    //         debug("%d is ",e.to);
+    //         if(cst == INF){
+    //             debug("通行不可 ");
+    //         }else{
+    //             debug("%lld ",cst);
+    //         }
+    //     }
+    //     debug("\n");
+    // }
 
+}
 void initial(void){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -98,19 +143,23 @@ int main(void){
             G[j].push_back({k,cost});
         }
     }
-    for(int j=0;j<N;j=j+1){
-        debug("町 %dから ",j);
-        for(auto &e:G[j]){
-            int city=e.to;
-            long long payment=e.cost;
-            debug("%d->",city);
-            if(payment==INF){
-                debug("不可 ");
-            }else{
-                debug("%lld ",payment);
-                }
-        }
-        debug("\n");
-    }
+    // for(int j=0;j<N;j=j+1){
+    //     debug("町 %dから ",j);
+    //     for(auto &e:G[j]){
+    //         int city=e.to;
+    //         long long payment=e.cost;
+    //         debug("%d->",city);
+    //         if(payment==INF){
+    //             debug("不可 ");
+    //         }else{
+    //             debug("%lld ",payment);
+    //             }
+    //     }
+    //     debug("\n");
+    // }
+    vector<long long> dist(N);
+    vector<int> prev(N);
+    dijkstra(G,0,dist,prev);
+    cout << dist[N-1] << "\n" << flush;
     return 0;
 }
