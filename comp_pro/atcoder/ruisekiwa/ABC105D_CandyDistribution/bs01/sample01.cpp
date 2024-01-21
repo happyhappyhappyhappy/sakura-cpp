@@ -24,22 +24,33 @@ void initial(void){
 int main(void){
     initial();
     int N,M;
-    vector<int> A(100010,0);
     cin >> N >> M;
+    vector<int> A(N,0);
+    vector<int> B(N+10,0);
     for(int j=0;j<N;j=j+1){
         cin >> A[j];
     }
-    long long ans=0;
-    long long sm = 0;
-    unordered_map<int,int> cnt;
-    cnt[0]=1;
+    unordered_map<int,int> mymap;
     for(int j=0;j<N;j=j+1){
-        sm=sm+A[j];
-        long long sumM=sm%M;
-        debug("j=%dの時 sum=%lld sumM=%lld cnt=%d\n",j,sm,sumM,cnt[sumM]);
-        ans=ans+cnt[sumM];
-        cnt[sumM]=cnt[sumM]+1;
+        B[j+1]=(B[j]+A[j])%M;
     }
+    // for(auto& b:B){
+    //     debug("%lld ",b);
+    // }
+    // debug("\n");
+    for(int j=0;j<=N;j=j+1){
+        mymap[B[j]]=mymap[B[j]]+1;
+    }
+    ll ans = 0;
+    for(auto& m:mymap){
+        // debug("余り%d -> %d\n",m.first,m.second);
+        ll cnt=m.second;
+        ans=ans+((cnt-1)*cnt)/2;
+    }
+    // debug("\n");
     cout << ans << "\n" << flush;
+    // for(auto &e:mymap){
+    //     debug("余り %d -> %d 個\n",e.first,e.second);
+    // }
     return 0;
 }
