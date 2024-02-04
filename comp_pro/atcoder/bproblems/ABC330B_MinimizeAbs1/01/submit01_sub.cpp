@@ -24,14 +24,19 @@ void initial(void){
 }
 int needX(int& A){
     int X=L;
-    if(A < L){
-        X=L;
-    }
-    else{
-        if(R<A){
-            X=R;
-        }else{
-            X=A;
+    for(int Xa=L;Xa<=R;Xa=Xa+1){
+        bool flug=true;
+        for(int Y=L;Y<=R;Y=Y+1){
+            int first = abs(Xa-A);
+            int second = abs(Y-A);
+            if(first > second){
+                flug=false;
+                break;
+            }
+        }
+        if(flug){
+            X=Xa;
+            break;
         }
     }
     return X;
